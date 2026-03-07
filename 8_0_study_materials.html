@@ -1335,8 +1335,10 @@
           </div>
           <div class="causal-arrow">↓</div>
           <div class="causal-node blank" id="cn2">
-            <div class="causal-node-num">NODE 2 — BLANK (fill in your own reasoning)</div>
-            <div class="causal-node-text" id="cn2-text">What power vacuum does this create, and which two nations fill it?</div>
+            <div class="causal-node-num">NODE 2 — YOUR REASONING</div>
+            <div class="causal-node-text">What power vacuum does this create, and which two nations fill it?</div>
+            <textarea class="response-area" style="min-height:70px;margin-top:8px;" placeholder="Type your reasoning here before revealing the answer..."></textarea>
+            <div class="causal-node-text" id="cn2-text" style="display:none;"></div>
           </div>
           <div class="causal-arrow">↓</div>
           <div class="causal-node">
@@ -1350,8 +1352,10 @@
           </div>
           <div class="causal-arrow">↓</div>
           <div class="causal-node blank" id="cn5">
-            <div class="causal-node-num">NODE 5 — BLANK (fill in your own reasoning)</div>
-            <div class="causal-node-text" id="cn5-text">What eventually causes this standoff to collapse — and how does it end?</div>
+            <div class="causal-node-num">NODE 5 — YOUR REASONING</div>
+            <div class="causal-node-text">What eventually causes this standoff to collapse — and how does it end?</div>
+            <textarea class="response-area" style="min-height:70px;margin-top:8px;" placeholder="Type your reasoning here before revealing the answer..."></textarea>
+            <div class="causal-node-text" id="cn5-text" style="display:none;"></div>
           </div>
           <div class="causal-arrow">↓</div>
           <div class="causal-node">
@@ -1861,9 +1865,21 @@ function revealChain() {
   const n2 = document.getElementById('cn2');
   const n5 = document.getElementById('cn5');
   n2.classList.add('revealed');
-  document.getElementById('cn2-text').textContent = "This creates a massive global power vacuum. The United States and the Soviet Union — the only nations with sufficient military and economic strength — rush to fill it, bringing their ideologically opposed systems into direct competition worldwide.";
+  const cn2 = document.getElementById('cn2-text');
+  cn2.textContent = "This creates a massive global power vacuum. The United States and the Soviet Union — the only nations with sufficient military and economic strength — rush to fill it, bringing their ideologically opposed systems into direct competition worldwide.";
+  cn2.style.display = 'block';
+  cn2.style.marginTop = '8px';
+  cn2.style.padding = '10px';
+  cn2.style.background = 'rgba(107,45,45,0.15)';
+  cn2.style.borderRadius = '4px';
   n5.classList.add('revealed');
-  document.getElementById('cn5-text').textContent = "Decades of arms-race spending bankrupts the Soviet economy; the costly USSR invasion of Afghanistan (1979–1989) accelerates the decline; and public discontent with communist rule erodes the system's legitimacy. By 1989, the Berlin Wall falls; by 1991, the Soviet Union itself dissolves — the Cold War ends from within, not through military defeat.";
+  const cn5 = document.getElementById('cn5-text');
+  cn5.textContent = "Decades of arms-race spending bankrupts the Soviet economy; the costly USSR invasion of Afghanistan (1979–1989) accelerates the decline; and public discontent with communist rule erodes the system's legitimacy. By 1989, the Berlin Wall falls; by 1991, the Soviet Union itself dissolves — the Cold War ends from within, not through military defeat.";
+  cn5.style.display = 'block';
+  cn5.style.marginTop = '8px';
+  cn5.style.padding = '10px';
+  cn5.style.background = 'rgba(107,45,45,0.15)';
+  cn5.style.borderRadius = '4px';
   document.querySelector('.reveal-btn').textContent = '✓ Nodes Revealed';
   document.querySelector('.reveal-btn').style.opacity = '0.6';
 }
