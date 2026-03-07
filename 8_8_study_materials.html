@@ -1359,11 +1359,10 @@
         Soviet command economy fails; chronic consumer shortages
       </div>
       <div class="chain-arrow">→</div>
-      <div class="chain-node blank" id="cc1" style="flex-direction:column;align-items:stretch;">
+      <div class="chain-node blank" id="cc1" onclick="revealChainAnswer('cc1')">
         <div class="chain-node-label">Blank 1</div>
-        <textarea class="causal-input" placeholder="What does economic failure cause at home?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.83rem;resize:vertical;outline:none;text-align:center;"></textarea>
-        <span class="blank-hint" style="cursor:pointer;" onclick="event.stopPropagation();revealChainAnswer('cc1')">Click to reveal answer</span>
-        <div id="cc1-answer" style="display:none;margin-top:8px;padding:10px 14px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.83rem;color:var(--text-muted);text-align:center;"></div>
+        <span style="font-size:0.8rem;color:var(--text-muted);font-style:italic;">What does economic failure cause at home?</span>
+        <span class="blank-hint">click to reveal</span>
       </div>
       <div class="chain-arrow">→</div>
       <div class="chain-node">
@@ -1376,11 +1375,10 @@
         Soviet-Afghan War drains treasury, morale, and global credibility
       </div>
       <div class="chain-arrow">→</div>
-      <div class="chain-node blank" id="cc2" style="flex-direction:column;align-items:stretch;">
+      <div class="chain-node blank" id="cc2" onclick="revealChainAnswer('cc2')">
         <div class="chain-node-label">Blank 2</div>
-        <textarea class="causal-input" placeholder="What does Gorbachev do — and what happens?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.83rem;resize:vertical;outline:none;text-align:center;"></textarea>
-        <span class="blank-hint" style="cursor:pointer;" onclick="event.stopPropagation();revealChainAnswer('cc2')">Click to reveal answer</span>
-        <div id="cc2-answer" style="display:none;margin-top:8px;padding:10px 14px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.83rem;color:var(--text-muted);text-align:center;"></div>
+        <span style="font-size:0.8rem;color:var(--text-muted);font-style:italic;">What does Gorbachev do — and what happens?</span>
+        <span class="blank-hint">click to reveal</span>
       </div>
       <div class="chain-arrow">→</div>
       <div class="chain-node">
@@ -1388,6 +1386,12 @@
         Berlin Wall falls 1989; Soviet Union dissolves 1991
       </div>
     </div>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-top:12px;">Think through what belongs in each blank node, then write your answers below and click reveal to check.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0;">
+      <textarea class="sa-textarea" style="width:100%;min-height:70px;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.85rem;resize:vertical;outline:none;" placeholder="Blank 1: What does economic failure cause at home?"></textarea>
+      <textarea class="sa-textarea" style="width:100%;min-height:70px;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.85rem;resize:vertical;outline:none;" placeholder="Blank 2: What does Gorbachev do — and what happens?"></textarea>
+    </div>
+    <button style="display:block;margin:8px auto;padding:8px 20px;background:rgba(184,134,11,0.12);border:1px solid rgba(184,134,11,0.3);border-radius:4px;color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;" onclick="revealChainAnswer('cc1');revealChainAnswer('cc2');">▸ Reveal Blank Nodes</button>
   </div>
 
   <!-- SAQ Practice -->
@@ -1812,12 +1816,9 @@ function revealChainAnswer(id) {
     'cc1': 'Public discontent grows; citizens lose faith in communist system',
     'cc2': 'Gorbachev introduces perestroika + glasnost to save communism \u2014 but unleashes democratic reform movements across Eastern Europe and Soviet republics'
   };
-  const ansDiv = document.getElementById(id + '-answer');
-  if (ansDiv) {
-    ansDiv.textContent = answers[id] || '';
-    ansDiv.style.display = 'block';
-  }
   const node = document.getElementById(id);
+  if (!node || node.classList.contains('revealed')) return;
+  node.innerHTML = '<div class="chain-node-label">Revealed</div>' + answers[id];
   if (node) node.classList.add('revealed');
 }
 
