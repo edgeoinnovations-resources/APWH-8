@@ -1073,12 +1073,16 @@
   // MCQ
   function chkMCQ(btn,r,id){
     const item=btn.closest('.mcq-item');
-    item.querySelectorAll('.mcq-opt').forEach(o=>{o.disabled=true;if(o!==btn&&o.getAttribute('onclick').includes("'correct'"))o.classList.add('correct');});
-    btn.classList.add(r==='correct'?'correct':'incorrect');
-    const fb=document.getElementById(id);
-    if(fb){
-      if(r!=='correct'){fb.innerHTML='<strong>Incorrect.</strong> Try reviewing the material above, then re-read the correct answer (highlighted in green).';fb.classList.add('show','wrong-fb');}
-      else{fb.classList.add('show');}
+    if(r==='correct'){
+      item.querySelectorAll('.mcq-opt').forEach(o=>o.disabled=true);
+      btn.classList.add('correct');
+      const fb=document.getElementById(id);
+      if(fb){fb.classList.remove('wrong-fb');fb.classList.add('show');}
+    } else {
+      btn.classList.add('incorrect');
+      btn.disabled=true;
+      const fb=document.getElementById(id);
+      if(fb){fb.innerHTML='<strong>Incorrect.</strong> That\'s not it — try again.';fb.classList.add('show','wrong-fb');}
     }
   }
 
