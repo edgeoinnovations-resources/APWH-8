@@ -1203,6 +1203,7 @@
     <div class="prompt-box">
       <strong>Prompt:</strong> Explain how advances in U.S. military and technological development contributed to the end of the Cold War. (KC-6.2.IV.E)
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain how US military/technological advances contributed to the Cold War's end..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span>▶ Reveal Sample Answer</span>
@@ -1223,6 +1224,7 @@
     <div class="prompt-box">
       <strong>Prompt:</strong> Explain how public discontent and economic weakness in communist countries contributed to the end of the Cold War. (KC-6.2.IV.E)
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain how public discontent and economic weakness contributed to the Cold War's end..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span>▶ Reveal Sample Answer</span>
@@ -1284,6 +1286,7 @@
     <div class="prompt-box" style="margin-top:0;">
       <strong>Reflection:</strong> Based on this table, what does the comparison suggest about the relationship between military overextension and superpower decline? What is ONE significant difference between these two cases?
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Write your reflection on military overextension and superpower decline..."></textarea>
   </div>
 
   <!-- Apply Activity -->
@@ -1299,6 +1302,12 @@
       <li><strong>Explain</strong> one specific historical development that supports this argument (from your knowledge).</li>
       <li><strong>Consider the source's purpose:</strong> This is an archival summary, not a personal account. How might its purpose affect its framing of perestroika?</li>
     </ol>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-top:14px;margin-bottom:4px;"><strong>1. Identify</strong> the main argument:</p>
+    <textarea class="sa-textarea" style="width:100%;min-height:70px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Identify the main argument about perestroika..."></textarea>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:4px;"><strong>2. Explain</strong> a supporting historical development:</p>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain one historical development that supports this argument..."></textarea>
+    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:4px;"><strong>3. Source purpose:</strong></p>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="How might the source's purpose as an archival summary affect its framing?"></textarea>
     <div class="accordion" style="margin-top:16px;">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span>▶ Reveal Model Response</span>
@@ -1350,9 +1359,11 @@
         Soviet command economy fails; chronic consumer shortages
       </div>
       <div class="chain-arrow">→</div>
-      <div class="chain-node blank" id="cc1" onclick="revealNode('cc1','Public discontent grows; citizens lose faith in communist system')">
-        <div class="chain-node-label">Blank 1 — Click to reveal</div>
-        <span class="blank-hint">What does economic failure cause at home?</span>
+      <div class="chain-node blank" id="cc1" style="flex-direction:column;align-items:stretch;">
+        <div class="chain-node-label">Blank 1</div>
+        <textarea class="causal-input" placeholder="What does economic failure cause at home?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.83rem;resize:vertical;outline:none;text-align:center;"></textarea>
+        <span class="blank-hint" style="cursor:pointer;" onclick="event.stopPropagation();revealChainAnswer('cc1')">Click to reveal answer</span>
+        <div id="cc1-answer" style="display:none;margin-top:8px;padding:10px 14px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.83rem;color:var(--text-muted);text-align:center;"></div>
       </div>
       <div class="chain-arrow">→</div>
       <div class="chain-node">
@@ -1365,9 +1376,11 @@
         Soviet-Afghan War drains treasury, morale, and global credibility
       </div>
       <div class="chain-arrow">→</div>
-      <div class="chain-node blank" id="cc2" onclick="revealNode('cc2','Gorbachev introduces perestroika + glasnost to save communism — but unleashes democratic reform movements across Eastern Europe and Soviet republics')">
-        <div class="chain-node-label">Blank 2 — Click to reveal</div>
-        <span class="blank-hint">What does Gorbachev do — and what happens?</span>
+      <div class="chain-node blank" id="cc2" style="flex-direction:column;align-items:stretch;">
+        <div class="chain-node-label">Blank 2</div>
+        <textarea class="causal-input" placeholder="What does Gorbachev do — and what happens?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.83rem;resize:vertical;outline:none;text-align:center;"></textarea>
+        <span class="blank-hint" style="cursor:pointer;" onclick="event.stopPropagation();revealChainAnswer('cc2')">Click to reveal answer</span>
+        <div id="cc2-answer" style="display:none;margin-top:8px;padding:10px 14px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.83rem;color:var(--text-muted);text-align:center;"></div>
       </div>
       <div class="chain-arrow">→</div>
       <div class="chain-node">
@@ -1385,6 +1398,7 @@
       <em style="display:block; padding:12px 16px; background:rgba(255,255,255,0.04); border-radius:6px; margin-top:8px; font-size:0.88rem;">"General Secretary Gorbachev, if you seek peace, if you seek prosperity for the Soviet Union and Eastern Europe, if you seek liberalization, come here to this gate. Mr. Gorbachev, open this gate! Mr. Gorbachev, tear down this wall!" — Ronald Reagan, address at the Brandenburg Gate, June 12, 1987</em>
     </div>
 
+    <textarea class="sa-textarea" style="width:100%;min-height:70px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Part A: Describe Reagan's argument in the passage..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span><strong>Part A:</strong> Describe President Reagan's argument in the passage above.</span>
@@ -1398,6 +1412,7 @@
       </div>
     </div>
 
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Part B: Explain one historical situation supporting Reagan's argument..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span><strong>Part B:</strong> Explain ONE historical situation that supports Reagan's argument.</span>
@@ -1411,6 +1426,7 @@
       </div>
     </div>
 
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Part C: Explain one way the resolution of Cold War tensions impacted other states..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span><strong>Part C:</strong> Explain ONE way in which the resolution of Cold War tensions between the US and USSR impacted other states.</span>
@@ -1573,6 +1589,7 @@
       <br>
       <p><strong>Prompt:</strong> The collapse of the Soviet Union in 1991 ended one era of global governance and created conditions for a new one. Explain ONE way in which the end of the Cold War created conditions for the globalization developments you will study in Unit 9 — such as economic integration, democratic transitions, new conflicts, or US unipolar power.</p>
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain one way the Cold War's end created conditions for Unit 9 globalization developments..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span>▶ Reveal Model Synthesis Response</span>
@@ -1590,6 +1607,7 @@
       <h4>🔗 Connecting 8.8 ← Unit 8 Internal Chain</h4>
       <p><strong>Prompt:</strong> Topic 8.8 is the final content topic before the capstone argumentation. Explain how the decolonization movements you studied in Topics 8.4–8.6 intersected with Cold War tensions in ways that contributed to Soviet overextension. (Connect: how did superpower competition in the developing world connect to Afghanistan?)</p>
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain how decolonization movements intersected with Cold War tensions and Soviet overextension..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span>▶ Reveal Within-Unit Synthesis Response</span>
@@ -1785,6 +1803,19 @@ function revealNode(id, text) {
   if (node.classList.contains('revealed')) return;
   node.classList.add('revealed');
   node.innerHTML = '<div class="chain-node-label">Revealed</div>' + text;
+}
+function revealChainAnswer(id) {
+  const answers = {
+    'cc1': 'Public discontent grows; citizens lose faith in communist system',
+    'cc2': 'Gorbachev introduces perestroika + glasnost to save communism \u2014 but unleashes democratic reform movements across Eastern Europe and Soviet republics'
+  };
+  const ansDiv = document.getElementById(id + '-answer');
+  if (ansDiv) {
+    ansDiv.textContent = answers[id] || '';
+    ansDiv.style.display = 'block';
+  }
+  const node = document.getElementById(id);
+  if (node) node.classList.add('revealed');
 }
 
 // ======= THESIS CARDS =======

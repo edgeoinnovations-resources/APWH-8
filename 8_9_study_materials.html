@@ -588,6 +588,7 @@
     <div class="prompt-box">
       <strong>Prompt:</strong> Explain ONE way in which the effects of the Cold War were similar in the Eastern and Western Hemispheres. (KC-6.2.IV.C)
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain one similarity in Cold War effects across both hemispheres..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Sample Answer</span><span class="accordion-arrow">▼</span></div>
       <div class="accordion-body">
@@ -605,6 +606,7 @@
     <div class="prompt-box">
       <strong>Prompt:</strong> Explain ONE way in which the effects of the Cold War were <em>different</em> in the Eastern and Western Hemispheres. (KC-6.2.II, KC-6.2.IV.C)
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain one difference in Cold War effects between the Eastern and Western Hemispheres..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Sample Answer</span><span class="accordion-arrow">▼</span></div>
       <div class="accordion-body">
@@ -663,6 +665,7 @@
     <div class="prompt-box" style="margin-top:0;">
       <strong>Reflection:</strong> Looking at this table, identify the most important similarity AND the most important difference. How would you use these to write a complex thesis responding to: "Evaluate the extent to which the effects of the Cold War were similar in the Eastern and Western Hemispheres"?
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Identify the key similarity, the key difference, and draft a complex thesis..."></textarea>
   </div>
 
   <!-- Apply Activity -->
@@ -678,6 +681,7 @@
       <li><strong>Explain</strong> one way this passage reflects the context of the superpowers in which the Non-Aligned Movement was formed.</li>
       <li><strong>HIPP Analysis — Purpose:</strong> The Belgrade Declaration was issued by heads of state. How might the diplomatic purpose of this document affect its framing?</li>
     </ol>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Write your analysis of the Belgrade Declaration here (address all three parts)..."></textarea>
     <div class="accordion" style="margin-top:16px;">
       <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Model Response</span><span class="accordion-arrow">▼</span></div>
       <div class="accordion-body">
@@ -726,9 +730,11 @@
         WWII ends; European colonial empires collapse; power vacuum in Asia and Africa
       </div>
       <div class="chain-arrow">→</div>
-      <div class="chain-node blank" id="cc1" onclick="revealNode('cc1','US and USSR step into the power vacuum — both eager to spread influence globally and recruit newly independent states as allies')">
-        <div class="chain-node-label">Blank 1 — Click to reveal</div>
-        <span class="blank-hint">Who fills the power vacuum?</span>
+      <div class="chain-node blank" id="cc1" style="flex-direction:column;align-items:stretch;padding:10px;">
+        <div class="chain-node-label" style="text-align:center;">Blank 1 — Who fills the power vacuum?</div>
+        <textarea class="causal-input" placeholder="Who fills the power vacuum?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--text-main);font-family:'Source Serif 4',serif;font-size:0.82rem;resize:vertical;outline:none;"></textarea>
+        <button onclick="revealChainAnswer('cc1')" style="margin-top:6px;background:none;border:1px solid var(--gold);color:var(--gold);padding:4px 10px;border-radius:4px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:10px;">Reveal</button>
+        <div id="cc1-answer" style="display:none;margin-top:8px;padding:8px 10px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.82rem;color:var(--text-muted);"></div>
       </div>
       <div class="chain-arrow">→</div>
       <div class="chain-node">
@@ -736,9 +742,11 @@
         Newly independent states face immediate pressure to align with either US (First World) or USSR (Second World)
       </div>
       <div class="chain-arrow">→</div>
-      <div class="chain-node blank" id="cc2" onclick="revealNode('cc2','Leaders like Nehru, Nkrumah, and Nasser conclude that Cold War alignment = new imperialism — surrendering independence they just won')">
-        <div class="chain-node-label">Blank 2 — Click to reveal</div>
-        <span class="blank-hint">How do new leaders interpret this pressure?</span>
+      <div class="chain-node blank" id="cc2" style="flex-direction:column;align-items:stretch;padding:10px;">
+        <div class="chain-node-label" style="text-align:center;">Blank 2 — How do new leaders interpret this pressure?</div>
+        <textarea class="causal-input" placeholder="How do new leaders interpret this pressure?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--text-main);font-family:'Source Serif 4',serif;font-size:0.82rem;resize:vertical;outline:none;"></textarea>
+        <button onclick="revealChainAnswer('cc2')" style="margin-top:6px;background:none;border:1px solid var(--gold);color:var(--gold);padding:4px 10px;border-radius:4px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:10px;">Reveal</button>
+        <div id="cc2-answer" style="display:none;margin-top:8px;padding:8px 10px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.82rem;color:var(--text-muted);"></div>
       </div>
       <div class="chain-arrow">→</div>
       <div class="chain-node">
@@ -758,9 +766,11 @@
     <div class="card-title">SAQ Practice — No-Stimulus Short Answer Question (3 Parts)</div>
     <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Answer all parts of the question that follow. No source is provided — rely on your knowledge of Unit 8 content.</p>
 
+    <p style="font-size:0.9rem;margin-bottom:6px;"><strong>Part A:</strong> Identify ONE specific proxy war that occurred during the Cold War era and identify in which hemisphere it took place.</p>
+    <textarea class="sa-textarea" style="width:100%;min-height:70px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Identify a specific Cold War proxy war and its hemisphere..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
-        <span><strong>Part A:</strong> Identify ONE specific proxy war that occurred during the Cold War era and identify in which hemisphere it took place.</span>
+        <span>▶ Reveal Part A Sample</span>
         <span class="accordion-arrow">▼</span>
       </div>
       <div class="accordion-body">
@@ -771,9 +781,11 @@
       </div>
     </div>
 
+    <p style="font-size:0.9rem;margin-bottom:6px;"><strong>Part B:</strong> Explain ONE way in which proxy wars in the Eastern hemisphere were different from those in the Western hemisphere.</p>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain one difference between Eastern and Western hemisphere proxy wars..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
-        <span><strong>Part B:</strong> Explain ONE way in which proxy wars in the Eastern hemisphere were different from those in the Western hemisphere.</span>
+        <span>▶ Reveal Part B Sample</span>
         <span class="accordion-arrow">▼</span>
       </div>
       <div class="accordion-body">
@@ -784,9 +796,11 @@
       </div>
     </div>
 
+    <p style="font-size:0.9rem;margin-bottom:6px;"><strong>Part C:</strong> Explain ONE way in which newly independent states in the Eastern hemisphere responded differently to Cold War superpower pressure than states in Latin America.</p>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain how Eastern hemisphere states responded differently to Cold War pressure than Latin American states..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
-        <span><strong>Part C:</strong> Explain ONE way in which newly independent states in the Eastern hemisphere responded differently to Cold War superpower pressure than states in Latin America.</span>
+        <span>▶ Reveal Part C Sample</span>
         <span class="accordion-arrow">▼</span>
       </div>
       <div class="accordion-body">
@@ -941,6 +955,7 @@
       <h4>Row A — Thesis / Claim (0–1 points)</h4>
       <div class="leq-points">Target: 1 point</div>
       <div class="leq-rubric-note">AP Rubric: Respond with a historically defensible thesis that establishes a line of reasoning. Must be located in intro or conclusion. Must provide some indication of the reason for the claim OR establish categories of the argument.</div>
+      <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Write your thesis statement here (use the While... however... because... formula)..."></textarea>
       <div class="accordion">
         <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Model Thesis</span><span class="accordion-arrow">▼</span></div>
         <div class="accordion-body">
@@ -955,6 +970,7 @@
       <h4>Row B — Contextualization (0–1 points)</h4>
       <div class="leq-points">Target: 1 point</div>
       <div class="leq-rubric-note">AP Rubric: Describe a broader historical context relevant to the prompt. Connect your topic to larger historical events, developments, or processes before, during, or after the time frame. Must be more than a phrase — must be developed and connected to the argument.</div>
+      <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Write your contextualization paragraph here (connect to broader historical context)..."></textarea>
       <div class="accordion">
         <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Model Contextualization Paragraph</span><span class="accordion-arrow">▼</span></div>
         <div class="accordion-body">
@@ -969,6 +985,7 @@
       <h4>Row C — Evidence (0–2 points)</h4>
       <div class="leq-points">Target: 2 points (need 3+ specific pieces of evidence connected to argument)</div>
       <div class="leq-rubric-note">AP Rubric: 1 pt = use specific evidence relevant to the topic. 2 pts = use evidence to directly support a claim (connect evidence to your thesis, don't just list facts). Aim for 3+ pieces of named, specific evidence.</div>
+      <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Write Body Paragraph 1 here — corroborate the similarity with specific evidence from both hemispheres..."></textarea>
       <div class="accordion">
         <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Body Paragraph 1 — The Similarity (Corroborate)</span><span class="accordion-arrow">▼</span></div>
         <div class="accordion-body">
@@ -976,6 +993,7 @@
           <div class="sample-body">The most significant similarity between the hemispheres was the universal reach of US-Soviet proxy warfare, which transformed local conflicts into arenas of superpower competition regardless of geography. In the Eastern hemisphere, the Korean War (1950–1953) divided the Korean Peninsula along ideological lines, with US-led UN forces supporting South Korea and Soviet/Chinese material support backing North Korea — producing over 2 million total casualties. The Angolan Civil War similarly pitted the Soviet- and Cuban-backed MPLA against the US-backed UNITA following Angolan independence in 1975, demonstrating that superpower competition followed decolonization wherever it occurred. In the Western hemisphere, the Sandinista-Contra conflict in Nicaragua repeated this pattern: the US funded Contra rebels against the Soviet-aligned Sandinista government throughout the 1980s. This consistent pattern across both hemispheres demonstrates that the Cold War was genuinely global — the ideological conflict between capitalism and communism recognized no geographic limits and drew developing nations into conflicts that served superpower rather than local interests.</div>
         </div>
       </div>
+      <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Write Body Paragraph 2 here — qualify the similarity with the decolonization context difference..."></textarea>
       <div class="accordion">
         <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Body Paragraph 2 — The Qualifying Difference (Modify)</span><span class="accordion-arrow">▼</span></div>
         <div class="accordion-body">
@@ -990,6 +1008,7 @@
       <h4>Row D — Analysis &amp; Reasoning / Complexity (0–2 points)</h4>
       <div class="leq-points">Target: 2 points (use causation + complexity move)</div>
       <div class="leq-rubric-note">AP Rubric: 1 pt = use historical reasoning (causation, comparison, CCOT) to frame your argument. 2 pts = demonstrate complex understanding: explain nuance across multiple variables, make cross-period connections, explore different perspectives, or argue both cause and effect.</div>
+      <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Write your complexity move and conclusion here (cross-period connection, nuanced qualification, or multiple perspectives)..."></textarea>
       <div class="accordion">
         <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Complexity Move &amp; Conclusion</span><span class="accordion-arrow">▼</span></div>
         <div class="accordion-body">
@@ -1030,6 +1049,7 @@
       <h4>🔗 Unit 8 → Unit 9: What Does the Cold War's End Unleash?</h4>
       <p>The video ends by looking forward. Using what you know about both Unit 8 and Unit 9 themes, write 3–4 sentences answering: <strong>Explain ONE way in which the legacy of Cold War proxy wars in the Eastern hemisphere created conditions that shaped the globalization challenges of the post-1991 world.</strong></p>
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain how Cold War proxy war legacies shaped post-1991 globalization challenges..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Model Synthesis Response</span><span class="accordion-arrow">▼</span></div>
       <div class="accordion-body">
@@ -1042,6 +1062,7 @@
       <h4>🔗 Unit 7 → Unit 8: How Did WWII Create the Cold War's Stage?</h4>
       <p><strong>Explain ONE specific way in which a development from Unit 7 (Global Conflict) created the conditions for Cold War competition in the developing world.</strong></p>
     </div>
+    <textarea class="sa-textarea" style="width:100%;min-height:90px;margin:10px 0;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.2);border-radius:4px;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;" placeholder="Explain how a Unit 7 development created conditions for Cold War competition in the developing world..."></textarea>
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Prior-Unit Synthesis Response</span><span class="accordion-arrow">▼</span></div>
       <div class="accordion-body">
@@ -1125,16 +1146,19 @@ function completeSection(n) {
 function toggleAccordion(header) { header.parentElement.classList.toggle('open'); }
 
 // MCQs
+var mcqOriginalHTML = {};
 function checkMCQ(li, qNum, isCorrect) {
   const allLis = li.parentElement.querySelectorAll('li');
-  allLis.forEach(l => l.classList.add('disabled'));
-  if (isCorrect) { li.classList.add('correct'); }
-  else {
-    li.classList.add('incorrect');
-    allLis.forEach(l => { if (l.getAttribute('onclick') && l.getAttribute('onclick').includes('true')) l.classList.add('correct'); });
-  }
   const exp = document.getElementById('mcq' + qNum + '-exp');
-  if (exp) exp.style.display = 'block';
+  if (exp && !mcqOriginalHTML[qNum]) { mcqOriginalHTML[qNum] = exp.innerHTML; }
+  if (isCorrect) {
+    allLis.forEach(l => l.classList.add('disabled'));
+    li.classList.add('correct');
+    if (exp) { exp.innerHTML = mcqOriginalHTML[qNum]; exp.style.display = 'block'; }
+  } else {
+    li.classList.add('incorrect', 'disabled');
+    if (exp) { exp.innerHTML = 'Incorrect \u2014 try again.'; exp.style.display = 'block'; }
+  }
 }
 
 // MATCHING
@@ -1170,6 +1194,17 @@ function revealNode(id, text) {
   if (node.classList.contains('revealed')) return;
   node.classList.add('revealed');
   node.innerHTML = '<div class="chain-node-label">Revealed</div>' + text;
+}
+function revealChainAnswer(id) {
+  const answers = {
+    'cc1': 'US and USSR step into the power vacuum \u2014 both eager to spread influence globally and recruit newly independent states as allies',
+    'cc2': 'Leaders like Nehru, Nkrumah, and Nasser conclude that Cold War alignment = new imperialism \u2014 surrendering independence they just won'
+  };
+  const node = document.getElementById(id);
+  node.classList.add('revealed');
+  const a = document.getElementById(id + '-answer');
+  a.textContent = answers[id];
+  a.style.display = 'block';
 }
 
 // THESIS CARDS
