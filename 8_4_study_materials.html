@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" href="data:,">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AP World History 8.4 — Spread of Communism After 1900</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -111,10 +112,10 @@ body{background:var(--bg-page);color:var(--text);font-family:'Source Serif 4',se
 
 /* FLIP CARDS */
 .vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:28px}
-.fc2{height:160px;perspective:1000px;cursor:pointer}
-.fci{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.fc2{perspective:1000px;cursor:pointer}
+.fci{display:grid;transition:transform .6s;transform-style:preserve-3d}
 .fc2.flipped .fci{transform:rotateY(180deg)}
-.ff,.fb{position:absolute;inset:0;backface-visibility:hidden;border-radius:8px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14px;text-align:center}
+.ff,.fb{grid-area:1/1;backface-visibility:hidden;border-radius:8px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14px;text-align:center;min-height:140px}
 .ff{background:var(--bg-card);border:2px solid var(--dok3)}
 .fb{background:var(--dok3);transform:rotateY(180deg);border:2px solid var(--dok3-light)}
 .ff .term{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--dok3-pale);margin-bottom:6px}
@@ -1040,6 +1041,21 @@ function rateDot(dot,row,level){
 }
 
 updatePg();
+</script>
+<script src="shared.js"></script>
+<script>
+// ── Shared integration ──
+document.addEventListener('DOMContentLoaded', function() {
+  buildStudentNameBar();
+  initAutoSave('8_4');
+  buildCompletionSection('8_4', 'Spread of Communism After 1900');
+  
+const _origCompleteSection = completeSection;
+completeSection = function(n, btn) {
+  _origCompleteSection(n, btn);
+  markDoneShared('8_4', 'dok' + n, n * 25);
+};
+});
 </script>
 </body>
 </html>
