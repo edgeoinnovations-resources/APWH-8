@@ -125,6 +125,7 @@
   .mcq-opt:disabled{cursor:default;}
   .mcq-fb{margin-top:10px;font-size:.85rem;color:var(--text-secondary);display:none;background:var(--bg-page);border-radius:4px;padding:10px 14px;border-left:3px solid var(--gold);}
   .mcq-fb.show{display:block;}
+  .mcq-fb.wrong-fb{border-left-color:#8a3040;}
   .mcq-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);margin-bottom:6px;}
 
   /* MATCHING */
@@ -1071,9 +1072,14 @@
 
   // MCQ
   function chkMCQ(btn,r,id){
-    btn.closest('.mcq-item').querySelectorAll('.mcq-opt').forEach(o=>o.disabled=true);
+    const item=btn.closest('.mcq-item');
+    item.querySelectorAll('.mcq-opt').forEach(o=>{o.disabled=true;if(o!==btn&&o.getAttribute('onclick').includes("'correct'"))o.classList.add('correct');});
     btn.classList.add(r==='correct'?'correct':'incorrect');
-    const fb=document.getElementById(id);if(fb)fb.classList.add('show');
+    const fb=document.getElementById(id);
+    if(fb){
+      if(r!=='correct'){fb.innerHTML='<strong>Incorrect.</strong> Try reviewing the material above, then re-read the correct answer (highlighted in green).';fb.classList.add('show','wrong-fb');}
+      else{fb.classList.add('show');}
+    }
   }
 
   // Accordion
