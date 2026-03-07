@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8.9 — Causation in the Age of the Cold War | AP World History</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-page: #2a2016;
+    --bg-card: #32291a;
+    --bg-card-light: #3d3120;
+    --gold: #b8860b;
+    --gold-bright: #d4a820;
+    --gold-pale: #e8c96a;
+    --dok1: #2d5a27;
+    --dok1-light: #3a7232;
+    --dok2: #1a3d6e;
+    --dok2-light: #254f8a;
+    --dok3: #6b2d2d;
+    --dok3-light: #8a3a3a;
+    --dok4: #4a2d6b;
+    --dok4-light: #5e3a8a;
+    --text-main: #e8dcc8;
+    --text-muted: #a89878;
+    --text-dim: #7a6a50;
+    --border: rgba(184,134,11,0.3);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-page); color: var(--text-main); font-family: 'Source Serif 4', serif; font-size: 16px; line-height: 1.7; }
+
+  /* PROGRESS BAR */
+  #progress-bar-wrap { position: sticky; top: 0; z-index: 100; background: #1c160e; border-bottom: 1px solid var(--border); padding: 8px 20px; display: flex; align-items: center; gap: 12px; }
+  .pb-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+  .pb-track { flex: 1; height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: visible; position: relative; }
+  .pb-fill { height: 100%; background: linear-gradient(90deg, var(--dok1), var(--dok2), var(--dok3), var(--dok4)); border-radius: 4px; transition: width 0.6s ease; width: 0%; }
+  .pb-markers { position: absolute; top: -4px; left: 0; width: 100%; height: 16px; }
+  .pb-mark { position: absolute; width: 2px; height: 16px; background: var(--bg-page); }
+  .pb-pct { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); }
+
+  /* CAPSTONE BANNER */
+  .capstone-ribbon { background: linear-gradient(90deg, var(--dok4), #6b2d6b, var(--dok4)); text-align: center; padding: 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 3px; color: #e1bee7; text-transform: uppercase; }
+
+  /* PAGE HEADER */
+  .page-header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid var(--border); }
+  .unit-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 900; color: var(--gold-pale); line-height: 1.1; margin-bottom: 16px; }
+  .page-subtitle { font-family: 'Source Serif 4', serif; font-style: italic; font-size: 1.1rem; color: var(--text-muted); }
+  .kc-code { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px; background: rgba(74,45,107,0.3); border: 1px solid var(--dok4-light); color: #c48ae8; padding: 3px 10px; border-radius: 3px; margin-top: 12px; }
+
+  /* HOW-TO BANNER */
+  .howto-banner { margin: 32px auto; max-width: 900px; background: linear-gradient(135deg, rgba(74,45,107,0.3), rgba(74,45,107,0.1)); border: 1px solid var(--dok4-light); border-radius: 8px; padding: 28px 32px; }
+  .howto-banner h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #c48ae8; margin-bottom: 12px; }
+  .howto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 16px; }
+  .howto-item { background: rgba(0,0,0,0.2); border-radius: 6px; padding: 12px; text-align: center; }
+  .howto-dok { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .howto-item p { font-size: 0.85rem; color: var(--text-muted); }
+
+  /* SECTION WRAPPERS */
+  .section { max-width: 960px; margin: 0 auto; padding: 48px 20px; }
+  .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 36px; padding-bottom: 16px; border-bottom: 2px solid; }
+  .dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; padding: 6px 14px; border-radius: 4px; font-weight: 600; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; }
+  .section-tagline { font-family: 'Source Serif 4', serif; font-style: italic; color: var(--text-muted); font-size: 0.95rem; margin-left: auto; }
+  .dok1 .section-header { border-color: var(--dok1); } .dok1 .dok-badge { background: var(--dok1); color: #c8e6c0; } .dok1 .section-title { color: #7ec870; }
+  .dok2 .section-header { border-color: var(--dok2); } .dok2 .dok-badge { background: var(--dok2); color: #bbdefb; } .dok2 .section-title { color: #82b1e8; }
+  .dok3 .section-header { border-color: var(--dok3); } .dok3 .dok-badge { background: var(--dok3); color: #ffcdd2; } .dok3 .section-title { color: #e88282; }
+  .dok4 .section-header { border-color: var(--dok4); } .dok4 .dok-badge { background: var(--dok4); color: #e1bee7; } .dok4 .section-title { color: #c48ae8; }
+
+  /* CARDS */
+  .card { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+  .card-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 16px; }
+
+  /* CALLOUTS */
+  .callout-blue { background: linear-gradient(135deg, rgba(26,61,110,0.4), rgba(26,61,110,0.2)); border-left: 4px solid #4a90d9; border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 24px; }
+  .callout-blue h3 { color: #82b1e8; font-family: 'Playfair Display', serif; margin-bottom: 8px; }
+  .callout-gold { background: linear-gradient(135deg, rgba(184,134,11,0.2), rgba(184,134,11,0.08)); border-left: 4px solid var(--gold); border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 24px; }
+  .callout-gold h3 { color: var(--gold-bright); font-family: 'Playfair Display', serif; margin-bottom: 8px; }
+  .callout-purple { background: linear-gradient(135deg, rgba(74,45,107,0.4), rgba(74,45,107,0.15)); border-left: 4px solid #8a5ab8; border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 24px; }
+  .callout-purple h3 { color: #c48ae8; font-family: 'Playfair Display', serif; margin-bottom: 8px; }
+
+  /* OPENING QUOTE */
+  .opening-quote { text-align: center; padding: 40px 32px; margin-bottom: 32px; position: relative; }
+  .opening-quote::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 8rem; color: rgba(184,134,11,0.15); position: absolute; top: -10px; left: 20px; line-height: 1; }
+  .opening-quote blockquote { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-style: italic; color: var(--gold-pale); line-height: 1.5; position: relative; z-index: 1; }
+  .opening-quote cite { display: block; margin-top: 16px; font-family: 'Source Serif 4', serif; font-style: normal; font-size: 0.9rem; color: var(--text-muted); }
+
+  /* FRAMEWORK GRID */
+  .framework-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .framework-card { background: var(--bg-card-light); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; }
+  .framework-card .icon { font-size: 2rem; margin-bottom: 10px; }
+  .framework-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold-bright); margin-bottom: 8px; }
+  .framework-card p { font-size: 0.86rem; color: var(--text-muted); }
+
+  /* FLIP CARDS */
+  .flip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; margin-bottom: 24px; }
+  .flip-card { height: 120px; perspective: 800px; cursor: pointer; }
+  .flip-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.5s ease; }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 12px; text-align: center; }
+  .flip-front { background: var(--bg-card-light); border: 1px solid var(--border); font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--gold-pale); flex-direction: column; gap: 4px; }
+  .flip-back { background: linear-gradient(135deg, #2d3a1a, #1e2a12); border: 1px solid var(--dok1); transform: rotateY(180deg); font-size: 0.82rem; color: var(--text-main); }
+  .flip-hint { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-dim); }
+
+  /* MCQ */
+  .mcq-item { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+  .mcq-q { font-size: 0.98rem; margin-bottom: 14px; font-weight: 600; }
+  .mcq-opts { list-style: none; }
+  .mcq-opts li { padding: 10px 14px; margin-bottom: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 6px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; display: flex; align-items: center; gap: 10px; }
+  .mcq-opts li:hover { background: rgba(255,255,255,0.08); border-color: var(--gold); }
+  .mcq-opts li.correct { background: rgba(45,90,39,0.4); border-color: var(--dok1); }
+  .mcq-opts li.incorrect { background: rgba(107,45,45,0.4); border-color: var(--dok3); }
+  .mcq-opts li.disabled { pointer-events: none; opacity: 0.6; }
+  .mcq-letter { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); min-width: 18px; }
+  .mcq-explanation { margin-top: 12px; padding: 12px; background: rgba(184,134,11,0.1); border-radius: 6px; font-size: 0.88rem; display: none; }
+
+  /* MATCHING */
+  .matching-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .match-col-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 10px; }
+  .match-item { padding: 12px 14px; background: var(--bg-card-light); border: 2px solid rgba(255,255,255,0.08); border-radius: 6px; cursor: pointer; margin-bottom: 8px; font-size: 0.88rem; transition: all 0.2s; user-select: none; }
+  .match-item:hover { border-color: var(--gold); }
+  .match-item.selected { border-color: var(--gold-bright); background: rgba(184,134,11,0.15); }
+  .match-item.matched-correct { border-color: var(--dok1); background: rgba(45,90,39,0.3); cursor: default; }
+  .match-item.matched-incorrect { border-color: var(--dok3); background: rgba(107,45,45,0.3); animation: shake 0.3s; }
+  @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+  .matching-reset { margin-top: 10px; background: none; border: 1px solid var(--text-dim); color: var(--text-muted); padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 0.82rem; font-family: 'JetBrains Mono', monospace; }
+  .matching-score { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold); margin-top: 8px; }
+
+  /* ACCORDION */
+  .accordion { background: var(--bg-card-light); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; margin-bottom: 16px; overflow: hidden; }
+  .accordion-header { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; font-weight: 600; color: var(--text-main); transition: background 0.2s; }
+  .accordion-header:hover { background: rgba(255,255,255,0.04); }
+  .accordion-arrow { font-size: 0.75rem; color: var(--gold); transition: transform 0.3s; }
+  .accordion.open .accordion-arrow { transform: rotate(180deg); }
+  .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; padding: 0 20px; }
+  .accordion.open .accordion-body { max-height: 2000px; padding: 0 20px 20px; }
+  .sample-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .sample-body { font-size: 0.88rem; color: var(--text-main); border-left: 3px solid var(--gold); padding-left: 14px; line-height: 1.75; }
+
+  /* TABLES */
+  .comp-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+  .comp-table th { background: rgba(184,134,11,0.2); color: var(--gold-bright); font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; padding: 12px 16px; text-align: left; border: 1px solid var(--border); }
+  .comp-table td { padding: 11px 16px; border: 1px solid rgba(255,255,255,0.06); font-size: 0.88rem; vertical-align: top; }
+  .comp-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  .comp-table .dim-col { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+
+  /* CAUSAL CHAIN */
+  .causal-chain { display: flex; align-items: stretch; gap: 0; overflow-x: auto; padding-bottom: 12px; margin-bottom: 16px; flex-wrap: nowrap; }
+  .chain-node { flex: 0 0 155px; background: var(--bg-card-light); border: 2px solid var(--border); border-radius: 8px; padding: 14px 12px; text-align: center; font-size: 0.82rem; position: relative; min-height: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .chain-node.blank { border-style: dashed; background: rgba(184,134,11,0.05); cursor: pointer; }
+  .chain-node.blank.revealed { border-style: solid; border-color: var(--gold); background: rgba(184,134,11,0.12); cursor: default; }
+  .chain-node-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 6px; letter-spacing: 1px; }
+  .chain-node .blank-hint { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--gold); margin-top: 6px; }
+  .chain-arrow { flex: 0 0 28px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.2rem; }
+
+  /* THESIS CARDS */
+  .thesis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .thesis-card { background: var(--bg-card-light); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 20px; cursor: pointer; transition: transform 0.2s; }
+  .thesis-card:hover { transform: translateY(-2px); }
+  .thesis-text { font-style: italic; font-size: 0.9rem; color: var(--text-main); margin-bottom: 14px; border-left: 3px solid rgba(255,255,255,0.1); padding-left: 12px; }
+  .thesis-verdict { display: none; margin-top: 12px; padding: 10px 12px; border-radius: 6px; font-size: 0.84rem; }
+  .fail-v { background: rgba(107,45,45,0.3); border: 1px solid var(--dok3); color: #ffcdd2; }
+  .pass-v { background: rgba(45,90,39,0.3); border: 1px solid var(--dok1); color: #c8e6c0; }
+  .verdict-badge { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+
+  /* CCOT TABLE */
+  .ccot-table { width: 100%; border-collapse: collapse; }
+  .ccot-table th { padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--border); text-align: left; }
+  .ccot-cont { color: #82b1e8; background: rgba(26,61,110,0.2); }
+  .ccot-change { color: #e88282; background: rgba(107,45,45,0.2); }
+  .ccot-table td { padding: 12px 16px; border: 1px solid rgba(255,255,255,0.06); font-size: 0.88rem; vertical-align: top; }
+
+  /* COMPLETE BUTTON */
+  .complete-btn { display: block; width: 100%; max-width: 360px; margin: 32px auto 0; padding: 14px 24px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; border: 2px solid var(--gold); background: transparent; color: var(--gold); border-radius: 6px; cursor: pointer; transition: all 0.3s; }
+  .complete-btn:hover { background: var(--gold); color: var(--bg-page); }
+  .complete-btn.done { background: rgba(45,90,39,0.4); border-color: var(--dok1); color: #7ec870; cursor: default; }
+
+  /* DIVIDER */
+  .section-divider { border: none; border-top: 1px solid var(--border); max-width: 960px; margin: 0 auto; }
+
+  /* AP INSIGHT */
+  .ap-insight { background: linear-gradient(135deg, rgba(184,134,11,0.2), rgba(184,134,11,0.05)); border: 1px solid var(--gold); border-radius: 8px; padding: 20px 24px; margin-bottom: 24px; }
+  .ap-insight h4 { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-bright); margin-bottom: 8px; }
+  .ap-insight p { font-size: 0.88rem; }
+
+  /* PROMPT BOX */
+  .prompt-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 18px 20px; margin-bottom: 16px; font-size: 0.93rem; }
+  .prompt-box strong { color: var(--gold-bright); }
+
+  /* LEQ WORKSHOP */
+  .leq-workshop { border: 2px solid var(--dok4-light); border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
+  .leq-workshop-header { background: linear-gradient(135deg, rgba(74,45,107,0.6), rgba(74,45,107,0.3)); padding: 20px 24px; border-bottom: 1px solid var(--dok4-light); }
+  .leq-workshop-header h3 { font-family: 'Playfair Display', serif; color: #e1bee7; font-size: 1.3rem; margin-bottom: 6px; }
+  .leq-prompt-box { background: rgba(0,0,0,0.3); border: 1px solid rgba(196,138,232,0.3); border-radius: 6px; padding: 16px; margin-top: 12px; font-style: italic; color: var(--gold-pale); font-size: 1rem; }
+  .leq-section { padding: 20px 24px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .leq-section:last-child { border-bottom: none; }
+  .leq-section h4 { font-family: 'Playfair Display', serif; color: #c48ae8; margin-bottom: 10px; font-size: 1rem; }
+  .leq-points { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #9a6ab8; background: rgba(74,45,107,0.3); border-radius: 3px; padding: 2px 8px; display: inline-block; margin-bottom: 10px; }
+  .leq-rubric-note { font-size: 0.82rem; color: var(--text-muted); padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 4px; margin-bottom: 10px; border-left: 2px solid var(--text-dim); }
+
+  /* SYNTHESIS PROMPT */
+  .synthesis-prompt { background: linear-gradient(135deg, rgba(74,45,107,0.3), rgba(74,45,107,0.1)); border: 1px solid var(--dok4); border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+  .synthesis-prompt h4 { font-family: 'Playfair Display', serif; color: #c48ae8; margin-bottom: 12px; }
+  .synthesis-prompt p { font-size: 0.9rem; }
+
+  /* CONTEXTUALIZATION PATHWAYS */
+  .ctx-pathways { display: flex; flex-direction: column; gap: 16px; }
+  .ctx-pathway { background: var(--bg-card-light); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .ctx-stem { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .ctx-stem:hover { background: rgba(255,255,255,0.03); }
+  .pathway-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); text-transform: uppercase; min-width: 70px; }
+  .pathway-text { font-style: italic; color: var(--gold-pale); font-size: 0.92rem; }
+  .ctx-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 20px; }
+  .ctx-pathway.open .ctx-body { max-height: 800px; padding: 0 20px 20px; }
+
+  /* SELF ASSESSMENT */
+  .sa-item { display: flex; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .sa-item:last-child { border-bottom: none; }
+  .sa-skill { flex: 1; font-size: 0.9rem; }
+  .sa-dots { display: flex; gap: 8px; }
+  .sa-dot { width: 22px; height: 22px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); cursor: pointer; transition: all 0.2s; }
+  .sa-dot:hover { border-color: var(--gold); }
+  .sa-dot.active-1 { background: var(--dok3); border-color: var(--dok3); }
+  .sa-dot.active-2 { background: var(--gold); border-color: var(--gold); }
+  .sa-dot.active-3 { background: var(--dok1); border-color: var(--dok1); }
+  .sa-legend { display: flex; gap: 20px; margin-top: 16px; font-size: 0.8rem; color: var(--text-muted); }
+  .sa-legend span { display: flex; align-items: center; gap: 6px; }
+  .sa-legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+  /* COMPLEXITY FORMULA */
+  .complexity-formula { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+  .cf-part { background: var(--bg-card-light); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; text-align: center; flex: 1; min-width: 150px; }
+  .cf-part .label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .cf-part .value { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold-pale); }
+  .cf-arrow { color: var(--gold); font-size: 1.4rem; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--dok1), var(--gold), var(--dok3)); }
+  .tl-item { position: relative; margin-bottom: 20px; }
+  .tl-item::before { content: ''; position: absolute; left: -23px; top: 7px; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); border: 2px solid var(--bg-page); }
+  .tl-date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); margin-bottom: 2px; }
+  .tl-event { font-weight: 600; font-size: 0.95rem; }
+  .tl-note { font-size: 0.85rem; color: var(--text-muted); }
+
+  @media(max-width:600px) { .matching-cols { grid-template-columns: 1fr; } .causal-chain { flex-direction: column; align-items: stretch; } .chain-arrow { transform: rotate(90deg); height: 24px; } .chain-node { flex: none; } .thesis-grid { grid-template-columns: 1fr; } .complexity-formula { flex-direction: column; } }
+</style>
+</head>
+<body>
+
+<!-- CAPSTONE RIBBON -->
+<div class="capstone-ribbon">⚔ CAPSTONE TOPIC — Argumentation &amp; Synthesis · Unit 8 Culmination ⚔</div>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar-wrap">
+  <span class="pb-label">PROGRESS</span>
+  <div class="pb-track">
+    <div class="pb-fill" id="pbFill"></div>
+    <div class="pb-markers">
+      <div class="pb-mark" style="left:25%"></div>
+      <div class="pb-mark" style="left:50%"></div>
+      <div class="pb-mark" style="left:75%"></div>
+    </div>
+  </div>
+  <span class="pb-pct" id="pbPct">0%</span>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="unit-label">AP World History: Modern · Unit 8 · Topic 8.9 · Capstone</div>
+  <h1 class="page-title">Causation in the Age of the Cold War and Decolonization</h1>
+  <p class="page-subtitle">Argumentation Synthesis · Learning Objective K · Skill 6.D</p>
+  <div class="kc-code">KC-6.2.IV.C · KC-6.2.II · KC-6.3.I · Skill 6.D: Corroborate, Qualify, Modify</div>
+</div>
+
+<!-- HOW-TO BANNER -->
+<div class="howto-banner">
+  <h3>⚔ This Is the Capstone — How It Works</h3>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">
+    Topic 8.9 is <strong style="color:#e1bee7;">not a new content topic</strong> — it is a <strong style="color:#e1bee7;">synthesis and argumentation challenge</strong> drawing on everything from Topics 8.1–8.8. The video's central skill: <strong style="color:var(--gold-pale);">To build a complex AP argument, start with a similarity (corroborate), then qualify it with the critical difference — the decolonization context in the East that did not exist in the West.</strong> The formula: <em>While [similarity]… however [qualifying difference]… therefore [nuanced claim].</em>
+  </p>
+  <div class="howto-grid">
+    <div class="howto-item">
+      <div class="howto-dok" style="color:#7ec870;">DOK 1</div>
+      <strong>Review Key Evidence</strong>
+      <p>Rebuild the unit's argument scaffolding from topics 8.1–8.8</p>
+    </div>
+    <div class="howto-item">
+      <div class="howto-dok" style="color:#82b1e8;">DOK 2</div>
+      <strong>Apply the Formula</strong>
+      <p>Practice similarity → qualification → complex claim</p>
+    </div>
+    <div class="howto-item">
+      <div class="howto-dok" style="color:#e88282;">DOK 3</div>
+      <strong>Analyze with Evidence</strong>
+      <p>SAQ, causal chain, thesis evaluation using unit-wide evidence</p>
+    </div>
+    <div class="howto-item">
+      <div class="howto-dok" style="color:#c48ae8;">DOK 4</div>
+      <strong>Full LEQ Workshop</strong>
+      <p>Capstone essay builder — thesis through complexity move</p>
+    </div>
+  </div>
+</div>
+
+<!-- =================== DOK 1 =================== -->
+<div class="section dok1" id="dok1">
+  <div class="section-header">
+    <span class="dok-badge">DOK 1</span>
+    <h2 class="section-title">Knowledge Acquisition</h2>
+    <span class="section-tagline">'Answer Correctly'</span>
+  </div>
+
+  <!-- Video Callout -->
+  <div class="callout-blue">
+    <h3>🎬 Watch the Video Explainer First</h3>
+    <p style="font-size:0.9rem;">Before continuing, watch: <a href="https://youtu.be/6MOsKDiUUv8" target="_blank" style="color:#82b1e8;">APWH 8.9 Cold War Arguments</a></p>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-top:8px;">Listen for: (1) the THREE-part formula for a complex AP thesis, (2) the KEY SIMILARITY between Eastern and Western hemispheres, and (3) the CRITICAL DIFFERENCE — why the Eastern hemisphere context was fundamentally different.</p>
+  </div>
+
+  <!-- Opening Quote -->
+  <div class="opening-quote">
+    <blockquote>"Walls in the mind often stand longer than those built of concrete blocks."</blockquote>
+    <cite>— Willy Brandt, former German Chancellor, December 1991<br>
+    <span style="font-size:0.8rem; color:var(--text-dim);">Said at the moment of Soviet collapse — the Cold War's ideological division outlasted its physical symbols.</span></cite>
+  </div>
+
+  <!-- Visual Framework -->
+  <div class="card">
+    <div class="card-title">Visual Framework — The Complexity Argument for 8.9</div>
+    <div class="complexity-formula">
+      <div class="cf-part">
+        <div class="label">Step 1 — Similarity</div>
+        <div class="value">Superpower intervention affected BOTH hemispheres</div>
+      </div>
+      <div class="cf-arrow">→</div>
+      <div class="cf-part">
+        <div class="label">Transition Word</div>
+        <div class="value" style="color:var(--gold-bright);">"However…"</div>
+      </div>
+      <div class="cf-arrow">→</div>
+      <div class="cf-part">
+        <div class="label">Step 2 — Qualify/Modify</div>
+        <div class="value">The CONTEXT was fundamentally different: decolonization in the East vs. established states in the West</div>
+      </div>
+      <div class="cf-arrow">→</div>
+      <div class="cf-part">
+        <div class="label">Result — Complex Argument</div>
+        <div class="value" style="color:#c48ae8;">Nuanced claim that earns the complexity point</div>
+      </div>
+    </div>
+    <div class="framework-grid" style="margin-top:16px;">
+      <div class="framework-card">
+        <div class="icon">🌍</div>
+        <h4>The Similarity (Corroborate)</h4>
+        <p>Both hemispheres experienced US/Soviet intervention, proxy wars, and ideological pressure — the Cold War was a global chessboard</p>
+      </div>
+      <div class="framework-card">
+        <div class="icon">⚡</div>
+        <h4>The Critical Difference (Qualify)</h4>
+        <p>Eastern hemisphere nations were newly independent — still building states AND navigating Cold War simultaneously. Latin America had been independent 100+ years.</p>
+      </div>
+      <div class="framework-card">
+        <div class="icon">🕊️</div>
+        <h4>The Non-Aligned Response</h4>
+        <p>New Eastern nations (Nehru, Nkrumah, Nasser) formed the Non-Aligned Movement — Cold War looked like re-colonization, not liberation</p>
+      </div>
+      <div class="framework-card">
+        <div class="icon">📝</div>
+        <h4>The AP Skill (6.D)</h4>
+        <p>Corroborate + Qualify/Modify = Complexity. This is how you earn that complexity point the video says feels "mysterious"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Annotated Timeline -->
+  <div class="card">
+    <div class="card-title">Unit 8 Evidence Timeline — Building Blocks for 8.9 Arguments</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1945–1950</div>
+        <div class="tl-event">Cold War begins; US and USSR emerge as superpowers</div>
+        <div class="tl-note">Post-WWII power vacuum: Western European empires decline, two ideologically opposed superpowers fill the void and begin global competition (8.1).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1950–1953</div>
+        <div class="tl-event">Korean War — proxy war in the East</div>
+        <div class="tl-note">US-backed South Korea vs. Soviet/Chinese-backed North Korea. Newly divided postcolonial state becomes a Cold War battlefield (8.3).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1955–1975</div>
+        <div class="tl-event">Decolonization accelerates across Africa and Asia</div>
+        <div class="tl-note">50+ new nations gain independence. These newly independent states must simultaneously build institutions AND navigate superpower competition (8.5–8.6).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1961</div>
+        <div class="tl-event">Non-Aligned Movement founded at Belgrade Conference</div>
+        <div class="tl-note">Nehru (India), Nkrumah (Ghana), Nasser (Egypt) refuse to take sides. For them, superpower competition = new imperialism (8.7).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1961–1975</div>
+        <div class="tl-event">Bay of Pigs, Vietnam War, Angolan Civil War — proxy wars across both hemispheres</div>
+        <div class="tl-note">Similarity: both hemispheres experience proxy intervention. Difference: Asian/African wars entangled with ongoing decolonization, Latin American states were established (8.3–8.5).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1979–1989</div>
+        <div class="tl-event">Soviet-Afghan War — Soviet overextension</div>
+        <div class="tl-note">A newly independent Muslim nation resists Soviet occupation. Mujahideen fighters, US-backed, inflict the "Soviet Vietnam" (8.8).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1989–1991</div>
+        <div class="tl-event">Cold War ends; Soviet Union dissolves</div>
+        <div class="tl-note">Internal decay + Gorbachev's paradox. Closure of the Cold War opens new era — connects to Unit 9 globalization (8.8).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vocabulary Flip Cards -->
+  <div class="card">
+    <div class="card-title">Vocabulary Flip Cards — Argumentation &amp; Unit 8 Key Terms</div>
+    <div class="flip-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Corroborate<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">AP Skill 6.D: Support your claim with evidence. The first step of complex argumentation — establish the similarity with specific historical evidence from both hemispheres.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Qualify / Modify<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">AP Skill 6.D: Add nuance or complexity to your argument. "That's true, BUT…" — acknowledging that history is messy and a great argument shows both sides of the coin.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Proxy War<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">A conflict in which smaller countries fight as stand-ins for superpowers. Examples: Korean War, Vietnam War, Angolan Civil War, Sandinista-Contras conflict in Nicaragua (KC-6.2.IV.D).</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Non-Aligned Movement<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Organization of newly independent states (led by Nehru, Nkrumah, Nasser) that refused to align with either superpower. Viewed Cold War competition as a new form of imperialism.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Decolonization<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">The process by which colonial territories gained independence, primarily in Africa and Asia after WWII. Between 1945–2000, independent states doubled from ~75 to ~190 (KC-6.2.II).</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Third World<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Cold War era term for non-aligned, often newly independent nations in Asia, Africa, and Latin America. Became a geopolitical battleground as the US and USSR competed for influence.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Containment<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">US foreign policy strategy to prevent the spread of Soviet communism. Justified US intervention in Korea, Vietnam, Latin America, and support for anti-communist movements worldwide.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">KC-6.2.IV.C<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">The Cold War conflict extended beyond its basic ideological origins to have profound effects on economic, political, social, and cultural aspects of global events. Core key concept for 8.9.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Line of Reasoning<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">The "because" in a thesis — the logical explanation for WHY the claim is true. AP rubric requires a thesis to establish a line of reasoning, not just make a defensible claim.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Complexity Point<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">LEQ Row D, 2 points: Earned by demonstrating sophisticated understanding — explaining nuance across multiple variables, making cross-period connections, or arguing both similarity and difference.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recall MCQs -->
+  <div class="card">
+    <div class="card-title">Recall MCQs — 5 Questions</div>
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-q">1. According to the CED, what is the Learning Objective for Topic 8.9?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,1,false)"><span class="mcq-letter">A</span>Explain the causes of the end of the Cold War</li>
+        <li onclick="checkMCQ(this,1,true)"><span class="mcq-letter">B</span>Explain the extent to which the effects of the Cold War were similar in the Eastern and Western Hemispheres</li>
+        <li onclick="checkMCQ(this,1,false)"><span class="mcq-letter">C</span>Describe the causes of decolonization movements in Africa and Asia</li>
+        <li onclick="checkMCQ(this,1,false)"><span class="mcq-letter">D</span>Compare the political systems of the United States and Soviet Union</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq1-exp">✅ <strong>B is correct.</strong> Learning Objective K is exactly: "Explain the extent to which the effects of the Cold War were similar in the Eastern and Western Hemispheres." Note the phrase "to what extent" — this is the AP signal for complex argumentation requiring both similarities AND qualifying differences.</div>
+    </div>
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-q">2. What was the KEY SIMILARITY between the Eastern and Western Hemispheres during the Cold War, according to the video?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,2,false)"><span class="mcq-letter">A</span>Both hemispheres gained independence from European colonial empires at the same time</li>
+        <li onclick="checkMCQ(this,2,false)"><span class="mcq-letter">B</span>Both hemispheres aligned with the same superpower</li>
+        <li onclick="checkMCQ(this,2,true)"><span class="mcq-letter">C</span>Both hemispheres experienced the push and pull of US and Soviet influence through proxy wars and superpower competition</li>
+        <li onclick="checkMCQ(this,2,false)"><span class="mcq-letter">D</span>Both hemispheres formed Non-Aligned Movements to resist superpower pressure</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq2-exp">✅ <strong>C is correct.</strong> The video frames this as "it didn't matter where you were on the globe — you felt the push and pull of the US and Soviet Union." Both the Western hemisphere (Cuba, Nicaragua, Chile) and Eastern hemisphere (Korea, Vietnam, Angola) experienced superpower-fueled proxy conflicts.</div>
+    </div>
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-q">3. What was the CRITICAL DIFFERENCE that qualifies the similarity between the hemispheres?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,3,false)"><span class="mcq-letter">A</span>The Western hemisphere had more nuclear weapons than the Eastern hemisphere</li>
+        <li onclick="checkMCQ(this,3,true)"><span class="mcq-letter">B</span>Eastern hemisphere nations were newly independent and navigating state-building AND Cold War simultaneously; most Latin American states had been independent for over a century</li>
+        <li onclick="checkMCQ(this,3,false)"><span class="mcq-letter">C</span>The Eastern hemisphere supported the Soviet Union while the Western hemisphere supported the US</li>
+        <li onclick="checkMCQ(this,3,false)"><span class="mcq-letter">D</span>The Eastern hemisphere was more economically developed than the Western hemisphere</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq3-exp">✅ <strong>B is correct.</strong> This is the qualifying difference the video calls "probably the single most important difference." New Eastern states faced a double burden: building governing institutions from scratch while simultaneously being pressured to align in the Cold War. Latin American states, though subject to US intervention, were established nations with existing governments.</div>
+    </div>
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-q">4. Why did Non-Aligned Movement leaders like Nehru, Nkrumah, and Nasser refuse to take sides in the Cold War?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,4,false)"><span class="mcq-letter">A</span>They were ideologically committed to communism but feared Soviet domination</li>
+        <li onclick="checkMCQ(this,4,false)"><span class="mcq-letter">B</span>They lacked the military power needed to choose a side</li>
+        <li onclick="checkMCQ(this,4,true)"><span class="mcq-letter">C</span>They viewed Cold War alignment as another form of imperialism — picking a side meant surrendering the independence they had just fought for</li>
+        <li onclick="checkMCQ(this,4,false)"><span class="mcq-letter">D</span>They believed the Cold War would end quickly and did not want to commit to either side</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq4-exp">✅ <strong>C is correct.</strong> The video quotes Nehru explicitly: for these leaders, picking a side meant giving up the independence they had just fought so hard for. Cold War competition looked to them not like a fight for freedom — but as just another form of outside domination over their newly independent nations.</div>
+    </div>
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-q">5. Which AP skill is specifically foregrounded in Topic 8.9 (Skill 6.D)?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,5,false)"><span class="mcq-letter">A</span>Causation — identify and explain causes and effects</li>
+        <li onclick="checkMCQ(this,5,false)"><span class="mcq-letter">B</span>CCOT — continuity and change over time</li>
+        <li onclick="checkMCQ(this,5,true)"><span class="mcq-letter">C</span>Argumentation — corroborate, qualify, or modify an argument using diverse and alternative evidence to develop a complex argument</li>
+        <li onclick="checkMCQ(this,5,false)"><span class="mcq-letter">D</span>Source Analysis (HIPP) — analyze a primary source's historical situation, audience, POV, and purpose</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq5-exp">✅ <strong>C is correct.</strong> Skill 6.D is Argumentation: "Corroborate, qualify, or modify an argument using diverse and alternative evidence in order to develop a complex argument." This is precisely the "good essay → great essay" transformation the video describes: moving from a simple similarity claim to a qualified, nuanced argument.</div>
+    </div>
+  </div>
+
+  <!-- Matching Activity -->
+  <div class="card">
+    <div class="card-title">Matching Activity — Leaders, Movements &amp; Events</div>
+    <div class="matching-cols">
+      <div>
+        <div class="match-col-title">Person / Event / Term</div>
+        <div class="match-item" id="t1" onclick="selectMatch('t1','terms')" data-pair="1">Jawaharlal Nehru</div>
+        <div class="match-item" id="t2" onclick="selectMatch('t2','terms')" data-pair="2">Angolan Civil War</div>
+        <div class="match-item" id="t3" onclick="selectMatch('t3','terms')" data-pair="3">Non-Aligned Movement</div>
+        <div class="match-item" id="t4" onclick="selectMatch('t4','terms')" data-pair="4">Sandinista-Contra conflict</div>
+        <div class="match-item" id="t5" onclick="selectMatch('t5','terms')" data-pair="5">KC-6.2.IV.D</div>
+      </div>
+      <div>
+        <div class="match-col-title">Significance / Definition</div>
+        <div class="match-item" id="d4" onclick="selectMatch('d4','defs')" data-pair="4">CED Illustrative Example: proxy war in Nicaragua — US-backed Contras vs. Soviet-backed Sandinistas in a Western hemisphere Cold War conflict</div>
+        <div class="match-item" id="d1" onclick="selectMatch('d1','defs')" data-pair="1">India's first Prime Minister; key Non-Aligned Movement founder who argued that Cold War alignment meant surrendering newly-won independence</div>
+        <div class="match-item" id="d5" onclick="selectMatch('d5','defs')" data-pair="5">CED Key Concept: Cold War produced new military alliances including NATO/Warsaw Pact and led to nuclear proliferation and proxy wars in Latin America, Africa, and Asia</div>
+        <div class="match-item" id="d2" onclick="selectMatch('d2','defs')" data-pair="2">CED Illustrative Example: proxy war in Africa where Soviet/Cuban-backed MPLA fought US-backed UNITA — Eastern hemisphere Cold War conflict entangled with decolonization</div>
+        <div class="match-item" id="d3" onclick="selectMatch('d3','defs')" data-pair="3">Organization founded at 1961 Belgrade Conference by newly independent nations refusing to align with either superpower; saw Cold War as new imperialism</div>
+      </div>
+    </div>
+    <div class="matching-score" id="matchScore"></div>
+    <button class="matching-reset" onclick="resetMatching()">↺ Reset</button>
+  </div>
+
+  <button class="complete-btn" id="btn-dok1" onclick="completeSection(1)">✓ Mark DOK 1 Complete</button>
+</div>
+
+<hr class="section-divider">
+
+<!-- =================== DOK 2 =================== -->
+<div class="section dok2" id="dok2">
+  <div class="section-header">
+    <span class="dok-badge">DOK 2</span>
+    <h2 class="section-title">Knowledge Application</h2>
+    <span class="section-tagline">'Establish and Explain with Examples'</span>
+  </div>
+
+  <!-- Explain Drill 1 -->
+  <div class="card">
+    <div class="card-title">Explain Drill 1 — The Similarity</div>
+    <div class="prompt-box">
+      <strong>Prompt:</strong> Explain ONE way in which the effects of the Cold War were similar in the Eastern and Western Hemispheres. (KC-6.2.IV.C)
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Sample Answer</span><span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Models the AP "Explain" Verb</div>
+        <div class="sample-body">
+          Both hemispheres experienced proxy wars in which the United States and Soviet Union supported opposing sides of internal conflicts, transforming local disputes into arenas of superpower competition. In the Eastern hemisphere, the Korean War (1950–1953) pitted US-backed South Korea against Soviet- and Chinese-backed North Korea, while the Angolan Civil War saw Soviet/Cuban-backed MPLA forces fight US-backed UNITA. In the Western hemisphere, the US supported anti-Sandinista Contra rebels against the Soviet-backed Sandinista government in Nicaragua. In both hemispheres, these proxy conflicts caused massive loss of life and destabilized governments, demonstrating that the Cold War's ideological battle had profound political and military consequences regardless of geography.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explain Drill 2 -->
+  <div class="card">
+    <div class="card-title">Explain Drill 2 — The Qualifying Difference</div>
+    <div class="prompt-box">
+      <strong>Prompt:</strong> Explain ONE way in which the effects of the Cold War were <em>different</em> in the Eastern and Western Hemispheres. (KC-6.2.II, KC-6.2.IV.C)
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Sample Answer</span><span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — The Qualifying Difference</div>
+        <div class="sample-body">
+          A critical difference in how the Cold War affected the two hemispheres involves the context of decolonization. In the Eastern hemisphere — across Africa and Asia — many nations were simultaneously gaining independence from European colonial empires and navigating Cold War superpower competition. New states like India, Ghana, and Egypt had barely established governing institutions when they were pressured to align with either the US or USSR. This double burden led to the formation of the Non-Aligned Movement in 1961, in which leaders like Nehru, Nkrumah, and Nasser explicitly framed Cold War alignment as a new form of imperialism that would undermine the independence they had just achieved. In contrast, most Western hemisphere nations — particularly in Latin America — had been formally independent for over a century and possessed established governing institutions, even if they were subject to significant US economic and political pressure. The decolonization context made Cold War intervention in the Eastern hemisphere a fundamentally different experience, entangling questions of sovereignty, national identity, and self-determination in ways that did not apply to the established states of Latin America.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="card">
+    <div class="card-title">Comparison Table — Cold War Effects Across Both Hemispheres</div>
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Western Hemisphere (Latin America)</th>
+          <th>Eastern Hemisphere (Africa/Asia)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dim-col">Political Independence at Cold War Start</td>
+          <td>Established states — most independent since early 1800s; existing governmental institutions</td>
+          <td>Many newly independent or still colonized — gained independence 1945–1975; building institutions from scratch</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Primary Superpower Intervening</td>
+          <td>Dominant US influence — Monroe Doctrine legacy; Bay of Pigs, Chile (1973), Nicaragua</td>
+          <td>Both superpowers — Korea, Vietnam (US); Afghanistan, Angola (USSR/Cuba)</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Key Proxy War Examples (CED)</td>
+          <td>Sandinista-Contra conflict in Nicaragua; US intervention in Chile, Guatemala, Cuba</td>
+          <td>Korean War; Angolan Civil War; Vietnam War; Soviet-Afghan War</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Response to Superpower Pressure</td>
+          <td>Revolutionary movements (Cuba, Nicaragua); dependency relationships; economic nationalism</td>
+          <td>Non-Aligned Movement; attempted neutrality; framed Cold War as new imperialism</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Connection to Decolonization</td>
+          <td>Limited — independence predated Cold War by a century; anti-imperialism directed at economic control</td>
+          <td>Direct — Cold War competition entangled with ongoing decolonization; independence and Cold War arrived simultaneously</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Long-term Effects</td>
+          <td>Economic inequality, authoritarian governments backed by US, leftist revolutionary traditions</td>
+          <td>Proxy wars, state fragility, post-colonial boundary conflicts, economic underdevelopment</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="prompt-box" style="margin-top:0;">
+      <strong>Reflection:</strong> Looking at this table, identify the most important similarity AND the most important difference. How would you use these to write a complex thesis responding to: "Evaluate the extent to which the effects of the Cold War were similar in the Eastern and Western Hemispheres"?
+    </div>
+  </div>
+
+  <!-- Apply Activity -->
+  <div class="card">
+    <div class="card-title">Apply Activity — Primary Source Analysis (HTS-6)</div>
+    <div class="prompt-box" style="font-style:italic; margin-bottom:16px;">
+      "The Governments of countries participating in the Conference resolutely reject the view that war, including the 'cold war,' is inevitable... They affirm their unwavering faith that the international community is able to organize its life without resorting to means which actually belong to a past epoch of human history."<br>
+      <span style="font-style:normal; font-size:0.82rem; color:var(--text-muted);">— Belgrade Declaration, First Non-Aligned Movement Conference, Belgrade, Yugoslavia, 1961</span>
+    </div>
+    <p style="font-size:0.9rem; margin-bottom:16px;">Using this primary source AND your knowledge of KC-6.2.IV.C:</p>
+    <ol style="font-size:0.9rem; padding-left:20px; display:flex; flex-direction:column; gap:10px;">
+      <li><strong>Explain</strong> one way this passage reflects the context of decolonization in which the Non-Aligned Movement was formed.</li>
+      <li><strong>Explain</strong> one way this passage reflects the context of the superpowers in which the Non-Aligned Movement was formed.</li>
+      <li><strong>HIPP Analysis — Purpose:</strong> The Belgrade Declaration was issued by heads of state. How might the diplomatic purpose of this document affect its framing?</li>
+    </ol>
+    <div class="accordion" style="margin-top:16px;">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Model Response</span><span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="sample-label">Model Analysis</div>
+        <div class="sample-body">
+          <strong>Decolonization Context:</strong> The phrase "past epoch of human history" reflects the decolonization context by framing the Cold War as a continuation of the same imperial logic that had justified European domination of Asia and Africa. These newly independent states had just escaped the "past epoch" of colonialism and saw Cold War competition — with its proxy wars and forced alignments — as a direct continuation of outside powers controlling their political destinies. Refusing to participate in the Cold War was therefore inseparable from asserting the sovereignty they had just won.<br><br>
+          <strong>Superpower Context:</strong> The explicit rejection of "cold war" as inevitable reflects the context of intense US-Soviet competition that was already, by 1961, pulling newly independent states into proxy conflicts. The Cuban Missile Crisis was one year away; proxy wars were escalating in Korea and Southeast Asia. These leaders saw the superpower rivalry as an existential threat to their autonomy — the declaration is their formal refusal to be conscripted into a conflict that was not their own.<br><br>
+          <strong>HIPP — Purpose:</strong> As an official diplomatic declaration, this document was crafted to present a unified, dignified front to both superpowers. It uses the language of universal principles ("international community," "faith") rather than specific accusations, which allowed the diverse member states to sign onto it without directly antagonizing the US or USSR — each of whose economic and military support many NAM members still sought.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Infographic Callout -->
+  <div class="callout-gold">
+    <h3>📊 Review the NotebookLM Infographic Now</h3>
+    <p style="font-size:0.9rem;">Before moving to DOK 3, review the 8.9 infographic. Focus especially on the visual representation of similarities vs. differences across hemispheres — this will be your reference map for the analysis activities ahead.</p>
+  </div>
+
+  <button class="complete-btn" id="btn-dok2" onclick="completeSection(2)">✓ Mark DOK 2 Complete</button>
+</div>
+
+<hr class="section-divider">
+
+<!-- =================== DOK 3 =================== -->
+<div class="section dok3" id="dok3">
+  <div class="section-header">
+    <span class="dok-badge">DOK 3</span>
+    <h2 class="section-title">Knowledge Analysis</h2>
+    <span class="section-tagline">'Examine and Explain with Evidence'</span>
+  </div>
+
+  <!-- AP Insight -->
+  <div class="ap-insight">
+    <h4>⚡ AP Insight — Skill 6.D: Corroborate, Qualify, Modify (The Complexity Point)</h4>
+    <p>The complexity point is the hardest point to earn on the LEQ. Topic 8.9 gives you the exact formula. The video describes the "magic word" — <strong style="color:var(--gold-bright);">"however."</strong> A complex argument doesn't just assert a similarity — it <em>qualifies</em> that similarity with a contextual difference. On the AP exam, you earn the complexity point when you: (1) explain nuance across multiple variables, (2) make relevant cross-period or cross-regional connections, or (3) demonstrate sophisticated understanding of different perspectives. Topic 8.9's comparison of hemispheres is purpose-built for this.</p>
+  </div>
+
+  <!-- Causal Chain -->
+  <div class="card">
+    <div class="card-title">Causal Chain — How Cold War Competition Created the Non-Aligned Movement (KC-6.2.IV.C)</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Two nodes are blank. Click them to reveal the missing links.</p>
+    <div class="causal-chain">
+      <div class="chain-node">
+        <div class="chain-node-label">Origin</div>
+        WWII ends; European colonial empires collapse; power vacuum in Asia and Africa
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node blank" id="cc1" onclick="revealNode('cc1','US and USSR step into the power vacuum — both eager to spread influence globally and recruit newly independent states as allies')">
+        <div class="chain-node-label">Blank 1 — Click to reveal</div>
+        <span class="blank-hint">Who fills the power vacuum?</span>
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node">
+        <div class="chain-node-label">Pressure</div>
+        Newly independent states face immediate pressure to align with either US (First World) or USSR (Second World)
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node blank" id="cc2" onclick="revealNode('cc2','Leaders like Nehru, Nkrumah, and Nasser conclude that Cold War alignment = new imperialism — surrendering independence they just won')">
+        <div class="chain-node-label">Blank 2 — Click to reveal</div>
+        <span class="blank-hint">How do new leaders interpret this pressure?</span>
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node">
+        <div class="chain-node-label">Response</div>
+        Non-Aligned Movement founded (1961, Belgrade) — "Third Path" refusing both superpowers
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node">
+        <div class="chain-node-label">Result</div>
+        Eastern hemisphere decolonization and Cold War become permanently entangled — the KEY qualifying difference
+      </div>
+    </div>
+  </div>
+
+  <!-- SAQ Practice -->
+  <div class="card">
+    <div class="card-title">SAQ Practice — No-Stimulus Short Answer Question (3 Parts)</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Answer all parts of the question that follow. No source is provided — rely on your knowledge of Unit 8 content.</p>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span><strong>Part A:</strong> Identify ONE specific proxy war that occurred during the Cold War era and identify in which hemisphere it took place.</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Part A (Identify = name it with sufficient specificity)</div>
+        <div class="sample-body">
+          The Korean War (1950–1953) was a proxy war that took place in the Eastern hemisphere on the Korean Peninsula in Asia. The conflict pitted the US-backed Republic of Korea (South Korea) against the Soviet- and Chinese-backed Democratic People's Republic of Korea (North Korea).
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span><strong>Part B:</strong> Explain ONE way in which proxy wars in the Eastern hemisphere were different from those in the Western hemisphere.</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Part B (Explain = how/why, show mechanism)</div>
+        <div class="sample-body">
+          Proxy wars in the Eastern hemisphere were often entangled with simultaneous decolonization movements in ways that Western hemisphere conflicts were not. In Vietnam, for example, the fight against communist North Vietnam was inseparable from the broader national independence struggle against French and then American presence — Ho Chi Minh drew on both nationalist and communist ideology simultaneously. This meant Eastern hemisphere proxy wars carried an additional dimension of anti-colonial resistance that gave local actors a stronger ideological foundation for resistance, made the conflicts harder to resolve on purely Cold War terms, and generated greater global sympathy from other newly independent states.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span><strong>Part C:</strong> Explain ONE way in which newly independent states in the Eastern hemisphere responded differently to Cold War superpower pressure than states in Latin America.</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Part C (Explain = mechanism + broader significance)</div>
+        <div class="sample-body">
+          Eastern hemisphere newly independent states responded by forming the Non-Aligned Movement (1961) — a formal multilateral organization explicitly rejecting alignment with either superpower — in a way that Latin American states did not replicate. Because Eastern hemisphere leaders like India's Nehru, Ghana's Nkrumah, and Egypt's Nasser had personally led anti-colonial independence movements, they interpreted Cold War alignment as ideologically identical to the colonial subjugation they had just escaped: an outside power determining their political direction. In Latin America, where independence had been won generations earlier, resistance to superpower pressure took different forms — revolutionary movements (Cuba under Castro, the Sandinistas in Nicaragua) that often aligned with one superpower to resist the other, rather than seeking neutrality from both. This difference reflects the fundamentally distinct historical contexts of decolonization in each hemisphere.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CCOT Grid -->
+  <div class="card">
+    <div class="card-title">CCOT Grid — Superpower Intervention in the Developing World, 1945–1991</div>
+    <table class="ccot-table">
+      <thead>
+        <tr>
+          <th class="ccot-cont">Continuity — What Stayed the Same</th>
+          <th class="ccot-change">Change Over Time — What Transformed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Both superpowers consistently supported proxy forces in developing nations to advance ideological interests throughout 1945–1991</td>
+          <td>The targets of superpower intervention shifted from established Cold War frontlines (Korea, Germany) to newly independent post-colonial states (Angola, Afghanistan, Nicaragua)</td>
+        </tr>
+        <tr>
+          <td>US policy of "containment" and Soviet policy of supporting communist movements remained the ideological drivers of intervention throughout the period</td>
+          <td>Newly independent states increasingly organized collective resistance (Non-Aligned Movement, 1961) rather than accepting binary alignment</td>
+        </tr>
+        <tr>
+          <td>Proxy conflicts produced massive civilian casualties and long-term political instability in both hemispheres</td>
+          <td>As decolonization accelerated (1955–1975), the number of potential "battleground states" multiplied dramatically — the Cold War chessboard expanded</td>
+        </tr>
+        <tr>
+          <td>The nuclear deterrence logic of Mutually Assured Destruction prevented direct superpower conflict while enabling proxy wars throughout the era</td>
+          <td>By the 1980s, the cost of superpower overextension (Vietnam, Afghanistan) visibly undermined both superpowers' willingness and capacity to sustain intervention</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="accordion" style="margin-top:16px;">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ CCOT Analysis Note</span><span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="sample-label">Analysis</div>
+        <div class="sample-body">The CCOT pattern in 8.9 reveals how the Cold War's geographic scope continuously expanded as decolonization created new arenas of superpower competition. What began as a European ideological confrontation became a global phenomenon precisely because the collapse of European empires created dozens of new states that both superpowers sought to recruit. The continuity is the mechanism (proxy war, alignment pressure); the change is the geographic scope and the increasing resistance from states that refused to be pawns.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="card">
+    <div class="card-title">Thesis Evaluator — 4 Cards (Click to Reveal Verdict)</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;"><strong>LEQ Prompt:</strong> Evaluate the extent to which the effects of the Cold War were similar in the Eastern and Western Hemispheres in the period 1945–1991.</p>
+    <div class="thesis-grid">
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <div class="thesis-text">"The effects of the Cold War were similar in the Eastern and Western Hemispheres because both experienced superpower competition."</div>
+        <div class="thesis-verdict fail-v">
+          <div class="verdict-badge">❌ FAILS AP Rubric</div>
+          This restates the prompt without establishing a line of reasoning. "Because both experienced superpower competition" is a factual restatement, not an interpretive argument. There is no "because" explaining the mechanism or degree of similarity — no line of reasoning about how or why this similarity was significant.
+        </div>
+      </div>
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <div class="thesis-text">"The Cold War affected both hemispheres through proxy wars, but the effects were also different."</div>
+        <div class="thesis-verdict fail-v">
+          <div class="verdict-badge">❌ FAILS AP Rubric</div>
+          This acknowledges both similarity and difference but establishes no line of reasoning for either. The AP rubric requires that a thesis establish WHY the claim is true — what categories of argument support it. Simply noting that effects were "similar" and "different" without explaining the mechanism fails to build a defensible interpretive claim.
+        </div>
+      </div>
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <div class="thesis-text">"While both the Eastern and Western Hemispheres became battlegrounds for US and Soviet proxy wars, the effects of the Cold War were more destabilizing in the Eastern hemisphere because newly independent post-colonial states faced the double burden of nation-building and superpower competition simultaneously — a context that fueled the Non-Aligned Movement and produced longer-lasting political fragility."</div>
+        <div class="thesis-verdict pass-v">
+          <div class="verdict-badge">✅ PASSES AP Rubric</div>
+          This earns the thesis point AND sets up the complexity point. It acknowledges the similarity (proxy wars in both hemispheres), qualifies it with the critical difference (decolonization context), and provides a line of reasoning (double burden → Non-Aligned Movement + political fragility). This is precisely the "While… however…" formula the video describes.
+        </div>
+      </div>
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <div class="thesis-text">"The effects of the Cold War were substantially similar in both hemispheres insofar as superpower intervention distorted local political processes and installed or supported governments serving superpower rather than local interests; however, Latin American states' century-long experience of independence gave them greater institutional resilience against intervention than newly independent African and Asian states."</div>
+        <div class="thesis-verdict pass-v">
+          <div class="verdict-badge">✅ PASSES AP Rubric</div>
+          This also earns the thesis point with a different valid line of reasoning — arguing that the similarity (distorted political processes) was real, but qualified by the variable of institutional resilience tied to historical independence. It takes an opposite position on degree from the previous PASS thesis, demonstrating that "evaluate the extent" is genuinely open to multiple defensible arguments.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="complete-btn" id="btn-dok3" onclick="completeSection(3)">✓ Mark DOK 3 Complete</button>
+</div>
+
+<hr class="section-divider">
+
+<!-- =================== DOK 4 =================== -->
+<div class="section dok4" id="dok4">
+  <div class="section-header">
+    <span class="dok-badge">DOK 4</span>
+    <h2 class="section-title">Knowledge Augmentation</h2>
+    <span class="section-tagline">'Explore and Explain — LEQ Capstone Workshop'</span>
+  </div>
+
+  <!-- Contextualization Builder -->
+  <div class="card">
+    <div class="card-title">Contextualization Builder — 3 Pathways (HTS-4)</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Write your own contextualization paragraph using a pathway stem, then reveal the model.</p>
+    <div class="ctx-pathways">
+      <div class="ctx-pathway">
+        <div class="ctx-stem" onclick="this.parentElement.classList.toggle('open')">
+          <span class="pathway-num">Pathway 1</span>
+          <span class="pathway-text">"To understand why the Cold War became a global phenomenon, consider the broader context of imperialism and the long 19th century of European colonial expansion..."</span>
+          <span style="color:var(--gold); font-size:0.8rem;">▼</span>
+        </div>
+        <div class="ctx-body">
+          <div class="sample-label">Model Contextualization — Pathway 1 (Connects to Units 4–6)</div>
+          <div class="sample-body">The Cold War's global reach must be understood against the backdrop of European imperial expansion across the 19th and early 20th centuries. By World War I, European powers controlled vast colonial empires across Asia, Africa, and the Pacific, creating relationships of economic extraction and political subordination that would shape 20th-century resistance movements. The two World Wars fatally weakened these empires — Britain, France, Belgium, and the Netherlands emerged from WWII economically drained and unable to maintain the coercive infrastructure of colonial rule. This collapse of European imperial authority created the power vacuum the video describes: dozens of new states gained independence in Asia and Africa just as US-Soviet ideological competition was intensifying. The Cold War did not happen in a vacuum — it erupted into a world already scarred by colonial hierarchies, nationalist resentments, and economic inequalities that superpower competition would exploit and deepen.</div>
+        </div>
+      </div>
+      <div class="ctx-pathway">
+        <div class="ctx-stem" onclick="this.parentElement.classList.toggle('open')">
+          <span class="pathway-num">Pathway 2</span>
+          <span class="pathway-text">"To understand why ideological competition was so central to the Cold War, consider how World War II reshaped global ideological alignments..."</span>
+          <span style="color:var(--gold); font-size:0.8rem;">▼</span>
+        </div>
+        <div class="ctx-body">
+          <div class="sample-label">Model Contextualization — Pathway 2 (Connects to Unit 7)</div>
+          <div class="sample-body">The intense ideological competition of the Cold War emerged directly from the ideological battles of World War II. The defeat of fascist Germany and Imperial Japan left only two major ideological systems competing for global dominance: US-led liberal capitalism and Soviet-led communism. These were not merely political positions but comprehensive visions of how societies should be organized — their economies, their governments, their relationships to individual liberty. Both superpowers believed, with genuine conviction, that spreading their system would improve the world. For newly independent states in Asia and Africa, these competing visions offered not just political alignment but also development models: the US offered market-based development and Western-style democracy; the Soviet Union offered rapid industrialization under state direction. The ideological dimension of the Cold War thus gave decolonizing nations real choices about development paths — even as it subjected them to pressure and intervention.</div>
+        </div>
+      </div>
+      <div class="ctx-pathway">
+        <div class="ctx-stem" onclick="this.parentElement.classList.toggle('open')">
+          <span class="pathway-num">Pathway 3</span>
+          <span class="pathway-text">"To understand the long-term significance of Cold War effects on the developing world, consider how these interventions connect to contemporary challenges..."</span>
+          <span style="color:var(--gold); font-size:0.8rem;">▼</span>
+        </div>
+        <div class="ctx-body">
+          <div class="sample-label">Model Contextualization — Pathway 3 (Connects to Unit 9)</div>
+          <div class="sample-body">The Cold War's effects on the Eastern and Western hemispheres did not end in 1991 — they created structural conditions that shaped the globalization era studied in Unit 9. Decades of proxy war in Southeast Asia, Central America, and sub-Saharan Africa left behind fractured states, displaced populations, and economies distorted by military spending rather than development investment. The collapse of the Soviet Union created a brief "unipolar moment" in which the United States promoted economic globalization — opening former communist-bloc markets to international capital — but also revealed the fragility of states that had been held together only by Cold War alignment rather than genuine nation-building. The Non-Aligned Movement's failure to prevent superpower intervention contributed to Global South frustration with existing international institutions, feeding movements for economic justice and political sovereignty that continue to shape international relations today.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEQ WORKSHOP — CAPSTONE -->
+  <div class="leq-workshop">
+    <div class="leq-workshop-header">
+      <h3>📝 Full LEQ Workshop — Unit 8 Capstone</h3>
+      <p style="font-size:0.88rem; color:#c8b8d8; margin-bottom:12px;">Build your essay section by section. Each component reveals a model response.</p>
+      <div class="leq-prompt-box">
+        <strong>LEQ Prompt:</strong> Evaluate the extent to which the effects of the Cold War were similar in the Eastern and Western Hemispheres in the period 1945–1991.
+      </div>
+    </div>
+
+    <!-- Row A: Thesis -->
+    <div class="leq-section">
+      <h4>Row A — Thesis / Claim (0–1 points)</h4>
+      <div class="leq-points">Target: 1 point</div>
+      <div class="leq-rubric-note">AP Rubric: Respond with a historically defensible thesis that establishes a line of reasoning. Must be located in intro or conclusion. Must provide some indication of the reason for the claim OR establish categories of the argument.</div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Model Thesis</span><span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <div class="sample-label">Model Thesis — Earns the Point</div>
+          <div class="sample-body">While both the Eastern and Western Hemispheres became battlegrounds for US-Soviet proxy wars that destabilized governments and caused massive civilian casualties, the effects of the Cold War were more profoundly destabilizing in the Eastern hemisphere because newly independent post-colonial states simultaneously faced the pressures of nation-building and superpower competition — a double burden that drove the Non-Aligned Movement and produced longer-lasting political fragility than experienced in Latin America's established states.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row B: Contextualization -->
+    <div class="leq-section">
+      <h4>Row B — Contextualization (0–1 points)</h4>
+      <div class="leq-points">Target: 1 point</div>
+      <div class="leq-rubric-note">AP Rubric: Describe a broader historical context relevant to the prompt. Connect your topic to larger historical events, developments, or processes before, during, or after the time frame. Must be more than a phrase — must be developed and connected to the argument.</div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Model Contextualization Paragraph</span><span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <div class="sample-label">Model Contextualization</div>
+          <div class="sample-body">The Cold War's transformation into a global phenomenon cannot be understood without recognizing the context of European imperial collapse that preceded it. For centuries, European powers had dominated vast colonial territories across Asia, Africa, and the Caribbean — relationships built on political subordination, economic extraction, and the denial of self-determination. World War II fatally undermined these empires; Britain, France, Belgium, and the Netherlands emerged from the conflict weakened and unable to sustain the coercive infrastructure of colonial rule. Between 1945 and 1975, dozens of new nations gained independence, doubling the number of sovereign states from roughly 75 to nearly 130. This extraordinary proliferation of new states — many with fragile institutions, borders drawn by colonial powers, and economies distorted by extraction — created the very conditions that made Cold War competition so globally destructive. The United States and Soviet Union did not simply inherit a stable world; they stepped into a post-colonial landscape of competing nationalisms, unresolved territorial disputes, and urgent development needs that both superpowers sought to exploit for strategic advantage.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row C: Evidence -->
+    <div class="leq-section">
+      <h4>Row C — Evidence (0–2 points)</h4>
+      <div class="leq-points">Target: 2 points (need 3+ specific pieces of evidence connected to argument)</div>
+      <div class="leq-rubric-note">AP Rubric: 1 pt = use specific evidence relevant to the topic. 2 pts = use evidence to directly support a claim (connect evidence to your thesis, don't just list facts). Aim for 3+ pieces of named, specific evidence.</div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Body Paragraph 1 — The Similarity (Corroborate)</span><span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <div class="sample-label">Body Paragraph 1 — Corroborating the Similarity with Evidence</div>
+          <div class="sample-body">The most significant similarity between the hemispheres was the universal reach of US-Soviet proxy warfare, which transformed local conflicts into arenas of superpower competition regardless of geography. In the Eastern hemisphere, the Korean War (1950–1953) divided the Korean Peninsula along ideological lines, with US-led UN forces supporting South Korea and Soviet/Chinese material support backing North Korea — producing over 2 million total casualties. The Angolan Civil War similarly pitted the Soviet- and Cuban-backed MPLA against the US-backed UNITA following Angolan independence in 1975, demonstrating that superpower competition followed decolonization wherever it occurred. In the Western hemisphere, the Sandinista-Contra conflict in Nicaragua repeated this pattern: the US funded Contra rebels against the Soviet-aligned Sandinista government throughout the 1980s. This consistent pattern across both hemispheres demonstrates that the Cold War was genuinely global — the ideological conflict between capitalism and communism recognized no geographic limits and drew developing nations into conflicts that served superpower rather than local interests.</div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Body Paragraph 2 — The Qualifying Difference (Modify)</span><span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <div class="sample-label">Body Paragraph 2 — Qualifying the Similarity with the Decolonization Context</div>
+          <div class="sample-body">However, the Cold War's effects were qualitatively different in the Eastern hemisphere because of the simultaneous pressures of decolonization — a context that did not apply to Latin America's established states. In Africa and Asia, nations were often gaining independence and confronting Cold War alignment pressure at the same moment. India's independence in 1947, Ghana's in 1957, and the rapid independence of over a dozen African states in 1960 alone meant that these nations had barely established governing institutions when US and Soviet agents arrived with offers of aid, military support, and ideological allegiance. For leaders like India's Jawaharlal Nehru, Ghana's Kwame Nkrumah, and Egypt's Gamal Abdel Nasser, choosing a Cold War side was ideologically equivalent to accepting a new form of colonial subordination — trading political control by Britain or France for dependence on Washington or Moscow. Their response — the founding of the Non-Aligned Movement at the 1961 Belgrade Conference — had no parallel in Latin America, where independence had been established since the early 19th century. Latin American states, though subject to significant US intervention (as in Guatemala in 1954 and Chile in 1973), operated as established nations with existing institutional frameworks rather than as polities still defining the basic terms of their sovereignty.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row D: Analysis & Reasoning — Complexity -->
+    <div class="leq-section">
+      <h4>Row D — Analysis &amp; Reasoning / Complexity (0–2 points)</h4>
+      <div class="leq-points">Target: 2 points (use causation + complexity move)</div>
+      <div class="leq-rubric-note">AP Rubric: 1 pt = use historical reasoning (causation, comparison, CCOT) to frame your argument. 2 pts = demonstrate complex understanding: explain nuance across multiple variables, make cross-period connections, explore different perspectives, or argue both cause and effect.</div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Complexity Move &amp; Conclusion</span><span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <div class="sample-label">Complexity Move — Cross-Period Connection + Nuanced Qualification</div>
+          <div class="sample-body">
+            <strong>[Complexity Move — Cross-Period Connection]</strong><br>
+            The patterns of superpower intervention in the developing world during the Cold War established structural conditions that would outlast the conflict itself, connecting the Unit 8 period to the globalization challenges of Unit 9. The proxy wars and political interventions of 1945–1991 left behind states whose governing institutions had been deliberately destabilized — Afghanistan, Angola, Nicaragua, and Vietnam each entered the post-Cold War era with fractured political systems, economies distorted by military spending, and populations displaced by decades of conflict. This long-term legacy suggests that the "similarity" of Cold War effects across hemispheres actually understates the depth of difference: while both hemispheres suffered the costs of proxy war, Eastern hemisphere states bore those costs at the most vulnerable moment of their political existence — before stable institutions had been established — making recovery significantly harder.<br><br>
+            <strong>[Conclusion — Extending the Thesis]</strong><br>
+            Although many factors led to the Cold War's differential effects across hemispheres — including geography, natural resources, and the specific ideological priorities of each superpower — most served to amplify the fundamental asymmetry between established and newly independent states. The Cold War was indeed a global chessboard, but not all pieces entered the game with equal strength. The Non-Aligned Movement's existence testifies to this reality: it was a phenomenon born specifically from the Eastern hemisphere's unique intersection of Cold War pressure and post-colonial vulnerability — and it had no equivalent in a Western hemisphere whose nations, however subordinated to US interests, had never doubted their own right to sovereignty.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Score Summary -->
+    <div class="leq-section">
+      <h4>📊 LEQ Score Summary — How This Essay Earns All 6 Points</h4>
+      <table class="comp-table" style="margin-top:10px;">
+        <thead>
+          <tr><th>Row</th><th>Points Available</th><th>How This Essay Earns It</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="dim-col">A — Thesis</td><td>0–1</td><td>"While both hemispheres became proxy war battlegrounds… more destabilizing in the East because of nation-building double burden" → Defensible claim + line of reasoning ✅</td></tr>
+          <tr><td class="dim-col">B — Contextualization</td><td>0–1</td><td>European imperial collapse → power vacuum → Cold War competition → developed and connected to argument ✅</td></tr>
+          <tr><td class="dim-col">C — Evidence (basic)</td><td>0–1</td><td>Korean War, Angolan Civil War, Sandinista-Contras, Non-Aligned Movement, Nehru/Nkrumah/Nasser → 3+ specific named examples ✅</td></tr>
+          <tr><td class="dim-col">C — Evidence (supports argument)</td><td>0–1</td><td>Each piece of evidence explicitly connected to the thesis claim about differential effects ✅</td></tr>
+          <tr><td class="dim-col">D — Reasoning (basic)</td><td>0–1</td><td>Comparison reasoning throughout — structured around similarity vs. qualifying difference ✅</td></tr>
+          <tr><td class="dim-col">D — Complexity</td><td>0–1</td><td>Cross-period connection to Unit 9 + nuanced qualification that "similarity" understates degree of difference + exploration of multiple variables ✅</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="card">
+    <div class="card-title">Cross-Unit Synthesis — The Unit 8 Chain &amp; Beyond</div>
+    <div class="synthesis-prompt">
+      <h4>🔗 Unit 8 → Unit 9: What Does the Cold War's End Unleash?</h4>
+      <p>The video ends by looking forward. Using what you know about both Unit 8 and Unit 9 themes, write 3–4 sentences answering: <strong>Explain ONE way in which the legacy of Cold War proxy wars in the Eastern hemisphere created conditions that shaped the globalization challenges of the post-1991 world.</strong></p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Model Synthesis Response</span><span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="sample-label">Cross-Unit Synthesis — 8.9 → Unit 9</div>
+        <div class="sample-body">The Cold War's proxy wars in the Eastern hemisphere created conditions for post-1991 state fragility that directly shaped Unit 9's globalization challenges. In Afghanistan, decades of superpower-funded conflict — first the Soviet invasion (1979–1989), then the US-backed Mujahideen — destroyed governing institutions and created the conditions for the Taliban's rise in the 1990s, directly connecting Cold War intervention to the post-9/11 "War on Terror." Similarly, the Angolan Civil War did not end with the Soviet collapse but continued until 2002, demonstrating how Cold War proxy conflicts created self-sustaining cycles of violence that outlasted the ideological competition that had fueled them. These legacies meant that globalization's economic integration and democratic transition narrative — optimistic after 1991 — was consistently complicated by the fragmented states and ongoing conflicts that were the direct inheritance of Cold War intervention in newly independent nations.</div>
+      </div>
+    </div>
+
+    <div class="synthesis-prompt" style="margin-top:16px;">
+      <h4>🔗 Unit 7 → Unit 8: How Did WWII Create the Cold War's Stage?</h4>
+      <p><strong>Explain ONE specific way in which a development from Unit 7 (Global Conflict) created the conditions for Cold War competition in the developing world.</strong></p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)"><span>▶ Reveal Prior-Unit Synthesis Response</span><span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="sample-label">Prior-Unit Connection — Unit 7 → Unit 8</div>
+        <div class="sample-body">World War II's acceleration of decolonization — through its weakening of European imperial powers and its ideological delegitimization of racial hierarchy — directly created the power vacuum that Cold War competition filled. Japan's rapid military defeat of European colonial forces in Southeast Asia (British Malaya, French Indochina, Dutch East Indies) in 1941–1942 shattered the myth of European invincibility that had helped sustain colonial rule. When Japan was defeated and European powers tried to reassert colonial control, they faced nationalist movements that had gained confidence, organizational experience, and — crucially — weapons during the wartime occupation. Ho Chi Minh's Viet Minh, for example, fought Japanese occupation and then refused to accept the return of French colonialism. This wartime transformation of anti-colonial movements directly set up Unit 8's decolonization wave, which in turn created the "Third World" battleground where Cold War competition played out most destructively.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Self Assessment -->
+  <div class="card">
+    <div class="card-title">Self-Assessment — Unit 8 Capstone Skills Confidence Check</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:20px;">Rate yourself on each skill. Red = Not Yet, Gold = Getting There, Green = Confident.</p>
+    <div id="selfAssess">
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Argumentation — Corroborate (Skill 6.D)</strong> — I can identify and explain specific evidence from both hemispheres that supports the similarity claim</div>
+        <div class="sa-dots"><div class="sa-dot" onclick="rateSelf(this,1,1)"></div><div class="sa-dot" onclick="rateSelf(this,1,2)"></div><div class="sa-dot" onclick="rateSelf(this,1,3)"></div></div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Argumentation — Qualify / Modify (Skill 6.D)</strong> — I can explain the decolonization context that qualifies the similarity between hemispheres</div>
+        <div class="sa-dots"><div class="sa-dot" onclick="rateSelf(this,2,1)"></div><div class="sa-dot" onclick="rateSelf(this,2,2)"></div><div class="sa-dot" onclick="rateSelf(this,2,3)"></div></div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Complexity Point Strategy</strong> — I know at least 2 ways to earn the complexity point on an LEQ (cross-period connection, nuance across variables, both similarity and difference)</div>
+        <div class="sa-dots"><div class="sa-dot" onclick="rateSelf(this,3,1)"></div><div class="sa-dot" onclick="rateSelf(this,3,2)"></div><div class="sa-dot" onclick="rateSelf(this,3,3)"></div></div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>LEQ Thesis Construction</strong> — I can write a thesis with a "While [similarity]… however [qualifying difference]… because [line of reasoning]" structure</div>
+        <div class="sa-dots"><div class="sa-dot" onclick="rateSelf(this,4,1)"></div><div class="sa-dot" onclick="rateSelf(this,4,2)"></div><div class="sa-dot" onclick="rateSelf(this,4,3)"></div></div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Contextualization (HTS-4)</strong> — I can write a contextualization paragraph connecting Unit 8 to the broader context of imperialism, WWII, or globalization</div>
+        <div class="sa-dots"><div class="sa-dot" onclick="rateSelf(this,5,1)"></div><div class="sa-dot" onclick="rateSelf(this,5,2)"></div><div class="sa-dot" onclick="rateSelf(this,5,3)"></div></div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Unit 8 Evidence Command</strong> — I can name at least 4 specific proxy wars or Cold War events from across both hemispheres with enough detail to use as evidence</div>
+        <div class="sa-dots"><div class="sa-dot" onclick="rateSelf(this,6,1)"></div><div class="sa-dot" onclick="rateSelf(this,6,2)"></div><div class="sa-dot" onclick="rateSelf(this,6,3)"></div></div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Unit 8 Complete — I'm Ready for the Exam</strong> — I can explain, compare, and argue about the major developments in Topics 8.1–8.9 with specific evidence</div>
+        <div class="sa-dots"><div class="sa-dot" onclick="rateSelf(this,7,1)"></div><div class="sa-dot" onclick="rateSelf(this,7,2)"></div><div class="sa-dot" onclick="rateSelf(this,7,3)"></div></div>
+      </div>
+    </div>
+    <div class="sa-legend">
+      <span><span class="sa-legend-dot" style="background:var(--dok3)"></span>Not Yet</span>
+      <span><span class="sa-legend-dot" style="background:var(--gold)"></span>Getting There</span>
+      <span><span class="sa-legend-dot" style="background:var(--dok1)"></span>Confident</span>
+    </div>
+  </div>
+
+  <button class="complete-btn" id="btn-dok4" onclick="completeSection(4)">✓ Mark DOK 4 Complete — Unit 8 Done!</button>
+</div>
+
+<!-- FOOTER -->
+<div style="text-align:center; padding:48px 20px 60px; border-top:1px solid var(--border); margin-top:40px;">
+  <div style="font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--gold-pale); margin-bottom:12px;">🎓 Unit 8: Cold War and Decolonization — Complete</div>
+  <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-dim);">Topics 8.1 – 8.9 · KC-6.2 · AP World History: Modern</div>
+  <div style="margin-top:20px; font-size:0.88rem; color:var(--text-muted);">Next Unit: Unit 9 — Globalization (c. 1900–present)</div>
+  <div style="margin-top:8px; font-size:0.82rem; color:var(--text-dim); font-style:italic;">"Walls in the mind often stand longer than those built of concrete blocks." — Willy Brandt, 1991</div>
+</div>
+
+<script>
+// PROGRESS BAR
+let completed = [false, false, false, false];
+function updateProgress() {
+  const done = completed.filter(Boolean).length;
+  const pct = done * 25;
+  document.getElementById('pbFill').style.width = pct + '%';
+  document.getElementById('pbPct').textContent = pct + '%';
+}
+function completeSection(n) {
+  completed[n-1] = true;
+  const btn = document.getElementById('btn-dok' + n);
+  btn.classList.add('done');
+  btn.textContent = n === 4 ? '✓ Unit 8 Complete!' : '✓ DOK ' + n + ' Complete!';
+  btn.disabled = true;
+  updateProgress();
+}
+
+// ACCORDIONS
+function toggleAccordion(header) { header.parentElement.classList.toggle('open'); }
+
+// MCQs
+function checkMCQ(li, qNum, isCorrect) {
+  const allLis = li.parentElement.querySelectorAll('li');
+  allLis.forEach(l => l.classList.add('disabled'));
+  if (isCorrect) { li.classList.add('correct'); }
+  else {
+    li.classList.add('incorrect');
+    allLis.forEach(l => { if (l.getAttribute('onclick') && l.getAttribute('onclick').includes('true')) l.classList.add('correct'); });
+  }
+  const exp = document.getElementById('mcq' + qNum + '-exp');
+  if (exp) exp.style.display = 'block';
+}
+
+// MATCHING
+let selectedTerm = null, selectedDef = null, matchScore = 0;
+function selectMatch(id, type) {
+  const el = document.getElementById(id);
+  if (el.classList.contains('matched-correct')) return;
+  if (type === 'terms') { if (selectedTerm) document.getElementById(selectedTerm).classList.remove('selected'); selectedTerm = id; el.classList.add('selected'); }
+  else { if (selectedDef) document.getElementById(selectedDef).classList.remove('selected'); selectedDef = id; el.classList.add('selected'); }
+  if (selectedTerm && selectedDef) {
+    const tPair = document.getElementById(selectedTerm).getAttribute('data-pair');
+    const dPair = document.getElementById(selectedDef).getAttribute('data-pair');
+    if (tPair === dPair) {
+      document.getElementById(selectedTerm).classList.remove('selected'); document.getElementById(selectedDef).classList.remove('selected');
+      document.getElementById(selectedTerm).classList.add('matched-correct'); document.getElementById(selectedDef).classList.add('matched-correct');
+      matchScore++; document.getElementById('matchScore').textContent = matchScore + '/5 matched';
+    } else {
+      const t = selectedTerm, d = selectedDef;
+      document.getElementById(t).classList.add('matched-incorrect'); document.getElementById(d).classList.add('matched-incorrect');
+      setTimeout(() => { document.getElementById(t).classList.remove('matched-incorrect','selected'); document.getElementById(d).classList.remove('matched-incorrect','selected'); }, 600);
+    }
+    selectedTerm = null; selectedDef = null;
+  }
+}
+function resetMatching() {
+  ['t1','t2','t3','t4','t5','d1','d2','d3','d4','d5'].forEach(id => { const el = document.getElementById(id); if (el) el.className = 'match-item'; });
+  selectedTerm = null; selectedDef = null; matchScore = 0; document.getElementById('matchScore').textContent = '';
+}
+
+// CAUSAL CHAIN
+function revealNode(id, text) {
+  const node = document.getElementById(id);
+  if (node.classList.contains('revealed')) return;
+  node.classList.add('revealed');
+  node.innerHTML = '<div class="chain-node-label">Revealed</div>' + text;
+}
+
+// THESIS CARDS
+function revealThesis(card) { const v = card.querySelector('.thesis-verdict'); if (v) v.style.display = 'block'; }
+
+// SELF ASSESSMENT
+function rateSelf(dot, skillNum, level) {
+  const dots = dot.parentElement.querySelectorAll('.sa-dot');
+  dots.forEach(d => d.classList.remove('active-1','active-2','active-3'));
+  dot.classList.add('active-' + level);
+}
+</script>
+</body>
+</html>

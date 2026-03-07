@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8.7 Global Resistance to Established Power Structures — AP World History</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-page:#2a2016;--bg-card:#32291a;--bg-card-light:#3a3020;
+    --gold:#b8860b;--gold-light:#d4a820;--gold-bright:#f0c040;
+    --text-primary:#e8dfc8;--text-secondary:#b8a888;--text-muted:#7a6e58;
+    --dok1:#2d5a27;--dok1-light:#3a7232;--dok1-bg:#1e3d1a;
+    --dok2:#1a3d6e;--dok2-light:#2356a0;--dok2-bg:#0f2540;
+    --dok3:#6b2d2d;--dok3-light:#8f3a3a;--dok3-bg:#401a1a;
+    --dok4:#4a2d6b;--dok4-light:#6640a0;--dok4-bg:#2a1840;
+    --border:#4a3e28;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg-page);color:var(--text-primary);font-family:'Source Serif 4',Georgia,serif;font-size:16px;line-height:1.7;}
+
+  /* PROGRESS */
+  #pb-wrap{position:sticky;top:0;z-index:1000;background:#1a1508;border-bottom:1px solid var(--border);padding:10px 20px;display:flex;align-items:center;gap:16px;}
+  #pb-wrap>span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);white-space:nowrap;}
+  #pb-track{flex:1;height:8px;background:#2e2510;border-radius:4px;overflow:visible;position:relative;}
+  #pb-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--dok1),var(--dok2),var(--dok3),var(--dok4));border-radius:4px;transition:width .6s ease;}
+  .pm{position:absolute;top:-4px;width:2px;height:16px;background:var(--text-muted);opacity:.4;}
+  .pl{position:absolute;top:-22px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-muted);transform:translateX(-50%);white-space:nowrap;}
+  #pb-pct{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold-light);min-width:36px;text-align:right;}
+
+  /* HEADER */
+  .page-header{padding:60px 40px 40px;border-bottom:2px solid var(--border);background:linear-gradient(180deg,#120a04 0%,var(--bg-page) 100%);text-align:center;}
+  .unit-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+  .page-header h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.6rem);font-weight:900;color:var(--text-primary);line-height:1.2;margin-bottom:8px;}
+  .page-header h1 span{color:var(--gold-light);}
+  .topic-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--text-secondary);margin-bottom:20px;}
+  .thematic-badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;background:var(--bg-card);border:1px solid var(--gold);color:var(--gold-light);padding:4px 12px;border-radius:2px;margin:2px;}
+  .lo-badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--bg-card-light);border:1px solid var(--border);color:var(--text-secondary);padding:3px 10px;border-radius:2px;margin:2px;}
+
+  /* HOW-TO */
+  .how-to{margin:30px 40px;background:linear-gradient(135deg,#2a1e00,#1a1200);border:1px solid var(--gold);border-left:5px solid var(--gold-light);border-radius:4px;padding:24px 28px;}
+  .how-to h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-bright);margin-bottom:10px;}
+  .how-to p{color:var(--text-secondary);margin-bottom:8px;}
+  .dok-flow{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .dp{font-family:'JetBrains Mono',monospace;font-size:10px;padding:4px 12px;border-radius:20px;letter-spacing:1px;}
+  .dp.d1{background:var(--dok1);color:#b4e6a8;}
+  .dp.d2{background:var(--dok2);color:#a8c8f0;}
+  .dp.d3{background:var(--dok3);color:#f0a8a8;}
+  .dp.d4{background:var(--dok4);color:#d4a8f0;}
+
+  /* SECTIONS */
+  .dok-section{padding:50px 40px;border-bottom:1px solid var(--border);}
+  .dok-header{display:flex;align-items:center;gap:16px;margin-bottom:36px;padding-bottom:16px;border-bottom:2px solid;}
+  .dok-badge{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;padding:5px 14px;border-radius:2px;text-transform:uppercase;white-space:nowrap;}
+  .dok-header h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;}
+  .dok-subtitle{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);margin-left:auto;text-align:right;letter-spacing:1px;line-height:1.6;}
+  #dok1 .dok-header{border-color:var(--dok1);}#dok1 .dok-badge{background:var(--dok1);color:#b4e6a8;}#dok1 .dok-header h2{color:#7ecf70;}
+  #dok2 .dok-header{border-color:var(--dok2);}#dok2 .dok-badge{background:var(--dok2);color:#a8c8f0;}#dok2 .dok-header h2{color:#6aaee0;}
+  #dok3 .dok-header{border-color:var(--dok3);}#dok3 .dok-badge{background:var(--dok3);color:#f0a8a8;}#dok3 .dok-header h2{color:#d97070;}
+  #dok4 .dok-header{border-color:var(--dok4);}#dok4 .dok-badge{background:var(--dok4);color:#d4a8f0;}#dok4 .dok-header h2{color:#b070e0;}
+
+  /* CARDS */
+  .card{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:24px;margin-bottom:24px;}
+  .card h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-light);margin-bottom:14px;}
+  .card-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;}
+  .kc-tag{font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--bg-page);border:1px solid var(--border);color:var(--text-muted);padding:2px 8px;border-radius:2px;display:inline-block;margin-bottom:4px;}
+
+  /* CALLOUTS */
+  .callout-blue{background:linear-gradient(135deg,#0d1f3a,#091528);border:1px solid #2a5a9a;border-left:5px solid #4a8ada;border-radius:4px;padding:20px 24px;margin-bottom:28px;}
+  .callout-blue h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;color:#6ab0f0;text-transform:uppercase;margin-bottom:8px;}
+  .callout-blue a{color:#7ecaf8;}
+  .callout-blue ol,.callout-blue ul{padding-left:20px;margin-top:8px;font-size:.88rem;color:#a8c8f0;}
+  .callout-blue li{margin-bottom:4px;}
+  .callout-gold{background:linear-gradient(135deg,#2a1e00,#1a1200);border:1px solid var(--gold);border-left:5px solid var(--gold-bright);border-radius:4px;padding:20px 24px;margin-bottom:28px;}
+  .callout-gold h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--gold-bright);text-transform:uppercase;margin-bottom:8px;}
+  .callout-gold ul{padding-left:20px;margin-top:8px;font-size:.88rem;color:#d4a820;}
+  .callout-gold li{margin-bottom:4px;}
+  .ap-insight{background:linear-gradient(135deg,#2a1e00,#201600);border:2px solid var(--gold);border-radius:4px;padding:20px 24px;margin-bottom:24px;}
+  .ap-insight h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--gold-bright);text-transform:uppercase;margin-bottom:10px;}
+
+  /* QUOTE */
+  .opening-quote{background:var(--bg-card);border-left:4px solid var(--gold);padding:28px 32px;margin-bottom:32px;border-radius:0 4px 4px 0;}
+  .opening-quote blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;color:var(--text-primary);line-height:1.6;margin-bottom:10px;}
+  .opening-quote cite{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1px;}
+
+  /* FRAMEWORK — 3 path columns */
+  .fw3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px;}
+  .fw-item{background:var(--bg-card-light);border:1px solid var(--border);border-radius:4px;padding:18px;}
+  .fw-item .ico{font-size:1.8rem;margin-bottom:8px;}
+  .fw-item h4{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--gold-light);margin-bottom:8px;}
+  .fw-item p,.fw-item ul{font-size:.85rem;color:var(--text-secondary);}
+  .fw-item ul{padding-left:16px;}
+  .fw-item li{margin-bottom:3px;}
+  .fw-item.highlight{border-top:3px solid var(--gold);}
+  .fw-bridge{background:#1a1508;border:1px solid var(--gold);border-radius:4px;padding:12px 16px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-light);letter-spacing:1px;}
+
+  /* TIMELINE */
+  .tl-item{display:flex;gap:20px;margin-bottom:14px;align-items:flex-start;}
+  .tl-date{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);background:var(--bg-card-light);border:1px solid var(--border);padding:3px 10px;border-radius:2px;white-space:nowrap;min-width:80px;text-align:center;flex-shrink:0;}
+  .tl-content h5{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--text-primary);margin-bottom:2px;}
+  .tl-content p{font-size:.85rem;color:var(--text-secondary);}
+  .tl-connector{margin-left:40px;width:2px;height:12px;background:var(--border);}
+
+  /* FLIP CARDS */
+  .flip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:8px;}
+  .flip-card{height:130px;cursor:pointer;perspective:800px;}
+  .flip-inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .5s ease;}
+  .flip-card.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-front,.flip-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:14px;text-align:center;}
+  .flip-front{background:var(--bg-card);border:1px solid var(--border);border-top:3px solid var(--dok1-light);}
+  .flip-front span{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--gold-light);}
+  .flip-back{background:var(--dok1-bg);border:1px solid var(--dok1);transform:rotateY(180deg);}
+  .flip-back span{font-size:.82rem;color:var(--text-secondary);line-height:1.45;}
+  .flip-hint{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-muted);text-align:center;margin-bottom:10px;}
+
+  /* MCQ */
+  .mcq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:20px;margin-bottom:16px;}
+  .mcq-item>p{font-size:.95rem;margin-bottom:14px;color:var(--text-primary);}
+  .mcq-options{display:grid;gap:8px;}
+  .mcq-opt{background:var(--bg-card-light);border:1px solid var(--border);border-radius:4px;padding:10px 14px;cursor:pointer;font-size:.88rem;color:var(--text-secondary);transition:all .2s;text-align:left;font-family:'Source Serif 4',serif;}
+  .mcq-opt:hover{border-color:var(--gold);color:var(--text-primary);}
+  .mcq-opt.correct{background:#1e3d1a;border-color:#4a8a40;color:#90e080;}
+  .mcq-opt.incorrect{background:#3d1a1a;border-color:#8a3040;color:#e08090;}
+  .mcq-opt:disabled{cursor:default;}
+  .mcq-fb{margin-top:10px;font-size:.85rem;color:var(--text-secondary);display:none;background:var(--bg-page);border-radius:4px;padding:10px 14px;border-left:3px solid var(--gold);}
+  .mcq-fb.show{display:block;}
+  .mcq-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);margin-bottom:6px;}
+
+  /* MATCHING */
+  .match-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .match-col h4{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;}
+  .match-term,.match-def{background:var(--bg-card-light);border:1px solid var(--border);border-radius:4px;padding:10px 14px;cursor:pointer;font-size:.85rem;margin-bottom:8px;transition:all .2s;min-height:52px;display:flex;align-items:center;color:var(--text-secondary);}
+  .match-term:hover,.match-def:hover{border-color:var(--gold);color:var(--text-primary);}
+  .match-term.selected{background:#2a1e00;border-color:var(--gold-bright);color:var(--gold-bright);}
+  .match-def.matched{background:#1e3d1a;border-color:#4a8a40;color:#90e080;}
+  .match-def.wrong{background:#3d1a1a;border-color:#8a3040;}
+  .match-reset{font-family:'JetBrains Mono',monospace;font-size:10px;padding:6px 14px;background:transparent;border:1px solid var(--border);color:var(--text-muted);cursor:pointer;border-radius:2px;margin-top:6px;}
+  .match-reset:hover{border-color:var(--gold);color:var(--gold);}
+
+  /* ACCORDION */
+  .acc-btn{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;padding:8px 16px;background:var(--bg-card-light);border:1px solid var(--border);color:var(--text-muted);cursor:pointer;border-radius:2px;margin-top:10px;transition:all .2s;display:block;}
+  .acc-btn:hover{border-color:var(--gold);color:var(--gold);}
+  .acc-body{display:none;background:var(--bg-page);border:1px solid var(--border);border-radius:4px;padding:18px 20px;margin-top:8px;font-size:.88rem;color:var(--text-secondary);line-height:1.75;}
+  .acc-body.open{display:block;}
+  .acc-body strong{color:var(--gold-light);}
+  .acc-body p{margin-bottom:10px;}
+  .acc-body p:last-child{margin-bottom:0;}
+
+  /* EXPLAIN DRILL */
+  .explain-prompt{background:var(--bg-card);border:1px solid var(--border);border-left:4px solid var(--dok2);border-radius:4px;padding:20px 24px;margin-bottom:8px;}
+  .explain-prompt .kc-code{font-family:'JetBrains Mono',monospace;font-size:10px;color:#6aaee0;margin-bottom:6px;}
+  .explain-prompt p{font-size:.95rem;font-style:italic;color:var(--text-primary);}
+
+  /* SOURCE HIPP BOX */
+  .source-box{background:#1a1508;border:1px solid var(--border);border-left:4px solid var(--gold);padding:20px 24px;border-radius:0 4px 4px 0;margin-bottom:16px;}
+  .source-box p{font-style:italic;font-size:.9rem;color:var(--text-secondary);margin-bottom:8px;}
+  .source-box p:last-child{margin-bottom:0;}
+  .source-meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);font-style:normal;margin-top:10px;display:block;}
+  .hipp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px;}
+  .hipp-cell{background:var(--bg-card-light);border:1px solid var(--border);border-radius:4px;padding:12px 14px;}
+  .hipp-cell h5{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .hipp-cell p{font-size:.83rem;color:var(--text-secondary);}
+
+  /* COMPARISON TABLE */
+  .comp-table-wrap{overflow-x:auto;margin-bottom:16px;}
+  .comp-table{width:100%;border-collapse:collapse;font-size:.88rem;}
+  .comp-table th{background:var(--bg-card-light);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold-light);padding:10px 16px;border:1px solid var(--border);text-align:left;}
+  .comp-table td{padding:10px 16px;border:1px solid var(--border);color:var(--text-secondary);vertical-align:top;}
+  .comp-table tr:nth-child(even) td{background:var(--bg-card-light);}
+  .comp-table td:first-child{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;background:var(--bg-card)!important;}
+  .reflection-prompt{background:var(--dok2-bg);border:1px solid var(--dok2);border-radius:4px;padding:14px 18px;font-size:.88rem;color:#a8c8f0;font-style:italic;}
+
+  /* CAUSAL CHAIN */
+  .causal-chain{display:flex;flex-direction:column;gap:0;margin-bottom:16px;}
+  .causal-node{display:flex;align-items:center;gap:16px;}
+  .causal-arrow{display:flex;align-items:center;padding-left:30px;color:var(--text-muted);font-size:1.2rem;margin:4px 0;}
+  .node-box{background:var(--dok3-bg);border:1px solid var(--dok3);border-radius:4px;padding:12px 18px;flex:1;font-size:.88rem;color:var(--text-secondary);min-height:52px;display:flex;align-items:center;}
+  .node-box.blank{background:#2a1a08;border-style:dashed;border-color:var(--gold);color:var(--text-muted);font-style:italic;}
+  .node-box.revealed{background:var(--dok3-bg);border-style:solid;border-color:var(--dok3-light);color:var(--text-secondary);}
+  .node-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);width:26px;text-align:center;flex-shrink:0;}
+  .reveal-chain-btn{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;padding:8px 16px;background:var(--dok3-bg);border:1px solid var(--dok3);color:#f0a8a8;cursor:pointer;border-radius:2px;margin-top:10px;transition:all .2s;}
+  .reveal-chain-btn:hover{background:var(--dok3);}
+
+  /* SAQ */
+  .saq-wrap{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:24px;margin-bottom:24px;}
+  .saq-stem{background:#1a1508;border-radius:4px;padding:16px 20px;font-size:.9rem;color:var(--text-secondary);margin-bottom:16px;font-style:italic;border:1px solid var(--border);}
+  .saq-part{border-top:1px solid var(--border);padding-top:14px;margin-top:14px;}
+  .saq-part-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:#d97070;text-transform:uppercase;margin-bottom:6px;}
+  .saq-part p{font-size:.9rem;color:var(--text-primary);}
+
+  /* CCOT */
+  .ccot-table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:.88rem;}
+  .ccot-table th{padding:10px 16px;border:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;}
+  .ccot-table th:first-child{background:#1a3d28;color:#70d090;}
+  .ccot-table th:last-child{background:#3d2a1a;color:#d09070;}
+  .ccot-table td{padding:10px 16px;border:1px solid var(--border);color:var(--text-secondary);vertical-align:top;}
+  .ccot-table tr:nth-child(even) td{background:var(--bg-card-light);}
+
+  /* THESIS EVALUATOR */
+  .thesis-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:14px;}
+  .thesis-card{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:18px;cursor:pointer;transition:all .2s;}
+  .thesis-card:hover{border-color:var(--gold);}
+  .thesis-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;}
+  .thesis-card p{font-style:italic;font-size:.88rem;color:var(--text-secondary);}
+  .thesis-verdict{margin-top:10px;padding:8px 12px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;display:none;}
+  .thesis-verdict.show{display:block;}
+  .thesis-verdict.pass{background:#1e3d1a;color:#90e080;border:1px solid #4a8a40;}
+  .thesis-verdict.fail{background:#3d1a1a;color:#e08090;border:1px solid #8a3040;}
+  .thesis-explanation{margin-top:8px;font-size:.8rem;color:var(--text-secondary);display:none;}
+  .thesis-explanation.show{display:block;}
+
+  /* CONTEXT BUILDER */
+  .ctx-pathways{display:grid;gap:14px;}
+  .ctx-path{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+  .ctx-path-header{padding:14px 18px;background:var(--dok4-bg);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;cursor:pointer;}
+  .ctx-path-header h5{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--text-primary);}
+  .path-num{font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--dok4);color:#d4a8f0;padding:3px 8px;border-radius:2px;flex-shrink:0;}
+  .ctx-path-body{padding:16px 18px;display:none;}
+  .ctx-path-body.open{display:block;}
+  .ctx-stem{font-style:italic;color:var(--text-secondary);font-size:.9rem;background:#1a1508;border-radius:4px;padding:12px 16px;margin-bottom:12px;border-left:3px solid var(--dok4);}
+  .ctx-path-body textarea{width:100%;background:var(--bg-page);border:1px solid var(--border);border-radius:4px;color:var(--text-primary);font-family:'Source Serif 4',serif;font-size:.88rem;padding:12px;min-height:90px;resize:vertical;margin-bottom:10px;}
+
+  /* SYNTHESIS */
+  .synth-card{background:var(--dok4-bg);border:1px solid var(--dok4-light);border-radius:4px;padding:22px;margin-bottom:24px;}
+  .synth-card h4{font-family:'Playfair Display',serif;color:#d4a8f0;margin-bottom:10px;}
+  .synth-card p{color:var(--text-secondary);font-size:.9rem;}
+  .synth-card ol,.synth-card ul{padding-left:20px;margin-top:8px;font-size:.88rem;color:var(--text-secondary);}
+  .synth-card li{margin-bottom:8px;}
+
+  /* SELF-ASSESSMENT */
+  .sa-grid{display:grid;gap:10px;}
+  .sa-row{display:flex;align-items:center;gap:14px;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:12px 16px;}
+  .sa-label{flex:1;font-size:.88rem;color:var(--text-secondary);}
+  .sa-dots{display:flex;gap:8px;flex-shrink:0;}
+  .dot-btn{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);background:var(--bg-page);cursor:pointer;transition:all .2s;}
+  .dot-btn.ny{border-color:#8a3040;}.dot-btn.ny.active{background:#8a3040;}
+  .dot-btn.gt{border-color:#8a6e20;}.dot-btn.gt.active{background:#8a6e20;}
+  .dot-btn.co{border-color:#3a7a30;}.dot-btn.co.active{background:#3a7a30;}
+  .dot-legend{display:flex;gap:8px;margin-bottom:10px;justify-content:flex-end;}
+  .dot-leg-item{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-muted);display:flex;align-items:center;gap:4px;}
+  .dot-swatch{width:10px;height:10px;border-radius:50%;}
+
+  /* COMPLETE BUTTON */
+  .csb{display:block;margin:30px auto 0;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;background:transparent;cursor:pointer;border-radius:2px;transition:all .2s;}
+  .csb.d1{border:1px solid var(--dok1);color:#7ecf70;}.csb.d1:hover{background:var(--dok1);}
+  .csb.d2{border:1px solid var(--dok2);color:#6aaee0;}.csb.d2:hover{background:var(--dok2);}
+  .csb.d3{border:1px solid var(--dok3);color:#d97070;}.csb.d3:hover{background:var(--dok3);}
+  .csb.d4{border:1px solid var(--dok4);color:#b070e0;}.csb.d4:hover{background:var(--dok4);}
+  .csb.done{opacity:.5;cursor:default;}
+
+  hr.div{border:none;border-top:1px solid var(--border);margin:20px 0;}
+  @media(max-width:700px){
+    .fw3{grid-template-columns:1fr;}
+    .match-wrap{grid-template-columns:1fr;}
+    .thesis-grid{grid-template-columns:1fr;}
+    .hipp-grid{grid-template-columns:1fr;}
+    .dok-section{padding:30px 20px;}
+    .page-header{padding:40px 20px 30px;}
+    .how-to{margin:20px;}
+    .dok-subtitle{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="pb-wrap">
+  <span>PROGRESS</span>
+  <div id="pb-track">
+    <div id="pb-fill"></div>
+    <div class="pm" style="left:25%"><span class="pl">DOK 2</span></div>
+    <div class="pm" style="left:50%"><span class="pl">DOK 3</span></div>
+    <div class="pm" style="left:75%"><span class="pl">DOK 4</span></div>
+  </div>
+  <span id="pb-pct">0%</span>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="unit-label">AP World History: Modern · Unit 8 · Topic 8.7</div>
+  <h1>Global Resistance to <span>Established Power Structures</span></h1>
+  <p class="topic-sub">Nonviolence, Armed Struggle, and State Repression After 1900</p>
+  <div>
+    <span class="thematic-badge">Cultural Developments &amp; Interactions (CDI)</span><br>
+    <span class="lo-badge">LO: Unit 8-I</span>
+    <span class="lo-badge">KC-6.2.V</span>
+    <span class="lo-badge">KC-6.2.V.A</span>
+    <span class="lo-badge">KC-6.2.V.C</span>
+    <span class="lo-badge">KC-6.2.V.D</span>
+    <span class="lo-badge">HTS-1: Causation</span>
+    <span class="lo-badge">Skill 2.B: Sourcing &amp; Situation (HIPP)</span>
+  </div>
+</div>
+
+<!-- HOW-TO BANNER -->
+<div class="how-to">
+  <h3>📌 How to Use This Module</h3>
+  <p>This module is organized around one central framework from the video: <strong>two diverging paths of resistance</strong> — nonviolence (Gandhi, MLK Jr., Mandela) versus violence (Shining Path, Al-Qaeda, state repression under Pinochet, Franco, Idi Amin). The thematic lens is <strong>Cultural Developments and Interactions (CDI)</strong>: ideas about how to fight injustice shaped the 20th century.</p>
+  <p>The suggested skill for 8.7 is <strong>Skill 2.B: Sourcing and Situation (HIPP)</strong> — you will practice explaining how a source's <em>Historical situation, Intended audience, Point of view, and Purpose</em> affect its meaning. The video's key insight is that the words "resistance," "terrorism," and "freedom fighter" are <em>always</em> loaded — they depend entirely on who is telling the story.</p>
+  <div class="dok-flow">
+    <span class="dp d1">DOK 1 → Answer Correctly</span>
+    <span style="color:var(--text-muted)">→</span>
+    <span class="dp d2">DOK 2 → Establish &amp; Explain</span>
+    <span style="color:var(--text-muted)">→</span>
+    <span class="dp d3">DOK 3 → Examine with Evidence</span>
+    <span style="color:var(--text-muted)">→</span>
+    <span class="dp d4">DOK 4 → Explore &amp; Synthesize</span>
+  </div>
+</div>
+
+<!-- ===================== DOK 1 ===================== -->
+<section class="dok-section" id="dok1">
+  <div class="dok-header">
+    <span class="dok-badge">DOK 1</span>
+    <h2>Knowledge Acquisition</h2>
+    <div class="dok-subtitle">ANSWER CORRECTLY<br>Build your factual foundation</div>
+  </div>
+
+  <div class="callout-blue">
+    <h4>🎧 Step 1 — Watch the Video Explainer First</h4>
+    <p>Before anything else, watch the APWH 8.7 video. Listen for three specific things:</p>
+    <ol>
+      <li>The <strong>three figures</strong> the video calls out as leaders of nonviolent resistance — and the <em>step-by-step strategic logic</em> it describes for the US civil rights movement</li>
+      <li>The <strong>common thread</strong> connecting Shining Path, ETA, IRA, and Al-Qaeda — despite their totally different ideologies</li>
+      <li>The video's key question about <strong>point of view</strong>: "Who gets to decide what's a legitimate act of resistance and what's an act of terror?"</li>
+    </ol>
+    <p style="margin-top:12px;"><a href="https://youtu.be/qgj2mMAwODc" target="_blank">▶ APWH 8.7 Global Resistance — YouTube</a></p>
+  </div>
+
+  <!-- Opening Quote -->
+  <div class="opening-quote">
+    <blockquote>"What difference does it make to the dead, the orphans, and the homeless, whether the mad destruction is wrought under the name of totalitarianism or the holy name of liberty and democracy?"</blockquote>
+    <cite>— Mohandas Gandhi (1869–1948)</cite>
+    <p style="margin-top:10px;font-size:.85rem;color:var(--text-muted);">Gandhi's quote opens the textbook chapter and frames the central tension of Topic 8.7: regardless of the political justification — left or right, authoritarian or democratic — mass violence destroys human lives. This moral equivalence between different forms of destruction is exactly the kind of perspective that Skill 2.B (HIPP) asks students to analyze: what does Gandhi's <em>point of view</em> as a practitioner of nonviolence reveal, and what might it limit us from seeing?</p>
+  </div>
+
+  <!-- Visual Framework -->
+  <div class="card">
+    <div class="card-label">Visual Framework — Three Types of Response to Power (KC-6.2.V)</div>
+    <h3>The Spectrum of Resistance After 1900</h3>
+    <div class="fw3">
+      <div class="fw-item">
+        <div class="ico">☮️</div>
+        <h4>Path 1: Nonviolent Resistance</h4>
+        <p>Strategic, disciplined use of civil disobedience, economic pressure, and mass mobilization to make oppressive systems unsustainable.</p>
+        <ul style="margin-top:8px;">
+          <li>CED figures: Gandhi, MLK Jr., Mandela</li>
+          <li>Tactics: boycotts, marches, strikes, court challenges</li>
+          <li>KC: KC-6.2.V.A</li>
+        </ul>
+      </div>
+      <div class="fw-item highlight">
+        <div class="ico">⚖️</div>
+        <h4>The POV Problem (Skill 2.B)</h4>
+        <p>Labels like "resistance," "terrorism," and "freedom fighter" are not neutral — they depend entirely on who is telling the story and their historical situation.</p>
+        <ul style="margin-top:8px;">
+          <li>Bobby Sands: soldier fighting a just war</li>
+          <li>British government: terrorist/criminal</li>
+          <li>Historians: must analyze POV, purpose, situation</li>
+        </ul>
+      </div>
+      <div class="fw-item">
+        <div class="ico">⚔️</div>
+        <h4>Path 2: Violence &amp; State Repression</h4>
+        <p>Two sub-types: (a) non-state groups using violence against civilians as political strategy; (b) states using military force to crush dissent.</p>
+        <ul style="margin-top:8px;">
+          <li>Groups: Shining Path, Al-Qaeda (KC-6.2.V.D)</li>
+          <li>States: Pinochet, Franco, Idi Amin (KC-6.2.V.C)</li>
+          <li>Military-industrial complex: arms buildup</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fw-bridge">The CED's central insight: "Although conflict dominated much of the 20th century, many individuals and groups — including states — opposed this trend. Some individuals and groups, however, intensified the conflicts." (KC-6.2.V)</div>
+  </div>
+
+  <!-- Annotated Timeline -->
+  <div class="card">
+    <div class="card-label">Annotated Timeline — KC-6.2.V.A · KC-6.2.V.C · KC-6.2.V.D</div>
+    <h3>Key Events in Global Resistance After 1900</h3>
+    <div>
+      <div class="tl-item">
+        <div class="tl-date">1930</div>
+        <div class="tl-content">
+          <h5>Gandhi's Salt March</h5>
+          <p>Gandhi leads a 240-mile march to the sea to protest British salt taxes — a masterpiece of nonviolent strategy that galvanized global attention and made British rule appear morally indefensible.</p>
+        </div>
+      </div>
+      <div class="tl-connector"></div>
+      <div class="tl-item">
+        <div class="tl-date">1936–1939</div>
+        <div class="tl-content">
+          <h5>Franco's Military Coup — Spain</h5>
+          <p>Francisco Franco uses military force to crush the Spanish Republic in a brutal civil war; his authoritarian regime rules Spain until 1975, exemplifying KC-6.2.V.C: militarized states intensifying conflict.</p>
+        </div>
+      </div>
+      <div class="tl-connector"></div>
+      <div class="tl-item">
+        <div class="tl-date">1955–1956</div>
+        <div class="tl-content">
+          <h5>Montgomery Bus Boycott — USA</h5>
+          <p>Martin Luther King Jr. leads a 381-day boycott of Montgomery's segregated buses; demonstrates the video's step-by-step logic: economic pressure → mass mobilization → political change.</p>
+        </div>
+      </div>
+      <div class="tl-connector"></div>
+      <div class="tl-item">
+        <div class="tl-date">1963</div>
+        <div class="tl-content">
+          <h5>March on Washington — USA</h5>
+          <p>250,000 people march on Washington D.C.; King delivers "I Have a Dream" — the peak of mass mobilization in the civil rights movement, which leads directly to the Civil Rights Act of 1964 and Voting Rights Act of 1965.</p>
+        </div>
+      </div>
+      <div class="tl-connector"></div>
+      <div class="tl-item">
+        <div class="tl-date">1968</div>
+        <div class="tl-content">
+          <h5>"The Year of Revolt" — Global</h5>
+          <p>Simultaneous upheavals across the globe: student protests in France (triggering France's largest general strike), Czechoslovakia, Mexico, Brazil, Japan, Poland, and Northern Ireland — a coordinated moment of global resistance.</p>
+        </div>
+      </div>
+      <div class="tl-connector"></div>
+      <div class="tl-item">
+        <div class="tl-date">1973</div>
+        <div class="tl-content">
+          <h5>Pinochet's Coup — Chile</h5>
+          <p>General Augusto Pinochet overthrows the democratically elected Salvador Allende in a US-backed military coup; thousands are executed or "disappeared" — a CED example of militarized state violence intensifying conflict.</p>
+        </div>
+      </div>
+      <div class="tl-connector"></div>
+      <div class="tl-item">
+        <div class="tl-date">1980</div>
+        <div class="tl-content">
+          <h5>Shining Path Launches Campaign — Peru</h5>
+          <p>The Maoist guerrilla group Sendero Luminoso (Shining Path) begins a campaign of violence against the Peruvian state, targeting government officials and civilians to "destroy the presence of the state and create a vacuum."</p>
+        </div>
+      </div>
+      <div class="tl-connector"></div>
+      <div class="tl-item">
+        <div class="tl-date">1990</div>
+        <div class="tl-content">
+          <h5>Mandela Released — South Africa</h5>
+          <p>Nelson Mandela is released after 27 years in prison; leads a negotiated transition from apartheid to multiracial democracy — the culmination of the ANC's decades-long nonviolent and armed resistance movement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vocabulary Flip Cards -->
+  <div class="card">
+    <div class="card-label">Vocabulary — 10 Terms · Click Cards to Reveal Definitions</div>
+    <h3>Essential Vocabulary for Topic 8.7</h3>
+    <p class="flip-hint">▸ Click any card to flip it and reveal the definition</p>
+    <div class="flip-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>Civil Disobedience</span></div>
+          <div class="flip-back"><span>The deliberate, nonviolent refusal to comply with laws or government demands considered unjust; the primary tactic of Gandhi's Indian independence movement and King's civil rights movement.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>Nonviolent Resistance</span></div>
+          <div class="flip-back"><span>KC-6.2.V.A: A strategic, disciplined approach to political change using boycotts, marches, strikes, and civil disobedience rather than armed force; exemplified by Gandhi, MLK Jr., and Mandela in the 20th century.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>Military-Industrial Complex</span></div>
+          <div class="flip-back"><span>The relationship between a nation's military and its defense industry; President Eisenhower warned about its dangers in 1961. The CED lists the "buildup of the military-industrial complex and weapons trading" as a response that intensified conflict.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>Shining Path</span></div>
+          <div class="flip-back"><span>A Peruvian Maoist guerrilla organization (KC-6.2.V.D) that used targeted assassinations of government officials and civilians to "destroy the presence of the state and create a vacuum" — a CED illustrative example of movements using violence against civilians.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>Al-Qaeda</span></div>
+          <div class="flip-back"><span>A transnational Islamist organization (KC-6.2.V.D) that used attacks on civilians as a political strategy to advance its goals — one of the CED's illustrative examples of "movements that used violence against civilians in an effort to achieve political aims."</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>State-Sponsored Violence</span></div>
+          <div class="flip-back"><span>KC-6.2.V.C: The use by governments of their own military power to suppress dissent, crush opposition, and maintain authoritarian control; exemplified by Pinochet (Chile), Franco (Spain), and Idi Amin (Uganda).</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>Apartheid</span></div>
+          <div class="flip-back"><span>A system of institutionalized racial segregation and white minority rule in South Africa (1948–1994); the target of Nelson Mandela and the ANC's decades-long resistance campaign, which culminated in a negotiated transition to multiracial democracy.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>Point of View (HIPP)</span></div>
+          <div class="flip-back"><span>Skill 2.B: One of the four HIPP elements — the perspective, background, or position of a source's author that shapes what they say and how they say it. For 8.7, the "freedom fighter vs. terrorist" distinction is fundamentally a POV question.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>1968: Year of Revolt</span></div>
+          <div class="flip-back"><span>A year of simultaneous global uprisings — student protests in France (largest general strike in French history), Czechoslovakia, Mexico, Brazil, Japan, and elsewhere — demonstrating the transnational spread of resistance movements in the Cold War era.</span></div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front"><span>Historical Situation (HIPP)</span></div>
+          <div class="flip-back"><span>Skill 2.B: The broader context in which a source was produced — events, conditions, and power structures that shaped why the source was created. For 8.7 sources, the Cold War's ideological polarization is often the key historical situation.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MCQs -->
+  <div class="card">
+    <div class="card-label">Recall Multiple Choice — 5 Questions · Instant Feedback</div>
+    <h3>Check Your Knowledge</h3>
+
+    <div class="mcq-item">
+      <div class="mcq-num">QUESTION 1 OF 5</div>
+      <p>According to KC-6.2.V.A, which three figures are CED illustrative examples of individuals who "promoted the practice of nonviolence as a way to bring about political change"?</p>
+      <div class="mcq-options">
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m1')">A. Ho Chi Minh, Kwame Nkrumah, and Gamal Abdel Nasser</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'correct','m1')">B. Mohandas Gandhi, Martin Luther King Jr., and Nelson Mandela</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m1')">C. Gandhi, Mandela, and Julius Nyerere</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m1')">D. Martin Luther King Jr., Bobby Sands, and Mohandas Gandhi</button>
+      </div>
+      <div class="mcq-fb" id="m1"><strong>Correct.</strong> KC-6.2.V.A names Gandhi, Martin Luther King Jr., and Nelson Mandela as the three CED illustrative examples of nonviolent resistance leaders. These are the three figures the video also specifically highlights. Ho Chi Minh and Nkrumah appear in different topics.</div>
+    </div>
+
+    <div class="mcq-item">
+      <div class="mcq-num">QUESTION 2 OF 5</div>
+      <p>The CED lists Chile under Pinochet, Spain under Franco, and Uganda under Idi Amin as illustrative examples of which key concept?</p>
+      <div class="mcq-options">
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m2')">A. KC-6.2.V.A — Individuals promoting nonviolence as a path to political change</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m2')">B. KC-6.2.V.D — Movements using violence against civilians to achieve political aims</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'correct','m2')">C. KC-6.2.V.C — Militaries and militarized states responding in ways that further intensified conflict</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m2')">D. KC-6.2.V.B — Groups opposing and promoting alternatives to existing orders</button>
+      </div>
+      <div class="mcq-fb" id="m2"><strong>Correct.</strong> KC-6.2.V.C covers "militaries and militarized states" that responded to conflict in ways that "further intensified conflict." Pinochet, Franco, and Idi Amin are all CED examples of authoritarian leaders who used state military power to crush opposition — not non-state groups using terrorism (that's KC-6.2.V.D).</div>
+    </div>
+
+    <div class="mcq-item">
+      <div class="mcq-num">QUESTION 3 OF 5</div>
+      <p>The video describes the US civil rights movement's strategy as a "step-by-step" process. Which sequence correctly orders the steps as described?</p>
+      <div class="mcq-options">
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m3')">A. Mass mobilization → economic pressure → court decisions → political change</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'correct','m3')">B. Economic pressure → mass mobilization → political change (Civil Rights Act)</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m3')">C. Court decisions → economic pressure → mass mobilization</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m3')">D. Political pressure → international attention → economic sanctions → independence</button>
+      </div>
+      <div class="mcq-fb" id="m3"><strong>Correct.</strong> The video explicitly describes the civil rights movement's logic: economic pressure first (like the Montgomery bus boycott) builds momentum; that momentum leads to mass mobilization (like the March on Washington); and that pressure finally creates the political push needed for concrete change (the Civil Rights Act of 1965). Each step was designed to build on the one before.</div>
+    </div>
+
+    <div class="mcq-item">
+      <div class="mcq-num">QUESTION 4 OF 5</div>
+      <p>What is the "common thread" connecting Shining Path, ETA (Basque separatists), the IRA, and Al-Qaeda, despite their vastly different political ideologies?</p>
+      <div class="mcq-options">
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m4')">A. All four were communist organizations aligned with the Soviet Union</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m4')">B. All four operated primarily in Latin America and the Middle East</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'correct','m4')">C. All four deliberately targeted civilians as a political strategy to destabilize governments</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m4')">D. All four were eventually successful in achieving their stated political goals</button>
+      </div>
+      <div class="mcq-fb" id="m4"><strong>Correct.</strong> KC-6.2.V.D: "Some movements used violence against civilians in an effort to achieve political aims." The video notes that despite completely different ideologies — Maoist communism (Shining Path), Basque nationalism (ETA), Irish nationalism (IRA), Islamist extremism (Al-Qaeda) — "the method targeting civilians, that was the common thread." This is the CED's defining criterion for this category.</div>
+    </div>
+
+    <div class="mcq-item">
+      <div class="mcq-num">QUESTION 5 OF 5</div>
+      <p>The suggested skill for Topic 8.7 is Skill 2.B (Sourcing and Situation / HIPP). Which of the following best describes what this skill requires students to do?</p>
+      <div class="mcq-options">
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m5')">A. Evaluate the extent to which a historical argument is supported by evidence</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m5')">B. Identify continuities and changes in power structures over time</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'correct','m5')">C. Explain how a source's point of view, purpose, historical situation, and/or audience shapes its meaning</button>
+        <button class="mcq-opt" onclick="chkMCQ(this,'wrong','m5')">D. Compare the causes and effects of different resistance movements across regions</button>
+      </div>
+      <div class="mcq-fb" id="m5"><strong>Correct.</strong> Skill 2.B states: "Explain the point of view, purpose, historical situation, and/or audience of a source." This is HIPP analysis. For Topic 8.7, this skill is directly relevant: the "freedom fighter vs. terrorist" question the video raises is a question about POV and historical situation — the same event can be interpreted entirely differently depending on who is telling the story.</div>
+    </div>
+  </div>
+
+  <!-- Matching -->
+  <div class="card">
+    <div class="card-label">Matching Activity — Click a Term, then Click Its Definition · 5 Pairs</div>
+    <h3>Match the Figure or Group to Its Description</h3>
+    <div class="match-wrap" id="matchWrap">
+      <div class="match-col">
+        <h4>Terms</h4>
+        <div class="match-term" data-id="a" onclick="selTerm(this)">Martin Luther King Jr.</div>
+        <div class="match-term" data-id="b" onclick="selTerm(this)">Augusto Pinochet</div>
+        <div class="match-term" data-id="c" onclick="selTerm(this)">Nelson Mandela</div>
+        <div class="match-term" data-id="d" onclick="selTerm(this)">Shining Path</div>
+        <div class="match-term" data-id="e" onclick="selTerm(this)">Francisco Franco</div>
+      </div>
+      <div class="match-col">
+        <h4>Definitions</h4>
+        <div class="match-def" data-id="c" onclick="selDef(this)">Led the ANC's decades-long campaign against South African apartheid; imprisoned for 27 years; negotiated a peaceful transition to multiracial democracy in 1994.</div>
+        <div class="match-def" data-id="a" onclick="selDef(this)">Baptist minister who led the US civil rights movement using economic boycotts, mass marches, and nonviolent civil disobedience, culminating in the Civil Rights Act of 1964.</div>
+        <div class="match-def" data-id="e" onclick="selDef(this)">Used a military coup to overthrow the Spanish Republic (1936–39) and ruled as authoritarian dictator until 1975 — a CED example of a militarized state intensifying conflict.</div>
+        <div class="match-def" data-id="b" onclick="selDef(this)">Chilean general who led a US-backed military coup (1973) overthrowing elected president Allende; used executions and disappearances to maintain authoritarian power.</div>
+        <div class="match-def" data-id="d" onclick="selDef(this)">Peruvian Maoist group that used targeted assassinations of government officials and civilians to "destroy the state and create a vacuum" — a CED example of violence against civilians.</div>
+      </div>
+    </div>
+    <button class="match-reset" onclick="resetMatch()">↺ Reset Matching</button>
+  </div>
+
+  <button class="csb d1" onclick="compSec(1,this)">✓ Mark DOK 1 Complete</button>
+</section>
+
+<!-- ===================== DOK 2 ===================== -->
+<section class="dok-section" id="dok2">
+  <div class="dok-header">
+    <h2>Knowledge Application</h2>
+    <span class="dok-badge">DOK 2</span>
+    <div class="dok-subtitle">ESTABLISH &amp; EXPLAIN WITH EXAMPLES<br>Apply concepts to cases</div>
+  </div>
+
+  <!-- Explain Drill 1 -->
+  <div class="card">
+    <div class="card-label">Explain Drill 1 of 2 — AP Command Verb: EXPLAIN</div>
+    <h3>Explaining Nonviolence as a Political Strategy</h3>
+    <div class="kc-tag">KC-6.2.V.A</div>
+    <div class="explain-prompt">
+      <div class="kc-code">LO: Unit 8-I · HTS-1: Causation</div>
+      <p>Explain how nonviolent resistance worked as a strategic tool for political change in the 20th century. Use at least two of the following CED figures: Gandhi, Martin Luther King Jr., Nelson Mandela.</p>
+    </div>
+    <button class="acc-btn" onclick="togAcc('e1')">▸ Reveal Sample AP Response</button>
+    <div class="acc-body" id="e1">
+      <p>Nonviolent resistance worked as a strategic political tool because it shifted the moral burden of conflict onto the oppressive system — making the violence of the oppressor visible to domestic and international audiences — while simultaneously imposing real economic and political costs on that system through organized, disciplined mass action.</p>
+      <p><strong>Gandhi</strong> refined this strategy in India through decades of noncooperation: boycotts of British goods, refusal to pay taxes, and mass civil disobedience campaigns like the 1930 Salt March. Each action was designed to make British colonial rule economically costly and politically unsustainable, while the spectacle of British authorities arresting peaceful protesters generated international sympathy and delegitimized empire.</p>
+      <p><strong>Martin Luther King Jr.</strong> applied a similar step-by-step strategic logic to the US civil rights movement: economic pressure first (the Montgomery Bus Boycott imposed financial costs on segregated transit systems), which built mass mobilization (the 1963 March on Washington), which created the political momentum required for legislative change (the Civil Rights Act of 1964 and Voting Rights Act of 1965). The strategy worked because it combined moral clarity with tactical sophistication — each step was designed to build on the one before.</p>
+      <p><strong>Nelson Mandela</strong> led the ANC's nonviolent resistance against South African apartheid for decades; even after the ANC turned to armed resistance in the 1960s and Mandela was imprisoned for 27 years, the moral authority he maintained through his imprisonment ultimately enabled a negotiated transition to multiracial democracy in 1994 — a testament to how sustained nonviolent moral pressure can outlast even direct state repression.</p>
+    </div>
+  </div>
+
+  <!-- Explain Drill 2 -->
+  <div class="card">
+    <div class="card-label">Explain Drill 2 of 2 — AP Command Verb: EXPLAIN</div>
+    <h3>Explaining How Militarized States Intensified Conflict</h3>
+    <div class="kc-tag">KC-6.2.V.C</div>
+    <div class="explain-prompt">
+      <div class="kc-code">LO: Unit 8-I · HTS-1: Causation</div>
+      <p>Explain how militaries and militarized states responded to conflict in ways that further intensified it after 1900. Use at least two CED illustrative examples (Pinochet, Franco, Idi Amin, or the military-industrial complex).</p>
+    </div>
+    <button class="acc-btn" onclick="togAcc('e2')">▸ Reveal Sample AP Response</button>
+    <div class="acc-body" id="e2">
+      <p>Militaries and militarized states intensified conflict after 1900 because their response to political opposition was not negotiation or reform but overwhelming force — a choice that typically generated further resistance, deepened divisions, and prolonged instability rather than resolving the underlying grievances that had produced dissent.</p>
+      <p><strong>In Chile</strong>, General Augusto Pinochet's 1973 military coup overthrew the democratically elected government of Salvador Allende, immediately killing thousands and "disappearing" tens of thousands more. Rather than ending political conflict, the coup's brutality radicalized opposition, generated international condemnation, and left Chile with deep social divisions that outlasted Pinochet's regime — the repression had intensified rather than resolved the underlying political conflict.</p>
+      <p><strong>In Spain</strong>, Francisco Franco's military coup against the Republic (1936–39) turned a political conflict into a devastating civil war. Franco's victory required three years of warfare and the deaths of hundreds of thousands of Spaniards; his subsequent authoritarian rule suppressed regional identities (Catalan, Basque) so aggressively that it fueled the emergence of armed separatist movements like ETA — meaning that military repression directly contributed to creating the very terrorist violence KC-6.2.V.D describes.</p>
+      <p>More broadly, the global <strong>military-industrial complex</strong> — the interconnected relationship between governments, defense industries, and arms traders — increased the scale and lethality of all conflicts by constantly expanding the supply of weapons worldwide, making every local confrontation potentially more destructive.</p>
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="card">
+    <div class="card-label">Comparison Table — KC-6.2.V.A vs KC-6.2.V.C vs KC-6.2.V.D · LO I</div>
+    <h3>Three Types of Response to Power: Side by Side</h3>
+    <div class="comp-table-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Nonviolent Resistance (V.A)</th>
+            <th>Militarized State Repression (V.C)</th>
+            <th>Non-State Violence Against Civilians (V.D)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Core Tactic</td>
+            <td>Civil disobedience, boycotts, marches, strikes; make oppression visible and costly</td>
+            <td>Military coups, executions, imprisonment, suppression of dissent through state violence</td>
+            <td>Targeted assassinations, bombings, terror attacks on civilians to destabilize the state</td>
+          </tr>
+          <tr>
+            <td>Goal</td>
+            <td>Moral delegitimization of the oppressive system + economic/political pressure for change</td>
+            <td>Maintain or seize power; crush opposition and suppress alternative political movements</td>
+            <td>Destroy state authority in targeted areas; create power vacuums; force political concessions through fear</td>
+          </tr>
+          <tr>
+            <td>CED Examples</td>
+            <td>Gandhi (India), MLK Jr. (USA), Mandela (South Africa)</td>
+            <td>Pinochet (Chile), Franco (Spain), Idi Amin (Uganda); military-industrial complex/arms trading</td>
+            <td>Shining Path (Peru), Al-Qaeda (global)</td>
+          </tr>
+          <tr>
+            <td>Effect on Conflict</td>
+            <td>Generally reduced or resolved conflict through political change; built durable institutions</td>
+            <td>Often intensified conflict by radicalizing opposition and generating further resistance (KC-6.2.V.C)</td>
+            <td>Prolonged instability; generated counter-violence; rarely achieved stated political goals</td>
+          </tr>
+          <tr>
+            <td>POV Complexity</td>
+            <td>Broadly recognized internationally as legitimate; leaders became moral icons</td>
+            <td>Regimes portrayed themselves as restoring order; opponents called them tyrants</td>
+            <td>Practitioners called themselves freedom fighters or soldiers; governments and victims called them terrorists</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="reflection-prompt">
+      <strong>Reflection (Skill 2.B):</strong> The table shows that "POV Complexity" varies across the three types. Using the concept of Historical Situation, why might someone in Chile in 1973 view Pinochet's coup very differently depending on their class, political affiliation, or role in Allende's government?
+    </div>
+  </div>
+
+  <!-- Apply Activity — HIPP -->
+  <div class="card">
+    <div class="card-label">Apply Activity — Skill 2.B: Sourcing and Situation (HIPP)</div>
+    <h3>Analyze a Primary Source from Topic 8.7</h3>
+    <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:14px;">The following excerpts come from an interview with a guerrilla officer in Peru's Shining Path. This source appears in the textbook's "Think as a Historian" feature for Topic 8.7.</p>
+    <div class="source-box">
+      <p>"All popular war is violent... We use selective annihilation of mayors and government officials, for example, to destroy the presence of the state and create a vacuum. Then we fill that vacuum."</p>
+      <p>"We are all prepared to die, and we fear nothing because the armed popular struggle will advance and triumph."</p>
+      <p>"We are fighting against a neofeudal society where the state has almost no presence in many areas and the masses have long been exploited."</p>
+      <span class="source-meta">— Shining Path guerrilla officer, Chicago Tribune, July 9, 1989 ("More War Will Bring Peace, Say Peru's Maoists after 15,000 Die")</span>
+    </div>
+    <p style="font-size:.88rem;color:var(--text-secondary);margin-bottom:12px;">Complete the HIPP analysis grid below, then click to see model responses.</p>
+    <div class="hipp-grid">
+      <div class="hipp-cell">
+        <h5>H — Historical Situation</h5>
+        <p>What broader context shaped when and why this source was produced? What was happening in Peru and globally in 1989?</p>
+      </div>
+      <div class="hipp-cell">
+        <h5>I — Intended Audience</h5>
+        <p>Who was the speaker trying to reach? How does speaking to a US newspaper (Chicago Tribune) shape what is said?</p>
+      </div>
+      <div class="hipp-cell">
+        <h5>P — Point of View</h5>
+        <p>What is the speaker's perspective? What does their position as a Shining Path officer lead them to emphasize or omit?</p>
+      </div>
+      <div class="hipp-cell">
+        <h5>P — Purpose</h5>
+        <p>Why did the speaker give this interview? What are they trying to accomplish by making these statements publicly?</p>
+      </div>
+    </div>
+    <button class="acc-btn" onclick="togAcc('hipp1')">▸ Reveal Model HIPP Analysis</button>
+    <div class="acc-body" id="hipp1">
+      <p><strong>H — Historical Situation:</strong> By 1989, the Shining Path had been waging its campaign since 1980 and approximately 15,000 people had died (as the article's title notes). Peru was experiencing severe political and economic instability; the government of Alan García was struggling to contain both the Shining Path insurgency and a collapsing economy. Globally, the Cold War was ending — the Soviet bloc was collapsing — meaning that Maoist revolutionary movements were losing their international ideological context. This historical situation helps explain why Shining Path was seeking international media attention: to legitimize its movement as the Cold War order that had defined revolutionary politics was disintegrating.</p>
+      <p><strong>I — Intended Audience:</strong> The source is an interview published in the Chicago Tribune — an American newspaper with a large, primarily non-Peruvian readership. Speaking to a US audience means the officer frames the struggle in terms that might resonate internationally: "neofeudal society," "masses long exploited" — language that echoes American progressive and left-wing frameworks. The audience shapes the language: the officer is not speaking to Peruvian peasants but to an international audience he wants to convince of the movement's legitimacy.</p>
+      <p><strong>P — Point of View:</strong> As a Shining Path officer, the speaker presents violence as rational, necessary, and strategically sound — not as atrocity but as political science ("selective annihilation," "create a vacuum"). He frames the Peruvian state as illegitimate ("neofeudal," with "almost no presence") and positions Shining Path as the only force that can provide genuine governance. His POV leads him to omit the civilian suffering caused by Shining Path's own attacks, the movement's authoritarian ideology, and the reality that most Peruvians strongly opposed the group. His certainty ("we fear nothing," "will advance and triumph") reflects the ideological commitment of a true believer.</p>
+      <p><strong>P — Purpose:</strong> The officer's purpose is to legitimize Shining Path's violence to an international audience — to reframe what others call terrorism as rational political strategy in service of the oppressed. By speaking publicly to a major US newspaper, he is attempting to: (1) present Shining Path as a political movement with comprehensible goals rather than a terrorist group; (2) delegitimize the Peruvian state as the real source of violence; and (3) generate international sympathy or at least neutrality. This is an act of political communication, not simply reportage.</p>
+      <p style="margin-top:10px;color:var(--text-muted);font-size:.83rem;"><strong>Limitation of the Source:</strong> Precisely because this source reflects the speaker's POV and purpose, it illuminates how Shining Path justified its violence internally — but it cannot give us an accurate picture of the actual human cost of those tactics, the perspectives of the government officials and civilians targeted, or the broader Peruvian population's reaction. It is most useful as a window into the ideology of a violent movement, not as a reliable account of what actually happened.</p>
+    </div>
+  </div>
+
+  <div class="callout-gold">
+    <h4>📊 Step 2 — Review the Infographic Now</h4>
+    <p>Before moving to DOK 3, review the NotebookLM or Gemini infographic for Topic 8.7. Look for:</p>
+    <ul>
+      <li>The visual map of where different types of resistance emerged globally</li>
+      <li>The comparison between nonviolent and violent outcomes across the century</li>
+      <li>The timeline showing the global spread of resistance movements in 1968</li>
+    </ul>
+  </div>
+
+  <button class="csb d2" onclick="compSec(2,this)">✓ Mark DOK 2 Complete</button>
+</section>
+
+<!-- ===================== DOK 3 ===================== -->
+<section class="dok-section" id="dok3">
+  <div class="dok-header">
+    <h2>Knowledge Analysis</h2>
+    <span class="dok-badge">DOK 3</span>
+    <div class="dok-subtitle">EXAMINE &amp; EXPLAIN WITH EVIDENCE<br>Construct AP-level arguments</div>
+  </div>
+
+  <!-- Causal Chain -->
+  <div class="card">
+    <div class="card-label">Causal Chain — KC-6.2.V.C · HTS-1: Causation · 2 Blank Nodes</div>
+    <h3>How State Repression Intensifies Conflict: The Chile Case</h3>
+    <p style="font-size:.88rem;color:var(--text-secondary);margin-bottom:16px;">Two nodes are blank. Reason through the causal logic, then click "Reveal Answers" to check.</p>
+    <div class="causal-chain">
+      <div class="causal-node">
+        <span class="node-num">1</span>
+        <div class="node-box">Salvador Allende is elected president of Chile in 1970, pursuing democratic socialist policies including nationalization of copper mines — threatening both Chilean elites and US Cold War interests in Latin America.</div>
+      </div>
+      <div class="causal-arrow">↓</div>
+      <div class="causal-node">
+        <span class="node-num">2</span>
+        <div class="node-box blank" id="chain2">[ Student completes this node ]</div>
+      </div>
+      <div class="causal-arrow">↓</div>
+      <div class="causal-node">
+        <span class="node-num">3</span>
+        <div class="node-box">Pinochet's regime executes thousands, "disappears" tens of thousands more, and bans political opposition — transforming what was a political dispute into systematic state terror against Chilean citizens.</div>
+      </div>
+      <div class="causal-arrow">↓</div>
+      <div class="causal-node">
+        <span class="node-num">4</span>
+        <div class="node-box blank" id="chain4">[ Student completes this node ]</div>
+      </div>
+      <div class="causal-arrow">↓</div>
+      <div class="causal-node">
+        <span class="node-num">5</span>
+        <div class="node-box">Pinochet's example becomes a Cold War template: US-backed military governments across Latin America (Argentina, Brazil, Uruguay) adopt similar tactics, spreading the pattern of state violence and intensifying conflict across the hemisphere.</div>
+      </div>
+    </div>
+    <button class="reveal-chain-btn" onclick="revChain()">▸ Reveal Blank Nodes</button>
+  </div>
+
+  <!-- AP Insight -->
+  <div class="ap-insight">
+    <h4>⚡ AP Skill in Focus — Skill 2.B: Sourcing and Situation (HIPP)</h4>
+    <p style="font-size:.9rem;color:var(--text-secondary);">Skill 2.B is the suggested skill for 8.7 for a reason: the entire topic turns on the question of <strong style="color:var(--gold-light);">who gets to define "resistance," "terrorism," and "freedom"</strong>. On the AP exam, HIPP analysis appears in:</p>
+    <ul style="padding-left:20px;margin-top:8px;font-size:.88rem;color:var(--text-secondary);">
+      <li><strong style="color:var(--gold-light);">SAQ Q1 and Q2</strong>: You must identify and explain at least one HIPP element of a source</li>
+      <li><strong style="color:var(--gold-light);">DBQ</strong>: You must do HIPP analysis on at least 2 documents (aim for 4) to earn the sourcing point</li>
+    </ul>
+    <p style="font-size:.9rem;color:var(--text-secondary);margin-top:10px;">The strongest HIPP explanations: (1) name the specific HIPP element, (2) identify the specific detail from the source that reflects it, and (3) explain <em>how</em> that element shapes the source's meaning or limits its usefulness. Don't just say "the author has a bias" — explain the specific mechanism by which their POV/purpose/situation shapes what they say.</p>
+  </div>
+
+  <!-- SAQ -->
+  <div class="saq-wrap">
+    <div class="card-label">SAQ Practice — 3-Part Short Answer · Source-Based (SAQ Type Q2)</div>
+    <h3 style="font-family:'Playfair Display',serif;color:var(--gold-light);margin-bottom:14px;">Short Answer Question: Global Resistance After 1900</h3>
+    <div class="saq-stem">
+      Use the following primary source and your knowledge of AP World History to answer all parts of the question.
+      <br><br>
+      <em>"Our government is not elected by the people. It is not of the people, it is against them... I am not a criminal. I am an Irish republican prisoner of war."</em>
+      <br>— Bobby Sands, IRA hunger striker, written during his imprisonment in the Maze Prison, Northern Ireland, 1981 (Sands died after 66 days on hunger strike, aged 27)
+    </div>
+    <div class="saq-part">
+      <div class="saq-part-label">Part A — Identify</div>
+      <p>Identify one claim Bobby Sands makes in this source about the nature of the conflict in Northern Ireland.</p>
+      <button class="acc-btn" onclick="togAcc('saqA')">▸ Reveal Sample Response (Part A)</button>
+      <div class="acc-body" id="saqA">
+        <p><strong>Sample Response:</strong> Sands claims that the British government ruling Northern Ireland lacks democratic legitimacy — it is "not elected by the people" and is "against them" — and that his imprisonment is therefore that of a political prisoner of war, not a criminal.</p>
+        <p style="color:var(--text-muted);font-size:.82rem;margin-top:8px;">AP Note: "Identify" requires you to state a specific claim from the source. One clear sentence that names the claim earns the point. You do not need to evaluate or analyze the claim — just identify it with enough specificity.</p>
+      </div>
+    </div>
+    <div class="saq-part">
+      <div class="saq-part-label">Part B — Explain</div>
+      <p>Explain how Sands' point of view as an IRA member shapes the argument he makes in this source.</p>
+      <button class="acc-btn" onclick="togAcc('saqB')">▸ Reveal Sample Response (Part B)</button>
+      <div class="acc-body" id="saqB">
+        <p><strong>Sample Response (Skill 2.B — POV):</strong> Sands' point of view as a member of the Irish Republican Army — a militant organization seeking to end British rule in Northern Ireland and unite Ireland — leads him to frame the conflict as a war between an illegitimate occupying government and the Irish people, rather than as a matter of domestic criminal justice. Because he understands himself to be a soldier in a legitimate political struggle, the language of "criminal" is unacceptable to him; he insists on the language of "prisoner of war," which would imply that IRA violence is a legitimate act of warfare rather than terrorism. His POV thus produces a source in which violence against the British state is morally justified, the British government is fundamentally illegitimate, and the hunger strike is an act of political defiance rather than self-destruction — all framing choices that reflect his organizational identity and political commitments, and that a British government official would categorically reject.</p>
+        <p style="color:var(--text-muted);font-size:.82rem;margin-top:8px;">AP Note: This response earns the HIPP point by (1) naming the specific HIPP element (Point of View), (2) connecting it to a specific aspect of the source (the "prisoner of war" vs. "criminal" framing), and (3) explaining the mechanism by which his POV shapes the source (his identity as an IRA soldier makes the criminal frame illegitimate to him). This is the full three-step HIPP move.</p>
+      </div>
+    </div>
+    <div class="saq-part">
+      <div class="saq-part-label">Part C — Explain</div>
+      <p>Explain one way in which this source's historical situation (Northern Ireland, 1981) limits a historian's ability to use it as evidence about the broader nature of resistance movements in the 20th century.</p>
+      <button class="acc-btn" onclick="togAcc('saqC')">▸ Reveal Sample Response (Part C)</button>
+      <div class="acc-body" id="saqC">
+        <p><strong>Sample Response (Skill 2.B — Historical Situation + Limitation):</strong> The source's historical situation — a hunger strike by an IRA prisoner in the specific context of British-Irish political conflict in 1981 — limits its usefulness as evidence about resistance movements broadly because Sands' argument is inseparable from the particular nationalist framing of Irish republicanism. His claim that British rule in Northern Ireland is inherently illegitimate reflects a specifically Irish nationalist position that was genuinely contested at the time: many Northern Irish Protestants considered themselves British and supported continued union with Britain. Using Sands' source to generalize about "resistance movements" risks importing his specific POV — that colonial or occupying governments are always illegitimate — into a framework that needs to be evaluated case by case. Additionally, as a source produced under extreme duress (a hunger strike), it represents the most heightened, extreme statement of his beliefs rather than a measured political analysis, which further limits its representativeness for drawing conclusions about resistance movements in general.</p>
+        <p style="color:var(--text-muted);font-size:.82rem;margin-top:8px;">AP Note: This Part C earns credit by identifying a specific limitation (the source's particular historical situation and the contested nature of its political claims within Northern Ireland) and explaining the mechanism by which that situation limits the source's usefulness for broader generalizations.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CCOT Grid -->
+  <div class="card">
+    <div class="card-label">CCOT Analysis — HTS-3 · Reactions to Power Structures · 1900–Present</div>
+    <h3>Global Resistance: What Changed, What Continued</h3>
+    <div class="comp-table-wrap">
+      <table class="ccot-table">
+        <thead>
+          <tr>
+            <th>Continuity — What Stayed the Same</th>
+            <th>Change Over Time — What Transformed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Throughout the 20th century, oppressed peoples continued to organize resistance against unjust power structures — the fundamental human impulse to challenge illegitimate authority persisted across all regions and ideologies.</td>
+            <td>The tools and tactics of resistance transformed dramatically: from petitions and strikes in the early 20th century to mass civil disobedience, global media campaigns, and transnational networks in the late 20th century.</td>
+          </tr>
+          <tr>
+            <td>Authoritarian states continued to use military force to suppress political opposition throughout the century, from Franco's Spain in the 1930s to Pinochet's Chile in the 1970s to Idi Amin's Uganda.</td>
+            <td>International norms around human rights gradually developed — the Universal Declaration of Human Rights (1948), international tribunals — making state repression increasingly subject to global scrutiny and condemnation.</td>
+          </tr>
+          <tr>
+            <td>Non-state groups continued to use violence against civilians as a political tactic throughout the century — terrorism as a strategy predates the 20th century and persisted through it.</td>
+            <td>The scale and global reach of non-state political violence expanded with technology: Al-Qaeda's 2001 attacks demonstrated a capability for transnational, simultaneous mass-casualty attacks that earlier movements lacked.</td>
+          </tr>
+          <tr>
+            <td>The fundamental debate about what counts as "legitimate resistance" versus "terrorism" remained unresolved — governments consistently applied the terrorist label to opponents while resistance movements claimed political soldier status.</td>
+            <td>Nonviolent resistance gained growing international recognition as a viable and often more effective alternative to armed struggle — Gandhi's and King's legacies became globally influential models that shaped subsequent resistance movements worldwide.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="acc-btn" onclick="togAcc('ccotAns')">▸ Reveal AP Analysis Note</button>
+    <div class="acc-body" id="ccotAns">
+      <p>The most important AP insight for the 8.7 CCOT is that <strong>the tools of resistance changed while the fundamental struggle persisted</strong>. Gandhi's success with nonviolent mass mobilization in the 1930s–40s did not eliminate violent resistance — it added a powerful new model to the repertoire of resistance movements globally. Similarly, Cold War-era state repression (Pinochet, Idi Amin) represented an intensification of an older pattern of authoritarian violence, accelerated by Cold War superpower support for client regimes. The most sophisticated AP argument for this topic connects 8.7 to Unit 9: in the globalization era, both nonviolent resistance (social media-enabled movements, the Arab Spring) and political violence (global jihadist networks) became transnational in ways that 20th-century versions of these movements were not — a genuine transformation in the nature of resistance itself.</p>
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="card">
+    <div class="card-label">Thesis Evaluator — HTS-5: Argumentation · 4 Cards: 2 Fail / 2 Pass · Click to Reveal</div>
+    <h3>Does This Thesis Meet the AP Standard?</h3>
+    <p style="font-size:.88rem;color:var(--text-secondary);margin-bottom:16px;"><strong style="color:var(--gold-light);">LEQ Prompt:</strong> <em>"Evaluate the extent to which nonviolent resistance was a more effective strategy for achieving political change than violent resistance in the period after 1900."</em></p>
+    <div class="thesis-grid">
+      <div class="thesis-card" onclick="revThesis(this,'fail','FAIL — Restates without reasoning: This response identifies that both nonviolent and violent resistance existed, but makes no argument about which was more effective or why. It simply acknowledges the existence of both paths without establishing any line of reasoning about their comparative effectiveness.')">
+        <div class="thesis-label">Thesis Card 1 — Click to Evaluate</div>
+        <p>"In the period after 1900, people around the world used both nonviolent resistance and violent resistance to challenge existing power structures."</p>
+        <div class="thesis-verdict"></div>
+        <div class="thesis-explanation"></div>
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,'fail','FAIL — Defensible but no line of reasoning: This thesis makes a defensible claim (nonviolence was more effective) but provides no mechanism explaining WHY. The word \'because\' is missing entirely. Without a line of reasoning — some explanation of the mechanism by which nonviolence achieved success — this is a statement of position, not an argument.')">
+        <div class="thesis-label">Thesis Card 2 — Click to Evaluate</div>
+        <p>"Nonviolent resistance was more effective than violent resistance in achieving lasting political change in the 20th century."</p>
+        <div class="thesis-verdict"></div>
+        <div class="thesis-explanation"></div>
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,'pass','PASS — Defensible claim WITH line of reasoning: This thesis makes a specific argument AND establishes why — the mechanism is that nonviolence forced oppressors to reveal their violence publicly, generating moral and political costs that states found unsustainable. It also acknowledges limits (\"where the state was willing to use unlimited force\"), setting up a nuanced argument that earns complexity credit.')">
+        <div class="thesis-label">Thesis Card 3 — Click to Evaluate</div>
+        <p>"Nonviolent resistance was more effective than violent resistance in achieving durable political change because it forced oppressive systems to expose their own violence publicly, generating moral and political costs that colonial and segregationist states ultimately could not sustain — though this strategy had limits where the state was willing to use unlimited force against its own people."</p>
+        <div class="thesis-verdict"></div>
+        <div class="thesis-explanation"></div>
+      </div>
+      <div class="thesis-card" onclick="revThesis(this,'pass','PASS — Opposite but equally valid line of reasoning: This thesis argues the contrary — that context determined effectiveness, not the tactic itself — and establishes a clear mechanism (the availability of nonviolent channels). It sets up an argument that both Gandhi\'s success AND the necessity of armed struggle in contexts like apartheid or colonial Algeria can be explained by the same logic. Both Card 3 and Card 4 earn the thesis point.')">
+        <div class="thesis-label">Thesis Card 4 — Click to Evaluate</div>
+        <p>"The effectiveness of nonviolent versus violent resistance depended on whether the targeted power structure was willing to respond to moral and economic pressure — in contexts like British colonial India and segregated America, nonviolence succeeded because the oppressor had political incentives to negotiate; where states were willing to use unlimited violence, as in apartheid South Africa or Franco's Spain, armed resistance or sustained military pressure became necessary supplements to nonviolent strategy."</p>
+        <div class="thesis-verdict"></div>
+        <div class="thesis-explanation"></div>
+      </div>
+    </div>
+  </div>
+
+  <button class="csb d3" onclick="compSec(3,this)">✓ Mark DOK 3 Complete</button>
+</section>
+
+<!-- ===================== DOK 4 ===================== -->
+<section class="dok-section" id="dok4">
+  <div class="dok-header">
+    <h2>Knowledge Augmentation</h2>
+    <span class="dok-badge">DOK 4</span>
+    <div class="dok-subtitle">EXPLORE &amp; EXPLAIN WITH EVIDENCE<br>Transfer, synthesize, create</div>
+  </div>
+
+  <!-- Contextualization Builder -->
+  <div class="card">
+    <div class="card-label">Contextualization Builder — HTS-4 · 3 Pathways · Choose One and Write</div>
+    <h3>Build Your Contextualization Paragraph</h3>
+    <p style="font-size:.88rem;color:var(--text-secondary);margin-bottom:16px;">Select one pathway, read the opening stem, write your own paragraph, then reveal the model.</p>
+    <div class="ctx-pathways">
+      <div class="ctx-path">
+        <div class="ctx-path-header" onclick="togCtx(this)">
+          <span class="path-num">PATH 1</span>
+          <h5>The World Wars as Context for 20th-Century Resistance</h5>
+          <span style="margin-left:auto;color:var(--text-muted);font-size:1rem;">▸</span>
+        </div>
+        <div class="ctx-path-body">
+          <div class="ctx-stem">"The global resistance movements of the mid-to-late 20th century did not emerge in a vacuum — they were shaped by the experience of two world wars that had..."</div>
+          <textarea placeholder="Write your contextualization paragraph. Connect WWI and WWII's impact — total war, mass civilian casualties, the Holocaust, anti-colonial service in Allied armies — to the conditions that produced the resistance movements of Topic 8.7."></textarea>
+          <button class="acc-btn" onclick="togAcc('ctx1')">▸ Reveal Model Contextualization</button>
+          <div class="acc-body" id="ctx1">
+            <p>The global resistance movements of the mid-to-late 20th century did not emerge in a vacuum — they were shaped by the experience of two world wars that had profoundly undermined the moral authority of established power structures and demonstrated the catastrophic consequences of unchecked state violence. The First World War had revealed that the governments of Europe could send millions of men to their deaths in industrialized slaughter while claiming the mantle of civilization and progress; its aftermath shattered faith in established authority across the political spectrum. The Second World War took this further: the Holocaust demonstrated that the most "civilized" European state could organize systematic mass murder against its own citizens while the international community failed to intervene, and the atomic bombings of Hiroshima and Nagasaki showed that modern states could destroy entire cities in an instant. At the same time, the war's mobilization of colonized peoples — who fought for empires that denied them basic rights — radicalized a generation of future resistance leaders across Asia and Africa. Mohandas Gandhi's moral framework for nonviolent resistance, Martin Luther King Jr.'s application of that framework to American racial injustice, and Nelson Mandela's decadeslong struggle against apartheid all emerged in this post-war context: a world that had witnessed what state power at its most extreme could do, and in which the moral legitimacy of any established order was fundamentally in question.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ctx-path">
+        <div class="ctx-path-header" onclick="togCtx(this)">
+          <span class="path-num">PATH 2</span>
+          <h5>Colonialism and Its Legacy as the Root of Global Resistance</h5>
+          <span style="margin-left:auto;color:var(--text-muted);font-size:1rem;">▸</span>
+        </div>
+        <div class="ctx-path-body">
+          <div class="ctx-stem">"The resistance movements of the 20th century cannot be understood apart from the longer history of European colonialism, which had..."</div>
+          <textarea placeholder="Write your contextualization paragraph. Connect centuries of colonial exploitation and resistance (from slavery to the Scramble for Africa to early nationalist movements) to the specific forms of resistance described in Topic 8.7."></textarea>
+          <button class="acc-btn" onclick="togAcc('ctx2')">▸ Reveal Model Contextualization</button>
+          <div class="acc-body" id="ctx2">
+            <p>The resistance movements of the 20th century cannot be understood apart from the longer history of European colonialism, which had imposed foreign rule, extracted resources, suppressed local political systems, and denied basic rights to hundreds of millions of people across Asia, Africa, and the Americas for centuries. Resistance to colonial rule was not invented in the 20th century — enslaved people had resisted their enslavement from the beginning, colonized peoples had organized against imperial rule throughout the 19th century, and early nationalist movements had emerged across Asia and Africa by the early 1900s. What changed in the 20th century was the scale, organization, and ideological sophistication of these resistance movements, as colonized peoples gained education in European universities, developed mass political parties, and learned to use the Europeans' own rhetoric of freedom and self-determination against them. Mohandas Gandhi's genius was to synthesize these traditions — drawing on both Hindu concepts of noncooperation and European liberal ideas of rights — into a disciplined mass movement capable of making British rule ungovernable. Martin Luther King Jr. and Nelson Mandela built on Gandhi's model, applying it to different but structurally similar systems of racial subordination. The violent resistance movements — the Shining Path, Al-Qaeda — also emerged from contexts of perceived colonial or neo-colonial exploitation, arguing that the political and economic structures of the 20th century represented a continuation of colonial domination in new forms.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ctx-path">
+        <div class="ctx-path-header" onclick="togCtx(this)">
+          <span class="path-num">PATH 3</span>
+          <h5>The Cold War as the Ideological Framework for Resistance</h5>
+          <span style="margin-left:auto;color:var(--text-muted);;font-size:1rem;">▸</span>
+        </div>
+        <div class="ctx-path-body">
+          <div class="ctx-stem">"The global resistance movements of the post-WWII era unfolded within the ideological landscape of the Cold War, which..."</div>
+          <textarea placeholder="Write your contextualization paragraph. Explain how the Cold War's ideological polarization between capitalism and communism shaped which resistance movements received support, how they framed their goals, and how states responded to them."></textarea>
+          <button class="acc-btn" onclick="togAcc('ctx3')">▸ Reveal Model Contextualization</button>
+          <div class="acc-body" id="ctx3">
+            <p>The global resistance movements of the post-WWII era unfolded within the ideological landscape of the Cold War, which divided the world into competing capitalist and communist blocs and transformed every local conflict into a potential front in the global struggle between the United States and the Soviet Union. This ideological polarization profoundly shaped which resistance movements received external support: the United States backed anti-communist authoritarian regimes — including Pinochet in Chile, Franco in Spain, and various military governments across Latin America — providing weapons, training, and political cover for state violence that KC-6.2.V.C describes as militarized states intensifying conflict. The Soviet Union, in turn, supported revolutionary and liberation movements that framed their goals in Marxist terms, from the Shining Path's Maoist guerrilla campaign to anti-colonial movements across Africa and Asia. This superpower involvement distorted the nature of resistance movements: local grievances about poverty, inequality, and political exclusion were frequently reframed in Cold War ideological terms, attracting superpower support but also drawing resistance movements into international proxy conflicts that often made them more violent and more extreme than their original goals required. The result was that the Cold War simultaneously amplified every form of resistance — providing resources, weapons, and ideological frameworks to movements on all sides — while also foreclosing the possibility of purely local resolutions to local conflicts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="synth-card">
+    <div class="card-label" style="color:#b070e0;margin-bottom:8px;">CROSS-UNIT SYNTHESIS — Skill 5.B: Making Connections · Bridging 8.7 → 8.8 &amp; Unit 9</div>
+    <h4>From Global Resistance to the End of the Cold War and Globalization</h4>
+    <p>The video ends with a genuinely open question: "When you're faced with profound injustice — how should you respond? What's the right path forward? And you know what, there are no simple answers." Topic 8.7 sets up two crucial forward connections.</p>
+    <hr class="div">
+    <p><strong style="color:#d4a8f0;">Synthesis Prompt:</strong> Choose <em>two</em> of the following connections and write a paragraph for each. Be specific — name the 8.7 development, identify the later development, and explain the mechanism linking them.</p>
+    <ol style="margin-top:12px;">
+      <li><strong>8.7 → 8.8 (End of the Cold War):</strong> How did nonviolent resistance movements in Eastern Europe — particularly the solidarity movement in Poland and the peaceful revolutions of 1989 — draw on and extend the tradition of nonviolent resistance described in KC-6.2.V.A? What does this suggest about the limits of state repression (KC-6.2.V.C)?</li>
+      <li><strong>8.7 → Unit 9 (Globalization):</strong> How did the globalization of communication technology in the late 20th and early 21st centuries transform the tactics available to both nonviolent resistance movements and violent non-state actors? Connect the Shining Path's local Peruvian campaign to the global reach of Al-Qaeda as an example of this transformation.</li>
+      <li><strong>Cross-Unit Backward (8.5/8.6 → 8.7):</strong> How do the frustrations of post-independence economic dependency (8.6) help explain why some newly independent states produced violent resistance movements like the Shining Path? What does this suggest about the relationship between economic conditions and political violence?</li>
+    </ol>
+    <button class="acc-btn" onclick="togAcc('synth')" style="margin-top:14px;">▸ Reveal Model Synthesis Responses</button>
+    <div class="acc-body" id="synth">
+      <p><strong>Connection 1 (8.7 → 8.8):</strong> The nonviolent resistance tradition described in KC-6.2.V.A found its most dramatic 20th-century vindication in the peaceful revolutions of 1989 that ended the Cold War. Poland's Solidarity movement — a trade union that became a mass nonviolent resistance movement against Soviet-backed communist rule — directly applied the step-by-step strategic logic of nonviolent pressure that the video describes for the US civil rights movement: economic pressure (strikes), mass mobilization (10 million members), and ultimately political change (free elections in 1989). The Solidarity model was explicitly inspired by Gandhi and King, demonstrating transnational diffusion of nonviolent tactics. The Soviet state's failure to crush Solidarity — and the failure of Brezhnev Doctrine repression to prevent the cascade of 1989 revolutions — also demonstrated the limits of KC-6.2.V.C: when state repression loses international legitimacy and the will to use unlimited force weakens, nonviolent mass movements can overcome even deeply entrenched authoritarian systems.</p>
+      <p style="margin-top:10px;"><strong>Connection 2 (8.7 → Unit 9):</strong> The globalization of communication technology transformed both nonviolent resistance and political violence by enabling transnational networks, instant global communication, and real-time international audiences for both protest and atrocity. The Shining Path operated as a local Peruvian insurgency, dependent on physical presence and geographic control; its reach was limited by what it could do within Peru. Al-Qaeda, by contrast, operated as a genuinely transnational organization coordinating simultaneous attacks across multiple countries, using encrypted communications, global financial networks, and the internet to recruit, train, and coordinate members who had never met in person. The globalization that Unit 9 describes — the same technological and economic integration that accelerated cultural exchange and economic growth — also accelerated the global reach of political violence, transforming what had been local or national resistance movements into potentially global ones. The same technologies that enabled the Arab Spring's nonviolent mass mobilization also enabled the Islamic State's propaganda machine.</p>
+    </div>
+  </div>
+
+  <!-- Self-Assessment -->
+  <div class="card">
+    <div class="card-label">Self-Assessment — AP Historical Thinking Skills for Topic 8.7</div>
+    <h3>Rate Your Confidence</h3>
+    <div class="dot-legend">
+      <span class="dot-leg-item"><span class="dot-swatch" style="background:#8a3040;"></span>Not Yet</span>
+      <span class="dot-leg-item"><span class="dot-swatch" style="background:#8a6e20;"></span>Getting There</span>
+      <span class="dot-leg-item"><span class="dot-swatch" style="background:#3a7a30;"></span>Confident</span>
+    </div>
+    <div class="sa-grid">
+      <div class="sa-row">
+        <div class="sa-label"><strong>LO 8-I:</strong> I can explain the various reactions to existing power structures after 1900, including nonviolent resistance, state repression, and non-state violence — using specific CED examples for each.</div>
+        <div class="sa-dots"><button class="dot-btn ny" onclick="togDot(this)"></button><button class="dot-btn gt" onclick="togDot(this)"></button><button class="dot-btn co" onclick="togDot(this)"></button></div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-label"><strong>KC-6.2.V.A:</strong> I can identify Gandhi, MLK Jr., and Mandela as the three CED nonviolent resistance figures and explain the strategic logic of nonviolent resistance as a step-by-step political tool.</div>
+        <div class="sa-dots"><button class="dot-btn ny" onclick="togDot(this)"></button><button class="dot-btn gt" onclick="togDot(this)"></button><button class="dot-btn co" onclick="togDot(this)"></button></div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-label"><strong>KC-6.2.V.C:</strong> I can explain how militarized states (Pinochet, Franco, Idi Amin) responded in ways that intensified conflict, and distinguish this from KC-6.2.V.D (non-state violence against civilians).</div>
+        <div class="sa-dots"><button class="dot-btn ny" onclick="togDot(this)"></button><button class="dot-btn gt" onclick="togDot(this)"></button><button class="dot-btn co" onclick="togDot(this)"></button></div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-label"><strong>KC-6.2.V.D:</strong> I can explain the CED's definition of movements that "used violence against civilians" and identify Shining Path and Al-Qaeda as illustrative examples, noting their different ideologies but shared tactic.</div>
+        <div class="sa-dots"><button class="dot-btn ny" onclick="togDot(this)"></button><button class="dot-btn gt" onclick="togDot(this)"></button><button class="dot-btn co" onclick="togDot(this)"></button></div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-label"><strong>Skill 2.B (HIPP):</strong> I can perform a full HIPP analysis of a primary source — identifying Historical situation, Intended audience, Point of view, and Purpose — and explain how each element shapes the source's meaning or limits its usefulness.</div>
+        <div class="sa-dots"><button class="dot-btn ny" onclick="togDot(this)"></button><button class="dot-btn gt" onclick="togDot(this)"></button><button class="dot-btn co" onclick="togDot(this)"></button></div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-label"><strong>POV Question:</strong> I can explain why the labels "resistance," "terrorism," and "freedom fighter" are POV-dependent — and use the Bobby Sands or Shining Path examples to demonstrate this on an AP question.</div>
+        <div class="sa-dots"><button class="dot-btn ny" onclick="togDot(this)"></button><button class="dot-btn gt" onclick="togDot(this)"></button><button class="dot-btn co" onclick="togDot(this)"></button></div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-label"><strong>HTS-5 Argumentation:</strong> I can write a thesis for an "evaluate the extent" prompt about nonviolent vs. violent resistance that makes a defensible claim with a clear line of reasoning about comparative effectiveness.</div>
+        <div class="sa-dots"><button class="dot-btn ny" onclick="togDot(this)"></button><button class="dot-btn gt" onclick="togDot(this)"></button><button class="dot-btn co" onclick="togDot(this)"></button></div>
+      </div>
+    </div>
+  </div>
+
+  <button class="csb d4" onclick="compSec(4,this)">✓ Mark DOK 4 Complete</button>
+</section>
+
+<script>
+  // Progress
+  let done=[false,false,false,false];
+  function updatePB(){
+    const p=done.filter(Boolean).length*25;
+    document.getElementById('pb-fill').style.width=p+'%';
+    document.getElementById('pb-pct').textContent=p+'%';
+  }
+  function compSec(n,btn){
+    if(btn.classList.contains('done'))return;
+    done[n-1]=true;btn.classList.add('done');
+    btn.textContent='✓ Section Complete';updatePB();
+  }
+
+  // MCQ
+  function chkMCQ(btn,r,id){
+    btn.closest('.mcq-item').querySelectorAll('.mcq-opt').forEach(o=>o.disabled=true);
+    btn.classList.add(r==='correct'?'correct':'incorrect');
+    const fb=document.getElementById(id);if(fb)fb.classList.add('show');
+  }
+
+  // Accordion
+  function togAcc(id){
+    const el=document.getElementById(id);if(!el)return;
+    el.classList.toggle('open');
+    const b=el.previousElementSibling;
+    if(b&&b.classList.contains('acc-btn'))
+      b.textContent=el.classList.contains('open')?'▾ Hide Sample Response':'▸ Reveal Sample Response';
+  }
+
+  // Matching
+  let selT=null;
+  function selTerm(el){
+    if(el.style.opacity==='0.5')return;
+    document.querySelectorAll('.match-term').forEach(t=>t.classList.remove('selected'));
+    el.classList.add('selected');selT=el;
+  }
+  function selDef(el){
+    if(!selT||el.classList.contains('matched'))return;
+    if(selT.dataset.id===el.dataset.id){
+      el.classList.add('matched');selT.classList.remove('selected');
+      selT.style.opacity='0.5';selT.style.cursor='default';selT=null;
+    }else{
+      el.classList.add('wrong');setTimeout(()=>el.classList.remove('wrong'),700);
+      selT.classList.remove('selected');selT=null;
+    }
+  }
+  function resetMatch(){
+    document.querySelectorAll('.match-term,.match-def').forEach(el=>{
+      el.classList.remove('selected','matched','wrong');
+      el.style.opacity='';el.style.cursor='';
+    });selT=null;
+  }
+
+  // Causal chain
+  function revChain(){
+    const n2=document.getElementById('chain2'),n4=document.getElementById('chain4');
+    n2.textContent='The US government, concerned about the spread of communism in Latin America, works with Chilean military and business elites to destabilize Allende\'s government through economic sabotage and covert support for the military — creating the conditions for Pinochet\'s 1973 coup.';
+    n2.classList.remove('blank');n2.classList.add('revealed');
+    n4.textContent='International human rights organizations document Pinochet\'s atrocities; Chilean exile communities and global human rights networks generate sustained international pressure; Pinochet\'s regime becomes internationally isolated, demonstrating that state repression ultimately creates its own opposition and legitimacy crisis.';
+    n4.classList.remove('blank');n4.classList.add('revealed');
+  }
+
+  // Thesis
+  function revThesis(card,result,expl){
+    const v=card.querySelector('.thesis-verdict'),e=card.querySelector('.thesis-explanation');
+    v.className='thesis-verdict show '+result;
+    v.textContent=result.toUpperCase()+(result==='pass'?' — Earns the AP Thesis Point ✓':' — Does NOT Earn the AP Thesis Point ✗');
+    e.classList.add('show');e.textContent=expl;
+  }
+
+  // Context paths
+  function togCtx(hdr){
+    const b=hdr.nextElementSibling;b.classList.toggle('open');
+    const a=hdr.querySelector('span:last-child');
+    a.textContent=b.classList.contains('open')?'▾':'▸';
+  }
+
+  // Dots
+  function togDot(btn){
+    const row=btn.closest('.sa-dots');
+    row.querySelectorAll('.dot-btn').forEach(d=>d.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

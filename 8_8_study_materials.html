@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8.8 — End of the Cold War | AP World History</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-page: #2a2016;
+    --bg-card: #32291a;
+    --bg-card-light: #3d3120;
+    --gold: #b8860b;
+    --gold-bright: #d4a820;
+    --gold-pale: #e8c96a;
+    --dok1: #2d5a27;
+    --dok1-light: #3a7232;
+    --dok2: #1a3d6e;
+    --dok2-light: #254f8a;
+    --dok3: #6b2d2d;
+    --dok3-light: #8a3a3a;
+    --dok4: #4a2d6b;
+    --dok4-light: #5e3a8a;
+    --text-main: #e8dcc8;
+    --text-muted: #a89878;
+    --text-dim: #7a6a50;
+    --border: rgba(184,134,11,0.3);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-page);
+    color: var(--text-main);
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ======= PROGRESS BAR ======= */
+  #progress-bar-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #1c160e;
+    border-bottom: 1px solid var(--border);
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .pb-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .pb-track {
+    flex: 1;
+    height: 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    overflow: visible;
+    position: relative;
+  }
+  .pb-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--dok1), var(--dok2), var(--dok3), var(--dok4));
+    border-radius: 4px;
+    transition: width 0.6s ease;
+    width: 0%;
+  }
+  .pb-markers {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+  }
+  .pb-mark {
+    position: absolute;
+    width: 2px;
+    height: 16px;
+    background: var(--bg-page);
+  }
+  .pb-pct {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+  }
+
+  /* ======= HEADER ======= */
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .unit-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--gold-pale);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .page-subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .kc-code {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: rgba(184,134,11,0.15);
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-top: 12px;
+  }
+
+  /* ======= HOW-TO BANNER ======= */
+  .howto-banner {
+    margin: 32px auto;
+    max-width: 900px;
+    background: linear-gradient(135deg, rgba(184,134,11,0.15), rgba(212,168,32,0.08));
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 28px 32px;
+  }
+  .howto-banner h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold-bright);
+    margin-bottom: 12px;
+  }
+  .howto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .howto-item {
+    background: rgba(0,0,0,0.2);
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+  }
+  .howto-dok {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .howto-item p { font-size: 0.85rem; color: var(--text-muted); }
+
+  /* ======= SECTION WRAPPERS ======= */
+  .section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 20px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid;
+  }
+  .dok-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .section-tagline {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-left: auto;
+  }
+
+  /* DOK colors */
+  .dok1 .section-header { border-color: var(--dok1); }
+  .dok1 .dok-badge { background: var(--dok1); color: #c8e6c0; }
+  .dok1 .section-title { color: #7ec870; }
+  .dok2 .section-header { border-color: var(--dok2); }
+  .dok2 .dok-badge { background: var(--dok2); color: #bbdefb; }
+  .dok2 .section-title { color: #82b1e8; }
+  .dok3 .section-header { border-color: var(--dok3); }
+  .dok3 .dok-badge { background: var(--dok3); color: #ffcdd2; }
+  .dok3 .section-title { color: #e88282; }
+  .dok4 .section-header { border-color: var(--dok4); }
+  .dok4 .dok-badge { background: var(--dok4); color: #e1bee7; }
+  .dok4 .section-title { color: #c48ae8; }
+
+  /* ======= CARDS ======= */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .card-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  /* ======= CALLOUT BOXES ======= */
+  .callout-blue {
+    background: linear-gradient(135deg, rgba(26,61,110,0.4), rgba(26,61,110,0.2));
+    border-left: 4px solid #4a90d9;
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+  .callout-blue h3 { color: #82b1e8; font-family: 'Playfair Display', serif; margin-bottom: 8px; }
+  .callout-gold {
+    background: linear-gradient(135deg, rgba(184,134,11,0.2), rgba(184,134,11,0.08));
+    border-left: 4px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+  .callout-gold h3 { color: var(--gold-bright); font-family: 'Playfair Display', serif; margin-bottom: 8px; }
+
+  /* ======= OPENING QUOTE ======= */
+  .opening-quote {
+    text-align: center;
+    padding: 40px 32px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .opening-quote::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    color: rgba(184,134,11,0.15);
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    line-height: 1;
+  }
+  .opening-quote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--gold-pale);
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+  }
+  .opening-quote cite {
+    display: block;
+    margin-top: 16px;
+    font-family: 'Source Serif 4', serif;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* ======= VISUAL FRAMEWORK GRID ======= */
+  .framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .framework-card {
+    background: var(--bg-card-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  .framework-card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .framework-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--gold-bright);
+    margin-bottom: 8px;
+  }
+  .framework-card p { font-size: 0.88rem; color: var(--text-muted); }
+
+  /* ======= TIMELINE ======= */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--dok1), var(--gold), var(--dok3));
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--bg-page);
+  }
+  .tl-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+  .tl-event { font-weight: 600; font-size: 0.95rem; }
+  .tl-note { font-size: 0.85rem; color: var(--text-muted); }
+
+  /* ======= FLIP CARDS ======= */
+  .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .flip-card {
+    height: 120px;
+    perspective: 800px;
+    cursor: pointer;
+  }
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  .flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+  }
+  .flip-front {
+    background: var(--bg-card-light);
+    border: 1px solid var(--border);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--gold-pale);
+  }
+  .flip-back {
+    background: linear-gradient(135deg, #2d3a1a, #1e2a12);
+    border: 1px solid var(--dok1);
+    transform: rotateY(180deg);
+    font-size: 0.82rem;
+    color: var(--text-main);
+  }
+  .flip-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-dim);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ======= MCQ ======= */
+  .mcq-item {
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .mcq-q {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.98rem;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .mcq-opts { list-style: none; }
+  .mcq-opts li {
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .mcq-opts li:hover { background: rgba(255,255,255,0.08); border-color: var(--gold); }
+  .mcq-opts li.correct { background: rgba(45,90,39,0.4); border-color: var(--dok1); }
+  .mcq-opts li.incorrect { background: rgba(107,45,45,0.4); border-color: var(--dok3); }
+  .mcq-opts li.disabled { pointer-events: none; opacity: 0.6; }
+  .mcq-letter {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    min-width: 18px;
+  }
+  .mcq-explanation {
+    margin-top: 12px;
+    padding: 12px;
+    background: rgba(184,134,11,0.1);
+    border-radius: 6px;
+    font-size: 0.88rem;
+    display: none;
+  }
+
+  /* ======= MATCHING ======= */
+  .matching-wrap { margin-bottom: 24px; }
+  .matching-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .match-col-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .match-item {
+    padding: 12px 14px;
+    background: var(--bg-card-light);
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .match-item:hover { border-color: var(--gold); }
+  .match-item.selected { border-color: var(--gold-bright); background: rgba(184,134,11,0.15); }
+  .match-item.matched-correct { border-color: var(--dok1); background: rgba(45,90,39,0.3); cursor: default; }
+  .match-item.matched-incorrect { border-color: var(--dok3); background: rgba(107,45,45,0.3); animation: shake 0.3s; }
+  @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+  .matching-reset {
+    margin-top: 10px;
+    background: none;
+    border: 1px solid var(--text-dim);
+    color: var(--text-muted);
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .matching-score {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    margin-top: 8px;
+  }
+
+  /* ======= ACCORDION ======= */
+  .accordion {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .accordion-header {
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: background 0.2s;
+  }
+  .accordion-header:hover { background: rgba(255,255,255,0.04); }
+  .accordion-arrow {
+    font-size: 0.75rem;
+    color: var(--gold);
+    transition: transform 0.3s;
+  }
+  .accordion.open .accordion-arrow { transform: rotate(180deg); }
+  .accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 20px;
+  }
+  .accordion.open .accordion-body { max-height: 1000px; padding: 0 20px 20px; }
+  .sample-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .sample-body {
+    font-size: 0.88rem;
+    color: var(--text-main);
+    border-left: 3px solid var(--gold);
+    padding-left: 14px;
+    line-height: 1.7;
+  }
+
+  /* ======= COMPARISON TABLE ======= */
+  .comp-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+  .comp-table th {
+    background: rgba(184,134,11,0.2);
+    color: var(--gold-bright);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+  .comp-table td {
+    padding: 11px 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    font-size: 0.88rem;
+    vertical-align: top;
+  }
+  .comp-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  .comp-table .dim-col { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+
+  /* ======= CAUSAL CHAIN ======= */
+  .causal-chain {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    flex-wrap: nowrap;
+  }
+  .chain-node {
+    flex: 0 0 160px;
+    background: var(--bg-card-light);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 12px;
+    text-align: center;
+    font-size: 0.83rem;
+    position: relative;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .chain-node.blank {
+    border-style: dashed;
+    background: rgba(184,134,11,0.05);
+    cursor: pointer;
+  }
+  .chain-node.blank.revealed {
+    border-style: solid;
+    border-color: var(--gold);
+    background: rgba(184,134,11,0.12);
+    cursor: default;
+  }
+  .chain-node-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .chain-node .blank-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--gold);
+    margin-top: 6px;
+  }
+  .chain-arrow {
+    flex: 0 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 1.2rem;
+  }
+
+  /* ======= THESIS CARDS ======= */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .thesis-card {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .thesis-card:hover { transform: translateY(-2px); }
+  .thesis-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 14px;
+    border-left: 3px solid rgba(255,255,255,0.1);
+    padding-left: 12px;
+  }
+  .thesis-verdict {
+    display: none;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.84rem;
+  }
+  .thesis-verdict.fail-v {
+    background: rgba(107,45,45,0.3);
+    border: 1px solid var(--dok3);
+    color: #ffcdd2;
+  }
+  .thesis-verdict.pass-v {
+    background: rgba(45,90,39,0.3);
+    border: 1px solid var(--dok1);
+    color: #c8e6c0;
+  }
+  .verdict-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  /* ======= CCOT GRID ======= */
+  .ccot-table { width: 100%; border-collapse: collapse; }
+  .ccot-table th {
+    padding: 12px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  .ccot-cont { color: #82b1e8; background: rgba(26,61,110,0.2); }
+  .ccot-change { color: #e88282; background: rgba(107,45,45,0.2); }
+  .ccot-table td {
+    padding: 12px 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    font-size: 0.88rem;
+    vertical-align: top;
+  }
+
+  /* ======= CONTEXTUALIZATION BUILDER ======= */
+  .ctx-pathways { display: flex; flex-direction: column; gap: 16px; }
+  .ctx-pathway {
+    background: var(--bg-card-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .ctx-stem {
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .ctx-stem:hover { background: rgba(255,255,255,0.03); }
+  .pathway-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    text-transform: uppercase;
+    min-width: 70px;
+  }
+  .pathway-text { font-style: italic; color: var(--gold-pale); font-size: 0.93rem; }
+  .ctx-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 20px;
+  }
+  .ctx-pathway.open .ctx-body { max-height: 600px; padding: 0 20px 20px; }
+
+  /* ======= SELF ASSESSMENT ======= */
+  .sa-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .sa-item:last-child { border-bottom: none; }
+  .sa-skill { flex: 1; font-size: 0.9rem; }
+  .sa-dots { display: flex; gap: 8px; }
+  .sa-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .sa-dot:hover { border-color: var(--gold); }
+  .sa-dot.active-1 { background: var(--dok3); border-color: var(--dok3); }
+  .sa-dot.active-2 { background: var(--gold); border-color: var(--gold); }
+  .sa-dot.active-3 { background: var(--dok1); border-color: var(--dok1); }
+  .sa-legend {
+    display: flex;
+    gap: 20px;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .sa-legend span { display: flex; align-items: center; gap: 6px; }
+  .sa-legend-dot {
+    width: 12px; height: 12px; border-radius: 50%; display: inline-block;
+  }
+
+  /* ======= COMPLETE BUTTON ======= */
+  .complete-btn {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 32px auto 0;
+    padding: 14px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .complete-btn:hover { background: var(--gold); color: var(--bg-page); }
+  .complete-btn.done { background: rgba(45,90,39,0.4); border-color: var(--dok1); color: #7ec870; cursor: default; }
+
+  /* ======= DIVIDER ======= */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* ======= SYNTHESIS ======= */
+  .synthesis-prompt {
+    background: linear-gradient(135deg, rgba(74,45,107,0.3), rgba(74,45,107,0.1));
+    border: 1px solid var(--dok4);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .synthesis-prompt h4 {
+    font-family: 'Playfair Display', serif;
+    color: #c48ae8;
+    margin-bottom: 12px;
+  }
+  .synthesis-prompt p { font-size: 0.9rem; }
+
+  /* ======= AP INSIGHT ======= */
+  .ap-insight {
+    background: linear-gradient(135deg, rgba(184,134,11,0.2), rgba(184,134,11,0.05));
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+  }
+  .ap-insight h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold-bright);
+    margin-bottom: 8px;
+  }
+  .ap-insight p { font-size: 0.88rem; color: var(--text-main); }
+
+  /* ======= RESPONSIVE ======= */
+  @media(max-width:600px){
+    .matching-cols { grid-template-columns: 1fr; }
+    .causal-chain { flex-direction: column; align-items: stretch; }
+    .chain-arrow { transform: rotate(90deg); height: 24px; }
+    .chain-node { flex: none; }
+    .thesis-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ======= PROMPT BOX ======= */
+  .prompt-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    font-size: 0.93rem;
+  }
+  .prompt-box strong { color: var(--gold-bright); }
+
+  /* LEQ Workshop */
+  .leq-section {
+    background: rgba(74,45,107,0.15);
+    border: 1px solid rgba(74,45,107,0.5);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .leq-section h4 {
+    font-family: 'Playfair Display', serif;
+    color: #c48ae8;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .leq-points {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--dok4-light);
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar-wrap">
+  <span class="pb-label">PROGRESS</span>
+  <div class="pb-track">
+    <div class="pb-fill" id="pbFill"></div>
+    <div class="pb-markers">
+      <div class="pb-mark" style="left:25%"></div>
+      <div class="pb-mark" style="left:50%"></div>
+      <div class="pb-mark" style="left:75%"></div>
+    </div>
+  </div>
+  <span class="pb-pct" id="pbPct">0%</span>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="unit-label">AP World History: Modern · Unit 8 · Topic 8.8</div>
+  <h1 class="page-title">End of the Cold War</h1>
+  <p class="page-subtitle">Thematic Focus: Governance (GOV) · Learning Objective J</p>
+  <div class="kc-code">KC-6.2.IV.E</div>
+</div>
+
+<!-- HOW-TO BANNER -->
+<div class="howto-banner" style="padding: 28px 32px;">
+  <h3>📋 How to Use This Module</h3>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">
+    The video's central argument: <strong style="color:var(--gold-pale);">The Soviet collapse was not caused by one thing — it was a perfect storm of external pressure (Reagan/SDI), military failure (Afghanistan), internal economic decay, and Gorbachev's reforms accidentally lighting the fuse.</strong>
+    Thematic lens: <em>Governance</em> — how internal and external pressures cause states to decline.
+  </p>
+  <div class="howto-grid">
+    <div class="howto-item">
+      <div class="howto-dok" style="color:#7ec870;">DOK 1</div>
+      <strong>Answer Correctly</strong>
+      <p>Build vocabulary & factual foundation</p>
+    </div>
+    <div class="howto-item">
+      <div class="howto-dok" style="color:#82b1e8;">DOK 2</div>
+      <strong>Explain with Examples</strong>
+      <p>Apply concepts; compare cases</p>
+    </div>
+    <div class="howto-item">
+      <div class="howto-dok" style="color:#e88282;">DOK 3</div>
+      <strong>Examine with Evidence</strong>
+      <p>Argue, analyze, evaluate theses</p>
+    </div>
+    <div class="howto-item">
+      <div class="howto-dok" style="color:#c48ae8;">DOK 4</div>
+      <strong>Explore & Synthesize</strong>
+      <p>Context, transfer, self-assess</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== DOK 1 ====================== -->
+<div class="section dok1" id="dok1">
+  <div class="section-header">
+    <span class="dok-badge">DOK 1</span>
+    <h2 class="section-title">Knowledge Acquisition</h2>
+    <span class="section-tagline">'Answer Correctly'</span>
+  </div>
+
+  <!-- Video Callout -->
+  <div class="callout-blue">
+    <h3>🎬 Watch the Video Explainer First</h3>
+    <p style="font-size:0.9rem;">Before continuing, watch: <a href="https://youtu.be/SCTT7o_rzz8" target="_blank" style="color:#82b1e8;">APWH 8.8 The End of the Cold War</a></p>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-top:8px;">As you watch, listen for: (1) the THREE major causes of Soviet collapse the narrator identifies, (2) why SDI was described as "a strategic masterstroke," and (3) what Gorbachev's goal was — and why it backfired.</p>
+  </div>
+
+  <!-- Opening Quote -->
+  <div class="opening-quote">
+    <blockquote>"Mr. Gorbachev, tear down this wall!"</blockquote>
+    <cite>— President Ronald Reagan, address at the Brandenburg Gate, West Berlin, June 12, 1987<br>
+    <span style="font-size:0.8rem; color:var(--text-dim);">Two years before the Berlin Wall fell, this speech encapsulated the US challenge to Soviet authority over Eastern Europe.</span></cite>
+  </div>
+
+  <!-- Visual Framework Card -->
+  <div class="card">
+    <div class="card-title">Visual Framework — The Anatomy of Collapse</div>
+    <div class="framework-grid">
+      <div class="framework-card">
+        <div class="icon">🔩</div>
+        <h4>External Pressure</h4>
+        <p>US military buildup, Reagan Doctrine, SDI/"Star Wars" — squeezing Soviet resources from outside</p>
+      </div>
+      <div class="framework-card">
+        <div class="icon">🩸</div>
+        <h4>Military Failure</h4>
+        <p>The Soviet-Afghan War (1979–1989) — the "Soviet Vietnam" draining money, soldiers, and credibility</p>
+      </div>
+      <div class="framework-card">
+        <div class="icon">📉</div>
+        <h4>Internal Decay</h4>
+        <p>Command economy failure, consumer shortages, public discontent eroding faith in the system</p>
+      </div>
+      <div class="framework-card">
+        <div class="icon">🔓</div>
+        <h4>Gorbachev's Paradox</h4>
+        <p>Perestroika + Glasnost meant to save communism — instead opened Pandora's box and lit the fuse</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Annotated Timeline -->
+  <div class="card">
+    <div class="card-title">Annotated Timeline — End of the Cold War</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">1972</div>
+        <div class="tl-event">Nixon visits USSR; SALT Treaty signed</div>
+        <div class="tl-note">Peak of détente — superpowers agree to freeze nuclear missile levels, demonstrating managed rivalry.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1979</div>
+        <div class="tl-event">Soviet invasion of Afghanistan</div>
+        <div class="tl-note">Shatters détente; begins a decade-long war that becomes the "Soviet Vietnam," draining the USSR economically and militarily.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1983</div>
+        <div class="tl-event">Reagan announces SDI ("Star Wars")</div>
+        <div class="tl-note">Proposed missile defense shield in space; whether feasible or not, it threatened to render Soviet nuclear arsenal obsolete and forced impossible economic competition.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1985</div>
+        <div class="tl-event">Gorbachev comes to power</div>
+        <div class="tl-note">More progressive Soviet leader introduces perestroika (economic restructuring) and glasnost (openness) — meant to save communism, not end it.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1987</div>
+        <div class="tl-event">INF Treaty signed</div>
+        <div class="tl-note">Intermediate-Range Nuclear Forces Treaty between US and USSR limits nuclear weapons — a sign of diplomatic thaw.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1989</div>
+        <div class="tl-event">Berlin Wall falls; democratic reforms sweep Eastern Europe</div>
+        <div class="tl-note">Glasnost allows public dissent; Gorbachev refuses to send Soviet troops to crush protests — communist regimes collapse across Eastern Europe.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1990</div>
+        <div class="tl-event">German Reunification</div>
+        <div class="tl-note">East and West Germany unite, symbolizing the end of the Iron Curtain in Europe.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1991</div>
+        <div class="tl-event">Soviet Union dissolves; Cold War ends</div>
+        <div class="tl-note">Soviet republics (Lithuania, Georgia, and others) declare independence; Warsaw Pact dissolves; Gorbachev loses power; Russia emerges as successor state.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vocabulary Flip Cards -->
+  <div class="card">
+    <div class="card-title">Vocabulary Flip Cards — Click to Reveal</div>
+    <div class="flip-grid" id="flipGrid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Détente<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">A relaxation of strained relations between nations. In the 1970s, US-Soviet détente included SALT and Nixon's visit to Moscow — a managed rivalry to avoid nuclear catastrophe.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">SALT Treaty<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Strategic Arms Limitation Treaty (1972). Agreement between Nixon and Brezhnev to freeze the number of intercontinental ballistic missiles each superpower could keep. Key symbol of détente.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">SDI<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Strategic Defense Initiative ("Star Wars"). Reagan's proposed missile shield in space (1983). Put the USSR in an impossible position: compete in a space arms race their failing economy could not afford.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Perestroika<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Gorbachev's policy of economic "restructuring" (from 1985), allowing limited free enterprise in the Soviet command economy. Intended to modernize communism — contributed to its collapse.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Glasnost<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Gorbachev's policy of "openness" — greater freedom of speech and public debate. Unleashed decades of suppressed frustration across Eastern Europe and Soviet republics, accelerating collapse.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">INF Treaty<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Intermediate-Range Nuclear Forces Treaty (1987). US-Soviet agreement restricting intermediate-range nuclear weapons. Showed diplomatic progress between Reagan and Gorbachev.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Command Economy<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Economic system where the government controls all production and distribution. The Soviet command economy was rigid, inefficient, and led to chronic shortages of basic goods — fueling public discontent.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Warsaw Pact<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Soviet-led military alliance of Eastern European communist states (1955–1991), the USSR's counterpart to NATO. Dissolved in 1991 as communist regimes fell across Eastern Europe.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">Reagan Doctrine<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">US policy under Reagan to actively oppose Soviet-backed communist governments worldwide, supporting anti-communist resistance movements. Reversed détente and dramatically escalated Cold War pressure on the USSR.</div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-front">"Soviet Vietnam"<span class="flip-hint">click to flip</span></div>
+          <div class="flip-back">Historians' comparison of the Soviet-Afghan War (1979–1989) to the US Vietnam War. Both represent superpowers humbled by guerrilla warfare — draining treasure, lives, and credibility without victory.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recall MCQs -->
+  <div class="card">
+    <div class="card-title">Recall MCQs — 5 Questions</div>
+
+    <div class="mcq-item" id="mcq1">
+      <div class="mcq-q">1. According to KC-6.2.IV.E, which THREE factors led to the end of the Cold War and collapse of the Soviet Union?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,1,false)"><span class="mcq-letter">A</span>US military/technological advances, Cuban Missile Crisis, and Nixon's détente</li>
+        <li onclick="checkMCQ(this,1,true)"><span class="mcq-letter">B</span>US military/technological advances, Soviet invasion of Afghanistan, and public discontent/economic weakness in communist countries</li>
+        <li onclick="checkMCQ(this,1,false)"><span class="mcq-letter">C</span>Berlin Wall construction, Marshall Plan, and Korean War</li>
+        <li onclick="checkMCQ(this,1,false)"><span class="mcq-letter">D</span>Cuban Missile Crisis, Vietnam War, and SALT Treaty</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq1-exp">✅ <strong>B is correct.</strong> KC-6.2.IV.E states exactly these three causes: advances in US military and technological development, the Soviet Union's costly and failed Afghanistan invasion, and public discontent plus economic weakness in communist countries. These are the CED-required causes you must know.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq2">
+      <div class="mcq-q">2. What was détente, and what event ended it?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,2,false)"><span class="mcq-letter">A</span>A US military strategy ended by Gorbachev's reforms</li>
+        <li onclick="checkMCQ(this,2,false)"><span class="mcq-letter">B</span>A Soviet economic plan ended by Reagan's election</li>
+        <li onclick="checkMCQ(this,2,true)"><span class="mcq-letter">C</span>A relaxation of US-Soviet tensions ended by the Soviet invasion of Afghanistan (1979)</li>
+        <li onclick="checkMCQ(this,2,false)"><span class="mcq-letter">D</span>A nuclear arms treaty ended by the Berlin Wall's construction</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq2-exp">✅ <strong>C is correct.</strong> Détente was a strategic relaxation of tensions — symbolized by Nixon's visit to Moscow and the SALT Treaty. The 1979 Soviet invasion of Afghanistan shattered détente and kicked off a much more intense Cold War chapter.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq3">
+      <div class="mcq-q">3. Why was Reagan's SDI ("Star Wars") described as a "strategic masterstroke" even if it never worked?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,3,false)"><span class="mcq-letter">A</span>It actually destroyed Soviet missiles in space, ending the arms race</li>
+        <li onclick="checkMCQ(this,3,true)"><span class="mcq-letter">B</span>The mere threat of it forced the Soviets into an arms race in space they could not afford, straining their already weak economy</li>
+        <li onclick="checkMCQ(this,3,false)"><span class="mcq-letter">C</span>It convinced Gorbachev to immediately dissolve the Soviet Union</li>
+        <li onclick="checkMCQ(this,3,false)"><span class="mcq-letter">D</span>It ended the Cuban Missile Crisis by establishing missile defense</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq3-exp">✅ <strong>B is correct.</strong> SDI's power was psychological and economic, not operational. The idea of competing in a space arms race was enough to put the Soviets — whose command economy was already failing — in an impossible fiscal position.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq4">
+      <div class="mcq-q">4. What was Mikhail Gorbachev's original goal with perestroika and glasnost?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,4,false)"><span class="mcq-letter">A</span>To dissolve the Soviet Union and transition to capitalism</li>
+        <li onclick="checkMCQ(this,4,false)"><span class="mcq-letter">B</span>To win the Cold War by building more nuclear weapons</li>
+        <li onclick="checkMCQ(this,4,true)"><span class="mcq-letter">C</span>To save and reform communism — fix it, not end it</li>
+        <li onclick="checkMCQ(this,4,false)"><span class="mcq-letter">D</span>To negotiate a formal peace treaty with the United States</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq4-exp">✅ <strong>C is correct.</strong> This is the critical irony of Topic 8.8: Gorbachev was a true believer who wanted to modernize communism and save the Soviet system. His reforms instead opened a Pandora's box that unleashed decades of suppressed frustration and brought the system down.</div>
+    </div>
+
+    <div class="mcq-item" id="mcq5">
+      <div class="mcq-q">5. Which of the following best describes why the Soviet-Afghan War weakened the USSR?</div>
+      <ul class="mcq-opts">
+        <li onclick="checkMCQ(this,5,false)"><span class="mcq-letter">A</span>Afghanistan successfully invaded Soviet territory, threatening Moscow directly</li>
+        <li onclick="checkMCQ(this,5,false)"><span class="mcq-letter">B</span>The war caused the US to impose economic sanctions on the Soviet Union</li>
+        <li onclick="checkMCQ(this,5,true)"><span class="mcq-letter">C</span>The decade-long guerrilla war drained Soviet finances, military morale, and global credibility — much as Vietnam had done to the United States</li>
+        <li onclick="checkMCQ(this,5,false)"><span class="mcq-letter">D</span>Afghanistan joined NATO as a result of the war, threatening Soviet borders</li>
+      </ul>
+      <div class="mcq-explanation" id="mcq5-exp">✅ <strong>C is correct.</strong> The "Soviet Vietnam" comparison is explicit in the CED and the video. Up to 2 million Afghan civilians died; Soviet coffers bled billions; military morale collapsed. This was one of three pillars of Soviet collapse identified in KC-6.2.IV.E.</div>
+    </div>
+  </div>
+
+  <!-- Matching Activity -->
+  <div class="card">
+    <div class="card-title">Matching Activity — Terms & Significance</div>
+    <div class="matching-wrap">
+      <div class="matching-cols">
+        <div>
+          <div class="match-col-title">Term / Event</div>
+          <div class="match-item" id="t1" onclick="selectMatch('t1','terms')" data-pair="1">SALT Treaty (1972)</div>
+          <div class="match-item" id="t2" onclick="selectMatch('t2','terms')" data-pair="2">Perestroika</div>
+          <div class="match-item" id="t3" onclick="selectMatch('t3','terms')" data-pair="3">Glasnost</div>
+          <div class="match-item" id="t4" onclick="selectMatch('t4','terms')" data-pair="4">SDI / "Star Wars"</div>
+          <div class="match-item" id="t5" onclick="selectMatch('t5','terms')" data-pair="5">Berlin Wall falls (1989)</div>
+        </div>
+        <div>
+          <div class="match-col-title">Significance / Definition</div>
+          <div class="match-item" id="d3" onclick="selectMatch('d3','defs')" data-pair="3">Policy of "openness" that allowed free speech, unleashing decades of suppressed political frustration</div>
+          <div class="match-item" id="d1" onclick="selectMatch('d1','defs')" data-pair="1">US-Soviet agreement to freeze ICBM levels — a symbol of peak détente</div>
+          <div class="match-item" id="d5" onclick="selectMatch('d5','defs')" data-pair="5">Visual end of Cold War division in Europe; driven by glasnost and Gorbachev's refusal to use military force</div>
+          <div class="match-item" id="d4" onclick="selectMatch('d4','defs')" data-pair="4">US space-based missile defense proposal; put Soviets in impossible position of competing in a space arms race</div>
+          <div class="match-item" id="d2" onclick="selectMatch('d2','defs')" data-pair="2">Gorbachev's economic "restructuring" allowing limited free enterprise — intended to modernize, accelerated collapse</div>
+        </div>
+      </div>
+      <div class="matching-score" id="matchScore"></div>
+      <button class="matching-reset" onclick="resetMatching()">↺ Reset</button>
+    </div>
+  </div>
+
+  <button class="complete-btn" id="btn-dok1" onclick="completeSection(1)">✓ Mark DOK 1 Complete</button>
+</div>
+
+<hr class="section-divider">
+
+<!-- ====================== DOK 2 ====================== -->
+<div class="section dok2" id="dok2">
+  <div class="section-header">
+    <span class="dok-badge">DOK 2</span>
+    <h2 class="section-title">Knowledge Application</h2>
+    <span class="section-tagline">'Establish and Explain with Examples'</span>
+  </div>
+
+  <!-- Explain Drill 1 -->
+  <div class="card">
+    <div class="card-title">Explain Drill 1 — Causation</div>
+    <div class="prompt-box">
+      <strong>Prompt:</strong> Explain how advances in U.S. military and technological development contributed to the end of the Cold War. (KC-6.2.IV.E)
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>▶ Reveal Sample Answer</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Models the AP "Explain" Verb</div>
+        <div class="sample-body">
+          US military and technological advances contributed to the Cold War's end by forcing the Soviet Union into an unsustainable economic competition. Under Reagan, the United States launched one of the largest military buildups in history, directly challenging the Soviets at every level. Most significantly, Reagan announced the Strategic Defense Initiative (SDI) in 1983 — a proposed space-based missile defense shield. Even though SDI's viability was disputed, the Soviet government recognized that competing in a space arms race would require massive expenditure their already failing command economy could not absorb. This compounded pressure on Soviet leadership, particularly liberal reformers like Gorbachev who feared SDI as a long-term economic threat. The US buildup thus created what the video calls a "superpower squeeze" — external pressure that the Soviet system, already weakened from within, simply could not withstand.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explain Drill 2 -->
+  <div class="card">
+    <div class="card-title">Explain Drill 2 — Internal Factors</div>
+    <div class="prompt-box">
+      <strong>Prompt:</strong> Explain how public discontent and economic weakness in communist countries contributed to the end of the Cold War. (KC-6.2.IV.E)
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>▶ Reveal Sample Answer</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Models the AP "Explain" Verb</div>
+        <div class="sample-body">
+          The Soviet command economy's systemic failures generated deep public discontent that ultimately destabilized communist rule. Because the government controlled all production, the economy was rigid and could not adapt to changing conditions, leading to chronic shortages of basic consumer goods — food, shoes, and other necessities. Soviet citizens watched as Western markets overflowed with goods while they stood in hours-long queues. This daily material reality eroded ordinary people's faith in the communist system over time. When Gorbachev introduced glasnost, which allowed greater freedom of speech, this pent-up frustration finally had an outlet. Across Eastern Europe and within the Soviet republics, people could now publicly express what they had long believed privately — that the system had failed them. Once Gorbachev made clear the Soviet army would not crush dissent, as it had in Hungary (1956) and Czechoslovakia (1968), these expressions of discontent became mass democratic movements that swept away communist regimes across the Soviet bloc.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="card">
+    <div class="card-title">Comparison Table — Two Pathways to Superpower Decline</div>
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>US in Vietnam (1964–1975)</th>
+          <th>USSR in Afghanistan (1979–1989)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dim-col">Initial Justification</td>
+          <td>Contain communist expansion (Domino Theory)</td>
+          <td>Prop up friendly communist government; prevent Soviet loss of influence</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Type of War</td>
+          <td>Counter-insurgency against Viet Cong guerrillas in jungle terrain</td>
+          <td>Counter-insurgency against Mujahideen guerrillas in mountainous terrain</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Duration & Cost</td>
+          <td>~11 years; ~58,000 US deaths; massive economic cost</td>
+          <td>~10 years; ~15,000 Soviet deaths; billions drained from struggling economy</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Civilian Impact</td>
+          <td>Massive Vietnamese civilian casualties; refugee crises</td>
+          <td>Estimated 1–2 million Afghan civilian deaths; 5 million refugees</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Domestic Effect</td>
+          <td>Anti-war movement; damaged faith in government; "Vietnam Syndrome"</td>
+          <td>Coffins returning home; military morale collapse; public discontent grows</td>
+        </tr>
+        <tr>
+          <td class="dim-col">Geopolitical Outcome</td>
+          <td>US prestige damaged; communist Vietnam united; Cold War continues</td>
+          <td>Soviet prestige shattered; accelerated economic collapse and dissolution of USSR</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="prompt-box" style="margin-top:0;">
+      <strong>Reflection:</strong> Based on this table, what does the comparison suggest about the relationship between military overextension and superpower decline? What is ONE significant difference between these two cases?
+    </div>
+  </div>
+
+  <!-- Apply Activity -->
+  <div class="card">
+    <div class="card-title">Apply Activity — Primary Source Analysis (HTS-6: Source Analysis)</div>
+    <div class="prompt-box" style="font-style:italic; margin-bottom:16px;">
+      "From modest beginnings at the Twenty-Seventh Party Congress in 1986, perestroika, Mikhail Gorbachev's program of economic, political, and social restructuring, became the unintended catalyst for dismantling what had taken nearly three-quarters of a century to erect: the Marxist-Leninist-Stalinist totalitarian state." <br>
+      <span style="font-style:normal; font-size:0.82rem; color:var(--text-muted);">— Library of Congress Archives summary of perestroika</span>
+    </div>
+    <p style="font-size:0.9rem; margin-bottom:16px;">Using this excerpt AND your knowledge of KC-6.2.IV.E, answer:</p>
+    <ol style="font-size:0.9rem; padding-left:20px; display:flex; flex-direction:column; gap:10px;">
+      <li><strong>Identify</strong> the main argument the author makes about perestroika.</li>
+      <li><strong>Explain</strong> one specific historical development that supports this argument (from your knowledge).</li>
+      <li><strong>Consider the source's purpose:</strong> This is an archival summary, not a personal account. How might its purpose affect its framing of perestroika?</li>
+    </ol>
+    <div class="accordion" style="margin-top:16px;">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>▶ Reveal Model Response</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Model Analysis</div>
+        <div class="sample-body">
+          <strong>Identification:</strong> The author argues that perestroika, though intended as modest reform, became the "unintended catalyst" for destroying the very Soviet system it was meant to save — an ironic paradox at the heart of Gorbachev's program.<br><br>
+          <strong>Supporting Evidence:</strong> Glasnost, the companion policy to perestroika, allowed previously suppressed ethnic, political, and social grievances to surface openly. Soviet republics like Lithuania and Georgia used this new freedom to declare independence. Once Gorbachev signaled the Soviet army would not intervene — as it had in Hungary (1956) and Czechoslovakia (1968) — these reform movements became unstoppable. By 1991, the Warsaw Pact had dissolved and the Soviet Union itself had broken into fifteen independent states.<br><br>
+          <strong>Purpose/Sourcing:</strong> As an archival summary from the Library of Congress, this source aims to provide scholarly context rather than advocacy. Its framing emphasizes institutional change over individual agency, which may understate the role of grassroots protest movements and Reagan-era external pressure in accelerating the collapse.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Infographic Callout -->
+  <div class="callout-gold">
+    <h3>📊 Review the NotebookLM Infographic Now</h3>
+    <p style="font-size:0.9rem;">Before moving to DOK 3, review the 8.8 infographic from your NotebookLM notebook. Use it as a reference as you work through the analytical activities. Look especially for the causal relationships between external pressure, internal decay, and Gorbachev's paradox.</p>
+  </div>
+
+  <button class="complete-btn" id="btn-dok2" onclick="completeSection(2)">✓ Mark DOK 2 Complete</button>
+</div>
+
+<hr class="section-divider">
+
+<!-- ====================== DOK 3 ====================== -->
+<div class="section dok3" id="dok3">
+  <div class="section-header">
+    <span class="dok-badge">DOK 3</span>
+    <h2 class="section-title">Knowledge Analysis</h2>
+    <span class="section-tagline">'Examine and Explain with Evidence'</span>
+  </div>
+
+  <!-- AP Insight Card -->
+  <div class="ap-insight">
+    <h4>⚡ AP Insight — Causation (HTS-1)</h4>
+    <p>Topic 8.8 is fundamentally a <strong>causation</strong> topic. The CED learning objective is literally: "Explain the causes of the end of the Cold War." On the AP exam, this means you must identify specific causes AND explain the mechanism — <em>how</em> or <em>why</em> each factor contributed. Simply listing causes without explaining their mechanisms will not earn full credit. The "perfect storm" framing from the video is your analytical anchor: show how external pressure, military failure, internal decay, and Gorbachev's paradox interacted.</p>
+  </div>
+
+  <!-- Causal Chain -->
+  <div class="card">
+    <div class="card-title">Causal Chain — Anatomy of Collapse (KC-6.2.IV.E)</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Two nodes are blank. Click them to reveal the missing causes.</p>
+    <div class="causal-chain">
+      <div class="chain-node">
+        <div class="chain-node-label">Start</div>
+        Soviet command economy fails; chronic consumer shortages
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node blank" id="cc1" onclick="revealNode('cc1','Public discontent grows; citizens lose faith in communist system')">
+        <div class="chain-node-label">Blank 1 — Click to reveal</div>
+        <span class="blank-hint">What does economic failure cause at home?</span>
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node">
+        <div class="chain-node-label">External</div>
+        Reagan buildup + SDI forces Soviets into unsustainable arms competition
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node">
+        <div class="chain-node-label">Military</div>
+        Soviet-Afghan War drains treasury, morale, and global credibility
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node blank" id="cc2" onclick="revealNode('cc2','Gorbachev introduces perestroika + glasnost to save communism — but unleashes democratic reform movements across Eastern Europe and Soviet republics')">
+        <div class="chain-node-label">Blank 2 — Click to reveal</div>
+        <span class="blank-hint">What does Gorbachev do — and what happens?</span>
+      </div>
+      <div class="chain-arrow">→</div>
+      <div class="chain-node">
+        <div class="chain-node-label">Collapse</div>
+        Berlin Wall falls 1989; Soviet Union dissolves 1991
+      </div>
+    </div>
+  </div>
+
+  <!-- SAQ Practice -->
+  <div class="card">
+    <div class="card-title">SAQ Practice — Short Answer Question (3 Parts)</div>
+    <div class="prompt-box" style="margin-bottom:20px;">
+      Use the passage below to answer all parts of the question.<br><br>
+      <em style="display:block; padding:12px 16px; background:rgba(255,255,255,0.04); border-radius:6px; margin-top:8px; font-size:0.88rem;">"General Secretary Gorbachev, if you seek peace, if you seek prosperity for the Soviet Union and Eastern Europe, if you seek liberalization, come here to this gate. Mr. Gorbachev, open this gate! Mr. Gorbachev, tear down this wall!" — Ronald Reagan, address at the Brandenburg Gate, June 12, 1987</em>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span><strong>Part A:</strong> Describe President Reagan's argument in the passage above.</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Part A (Describe = relevant characteristics, more than a term)</div>
+        <div class="sample-body">
+          Reagan argues that the Berlin Wall is a physical symbol of Soviet oppression and the denial of freedom, and that its destruction is inseparable from the goals of peace, prosperity, and political liberalization. He directly challenges Gorbachev — who had signaled openness to reform — to take a concrete, public step toward those stated goals by dismantling the barrier that divided Germany and symbolized the Iron Curtain's division of Europe.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span><strong>Part B:</strong> Explain ONE historical situation that supports Reagan's argument.</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Part B (Explain = how/why, show mechanism)</div>
+        <div class="sample-body">
+          The Soviet command economy's failure to provide basic consumer goods supports Reagan's implicit argument that the Soviet system could not deliver prosperity. While Western markets overflowed with goods, Soviet citizens stood in hours-long lines for necessities, generating the public discontent that Gorbachev's glasnost policy would eventually unleash. This material gap demonstrated precisely the system's inability to provide the "prosperity" Reagan invoked — strengthening the US argument that liberalization was both necessary and inevitable if the Soviet bloc was to survive.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span><strong>Part C:</strong> Explain ONE way in which the resolution of Cold War tensions between the US and USSR impacted other states.</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Sample Response — Part C (Explain = mechanism + connection to broader argument)</div>
+        <div class="sample-body">
+          The end of Cold War tensions enabled democratic reform movements to sweep Eastern European states that had previously been held under Soviet control. When Gorbachev signaled that the Soviet Army would no longer intervene to crush reform movements — as it had in Hungary (1956) and Czechoslovakia (1968) — communist governments in Poland, East Germany, Czechoslovakia, and Romania collapsed in rapid succession in 1989. East and West Germany reunited in 1990. These formerly Soviet satellite states could now pursue independent political development, illustrating how the Cold War's end transformed state governance across the entire Eastern bloc.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CCOT Grid -->
+  <div class="card">
+    <div class="card-title">CCOT Grid — US-Soviet Relations, 1972–1991</div>
+    <table class="ccot-table">
+      <thead>
+        <tr>
+          <th class="ccot-cont">Continuity</th>
+          <th class="ccot-change">Change Over Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Both superpowers maintained proxy wars and supported opposing sides in regional conflicts throughout this period (e.g., Afghanistan, Central America)</td>
+          <td>Diplomatic tone shifted dramatically: from détente cooperation (SALT, 1972) to Reagan's "Evil Empire" rhetoric (1983), then back to INF Treaty diplomacy (1987)</td>
+        </tr>
+        <tr>
+          <td>Nuclear deterrence (Mutually Assured Destruction) remained the fundamental logic preventing direct conflict throughout the period</td>
+          <td>Soviet domestic policy transformed: from Brezhnev's conservative rigidity to Gorbachev's radical reforms (perestroika/glasnost)</td>
+        </tr>
+        <tr>
+          <td>Ideological competition between capitalism and communism continued as the defining frame of the rivalry</td>
+          <td>Economic disparity widened: Western consumer economies boomed while Soviet command economy stagnated, visibly delegitimizing communism</td>
+        </tr>
+        <tr>
+          <td>Both powers continued investing in military technology as a primary instrument of competition</td>
+          <td>Soviet bloc shifted from enforced cohesion (1956, 1968 interventions) to voluntary dissolution — Warsaw Pact dissolved 1991</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="accordion" style="margin-top:16px;">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>▶ CCOT Sample Analysis</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Analysis Note</div>
+        <div class="sample-body">
+          The CCOT pattern in Topic 8.8 reveals a governance paradox: the structural continuity of nuclear deterrence and ideological rivalry actually masked an accelerating internal transformation within the Soviet system. The most significant changes occurred not in the external relationship between the superpowers, but within the USSR itself — from rigid command economy to attempted market reform, from enforced bloc cohesion to voluntary dissolution. This internal transformation, catalyzed by Gorbachev's reforms, changed the nature of the Cold War more fundamentally than any external pressure alone could have.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="card">
+    <div class="card-title">Thesis Evaluator — 4 Cards (Click to Reveal Verdict)</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;"><strong>Prompt:</strong> Evaluate the extent to which Mikhail Gorbachev's reforms were the primary cause of the end of the Cold War.</p>
+    <div class="thesis-grid">
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <div class="thesis-text">"Mikhail Gorbachev's reforms played a role in the end of the Cold War."</div>
+        <div class="thesis-verdict fail-v">
+          <div class="verdict-badge">❌ FAILS AP Rubric</div>
+          This restates the prompt without establishing a line of reasoning. It makes a defensible claim but offers no "because" — no categories, no degree, no argument about mechanism. The AP rubric requires that a thesis "establish a line of reasoning," not merely assert that something "played a role."
+        </div>
+      </div>
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <div class="thesis-text">"Gorbachev's reforms caused the end of the Cold War because they led to the fall of the Berlin Wall."</div>
+        <div class="thesis-verdict fail-v">
+          <div class="verdict-badge">❌ FAILS AP Rubric</div>
+          This makes a defensible claim but provides only a factual statement as its "because" — no line of reasoning. It identifies one event (Berlin Wall) without explaining the mechanism or degree. The AP rubric requires more than a restated fact; it needs an interpretive claim about how or why.
+        </div>
+      </div>
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <div class="thesis-text">"Although external pressure from Reagan's military buildup and the Soviet-Afghan War significantly weakened the USSR, Gorbachev's reforms were the primary cause of the Cold War's end because glasnost unleashed decades of suppressed political frustration that destroyed the Soviet state's internal legitimacy."</div>
+        <div class="thesis-verdict pass-v">
+          <div class="verdict-badge">✅ PASSES AP Rubric</div>
+          This earns the thesis point. It makes a defensible claim with a clear line of reasoning: glasnost → unleashed suppressed frustration → destroyed internal legitimacy. It addresses degree ("primary cause") and acknowledges competing factors, meeting the AP requirement for an argument that "establishes a line of reasoning."
+        </div>
+      </div>
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <div class="thesis-text">"While Gorbachev's reforms accelerated the Soviet collapse, US military and technological pressure — particularly the Strategic Defense Initiative — was the primary cause of the Cold War's end because it forced the Soviet Union into an economically unsustainable arms competition that exposed and amplified the command economy's fundamental failures."</div>
+        <div class="thesis-verdict pass-v">
+          <div class="verdict-badge">✅ PASSES AP Rubric</div>
+          This also earns the thesis point with a different but equally valid line of reasoning: SDI → unsustainable economic competition → exposed command economy failures. It argues the opposite position from the previous PASS thesis, demonstrating that "evaluate the extent" prompts are genuinely open to multiple defensible positions.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="complete-btn" id="btn-dok3" onclick="completeSection(3)">✓ Mark DOK 3 Complete</button>
+</div>
+
+<hr class="section-divider">
+
+<!-- ====================== DOK 4 ====================== -->
+<div class="section dok4" id="dok4">
+  <div class="section-header">
+    <span class="dok-badge">DOK 4</span>
+    <h2 class="section-title">Knowledge Augmentation</h2>
+    <span class="section-tagline">'Explore and Explain with Examples and Evidence'</span>
+  </div>
+
+  <!-- Contextualization Builder -->
+  <div class="card">
+    <div class="card-title">Contextualization Builder — 3 Pathways (HTS-4)</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">Select a pathway stem, write your own contextualization paragraph, then reveal the model response.</p>
+    <div class="ctx-pathways">
+      <div class="ctx-pathway">
+        <div class="ctx-stem" onclick="this.parentElement.classList.toggle('open')">
+          <span class="pathway-num">Pathway 1</span>
+          <span class="pathway-text">"To understand why the Soviet Union was so vulnerable by the 1980s, consider the origins of the Cold War rivalry itself in the aftermath of World War II..."</span>
+          <span style="color:var(--gold); font-size:0.8rem;">▼</span>
+        </div>
+        <div class="ctx-body">
+          <div class="sample-label">Model Contextualization — Pathway 1 (Connects to Topic 8.1)</div>
+          <div class="sample-body">
+            The Cold War rivalry that ultimately led to Soviet collapse had its origins in the aftermath of World War II, when the United States and Soviet Union emerged as the only superpowers capable of projecting global power. The ideological conflict between US capitalism and Soviet communism produced decades of proxy wars, nuclear buildup, and an arms race that both sides pursued at enormous cost. From the Marshall Plan and NATO in the late 1940s to the Korean War and the Berlin crises of the 1950s and 1960s, both superpowers had structured their entire economies and political systems around the competition. For the Soviet Union, this decades-long arms race meant diverting massive resources away from consumer production — setting up the very economic vulnerabilities that would prove fatal when Reagan escalated competition in the 1980s. The Cold War was thus not simply a backdrop to Soviet collapse; it was the structural pressure that had been accumulating for nearly five decades when Gorbachev took power.
+          </div>
+        </div>
+      </div>
+      <div class="ctx-pathway">
+        <div class="ctx-stem" onclick="this.parentElement.classList.toggle('open')">
+          <span class="pathway-num">Pathway 2</span>
+          <span class="pathway-text">"To understand why Soviet economic weakness was so decisive, consider the nature of command economies and their structural limitations compared to market systems..."</span>
+          <span style="color:var(--gold); font-size:0.8rem;">▼</span>
+        </div>
+        <div class="ctx-body">
+          <div class="sample-label">Model Contextualization — Pathway 2 (Connects to Topic 8.7)</div>
+          <div class="sample-body">
+            The economic crisis that undermined the Soviet Union must be understood in the context of diverging global economic models during the post-World War II era. While the Western capitalist economies — fueled by Bretton Woods institutions, Marshall Plan reconstruction, and market-driven innovation — experienced the consumer boom of the 1950s and 1960s, the Soviet command economy was organized entirely around military-industrial production and ideological goals. By the 1970s and 1980s, this structural rigidity became a fatal weakness: the West continued to generate technological innovation and consumer wealth, while Soviet citizens increasingly compared their material conditions to those visible in Western media. This "demonstration effect" — seeing prosperity elsewhere while experiencing shortages at home — was a crucial element of the public discontent that KC-6.2.IV.E identifies as a cause of the Cold War's end, and cannot be understood without the broader context of diverging global economic systems.
+          </div>
+        </div>
+      </div>
+      <div class="ctx-pathway">
+        <div class="ctx-stem" onclick="this.parentElement.classList.toggle('open')">
+          <span class="pathway-num">Pathway 3</span>
+          <span class="pathway-text">"To understand why Gorbachev's reforms triggered collapse rather than recovery, consider the historical pattern of reform movements in authoritarian states..."</span>
+          <span style="color:var(--gold); font-size:0.8rem;">▼</span>
+        </div>
+        <div class="ctx-body">
+          <div class="sample-label">Model Contextualization — Pathway 3 (Connects to Unit 9 themes)</div>
+          <div class="sample-body">
+            Gorbachev's paradox — reform intended to save the system destroying it instead — reflects a broader historical pattern in which authoritarian states that attempt liberalization from above often accelerate rather than prevent their own collapse. The "thaw" that Gorbachev initiated was not the first attempt to reform the Soviet system: Khrushchev's de-Stalinization in the 1950s had similarly unleashed expectations it could not fully satisfy, producing uprisings in Hungary (1956) and Poland. The difference in 1985–1991 was that the structural weaknesses — economic decline, military overextension in Afghanistan, and the accumulated frustrations of decades — were far more advanced, and the Soviet army's willingness to use overwhelming force to preserve the system had eroded. Perestroika and glasnost thus operated in a fundamentally different context than earlier reform attempts, in which the gap between popular expectations and Soviet capacity was simply too wide to manage.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="card">
+    <div class="card-title">Cross-Unit Synthesis Activity (HTS-4: Contextualization)</div>
+    <div class="synthesis-prompt">
+      <h4>🔗 Connecting 8.8 → Unit 9: Globalization</h4>
+      <p>The video ends with this question: what new challenges did the end of the Cold War unleash? Using what you know about Unit 9 themes, write 3–4 sentences addressing the following:</p>
+      <br>
+      <p><strong>Prompt:</strong> The collapse of the Soviet Union in 1991 ended one era of global governance and created conditions for a new one. Explain ONE way in which the end of the Cold War created conditions for the globalization developments you will study in Unit 9 — such as economic integration, democratic transitions, new conflicts, or US unipolar power.</p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>▶ Reveal Model Synthesis Response</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Cross-Unit Connection — 8.8 → Unit 9</div>
+        <div class="sample-body">
+          The collapse of the Soviet Union created the conditions for accelerated economic globalization in the 1990s by removing the ideological and political barriers that had prevented communist-bloc nations from integrating into global markets. As former Soviet republics and Eastern European satellites transitioned to market economies — often under IMF and World Bank structural adjustment programs — they opened their labor forces, natural resources, and consumer markets to global capital for the first time. This post-Cold War opening contributed to the rapid expansion of global trade networks and multinational corporate investment that defines Unit 9's globalization narrative. However, the transition was not smooth: the sudden shift from command to market economies produced economic inequality, political instability, and in some cases (e.g., the former Yugoslavia) violent ethnic conflict — illustrating that the "new challenges" the video references were not merely theoretical, but immediate and destabilizing consequences of the Cold War's end.
+        </div>
+      </div>
+    </div>
+
+    <div class="synthesis-prompt" style="margin-top:16px;">
+      <h4>🔗 Connecting 8.8 ← Unit 8 Internal Chain</h4>
+      <p><strong>Prompt:</strong> Topic 8.8 is the final content topic before the capstone argumentation. Explain how the decolonization movements you studied in Topics 8.4–8.6 intersected with Cold War tensions in ways that contributed to Soviet overextension. (Connect: how did superpower competition in the developing world connect to Afghanistan?)</p>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>▶ Reveal Within-Unit Synthesis Response</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="sample-label">Within-Unit Connection — 8.4–8.6 → 8.8</div>
+        <div class="sample-body">
+          The Soviet-Afghan War must be understood in the context of Cold War competition over newly independent states during decolonization. As Asian and African nations gained independence in the 1950s–1970s (Topics 8.4–8.6), both superpowers competed aggressively for influence over these new states, seeing them as strategic prizes in the broader ideological battle. The Soviet invasion of Afghanistan in 1979 was driven by this same logic: Afghanistan was a newly-vulnerable state on the Soviet border where a pro-Soviet communist government was threatened by internal resistance, and the USSR feared losing another domino. What Soviet planners failed to anticipate was that this competition for influence — which had driven proxy wars across the developing world for decades — would become their own trap in the mountains of Central Asia. The very superpower overextension that characterized US involvement in Vietnam (a decolonization war) was replicated by the Soviets in Afghanistan, completing a symmetry of imperial overreach that both superpowers ultimately shared.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Self-Assessment -->
+  <div class="card">
+    <div class="card-title">Self-Assessment — AP Skills Confidence Check</div>
+    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:20px;">Rate yourself on each skill. Click the dots: red = Not Yet, gold = Getting There, green = Confident.</p>
+    <div id="selfAssess">
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Causation (HTS-1)</strong> — I can explain how US military pressure, Afghan War failure, and economic weakness each caused the Cold War's end</div>
+        <div class="sa-dots">
+          <div class="sa-dot" title="Not Yet" onclick="rateSelf(this,1,1)"></div>
+          <div class="sa-dot" title="Getting There" onclick="rateSelf(this,1,2)"></div>
+          <div class="sa-dot" title="Confident" onclick="rateSelf(this,1,3)"></div>
+        </div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Comparison (HTS-2)</strong> — I can compare the Soviet-Afghan War to the US-Vietnam War using specific evidence</div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSelf(this,2,1)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,2,2)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,2,3)"></div>
+        </div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>CCOT (HTS-3)</strong> — I can identify what stayed the same AND what changed in US-Soviet relations from détente through Soviet collapse</div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSelf(this,3,1)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,3,2)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,3,3)"></div>
+        </div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Contextualization (HTS-4)</strong> — I can place KC-6.2.IV.E causes in broader historical context connecting to prior units</div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSelf(this,4,1)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,4,2)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,4,3)"></div>
+        </div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Argumentation (HTS-5)</strong> — I can write a thesis on 8.8 that makes a defensible claim with a clear line of reasoning</div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSelf(this,5,1)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,5,2)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,5,3)"></div>
+        </div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>Source Analysis / HIPP (HTS-6)</strong> — I can analyze a primary source (like Reagan's Brandenburg Gate speech) for its purpose, POV, and historical situation</div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSelf(this,6,1)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,6,2)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,6,3)"></div>
+        </div>
+      </div>
+      <div class="sa-item">
+        <div class="sa-skill"><strong>AP Command Verbs</strong> — I know the difference between "identify," "describe," and "explain" and can apply each correctly on an SAQ</div>
+        <div class="sa-dots">
+          <div class="sa-dot" onclick="rateSelf(this,7,1)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,7,2)"></div>
+          <div class="sa-dot" onclick="rateSelf(this,7,3)"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sa-legend">
+      <span><span class="sa-legend-dot" style="background:var(--dok3)"></span>Not Yet</span>
+      <span><span class="sa-legend-dot" style="background:var(--gold)"></span>Getting There</span>
+      <span><span class="sa-legend-dot" style="background:var(--dok1)"></span>Confident</span>
+    </div>
+  </div>
+
+  <button class="complete-btn" id="btn-dok4" onclick="completeSection(4)">✓ Mark DOK 4 Complete</button>
+</div>
+
+<!-- Footer -->
+<div style="text-align:center; padding:40px 20px; border-top:1px solid var(--border); margin-top:40px;">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-dim);">AP World History: Modern · Unit 8, Topic 8.8 · End of the Cold War</div>
+  <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text-dim); margin-top:4px;">KC-6.2.IV.E · Learning Objective J · Governance (GOV) · DOK 1–4</div>
+  <div style="margin-top:16px; font-size:0.85rem; color:var(--text-muted);">Next: Topic 8.9 — Causation in the Cold War Era (Capstone Argumentation)</div>
+</div>
+
+<script>
+// ======= PROGRESS BAR =======
+let completed = [false, false, false, false];
+function updateProgress() {
+  const done = completed.filter(Boolean).length;
+  const pct = done * 25;
+  document.getElementById('pbFill').style.width = pct + '%';
+  document.getElementById('pbPct').textContent = pct + '%';
+}
+function completeSection(n) {
+  completed[n-1] = true;
+  const btn = document.getElementById('btn-dok' + n);
+  btn.classList.add('done');
+  btn.textContent = '✓ DOK ' + n + ' Complete!';
+  btn.disabled = true;
+  updateProgress();
+}
+
+// ======= ACCORDIONS =======
+function toggleAccordion(header) {
+  const acc = header.parentElement;
+  acc.classList.toggle('open');
+}
+
+// ======= MCQs =======
+function checkMCQ(li, qNum, isCorrect) {
+  const allLis = li.parentElement.querySelectorAll('li');
+  allLis.forEach(l => l.classList.add('disabled'));
+  if (isCorrect) {
+    li.classList.add('correct');
+  } else {
+    li.classList.add('incorrect');
+    allLis.forEach(l => {
+      if (l.getAttribute('onclick') && l.getAttribute('onclick').includes('true')) {
+        l.classList.add('correct');
+      }
+    });
+  }
+  const exp = document.getElementById('mcq' + qNum + '-exp');
+  if (exp) exp.style.display = 'block';
+}
+
+// ======= FLIP CARDS — prevent double init =======
+// handled by onclick inline
+
+// ======= MATCHING =======
+let selectedTerm = null;
+let selectedDef = null;
+let matchScore = 0;
+let matchTotal = 5;
+
+function selectMatch(id, type) {
+  const el = document.getElementById(id);
+  if (el.classList.contains('matched-correct')) return;
+
+  if (type === 'terms') {
+    if (selectedTerm) document.getElementById(selectedTerm).classList.remove('selected');
+    selectedTerm = id;
+    el.classList.add('selected');
+  } else {
+    if (selectedDef) document.getElementById(selectedDef).classList.remove('selected');
+    selectedDef = id;
+    el.classList.add('selected');
+  }
+
+  if (selectedTerm && selectedDef) {
+    const tPair = document.getElementById(selectedTerm).getAttribute('data-pair');
+    const dPair = document.getElementById(selectedDef).getAttribute('data-pair');
+
+    if (tPair === dPair) {
+      document.getElementById(selectedTerm).classList.remove('selected');
+      document.getElementById(selectedDef).classList.remove('selected');
+      document.getElementById(selectedTerm).classList.add('matched-correct');
+      document.getElementById(selectedDef).classList.add('matched-correct');
+      matchScore++;
+      document.getElementById('matchScore').textContent = matchScore + '/' + matchTotal + ' matched';
+    } else {
+      const t = selectedTerm, d = selectedDef;
+      document.getElementById(t).classList.add('matched-incorrect');
+      document.getElementById(d).classList.add('matched-incorrect');
+      setTimeout(() => {
+        document.getElementById(t).classList.remove('matched-incorrect', 'selected');
+        document.getElementById(d).classList.remove('matched-incorrect', 'selected');
+      }, 600);
+    }
+    selectedTerm = null;
+    selectedDef = null;
+  }
+}
+
+function resetMatching() {
+  ['t1','t2','t3','t4','t5','d1','d2','d3','d4','d5'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.className = 'match-item';
+  });
+  selectedTerm = null; selectedDef = null; matchScore = 0;
+  document.getElementById('matchScore').textContent = '';
+}
+
+// ======= CAUSAL CHAIN =======
+function revealNode(id, text) {
+  const node = document.getElementById(id);
+  if (node.classList.contains('revealed')) return;
+  node.classList.add('revealed');
+  node.innerHTML = '<div class="chain-node-label">Revealed</div>' + text;
+}
+
+// ======= THESIS CARDS =======
+function revealThesis(card) {
+  const verdict = card.querySelector('.thesis-verdict');
+  if (verdict) verdict.style.display = 'block';
+}
+
+// ======= SELF ASSESSMENT =======
+function rateSelf(dot, skillNum, level) {
+  const dots = dot.parentElement.querySelectorAll('.sa-dot');
+  dots.forEach((d, i) => {
+    d.classList.remove('active-1', 'active-2', 'active-3');
+  });
+  dot.classList.add('active-' + level);
+}
+
+// ======= CTX PATHWAYS handled by onclick inline =======
+</script>
+</body>
+</html>

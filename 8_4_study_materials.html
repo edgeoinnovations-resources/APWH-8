@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP World History 8.4 — Spread of Communism After 1900</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-page:#2a2016;--bg-card:#32291a;--bg-card-light:#3a3020;
+  --gold:#b8860b;--gold-light:#d4a820;--gold-pale:#f0d878;
+  --dok1:#2d5a27;--dok1-light:#3a7a32;--dok1-pale:#c8e6c4;
+  --dok2:#1a3d6e;--dok2-light:#2255a0;--dok2-pale:#c2d4f0;
+  --dok3:#6b2d2d;--dok3-light:#952020;--dok3-pale:#f0c8c8;
+  --dok4:#4a2d6b;--dok4-light:#6a3da0;--dok4-pale:#dac8f0;
+  --text:#f0e8d8;--text-muted:#c8b898;--border:#5a4828;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg-page);color:var(--text);font-family:'Source Serif 4',serif;font-size:17px;line-height:1.7}
+
+/* PROGRESS */
+#pgbar{position:sticky;top:0;z-index:100;background:#1a1408;border-bottom:2px solid var(--gold);padding:10px 20px;display:flex;align-items:center;gap:16px}
+#pgbar span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold-light);white-space:nowrap}
+#pgtrack{flex:1;height:10px;background:#3a2e18;border-radius:5px;overflow:hidden}
+#pgfill{height:100%;width:0%;background:linear-gradient(90deg,var(--dok1),var(--dok2),var(--dok3),var(--dok4));border-radius:5px;transition:width .6s}
+.pgmarks{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);margin-top:3px}
+
+/* HEADER */
+.ph{text-align:center;padding:48px 24px 32px;border-bottom:1px solid var(--border)}
+.ul{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.pt{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,46px);font-weight:900;color:var(--gold-pale);line-height:1.2;margin-bottom:12px}
+.ps{font-size:18px;color:var(--text-muted);font-style:italic}
+
+/* HOW-TO */
+.htb{max-width:860px;margin:28px auto;background:linear-gradient(135deg,#2a1e06,#3a2e0e);border:2px solid var(--gold);border-radius:10px;padding:24px 28px}
+.htb h3{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:18px;margin-bottom:10px}
+.htb p{color:var(--text-muted);margin-bottom:8px;font-size:15px}
+.htgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:14px}
+.hts{background:rgba(0,0,0,.3);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text-muted);border-left:3px solid}
+.hts strong{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;margin-bottom:3px}
+.s1{border-color:var(--dok1)}.s1 strong{color:var(--dok1-pale)}
+.s2{border-color:var(--dok2)}.s2 strong{color:var(--dok2-pale)}
+.s3{border-color:var(--dok3)}.s3 strong{color:var(--dok3-pale)}
+.s4{border-color:var(--dok4)}.s4 strong{color:var(--dok4-pale)}
+
+/* SECTIONS */
+.sw{max-width:900px;margin:40px auto;padding:0 20px}
+.sh{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:14px;border-bottom:2px solid}
+.db{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;padding:5px 12px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,30px)}
+.stag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted);margin-top:4px}
+.d1 .sh{border-color:var(--dok1)}.d1 .stitle{color:var(--dok1-pale)}.d1 .db{background:var(--dok1);color:#fff}
+.d2 .sh{border-color:var(--dok2)}.d2 .stitle{color:var(--dok2-pale)}.d2 .db{background:var(--dok2);color:#fff}
+.d3 .sh{border-color:var(--dok3)}.d3 .stitle{color:var(--dok3-pale)}.d3 .db{background:var(--dok3);color:#fff}
+.d4 .sh{border-color:var(--dok4)}.d4 .stitle{color:var(--dok4-pale)}.d4 .db{background:var(--dok4);color:#fff}
+
+/* CALLOUTS */
+.cblue{background:linear-gradient(135deg,#0d2240,#1a3560);border:2px solid #3a70c0;border-radius:10px;padding:20px 24px;margin-bottom:28px}
+.cblue h4{color:#80b4ff;font-family:'Playfair Display',serif;font-size:16px;margin-bottom:8px}
+.cblue p{color:#b8d0f8;font-size:14px}.cblue a{color:#80b4ff}
+.cblue ul{color:#b8d0f8;font-size:14px;margin-left:20px;margin-top:6px}.cblue li{margin-bottom:4px}
+.cgold{background:linear-gradient(135deg,#2a1e06,#3a2c08);border:2px solid var(--gold);border-radius:10px;padding:20px 24px;margin-bottom:28px}
+.cgold h4{color:var(--gold-light);font-family:'Playfair Display',serif;font-size:16px;margin-bottom:8px}
+.cgold p{color:var(--text-muted);font-size:14px}
+
+/* QUOTE */
+.oq{background:var(--bg-card);border-left:5px solid var(--gold);border-radius:0 8px 8px 0;padding:24px 28px;margin-bottom:28px}
+.oq blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(17px,2.5vw,21px);color:var(--gold-pale);line-height:1.5;margin-bottom:10px}
+.oq cite{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted);display:block}
+
+/* FRAMEWORK CARD */
+.fc{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:24px;margin-bottom:28px}
+.fc h4{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:18px;margin-bottom:18px;text-align:center}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.fi{background:var(--bg-card-light);border-radius:8px;padding:16px;border-top:3px solid;text-align:center}
+.fi1{border-color:var(--dok1-light)}.fi1 .fit{color:var(--dok1-pale)}
+.fi2{border-color:var(--dok2-light)}.fi2 .fit{color:var(--dok2-pale)}
+.fi3{border-color:var(--dok3-light)}.fi3 .fit{color:var(--dok3-pale)}
+.fi4{border-color:var(--gold)}.fi4 .fit{color:var(--gold-pale)}
+.fii{font-size:28px;margin-bottom:8px}
+.fit{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;margin-bottom:6px}
+.fi p{font-size:13px;color:var(--text-muted)}
+
+/* CASE STUDY CARDS */
+.cs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-bottom:28px}
+.cs-card{background:var(--bg-card);border-radius:10px;border:1px solid var(--border);overflow:hidden}
+.cs-header{padding:14px 16px;font-family:'Playfair Display',serif;font-size:16px;font-weight:700;display:flex;align-items:center;gap:10px}
+.cs-china .cs-header{background:linear-gradient(135deg,#3d1a1a,#2a0d0d);color:var(--dok3-pale)}
+.cs-vietnam .cs-header{background:linear-gradient(135deg,#1a2a1a,#0d2010);color:var(--dok1-pale)}
+.cs-ethiopia .cs-header{background:linear-gradient(135deg,#2d2200,#3a2e00);color:var(--gold-pale)}
+.cs-india .cs-header{background:linear-gradient(135deg,#1a1a3d,#0d0d2a);color:var(--dok2-pale)}
+.cs-iran .cs-header{background:linear-gradient(135deg,#2d1a2d,#1a0d1a);color:var(--dok4-pale)}
+.cs-guatemala .cs-header{background:linear-gradient(135deg,#1a2d1a,#0d1a0d);color:var(--dok1-pale)}
+.cs-body{padding:14px 16px}
+.cs-row{display:grid;grid-template-columns:90px 1fr;gap:8px;margin-bottom:8px;font-size:13px}
+.cs-label{color:var(--gold-light);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.5px;text-transform:uppercase;padding-top:2px}
+.cs-val{color:var(--text-muted)}
+.cs-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 7px;border-radius:4px;margin-right:4px;margin-bottom:4px}
+.tag-com{background:rgba(149,32,32,.4);border:1px solid var(--dok3-light);color:var(--dok3-pale)}
+.tag-soc{background:rgba(34,85,160,.4);border:1px solid var(--dok2-light);color:var(--dok2-pale)}
+.tag-ref{background:rgba(184,134,11,.2);border:1px solid var(--gold);color:var(--gold-pale)}
+.tag-cw{background:rgba(74,45,107,.4);border:1px solid var(--dok4-light);color:var(--dok4-pale)}
+
+/* TIMELINE */
+.sh2{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:16px;margin-bottom:12px;margin-top:4px}
+.kct{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;background:rgba(184,134,11,.15);border:1px solid var(--gold);color:var(--gold-light);border-radius:4px;padding:2px 8px;margin-bottom:10px}
+.tl-item{display:grid;grid-template-columns:100px 1fr;gap:16px;margin-bottom:10px;background:var(--bg-card);border-radius:8px;padding:14px 16px;border-left:3px solid var(--dok3);align-items:start}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--dok3-pale);padding-top:2px}
+.tl-text{font-size:14px;color:var(--text-muted)}.tl-text strong{color:var(--text)}
+
+/* FLIP CARDS */
+.vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:28px}
+.fc2{height:160px;perspective:1000px;cursor:pointer}
+.fci{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.fc2.flipped .fci{transform:rotateY(180deg)}
+.ff,.fb{position:absolute;inset:0;backface-visibility:hidden;border-radius:8px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14px;text-align:center}
+.ff{background:var(--bg-card);border:2px solid var(--dok3)}
+.fb{background:var(--dok3);transform:rotateY(180deg);border:2px solid var(--dok3-light)}
+.ff .term{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--dok3-pale);margin-bottom:6px}
+.ff .kcs{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted)}
+.ff .hint{font-size:11px;color:var(--text-muted);margin-top:8px}
+.fb .def{font-size:13px;color:#fff;line-height:1.5}
+
+/* MCQ */
+.mq{background:var(--bg-card);border-radius:8px;padding:20px;margin-bottom:16px;border:1px solid var(--border)}
+.mqq{font-size:15px;color:var(--text);margin-bottom:14px;font-weight:600}
+.moo{display:flex;flex-direction:column;gap:8px}
+.mo{background:var(--bg-card-light);border:1px solid var(--border);border-radius:6px;padding:10px 14px;cursor:pointer;font-size:14px;color:var(--text-muted);transition:all .2s;text-align:left}
+.mo:hover{border-color:var(--gold);color:var(--text)}
+.mo.correct{background:#1a4a1a;border-color:var(--dok1-light);color:var(--dok1-pale)}
+.mo.incorrect{background:#4a1a1a;border-color:var(--dok3-light);color:var(--dok3-pale)}
+.mo.disabled{cursor:default;pointer-events:none}
+.mf{display:none;margin-top:12px;padding:12px 16px;background:rgba(0,0,0,.3);border-radius:6px;font-size:13px;color:var(--text-muted);line-height:1.6}
+.mf.show{display:block}.mf strong{color:var(--gold-light)}
+
+/* MATCHING */
+.mc{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px}
+.mc h5{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.mi{background:var(--bg-card);border:2px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;font-size:13px;margin-bottom:8px;transition:all .2s;min-height:52px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.4}
+.mi.term{color:var(--dok3-pale);border-color:var(--dok3)}
+.mi.def{color:var(--text-muted)}
+.mi.selected{border-color:var(--gold-light);background:#3a2c08}
+.mi.matched{border-color:var(--dok1-light);background:#1a3a1a;color:var(--dok1-pale);pointer-events:none}
+.mi.wrong{border-color:var(--dok3-light);background:#3a1a1a;animation:shake .3s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+#mstat{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold-light);text-align:center;margin-top:8px;height:20px}
+
+/* SOURCE SKILL 2.C */
+.sk-wrap{background:var(--bg-card);border:2px solid var(--dok2);border-radius:10px;padding:22px;margin-bottom:28px}
+.sk-lbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dok2-pale);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.sk-source{background:#1a1408;border-left:4px solid var(--gold);padding:16px 18px;margin-bottom:16px;border-radius:0 6px 6px 0;font-style:italic;font-size:14px;color:var(--text-muted)}
+.sk-source cite{display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);font-style:normal}
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:16px}
+.sk-box{background:var(--bg-card-light);border-radius:8px;padding:14px;border-left:3px solid var(--dok2-light)}
+.sk-box h5{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dok2-pale);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.sk-box p{font-size:13px;color:var(--text-muted);line-height:1.5}
+
+/* EXPLAIN DRILLS */
+.ed{background:var(--bg-card);border:1px solid var(--dok2);border-radius:10px;padding:22px;margin-bottom:20px}
+.edl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dok2-pale);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.edp{font-size:15px;color:var(--text);margin-bottom:16px;font-style:italic}
+.ta{width:100%;min-height:90px;background:var(--bg-card-light);border:1px solid var(--border);border-radius:6px;padding:12px;color:var(--text);font-family:'Source Serif 4',serif;font-size:14px;resize:vertical;margin-bottom:10px}
+.ta:focus{outline:none;border-color:var(--dok2-light)}
+.ta3{width:100%;background:var(--bg-page);border:1px solid var(--border);border-radius:6px;padding:10px 12px;color:var(--text);font-family:'Source Serif 4',serif;font-size:14px;resize:vertical}
+.ta3:focus{outline:none;border-color:var(--dok3-light)}
+.ta4{width:100%;background:var(--bg-page);border:1px solid var(--border);border-radius:6px;padding:10px 12px;color:var(--text);font-family:'Source Serif 4',serif;font-size:14px;resize:vertical}
+.ta4:focus{outline:none;border-color:var(--dok4-light)}
+
+/* COMPARE TABLE */
+.ct-wrap{background:var(--bg-card);border-radius:10px;padding:22px;margin-bottom:28px;border:1px solid var(--dok2);overflow-x:auto}
+.ct-wrap h4{font-family:'Playfair Display',serif;color:var(--dok2-pale);font-size:18px;margin-bottom:16px}
+.ct{width:100%;border-collapse:collapse;font-size:13px}
+.ct th{background:var(--dok2);color:#fff;padding:10px 12px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1px;text-align:left}
+.ct td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text-muted);vertical-align:top;line-height:1.5}
+.ct tr:nth-child(even) td{background:rgba(255,255,255,.03)}
+.ct td:first-child{color:var(--gold-light);font-weight:600;font-family:'JetBrains Mono',monospace;font-size:11px;white-space:nowrap}
+.rp{background:var(--bg-card-light);border-radius:6px;padding:12px 16px;font-size:13px;color:var(--text-muted);font-style:italic;margin-top:12px}
+
+/* ACCORDION */
+.ab{width:100%;background:rgba(0,0,0,.4);border:1px solid var(--border);border-radius:6px;padding:10px 16px;color:var(--text-muted);cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;text-align:left;display:flex;justify-content:space-between;align-items:center;transition:all .2s;margin-bottom:4px}
+.ab:hover{border-color:var(--gold);color:var(--gold-light)}
+.ab.open{border-color:var(--gold);color:var(--gold-light)}
+.ac{display:none;background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:0 0 6px 6px;padding:16px;margin-bottom:10px;font-size:14px;color:var(--text-muted);line-height:1.7}
+.ac.open{display:block}.ac strong{color:var(--gold-light)}.ac em{color:var(--text)}
+
+/* CHAIN */
+.cw{background:var(--bg-card);border-radius:10px;padding:22px;margin-bottom:28px;border:1px solid var(--dok3)}
+.cw h4{font-family:'Playfair Display',serif;color:var(--dok3-pale);font-size:18px;margin-bottom:16px}
+.cn-nodes{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.cn-row{display:flex;align-items:center;gap:8px}
+.cn{flex:1;background:var(--bg-card-light);border:2px solid var(--dok3);border-radius:8px;padding:12px 16px;font-size:14px;color:var(--text);text-align:center;line-height:1.4;min-height:60px;display:flex;align-items:center;justify-content:center}
+.cn.blank{background:#2a1818;border-style:dashed;color:var(--dok3-pale);font-style:italic;font-size:13px;cursor:pointer;transition:all .2s}
+.cn.blank:hover{background:#3a2020}
+.cn.revealed{background:#3a1a1a;border-style:solid;color:var(--dok3-pale);font-style:normal}
+.ca{font-size:22px;color:var(--dok3-light);flex-shrink:0}
+.cb-btn{background:var(--dok3);border:none;border-radius:6px;color:#fff;padding:10px 20px;cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;transition:background .2s}
+.cb-btn:hover{background:var(--dok3-light)}
+
+/* AP INSIGHT */
+.ai{background:linear-gradient(135deg,#2a1e06,#3a2c08);border:2px solid var(--gold);border-radius:10px;padding:20px 24px;margin-bottom:28px}
+.ai h5{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.ai p{color:var(--text-muted);font-size:14px;line-height:1.6;margin-top:8px}
+.ai strong{color:var(--gold-light)}
+
+/* SAQ */
+.saq{background:var(--bg-card);border:1px solid var(--dok3);border-radius:10px;padding:22px;margin-bottom:28px}
+.saq h4{font-family:'Playfair Display',serif;color:var(--dok3-pale);font-size:18px;margin-bottom:6px}
+.saqctx{font-size:13px;color:var(--text-muted);margin-bottom:16px;font-style:italic}
+.saqp{background:var(--bg-card-light);border-radius:8px;padding:16px;margin-bottom:12px;border-left:4px solid var(--dok3)}
+.saqlbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dok3-pale);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.saqp p{font-size:14px;color:var(--text);margin-bottom:10px}
+
+/* THESIS EVAL */
+.te-wrap{margin-bottom:28px}
+.te-wrap h4{font-family:'Playfair Display',serif;color:var(--dok3-pale);font-size:18px;margin-bottom:6px}
+.te-prompt{font-size:14px;color:var(--text-muted);font-style:italic;margin-bottom:16px;background:var(--bg-card);padding:14px 18px;border-radius:8px;border-left:4px solid var(--dok3)}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:14px}
+.tc{background:var(--bg-card);border:2px solid var(--border);border-radius:10px;padding:18px;cursor:pointer;transition:all .2s}
+.tc:hover{border-color:var(--gold)}
+.tc p{font-size:14px;color:var(--text-muted);line-height:1.6;margin-bottom:10px}
+.tv{display:none;padding:10px 14px;border-radius:6px;font-size:13px;margin-top:8px}
+.tv.show{display:block}
+.tv.fail{background:#3a1a1a;border:1px solid var(--dok3-light);color:var(--dok3-pale)}
+.tv.pass{background:#1a3a1a;border:1px solid var(--dok1-light);color:var(--dok1-pale)}
+.tvl{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;margin-bottom:4px}
+
+/* CTX BUILDER */
+.ctx-wrap{background:var(--bg-card);border:1px solid var(--dok4);border-radius:10px;padding:22px;margin-bottom:28px}
+.ctx-wrap h4{font-family:'Playfair Display',serif;color:var(--dok4-pale);font-size:18px;margin-bottom:8px}
+.ctx-wrap>p{font-size:14px;color:var(--text-muted);margin-bottom:16px}
+.cp{background:var(--bg-card-light);border:2px solid var(--dok4);border-radius:8px;padding:16px;margin-bottom:14px}
+.cpl{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dok4-pale);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.cstem{font-size:14px;color:var(--gold-pale);font-style:italic;margin-bottom:12px;padding:10px 14px;background:rgba(0,0,0,.3);border-radius:6px}
+
+/* SYNTHESIS */
+.syn{background:var(--bg-card);border:1px solid var(--dok4);border-radius:10px;padding:22px;margin-bottom:28px}
+.syn h4{font-family:'Playfair Display',serif;color:var(--dok4-pale);font-size:18px;margin-bottom:12px}
+.syn p{font-size:14px;color:var(--text-muted);margin-bottom:12px;line-height:1.7}
+.scon{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:16px 0}
+.sc{background:var(--bg-card-light);border-radius:8px;padding:14px;border-left:3px solid var(--dok4-light)}
+.sclbl{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dok4-pale);letter-spacing:1px;text-transform:uppercase;margin-bottom:5px}
+.sc p{font-size:13px;margin-bottom:0}
+.stask{background:#1a1408;border:1px solid var(--gold);border-radius:8px;padding:16px;margin-top:14px}
+
+/* SELF-ASSESSMENT */
+.sa{background:var(--bg-card);border:1px solid var(--dok4);border-radius:10px;padding:22px;margin-bottom:40px}
+.sa h4{font-family:'Playfair Display',serif;color:var(--dok4-pale);font-size:18px;margin-bottom:16px}
+.sai{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);gap:12px;flex-wrap:wrap}
+.sai:last-child{border-bottom:none}
+.sask{font-size:14px;color:var(--text-muted);flex:1;min-width:200px}
+.sads{display:flex;gap:8px}
+.sad{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);cursor:pointer;transition:all .2s}
+.sad:hover{border-color:var(--gold)}
+.sad.a1{background:var(--dok3);border-color:var(--dok3-light)}
+.sad.a2{background:var(--gold);border-color:var(--gold-light)}
+.sad.a3{background:var(--dok1);border-color:var(--dok1-light)}
+.salabels{display:flex;gap:8px;margin-bottom:10px;justify-content:flex-end}
+.sali{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);width:28px;text-align:center;line-height:1.2}
+
+/* COMPLETE BTN */
+.cbtn{display:block;margin:28px auto 0;background:transparent;border:2px solid;border-radius:8px;padding:12px 28px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;cursor:pointer;transition:all .2s;text-transform:uppercase}
+.d1 .cbtn{border-color:var(--dok1);color:var(--dok1-pale)}.d1 .cbtn:hover{background:var(--dok1);color:#fff}
+.d2 .cbtn{border-color:var(--dok2);color:var(--dok2-pale)}.d2 .cbtn:hover{background:var(--dok2);color:#fff}
+.d3 .cbtn{border-color:var(--dok3);color:var(--dok3-pale)}.d3 .cbtn:hover{background:var(--dok3);color:#fff}
+.d4 .cbtn{border-color:var(--dok4);color:var(--dok4-pale)}.d4 .cbtn:hover{background:var(--dok4);color:#fff}
+.cbtn:disabled{opacity:.5;cursor:default}
+
+.sdiv{max-width:900px;margin:0 auto 10px;padding:0 20px;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent)}
+
+/* PROMISE vs REALITY */
+.pvr{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
+.pvr-col{background:var(--bg-card);border-radius:10px;padding:20px}
+.pvr-promise{border:2px solid var(--dok1-light)}
+.pvr-reality{border:2px solid var(--dok3-light)}
+.pvr-col h5{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;margin-bottom:14px;text-align:center}
+.pvr-promise h5{color:var(--dok1-pale)}
+.pvr-reality h5{color:var(--dok3-pale)}
+.pvr-item{background:rgba(0,0,0,.3);border-radius:6px;padding:10px 12px;margin-bottom:8px;font-size:13px;color:var(--text-muted);line-height:1.5}
+
+@media(max-width:600px){
+  .mc{grid-template-columns:1fr}.tg{grid-template-columns:1fr}
+  .pvr{grid-template-columns:1fr}.cs-grid{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:80px 1fr}.sk-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS -->
+<div id="pgbar">
+  <span>PROGRESS</span>
+  <div style="flex:1">
+    <div id="pgtrack"><div id="pgfill"></div></div>
+    <div class="pgmarks"><span>START</span><span>DOK 1 — 25%</span><span>DOK 2 — 50%</span><span>DOK 3 — 75%</span><span>DOK 4 — 100%</span></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="ph">
+  <div class="ul">AP World History: Modern · Unit 8 · Topic 8.4</div>
+  <h1 class="pt">Spread of Communism After 1900</h1>
+  <p class="ps">Thematic Focus: ECN / SIO &nbsp;·&nbsp; KC-6.2.I.i · KC-6.3.I.A.ii · KC-6.2.II.D.i &nbsp;·&nbsp; HTS: Sourcing &amp; Situation (Skill 2.C)</p>
+</div>
+
+<!-- HOW-TO -->
+<div class="htb">
+  <h3>📋 How to Use This Module</h3>
+  <p><strong>Central Argument (from the video):</strong> The spread of communism wasn't just military strategy — it was a <em>response to injustice</em>. Across Asia, Africa, and Latin America, feudalism, capitalism, and colonialism had created a world of deep inequality: tiny elites owned the land; peasants who worked it owned nothing. Into that world came a simple, electrifying promise: <em>we'll flip the system — you'll get land, dignity, and power</em>. But the promise and the brutal reality constantly collided. China's Great Leap Forward killed ~20 million people. Iran's White Revolution angered everyone. Guatemala's land reform was crushed by a CIA-backed coup. The historian's job — and the AP skill here — is to ask: <em>who is telling this story, and why?</em></p>
+  <p><strong>Dual Thematic Lens:</strong> ECN (Economics Systems) — how states controlled land and production through communism and land reform. SIO (Social Interactions) — how movements to redistribute resources reorganized social hierarchies and sparked revolutionary conflict.</p>
+  <p><strong>CED Skill:</strong> Sourcing and Situation (2.C) — Explain the <em>significance</em> of a source's POV, purpose, historical situation, and/or audience, including how these might <strong>limit</strong> the use(s) of a source. Not just HAPP — the AP upgrade is explaining the <em>limitation</em>.</p>
+  <div class="htgrid">
+    <div class="hts s1"><strong>DOK 1 — Answer Correctly</strong>Watch the video, master the vocabulary, identify all 6 case studies, check recall with MCQs and matching.</div>
+    <div class="hts s2"><strong>DOK 2 — Establish &amp; Explain</strong>Compare the promise vs. reality of land reform, apply Skill 2.C sourcing analysis, explain causes &amp; consequences using case studies.</div>
+    <div class="hts s3"><strong>DOK 3 — Examine with Evidence</strong>Causal chain of Chinese communism, source-based SAQ, thesis evaluation for LO-D and LO-E prompts.</div>
+    <div class="hts s4"><strong>DOK 4 — Explore &amp; Synthesize</strong>Contextualize within colonialism and global inequality, connect land reform across Units 7–9, self-assess AP skills.</div>
+  </div>
+</div>
+
+<!-- ═══════════ DOK 1 ═══════════ -->
+<div class="sw d1" id="dok1">
+  <div class="sh">
+    <div><span class="db">DOK 1</span></div>
+    <div>
+      <div class="stitle">Knowledge Acquisition</div>
+      <div class="stag">GOAL: Answer Correctly — master vocabulary, 6 case studies, and dual learning objectives</div>
+    </div>
+  </div>
+
+  <!-- Video -->
+  <div class="cblue">
+    <h4>🎬 Layer 1: Watch the Video Explainer First</h4>
+    <p><strong>APWH 8.4 — Spread of Communism After 1900</strong> &nbsp;|&nbsp; <a href="https://youtu.be/placeholder_84" target="_blank">Link from your NotebookLM project</a></p>
+    <p>As you watch, listen for three things:</p>
+    <ul>
+      <li><strong>The engine:</strong> What social conditions — rooted in feudalism, capitalism, and colonialism — made communism and land reform so appealing to peasants across Asia, Africa, and Latin America?</li>
+      <li><strong>Promise vs. Reality:</strong> Where did the land reform promise actually help people? Where did it end in catastrophe — and why?</li>
+      <li><strong>The Skill 2.C moment:</strong> The video explicitly models sourcing analysis using the 1954 Collier's magazine quote. What does the source tell us? What does it fail to tell us — and why is that limitation historically significant?</li>
+    </ul>
+  </div>
+
+  <!-- Quote -->
+  <div class="oq">
+    <blockquote>"The road after the revolution will be longer, the work greater and more arduous."</blockquote>
+    <cite>— Mao Zedong, 1949 (the year Chinese communists defeated the Nationalists)</cite>
+  </div>
+
+  <!-- Framework Card -->
+  <div class="fc">
+    <h4>The Two Learning Objectives: Why This Topic Has Two "Lenses"</h4>
+    <div class="fgrid">
+      <div class="fi fi3">
+        <div class="fii">🇨🇳</div>
+        <div class="fit">LO-D: China</div>
+        <p><strong>KC-6.2.I.i &amp; KC-6.3.I.A.ii</strong><br>Internal tension + Japanese aggression → Communist victory (1949). Then: Great Leap Forward = government economic control with repressive policies → catastrophic famine (~20 million dead). This is about a specific state adopting communism with devastating consequences.</p>
+      </div>
+      <div class="fi fi2">
+        <div class="fii">🌍</div>
+        <div class="fit">LO-E: Global Land Reform</div>
+        <p><strong>KC-6.2.II.D.i</strong><br>Movements across Africa, Asia, and Latin America to redistribute land and resources — some communist, some socialist, some neither. Vietnam, Ethiopia, India (Kerala), Iran (White Revolution), Guatemala. The through-line: peasant inequality fueled by colonialism &amp; feudalism.</p>
+      </div>
+      <div class="fi fi4">
+        <div class="fii">📖</div>
+        <div class="fit">Skill 2.C</div>
+        <p>Not just HAPP — you must explain the <strong>significance of limitations</strong>. The Collier's quote "tells you a ton about what Americans were afraid of but absolutely nothing about why millions found communism appealing." That gap IS the limitation — and it matters historically.</p>
+      </div>
+      <div class="fi fi1">
+        <div class="fii">⚖️</div>
+        <div class="fit">The Core Tension</div>
+        <p>The video's central question: "When you're faced with a system that is fundamentally unjust, what is the real cost of revolution?" Promise (land, dignity, justice) vs. Reality (famine, repression, violence). AP essays must grapple with this tension, not flatten it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Study Cards -->
+  <div class="sh2">📚 Six Case Studies — Deep Dive Cards</div>
+  <div class="kct">KC-6.2.I.i · KC-6.3.I.A.ii · KC-6.2.II.D.i · CED Illustrative Examples</div>
+  <div class="cs-grid">
+
+    <div class="cs-card cs-china">
+      <div class="cs-header">🇨🇳 China — Communist Revolution</div>
+      <div class="cs-body">
+        <div class="cs-row"><div class="cs-label">LO</div><div class="cs-val"><span class="cs-tag tag-com">LO-D</span> Primary case study</div></div>
+        <div class="cs-row"><div class="cs-label">Causes</div><div class="cs-val">Decades of civil war + Japanese invasion (KC-6.2.I.i). Mao won by promising peasants land — then actually redistributing it. Peasants saw Communists as nationalist AND less corrupt than Nationalists.</div></div>
+        <div class="cs-row"><div class="cs-label">1949</div><div class="cs-val">Communists defeat Nationalists → People's Republic of China. Mao nationalizes industry; Soviet-model 5-year plans emphasizing heavy industry.</div></div>
+        <div class="cs-row"><div class="cs-label">Great Leap</div><div class="cs-val">1958: Abolishes private land; peasants forced onto state communes. Backyard steel furnaces produce useless metal while farming collapses. ~20 million die in famine. Abandoned 1960. (KC-6.3.I.A.ii)</div></div>
+        <div class="cs-row"><div class="cs-label">Cul. Rev.</div><div class="cs-val">1966: Red Guards seize officials, teachers, send them for "reeducation." Like Stalin's purges — political repression disguised as ideological renewal.</div></div>
+        <div class="cs-row"><div class="cs-label">AP Note</div><div class="cs-val">The pivot from promising peasants land → confiscating their land for communes is the central LO-D contradiction. Promise vs. brutal reality in one country.</div></div>
+      </div>
+    </div>
+
+    <div class="cs-card cs-vietnam">
+      <div class="cs-header">🇻🇳 Vietnam — Land as Revolutionary Fuel</div>
+      <div class="cs-body">
+        <div class="cs-row"><div class="cs-label">LO</div><div class="cs-val"><span class="cs-tag tag-com">LO-E</span> CED Example: "Communist Revolution for Vietnamese Independence"</div></div>
+        <div class="cs-row"><div class="cs-label">Context</div><div class="cs-val">Agricultural society: few controlled most land. Communists (Ho Chi Minh) pledged to seize land from large owners and redistribute to peasants → won massive support.</div></div>
+        <div class="cs-row"><div class="cs-label">Key Point</div><div class="cs-val">Land reform was the engine of the independence movement, not just ideology. Ho Chi Minh used the same peasant appeal as Mao — promising concrete material benefit (land) as the path to revolution AND national independence.</div></div>
+        <div class="cs-row"><div class="cs-label">South</div><div class="cs-val">South Vietnam's government was slow to implement land reform → remained unpopular. This unpopularity undermined US support for South Vietnam throughout the war.</div></div>
+        <div class="cs-row"><div class="cs-label">AP Note</div><div class="cs-val">Strong connection to 8.3 (proxy war) and 8.5 (decolonization). Vietnam shows land reform as both a communist tool AND an anti-colonial movement.</div></div>
+      </div>
+    </div>
+
+    <div class="cs-card cs-ethiopia">
+      <div class="cs-header">🇪🇹 Ethiopia — Mengistu's Socialist Revolution</div>
+      <div class="cs-body">
+        <div class="cs-row"><div class="cs-label">LO</div><div class="cs-val"><span class="cs-tag tag-soc">LO-E</span> CED Example: "Mengistu Haile Mariam in Ethiopia"</div></div>
+        <div class="cs-row"><div class="cs-label">Before</div><div class="cs-val">Emperor Haile Selassie: aligned with West post-WWII; economic success from coffee trade. But unable to implement effective land reform → seen as US pawn by many Ethiopians by 1960s.</div></div>
+        <div class="cs-row"><div class="cs-label">1974</div><div class="cs-val">Military coup deposes Selassie. Mengistu Haile Mariam rises to power; orders assassination of 60 former officials. New government declares itself socialist; receives Soviet/communist aid and weapons.</div></div>
+        <div class="cs-row"><div class="cs-label">Result</div><div class="cs-val">Famine, failed economic policies, rebellion. Mengistu flees to Zimbabwe 1991. Ethiopia shows socialism as a Cold War political tool — Soviet backing for anti-Western African governments.</div></div>
+        <div class="cs-row"><div class="cs-label">AP Note</div><div class="cs-val">Connects to 8.3 (Cold War proxy conflicts in Africa) and 8.6 (newly independent states navigating decolonization).</div></div>
+      </div>
+    </div>
+
+    <div class="cs-card cs-india">
+      <div class="cs-header">🇮🇳 India — Kerala's Incremental Reform</div>
+      <div class="cs-body">
+        <div class="cs-row"><div class="cs-label">LO</div><div class="cs-val"><span class="cs-tag tag-ref">LO-E</span> CED Example: "Land reform in Kerala and other states within India"</div></div>
+        <div class="cs-row"><div class="cs-label">Context</div><div class="cs-val">India independent 1947. Mixed results from national land reform — tried to redistribute land, abolish power of rent collectors, protect renters. Central government's results: mixed.</div></div>
+        <div class="cs-row"><div class="cs-label">Kerala</div><div class="cs-val">Series of incremental successes: 1960 land reform passed (overturned by courts); 1963 tenants win right to buy land; 1969 tenants become full owners; 1974 minimum wages + fixed hours.</div></div>
+        <div class="cs-row"><div class="cs-label">Irony</div><div class="cs-val">Despite Kerala's reform popularity, India's central government took direct rule over Kerala to slow/reverse the program — showing the contradiction between democratic governance and radical redistribution.</div></div>
+        <div class="cs-row"><div class="cs-label">AP Note</div><div class="cs-val">The ONLY case study showing gradual, democratic-process land reform succeeding (partially). Useful for comparison — contrast with violent revolutionary approaches.</div></div>
+      </div>
+    </div>
+
+    <div class="cs-card cs-iran">
+      <div class="cs-header">🇮🇷 Iran — White Revolution &amp; Its Backlash</div>
+      <div class="cs-body">
+        <div class="cs-row"><div class="cs-label">LO</div><div class="cs-val"><span class="cs-tag tag-ref">LO-E</span> CED Example: "White Revolution in Iran"</div></div>
+        <div class="cs-row"><div class="cs-label">Shah's Goal</div><div class="cs-val">Top-down modernization to prevent communist revolution. Progressive reforms: women's right to vote, social welfare, literacy programs, land redistribution (buying land from lords, reselling cheaply to peasants).</div></div>
+        <div class="cs-row"><div class="cs-label">Problem</div><div class="cs-val">Angered everyone: religious conservatives hated modernization; landowners furious about property loss; many peasants received nothing and remained frustrated. Massive instability created.</div></div>
+        <div class="cs-row"><div class="cs-label">Backstory</div><div class="cs-val">Shah was a US/Britain-backed authoritarian — they engineered the overthrow of democratically elected Mosaddegh (1953) to restore him after Mosaddegh tried to nationalize oil companies.</div></div>
+        <div class="cs-row"><div class="cs-label">1979</div><div class="cs-val">Iranian Revolution topples the Shah → Islamic Republic theocracy. Clerics and Guardian Council take power; oppose Western Middle East policy and Israel.</div></div>
+        <div class="cs-row"><div class="cs-label">AP Note</div><div class="cs-val">Unique case: anti-communist land reform that backfired, producing a theocratic revolution instead. Shows land reform's unintended consequences and the limits of top-down change.</div></div>
+      </div>
+    </div>
+
+    <div class="cs-card cs-guatemala">
+      <div class="cs-header">🇬🇹 Guatemala — Cold War Crushes Reform</div>
+      <div class="cs-body">
+        <div class="cs-row"><div class="cs-label">LO</div><div class="cs-val"><span class="cs-tag tag-cw">LO-E + 8.3 Link</span> Where land reform meets Cold War proxy logic</div></div>
+        <div class="cs-row"><div class="cs-label">Context</div><div class="cs-val">Democratically elected president Jacobo Árbenz begins land reform program — including land belonging to the US-owned United Fruit Company.</div></div>
+        <div class="cs-row"><div class="cs-label">US Response</div><div class="cs-val">United Fruit lobbies US government. US frames reform as communist threat (not a domestic economic policy). CIA-backed coup overthrows Árbenz in 1954. Reforms stopped immediately.</div></div>
+        <div class="cs-row"><div class="cs-label">Diego Rivera</div><div class="cs-val">Mural "Glorious Victory" (1954) — sarcastic title. Portrays Secretary of State Dulles holding a bomb with Eisenhower's face, US officials as aggressors. CED primary source for Skill 2.C analysis.</div></div>
+        <div class="cs-row"><div class="cs-label">AP Note</div><div class="cs-val">The video's key Skill 2.C moment: two sources on same event (Collier's magazine vs. Rivera's mural) reveal how POV and purpose completely change the story told. Guatemala shows land reform as a Cold War battleground, not just a domestic issue.</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Timeline -->
+  <div class="sh2">📅 Annotated Timeline — Spread of Communism After 1900</div>
+  <div class="kct">KC-6.2.I.i · KC-6.3.I.A.ii · KC-6.2.II.D.i</div>
+
+  <div class="tl-item"><div class="tl-date">1927</div><div class="tl-text"><strong>Chinese Civil War Begins</strong> — Communists vs. Nationalists. Paused when Japan invades; resumes 1945 after Japan's defeat. Two decades of conflict that frames the communist victory of 1949.</div></div>
+  <div class="tl-item"><div class="tl-date">1949</div><div class="tl-text"><strong>People's Republic of China Founded</strong> — Mao's communists defeat the Nationalists. Nationalists flee to Taiwan. Mao nationalizes industry; creates Soviet-model 5-year plans. Land redistribution to peasants consolidates popular support (KC-6.2.I.i).</div></div>
+  <div class="tl-item"><div class="tl-date">1951</div><div class="tl-text"><strong>Mosaddegh Elected, Iran</strong> — Vows to nationalize oil companies. US &amp; Britain engineer his overthrow 1953; restore Shah. Sets the conditions for later anti-Western sentiment that fuels the 1979 revolution.</div></div>
+  <div class="tl-item"><div class="tl-date">1954</div><div class="tl-text"><strong>CIA Coup in Guatemala</strong> — Overthrows democratically elected Árbenz after his land reform threatens United Fruit Company. Diego Rivera paints "Glorious Victory" in response. Classic Cold War exploitation of land reform movements.</div></div>
+  <div class="tl-item"><div class="tl-date">1954</div><div class="tl-text"><strong>Vietnam Divided</strong> — French colonial war ends; country split North (Ho Chi Minh, communist) and South. Land reform fuels communist support in the North; South's failure to reform feeds its unpopularity. Stage set for the Vietnam War.</div></div>
+  <div class="tl-item"><div class="tl-date">1958–60</div><div class="tl-text"><strong>Great Leap Forward, China</strong> — Mao abolishes private land; creates state communes; orders backyard steel furnaces. Policy failure + repression + bad harvests = ~20 million dead from famine. Abandoned 1960. Worst man-made famine in history (KC-6.3.I.A.ii).</div></div>
+  <div class="tl-item"><div class="tl-date">1960–74</div><div class="tl-text"><strong>Kerala Land Reform, India</strong> — Incremental series of reforms: 1960 passed/overturned; 1963 tenants win purchase rights; 1969 full ownership; 1974 minimum wages. Central government intervenes to slow reforms — popular but politically inconvenient.</div></div>
+  <div class="tl-item"><div class="tl-date">1963</div><div class="tl-text"><strong>White Revolution, Iran</strong> — Shah launches top-down modernization: women's voting rights, social welfare, land redistribution. Angers conservatives, landowners, AND frustrated peasants. Creates instability that will detonate in 1979.</div></div>
+  <div class="tl-item"><div class="tl-date">1966</div><div class="tl-text"><strong>Cultural Revolution, China</strong> — Mao launches purge of perceived counter-revolutionaries. Red Guards seize officials and teachers; send them for "reeducation" through hard labor. Similar to Stalin's purges; devastates China's intellectual and administrative class.</div></div>
+  <div class="tl-item"><div class="tl-date">1974</div><div class="tl-text"><strong>Mengistu Seizes Power, Ethiopia</strong> — Military coup deposes Emperor Selassie. Mengistu declares socialist government; receives Soviet support. Famine and rebellion follow. Flees to Zimbabwe 1991 as Cold War ends and Soviet backing evaporates.</div></div>
+  <div class="tl-item"><div class="tl-date">1979</div><div class="tl-text"><strong>Iranian Revolution</strong> — Shah overthrown; Islamic theocracy established under clerical leadership. Guardian Council interprets constitution through Islamic law. Rejects Western Middle East policy. Shows how anti-colonial memory (1953 coup) fueled 1979 revolution.</div></div>
+
+  <!-- Vocabulary Flip Cards -->
+  <div class="sh2" style="margin-top:20px">🃏 Vocabulary Flip Cards — Click to Reveal</div>
+  <div class="kct">CED Vocabulary · KC-6.2.I.i · KC-6.3.I.A.ii · KC-6.2.II.D.i</div>
+  <div class="vg">
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">Land Reform</div><div class="kcs">KC-6.2.II.D.i</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">Government policies to redistribute land from large landowners (often wealthy elites or colonial companies) to landless peasants. The central demand of most communist and socialist movements in postcolonial Asia, Africa, and Latin America — and a key source of their popular support.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">Great Leap Forward</div><div class="kcs">KC-6.3.I.A.ii</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">Mao's 1958–1960 plan to rapidly industrialize China by abolishing private land, creating state communes, and ordering backyard steel production. Policy failure + repression + bad harvests = ~20 million deaths from famine. Abandoned 1960. A catastrophic example of state economic control with repressive policies.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">Commune</div><div class="kcs">KC-6.3.I.A.ii</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">Large state-owned agricultural communities created during China's Great Leap Forward. Peasants were forced onto communes where the state — not individuals — held the land. Eliminated the private land ownership that had originally won peasant support for Mao in 1949.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">Cultural Revolution</div><div class="kcs">China 1966</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">Mao's 1966 campaign to purge "counter-revolutionary" elements from Chinese society. Red Guards seized officials, teachers, and intellectuals, sending them to the countryside for "reeducation" through hard labor. Functionally similar to Stalin's purges — political repression under ideological cover.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">White Revolution</div><div class="kcs">Iran</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">Shah Muhammad Reza Pahlavi's top-down modernization program (1963) — land redistribution, women's voting rights, social welfare, literacy programs. Named "White" because it came without bloodshed. But it angered conservatives, landowners, AND many peasants who received nothing — creating the instability that produced the 1979 Islamic Revolution.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">Theocracy</div><div class="kcs">Iran 1979</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">A form of government in which religion is the supreme authority. Post-1979 Iran: headed by a cleric; Guardian Council of religious legal experts ensures all laws comply with Islamic (shariah) law; clergy approve/disapprove all election candidates. Opposite of the secular state the Shah had tried to build.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">Red Guards</div><div class="kcs">China · Cultural Revolution</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">Groups of revolutionary students mobilized by Mao during the Cultural Revolution (1966). Tasked with rooting out "counter-revolutionaries" — in practice, seizing teachers, government officials, and intellectuals and sending them for reeducation through hard labor. Instruments of political purge under ideological cover.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">KC-6.2.I.i</div><div class="kcs">CED Key Concept</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">"As a result of internal tension and Japanese aggression, Chinese communists seized power. These changes in China eventually led to communist revolution." The causal sequence: civil war chaos + Japanese invasion + communist land promises = Mao's victory in 1949 and eventual establishment of communist China.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">KC-6.2.II.D.i</div><div class="kcs">CED Key Concept</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">"Movements to redistribute land and resources developed within states in Africa, Asia, and Latin America, sometimes advocating communism or socialism." This KC covers LO-E: all the non-China cases — Vietnam, Ethiopia, India (Kerala), Iran, Guatemala — where redistribution movements arose from the same underlying conditions of inequality.</div></div>
+      </div>
+    </div>
+    <div class="fc2" onclick="this.classList.toggle('flipped')">
+      <div class="fci">
+        <div class="ff"><div class="term">Skill 2.C</div><div class="kcs">CED Suggested Skill</div><div class="hint">Click to flip</div></div>
+        <div class="fb"><div class="def">Sourcing and Situation: Explain the SIGNIFICANCE of a source's POV, purpose, historical situation, and/or audience — including how these might LIMIT its use. The upgrade from 2.B: 2.C requires you to evaluate what the source CANNOT tell you and why that gap matters historically.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MCQ -->
+  <div class="sh2">✅ Recall Multiple Choice</div>
+  <div class="kct">KC-6.2.I.i · KC-6.3.I.A.ii · KC-6.2.II.D.i</div>
+
+  <div class="mq" id="mcq1">
+    <div class="mqq">1. The video explains that "the core appeal of communism was incredibly simple and powerful." According to both the video and KC-6.2.II.D.i, what was the primary social condition that made communist and socialist land reform movements so appealing to peasants across Asia, Africa, and Latin America?</div>
+    <div class="moo">
+      <button class="mo" onclick="chkMCQ('mcq1',this,false)">(A) The military superiority of communist armies, which provided physical protection to peasants threatened by nationalist governments.</button>
+      <button class="mo" onclick="chkMCQ('mcq1',this,true)">(B) The deep inequality created by feudalism, capitalism, and colonialism — in which tiny elites owned nearly all the land while large peasant populations worked it but could never own it — made the promise of redistribution sound like survival and justice.</button>
+      <button class="mo" onclick="chkMCQ('mcq1',this,false)">(C) The Soviet Union's active promotion of communist ideology through state media, which convinced peasants in postcolonial regions that communism was economically superior to capitalism.</button>
+      <button class="mo" onclick="chkMCQ('mcq1',this,false)">(D) The failures of Western democratic governments to provide economic aid to developing nations after World War II, leaving peasants with no alternative but to turn to communist movements.</button>
+    </div>
+    <div class="mf" id="mcq1-fb"><strong>Correct — B.</strong> Both the video and KC-6.2.II.D.i are explicit: the engine of land reform movements was pre-existing inequality rooted in feudalism, capitalism, and colonialism. The video puts it vividly: "a tiny, super-wealthy elite owned pretty much all the land, and then you had, well, everyone else." The communist promise was "you have no land, you'll get land; you feel exploited, you'll have dignity." For peasants with nothing, that wasn't abstract politics — it was survival. This foundational social condition appears in ALL six case studies and is the prerequisite for understanding why communism spread globally after 1900.</div>
+  </div>
+
+  <div class="mq" id="mcq2">
+    <div class="mqq">2. Which of the following best describes the central contradiction of the Great Leap Forward (1958–1960) in relation to what Chinese communists had originally promised peasants in order to win the civil war?</div>
+    <div class="moo">
+      <button class="mo" onclick="chkMCQ('mcq2',this,false)">(A) Mao had promised industrial development, but the Great Leap Forward focused almost entirely on agricultural production, disappointing workers in China's cities.</button>
+      <button class="mo" onclick="chkMCQ('mcq2',this,true)">(B) Mao had won peasant support by redistributing land to them, but the Great Leap Forward then abolished private land entirely and forced peasants onto state communes — taking back the very promise that had fueled the revolution.</button>
+      <button class="mo" onclick="chkMCQ('mcq2',this,false)">(C) Mao had promised to model China's economy on the Soviet Union, but the Great Leap Forward rejected Soviet economic planning in favor of an entirely Chinese approach to industrialization.</button>
+      <button class="mo" onclick="chkMCQ('mcq2',this,false)">(D) Mao had promised peasants democratic participation in governance, but the Great Leap Forward concentrated all decision-making power in a small circle of Communist Party elites.</button>
+    </div>
+    <div class="mf" id="mcq2-fb"><strong>Correct — B.</strong> This is the central contradiction of LO-D and KC-6.3.I.A.ii: Mao won the civil war by promising peasants land and then actually redistributing it — earning "incredible support and loyalty." But in 1958, the Great Leap Forward reversed this entirely, abolishing private land and forcing peasants onto state communes. The promise that fueled the revolution became the policy that was eliminated by it. The video calls this the moment where "that grand, inspiring promise just collided head-on with a brutal, brutal reality." This contradiction is the heart of every AP question about Chinese communism in Topic 8.4.</div>
+  </div>
+
+  <div class="mq" id="mcq3">
+    <div class="mqq">3. The Iran White Revolution is described as a "fascinating case" in the video. What made it uniquely different from the other CED land reform examples (Vietnam, Ethiopia, India, Guatemala)?</div>
+    <div class="moo">
+      <button class="mo" onclick="chkMCQ('mcq3',this,false)">(A) The White Revolution was the only case where land reform was implemented successfully and produced stable democratic governance without triggering any resistance or opposition.</button>
+      <button class="mo" onclick="chkMCQ('mcq3',this,false)">(B) The White Revolution was a foreign-imposed reform program, carried out entirely by US and British advisors rather than Iranian political leaders or military forces.</button>
+      <button class="mo" onclick="chkMCQ('mcq3',this,true)">(C) Unlike the other cases where reform was driven by communist or socialist revolutionaries seeking to overthrow the existing order, the White Revolution was a top-down reform by an authoritarian anti-communist monarch attempting to prevent revolution — yet paradoxically created the instability that caused the 1979 Islamic Revolution.</button>
+      <button class="mo" onclick="chkMCQ('mcq3',this,false)">(D) The White Revolution was the only case study where the United States actively supported a land reform program rather than opposing it, seeing it as a way to counter Soviet influence in the Middle East.</button>
+    </div>
+    <div class="mf" id="mcq3-fb"><strong>Correct — C.</strong> The Iran case is unique among the CED examples in two ways: (1) It was <em>anti</em>-communist reform — the Shah modernized precisely to prevent a communist revolution. (2) It backfired spectacularly — angering conservatives, landowners, AND many peasants — creating the exact instability it was designed to prevent, and ultimately producing not communism but a theocratic Islamic revolution. The video notes: "He managed to anger everybody... it created this massive instability that ultimately paved the way for the Iranian Revolution in 1979." For AP purposes, Iran is the strongest counter-example to the idea that land reform → communist revolution. Here, inadequate reform → Islamic theocracy.</div>
+  </div>
+
+  <div class="mq" id="mcq4">
+    <div class="mqq">4. The CIA-backed coup in Guatemala (1954) that overthrew democratically elected President Árbenz illustrates which broader historical argument about Cold War-era land reform movements?</div>
+    <div class="moo">
+      <button class="mo" onclick="chkMCQ('mcq4',this,false)">(A) That communist movements in Latin America were almost always led by foreign agents trained in the Soviet Union rather than domestic leaders responding to local conditions.</button>
+      <button class="mo" onclick="chkMCQ('mcq4',this,true)">(B) That Cold War superpower competition often suppressed or distorted genuine domestic land reform movements — the US intervening not because Árbenz was actually communist, but because his reforms threatened American corporate interests that the US government framed as a Cold War threat.</button>
+      <button class="mo" onclick="chkMCQ('mcq4',this,false)">(C) That land reform in Latin America was inherently destabilizing because the unequal distribution of land was too deeply entrenched to be changed through democratic political processes.</button>
+      <button class="mo" onclick="chkMCQ('mcq4',this,false)">(D) That the United Fruit Company's lobbying demonstrated that multinational corporations had more political power than national governments in postcolonial societies during the Cold War era.</button>
+    </div>
+    <div class="mf" id="mcq4-fb"><strong>Correct — B.</strong> Guatemala is the clearest example of what the video calls land reform "smacking right into the Cold War." Árbenz was democratically elected and pursued land reform for domestic reasons — the United Fruit Company (a US corporation) happened to own affected land. The US government reframed a local economic policy as a communist threat, used the CIA to overthrow a democratic government, and stopped the reforms. The video is explicit: "the US government viewed this not as a local issue, but as a communist threat." This connects 8.4's land reform theme directly to 8.3's proxy war theme — showing how Cold War ideology was used to justify suppressing legitimate domestic reforms worldwide.</div>
+  </div>
+
+  <div class="mq" id="mcq5">
+    <div class="mqq">5. The CED's suggested skill for Topic 8.4 is Sourcing and Situation (2.C): explain the significance of a source's limitations. The video presents two sources about Guatemala: a 1954 Collier's magazine article ("The communists are without moral restraints") and Diego Rivera's mural "Glorious Victory." Which of the following best demonstrates Skill 2.C analysis of the Collier's quote?</div>
+    <div class="moo">
+      <button class="mo" onclick="chkMCQ('mcq5',this,false)">(A) The Collier's quote was written by an American journalist in 1954 for an American audience, which shows that the source has a clear point of view and purpose.</button>
+      <button class="mo" onclick="chkMCQ('mcq5',this,false)">(B) The Collier's quote accurately describes communist ideology, confirming that Cold War fears about communist expansion in Latin America were based on real threats.</button>
+      <button class="mo" onclick="chkMCQ('mcq5',this,true)">(C) The Collier's quote, produced by an American journalist during Cold War anti-communist hysteria, is significantly limited because it reveals American fears but completely obscures the legitimate grievances — land inequality, poverty, colonial exploitation — that made communism genuinely appealing to millions of people, making it useless for understanding why these movements arose.</button>
+      <button class="mo" onclick="chkMCQ('mcq5',this,false)">(D) The Collier's quote demonstrates that American media was intentionally manipulated by the US government to build public support for the CIA coup in Guatemala.</button>
+    </div>
+    <div class="mf" id="mcq5-fb"><strong>Correct — C.</strong> This is the model Skill 2.C response: it identifies the source's historical situation (American journalist, Cold War, 1954), explains the significant limitation — not just that it's biased, but <em>what it cannot show us</em> and <em>why that matters historically</em>. The video's own words: "This view is completely one-sided. It tells you a ton about what Americans were afraid of at the time, but it tells you absolutely nothing about why millions of people around the world living in poverty and injustice might find communism appealing in the first place." Option A names the situation but does NOT explain the significance of the limitation — that's Skill 2.B, not 2.C. Skill 2.C requires the "so what" — explaining WHY the limitation matters for using this source as historical evidence.</div>
+  </div>
+
+  <!-- Matching -->
+  <div class="sh2">🔗 Matching Activity — Click a Term, Then Click Its Match</div>
+  <div class="mc">
+    <div><h5>Terms</h5>
+      <div class="mi term" id="mt1" onclick="selMatch('mt1','term')" data-pair="1">Great Leap Forward</div>
+      <div class="mi term" id="mt2" onclick="selMatch('mt2','term')" data-pair="2">White Revolution</div>
+      <div class="mi term" id="mt3" onclick="selMatch('mt3','term')" data-pair="3">KC-6.2.I.i</div>
+      <div class="mi term" id="mt4" onclick="selMatch('mt4','term')" data-pair="4">Diego Rivera — "Glorious Victory"</div>
+      <div class="mi term" id="mt5" onclick="selMatch('mt5','term')" data-pair="5">Kerala, India</div>
+    </div>
+    <div><h5>Descriptions</h5>
+      <div class="mi def" id="md2" onclick="selMatch('md2','def')" data-pair="2">Iran's Shah's top-down modernization program (1963) — anti-communist land reform that paradoxically created the instability leading to the 1979 Islamic Revolution by angering conservatives, landowners, and many peasants alike.</div>
+      <div class="mi def" id="md5" onclick="selMatch('md5','def')" data-pair="5">Indian state where incremental land reform (1960–1974) achieved partial success through democratic process — the only CED case of gradual, non-revolutionary redistribution — until the central government intervened to slow the program.</div>
+      <div class="mi def" id="md3" onclick="selMatch('md3','def')" data-pair="3">CED key concept: "As a result of internal tension and Japanese aggression, Chinese communists seized power" — the causal sequence explaining Mao's 1949 victory through civil war chaos, Japanese invasion, and communist land promises to peasants.</div>
+      <div class="mi def" id="md1" onclick="selMatch('md1','def')" data-pair="1">Mao's 1958–1960 plan to industrialize China overnight: abolished private land, created state communes, ordered backyard steel furnaces. Failed policies + repression + bad harvests = ~20 million dead from famine (KC-6.3.I.A.ii).</div>
+      <div class="mi def" id="md4" onclick="selMatch('md4','def')" data-pair="4">1954 Mexican artist's mural satirizing US Secretary of State Dulles and the CIA coup in Guatemala — a primary source that illustrates the Skill 2.C principle that "who is telling the story completely changes the story you hear."</div>
+    </div>
+  </div>
+  <div id="mstat"></div>
+
+  <button class="cbtn" onclick="completeSection(1,this)">✓ Mark DOK 1 Complete</button>
+</div>
+
+<div class="sdiv"></div>
+
+<!-- ═══════════ DOK 2 ═══════════ -->
+<div class="sw d2" id="dok2">
+  <div class="sh">
+    <div><span class="db">DOK 2</span></div>
+    <div>
+      <div class="stitle">Knowledge Application</div>
+      <div class="stag">GOAL: Establish and Explain with Examples — apply Skill 2.C, compare cases, explain causes &amp; consequences</div>
+    </div>
+  </div>
+
+  <!-- Promise vs. Reality -->
+  <div class="sh2" style="margin-bottom:12px">⚖️ The Core Tension: Promise vs. Reality of Land Reform</div>
+  <div class="kct">KC-6.2.II.D.i · LO-D &amp; LO-E</div>
+  <div class="pvr">
+    <div class="pvr-col pvr-promise">
+      <h5>🌱 The Promise — Why People Believed</h5>
+      <div class="pvr-item"><strong>Land &amp; Dignity:</strong> "You have no land, you'll get land. You feel exploited, you'll have dignity." For peasants with nothing, this wasn't abstract theory — it was survival and justice.</div>
+      <div class="pvr-item"><strong>Mao (1949):</strong> Redistributed land to peasants, opened schools and hospitals, punished soldiers who mistreated civilians. Won massive popular support — Communists seen as nationalist AND less corrupt than Nationalists.</div>
+      <div class="pvr-item"><strong>Ho Chi Minh (Vietnam):</strong> Land redistribution pledge won enormous support among peasants — and explains why the South's failure to reform made it permanently unpopular.</div>
+      <div class="pvr-item"><strong>Kerala (India):</strong> Gradual reforms gave tenants purchase rights (1963), full ownership (1969), minimum wages (1974). Real, measurable improvement in peasant lives — the promise actually delivered (partially).</div>
+    </div>
+    <div class="pvr-col pvr-reality">
+      <h5>💀 The Reality — What It Often Became</h5>
+      <div class="pvr-item"><strong>Great Leap Forward:</strong> The land given to peasants in 1949 was confiscated by 1958 and absorbed into state communes. Backyard steel + neglected farming = ~20 million dead. The worst famine in human history as a direct result of government policy.</div>
+      <div class="pvr-item"><strong>Cultural Revolution:</strong> Red Guards terrorized teachers and officials; reeducation through hard labor. Mao used ideological revolution as cover for political purge — just like Stalin's methods.</div>
+      <div class="pvr-item"><strong>Mengistu (Ethiopia):</strong> Socialist revolution + Soviet backing → famine, failed economic policies, rebellion. The same pattern: revolutionary promise followed by authoritarian governance and economic failure.</div>
+      <div class="pvr-item"><strong>Guatemala:</strong> A democratic land reform crushed by CIA coup before it could deliver on its promises. Cold War intervention stopped reform cold — showing that even moderate redistribution faced suppression.</div>
+    </div>
+  </div>
+
+  <!-- Skill 2.C Deep Dive -->
+  <div class="sk-wrap">
+    <div class="sk-lbl">SKILL 2.C ANALYSIS — Sourcing and Situation with Limitations</div>
+    <p style="font-size:14px;color:var(--text-muted);margin-bottom:14px;">Topic 8.4's CED skill is <strong>Skill 2.C</strong> — the upgrade from 2.B. You don't just identify HAPP (Historical situation, Audience, Purpose, Point of View). You must explain the <em>significance of limitations</em>: what can this source NOT tell us, and why does that matter for historical understanding?</p>
+
+    <div class="sh2" style="font-size:15px;margin-bottom:10px">Source A — American Perspective</div>
+    <div class="sk-source">
+      "The communists are without moral restraints. They call war, peace, tyranny, freedom."
+      <cite>— American journalist, Collier's Magazine, 1954 (the same year as the CIA coup in Guatemala)</cite>
+    </div>
+    <div class="sk-grid">
+      <div class="sk-box"><h5>Historical Situation</h5><p>Written at the height of McCarthyism and anti-communist hysteria in the US — the same year the CIA overthrew Árbenz in Guatemala. American public discourse was saturated with "Red Scare" framing.</p></div>
+      <div class="sk-box"><h5>Audience &amp; Purpose</h5><p>American magazine readership — purpose is to alarm readers about the communist threat, build support for anti-communist foreign policy, and frame the Cold War as a moral (not economic) conflict.</p></div>
+      <div class="sk-box"><h5>Point of View</h5><p>American Cold War journalist viewing communism entirely through an ideological and security lens — unable or unwilling to consider the material conditions that made communism appealing.</p></div>
+      <div class="sk-box"><h5>⚠️ Significant Limitation (2.C)</h5><p>Tells us about American <em>fears</em>, not about the <em>causes</em> of communist movements. Cannot explain why millions chose communism — making it useless as evidence for understanding the appeal of land reform.</p></div>
+    </div>
+
+    <div class="sh2" style="font-size:15px;margin-bottom:10px;margin-top:18px">Source B — Latin American Perspective</div>
+    <div class="sk-source">
+      [Description of Diego Rivera's mural "Glorious Victory" (1954): portrays US Secretary of State Dulles holding a bomb featuring President Eisenhower's face, with US officials shown as aggressors in the Guatemalan coup. The US Secretary of State had called the coup "a glorious victory for democracy" — Rivera's title uses that phrase sarcastically.]
+      <cite>— Diego Rivera, Mexican muralist and communist sympathizer, "Glorious Victory," 1954, Pushkin Museum, Moscow</cite>
+    </div>
+    <div class="sk-grid">
+      <div class="sk-box"><h5>Historical Situation</h5><p>Painted immediately after the CIA coup in Guatemala by Mexico's most celebrated muralist, who was himself a communist. The mural was displayed in Moscow — not in the Americas — suggesting an audience of Soviet supporters.</p></div>
+      <div class="sk-box"><h5>Audience &amp; Purpose</h5><p>Soviet / international communist audience. Purpose: to condemn US imperialism, expose the hypocrisy of framing a coup as "democracy," and build international sympathy for anti-US movements in Latin America.</p></div>
+      <div class="sk-box"><h5>Point of View</h5><p>Rivera, a committed communist, portrays the US entirely as an imperial aggressor. His sympathy for the Guatemalan land reform is explicit — he presents Árbenz as a victim of corporate and government imperialism.</p></div>
+      <div class="sk-box"><h5>⚠️ Significant Limitation (2.C)</h5><p>Rivera's communist sympathies make him unlikely to acknowledge any legitimate US security concerns or failures of the Guatemalan government. Useful for understanding Latin American anti-US sentiment — not useful for understanding US motivations.</p></div>
+    </div>
+
+    <div class="rp">🎯 <strong>Skill 2.C Application:</strong> Using BOTH sources together, write 2–3 sentences explaining what historians CAN and CANNOT conclude about the Guatemalan coup using only these two sources. What third perspective would be most valuable — and why?</div>
+    <textarea class="ta" style="margin-top:12px;" placeholder="Write your Skill 2.C cross-source analysis here. What can each source tell us? What significant gap remains? What missing voice would matter most?"></textarea>
+    <button class="ab" onclick="toggleAcc('sk1',this)">▶ REVEAL SAMPLE SKILL 2.C RESPONSE</button>
+    <div class="ac" id="sk1">
+      <strong>Sample Skill 2.C Cross-Source Analysis:</strong><br><br>
+      Using only Sources A and B, historians can conclude that the Guatemalan coup was deeply contested and that both the US government and Latin American critics interpreted it in diametrically opposed terms: what US officials celebrated as a "victory for democracy," Rivera and many Latin Americans viewed as naked imperial aggression in service of corporate interests. However, both sources are significantly limited in the same way — neither represents the perspective of Guatemalan peasants themselves, whose land was the subject of the reform. Source A cannot explain why Guatemalans supported Árbenz, and Source B cannot explain whether Árbenz's reform was economically viable or politically sustainable. The most valuable missing voice would be testimony from Guatemalan rural workers — particularly those who stood to gain land from the reform — because their perspective would allow historians to evaluate the actual impact of the policy on the people it was designed to serve, rather than viewing the coup purely through the lens of Cold War ideology (the US) or anti-imperialism (Rivera).
+    </div>
+  </div>
+
+  <!-- Compare Table -->
+  <div class="ct-wrap">
+    <h4>📊 Comparing Land Reform Movements — Causes, Methods, Results</h4>
+    <div class="kct">KC-6.2.II.D.i · LO-E · Skill 2.C</div>
+    <table class="ct">
+      <thead>
+        <tr><th>CASE</th><th>DRIVING CAUSE</th><th>METHOD</th><th>RESULT / OUTCOME</th><th>TYPE</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>China</td><td>Civil war + Japanese invasion + peasant land inequality</td><td>Communist revolution → land redistribution (1949), then state communes (1958)</td><td>~20M dead in famine; Cultural Revolution; CCP consolidates power; China remains communist today</td><td>Communist</td></tr>
+        <tr><td>Vietnam</td><td>Colonial land inequality + anti-French independence movement</td><td>Communist-led revolution; land redistribution promise as revolutionary tool</td><td>Communist North wins; South's failure to reform feeds its collapse; Vietnam unifies under communism 1975</td><td>Communist</td></tr>
+        <tr><td>Ethiopia</td><td>Colonial-era land inequality; Selassie's failure to reform; anti-Western sentiment</td><td>Military coup (1974); socialist government backed by USSR</td><td>Famine, failed policies, rebellion; Mengistu flees 1991; Cold War end removes Soviet support</td><td>Socialist</td></tr>
+        <tr><td>India (Kerala)</td><td>British colonial land inequality; independence creating space for reform</td><td>Incremental democratic legislation (1960–1974)</td><td>Partial success; tenants gain land ownership; central government intervenes to slow reforms</td><td>Democratic</td></tr>
+        <tr><td>Iran</td><td>Foreign domination + inequality; Shah wants to prevent communism</td><td>Top-down royal decree (1963); land purchased from lords, resold to peasants</td><td>Angered all factions; Islamic Revolution 1979; theocracy replaces secular monarchy</td><td>Anti-communist reform</td></tr>
+        <tr><td>Guatemala</td><td>Colonial land inequality; United Fruit Company dominance; democratic reform impulse</td><td>Democratic legislation by elected government</td><td>CIA coup 1954 before reform delivers; democracy crushed; Cold War suppresses genuine reform</td><td>Democratic (crushed)</td></tr>
+      </tbody>
+    </table>
+    <div class="rp">🔍 <strong>Pattern Recognition:</strong> What do the failed cases share? What made Kerala partially successful when others failed? What role did Cold War superpower interference play in shaping outcomes? These patterns are the foundation of a strong LO-E explanation.</div>
+  </div>
+
+  <!-- Explain Drills -->
+  <div class="ed">
+    <div class="edl">EXPLAIN DRILL 1 · KC-6.2.I.i &amp; KC-6.3.I.A.ii · LO-D</div>
+    <div class="edp">Explain the causes AND consequences of China's adoption of communism. Your response should address both key concepts: the causes of Mao's victory (KC-6.2.I.i) and the consequences of communist economic policy, specifically the Great Leap Forward (KC-6.3.I.A.ii).</div>
+    <textarea class="ta" placeholder="Explain both causes (civil war + Japanese aggression + peasant appeal) AND consequences (nationalization, Great Leap Forward, ~20M deaths, Cultural Revolution). Show the mechanism connecting each cause or consequence to the key concept..."></textarea>
+    <button class="ab" onclick="toggleAcc('ed1',this)">▶ REVEAL SAMPLE ANSWER</button>
+    <div class="ac" id="ed1">
+      <strong>Sample Answer (addresses both KC-6.2.I.i and KC-6.3.I.A.ii):</strong><br><br>
+      <em>Causes (KC-6.2.I.i):</em> China's adoption of communism resulted from the convergence of three factors: decades of civil war between Communists and Nationalists that left the country exhausted and politically unstable; the brutal Japanese invasion of World War II, which interrupted the civil war but further destabilized Chinese society; and the Communists' masterful appeal to peasants — the vast majority of the population — by redistributing land and presenting themselves as more nationalist and less corrupt than the Nationalists. By 1949, Mao's forces had won decisively, establishing the People's Republic of China and nationalizing industry on the Soviet model.<br><br>
+      <em>Consequences (KC-6.3.I.A.ii):</em> The consequences were catastrophic. Mao's 1958 Great Leap Forward — designed to industrialize China overnight — abolished the private land that had won peasants over, forcing them onto state communes. The policy prioritized steel production (using useless backyard furnaces) over farming. The result: failed agriculture, brutal repression of critics, and natural disasters combined to produce one of the worst famines in human history — an estimated 20 million deaths. The Cultural Revolution (1966) deepened the repression, deploying Red Guards to purge teachers, officials, and intellectuals. The pattern: state economic control with repressive policies producing negative repercussions for the population — exactly what KC-6.3.I.A.ii describes.
+    </div>
+  </div>
+
+  <div class="ed">
+    <div class="edl">EXPLAIN DRILL 2 · KC-6.2.II.D.i · LO-E</div>
+    <div class="edp">Explain the causes and effects of ONE land reform movement from Africa, Asia (non-China), or Latin America. Your response should establish the underlying cause, describe the specific movement, and explain at least one significant effect.</div>
+    <textarea class="ta" placeholder="Choose Vietnam, Ethiopia, India (Kerala), Iran, or Guatemala. For your chosen case, identify the underlying cause (land inequality, colonial legacy, Cold War pressure), describe the movement, and explain an effect that reveals something significant about KC-6.2.II.D.i..."></textarea>
+    <button class="ab" onclick="toggleAcc('ed2',this)">▶ REVEAL SAMPLE ANSWER (Iran)</button>
+    <div class="ac" id="ed2">
+      <strong>Sample Answer — Iran (demonstrates the most counterintuitive case):</strong><br><br>
+      <em>Cause:</em> Iran's White Revolution was driven by a paradoxical cause — the Shah's desire to <em>prevent</em> communist land reform by implementing his own version. Iran's longstanding land inequality (rooted in its history of foreign domination by Britain and Russia) had created conditions ripe for communist revolution; the Shah recognized this and initiated top-down land redistribution to undercut communist appeal. His legitimacy was also compromised by the US/British-engineered overthrow of popular Prime Minister Mosaddegh in 1953, which had branded the Shah as a Western puppet.<br><br>
+      <em>Movement:</em> The White Revolution (1963) redistributed land from large landlords to peasants through a state purchase-and-resale program, while also granting women the right to vote and establishing social welfare programs. Unlike communist cases, the reform came "without bloodshed" — hence "White."<br><br>
+      <em>Effects:</em> The reform's effects were profoundly destabilizing: religious conservatives opposed modernization; landowners were furious about property loss; many peasants received nothing and remained frustrated. All three groups — conservatives, landowners, and the poor — united against the Shah, creating exactly the instability the reform was designed to prevent. The 1979 Iranian Revolution replaced the Shah's secular modernizing regime with an Islamic theocracy — showing that inadequate reform can be just as destabilizing as no reform, and that Cold War-era anti-communist policies could produce entirely unexpected outcomes (KC-6.2.II.D.i).
+    </div>
+  </div>
+
+  <div class="cgold">
+    <h4>🗺️ Layer 2: Review the Infographic Now</h4>
+    <p>Pause here and review the NotebookLM infographic for Topic 8.4. Focus on: the global map of land reform movements; the timeline of Chinese communist development (1927–1966); the Promise vs. Reality visual; and the sourcing comparison between the Collier's quote and Rivera's mural. As you review, practice the Skill 2.C question: "What does each source reveal, what does it conceal, and what is the historical significance of that gap?"</p>
+  </div>
+
+  <button class="cbtn" onclick="completeSection(2,this)">✓ Mark DOK 2 Complete</button>
+</div>
+
+<div class="sdiv"></div>
+
+<!-- ═══════════ DOK 3 ═══════════ -->
+<div class="sw d3" id="dok3">
+  <div class="sh">
+    <div><span class="db">DOK 3</span></div>
+    <div>
+      <div class="stitle">Knowledge Analysis</div>
+      <div class="stag">GOAL: Examine and Explain with Evidence — source-based SAQ, causal chain, thesis evaluation</div>
+    </div>
+  </div>
+
+  <!-- Causal Chain -->
+  <div class="cw">
+    <h4>⛓ Causal Chain: From Inequality to Communist Victory in China</h4>
+    <div class="kct">HTS-1: Causation · KC-6.2.I.i · LO-D</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px;">Two nodes are blank. Think through the mechanism, then reveal to check.</p>
+    <div class="cn-nodes">
+      <div class="cn-row"><div class="cn">Long legacies of feudalism + colonialism create deep land inequality across China: tiny elite owns land; vast peasant majority works it with no prospect of ownership</div></div>
+      <div class="cn-row" style="justify-content:center"><div class="ca">↓</div></div>
+      <div class="cn-row"><div class="cn">Decades of civil war (Communists vs. Nationalists, 1927–1949) + brutal Japanese invasion — creates political chaos, economic devastation, and urgent popular demand for stability and change</div></div>
+      <div class="cn-row" style="justify-content:center"><div class="ca">↓</div></div>
+      <div class="cn-row"><div class="cn blank" id="blank1" onclick="revBlank('blank1','blank1txt')">[BLANK 1: What specific strategy did the Communists use to win peasant support during the civil war — and why was it so effective? Click to reveal.]</div></div>
+      <div class="cn-row" style="justify-content:center"><div class="ca">↓</div></div>
+      <div class="cn-row"><div class="cn">1949: Mao's Communists defeat Nationalists → People's Republic of China. Nationalize industry; Soviet-model 5-year plans. Initial land redistribution consolidates popular support.</div></div>
+      <div class="cn-row" style="justify-content:center"><div class="ca">↓</div></div>
+      <div class="cn-row"><div class="cn blank" id="blank2" onclick="revBlank('blank2','blank2txt')">[BLANK 2: How did the Great Leap Forward (1958) reverse the promise that had won popular support — and what were the catastrophic consequences? Click to reveal.]</div></div>
+      <div class="cn-row" style="justify-content:center"><div class="ca">↓</div></div>
+      <div class="cn-row"><div class="cn">Long-term consequence: China remains a communist single-party state, but from the 1980s introduces market-based economic reforms — partially abandoning the rigid state-control model that caused the Great Leap famine</div></div>
+    </div>
+    <button class="cb-btn" onclick="revAllBlanks()">Reveal All Blank Nodes</button>
+  </div>
+
+  <!-- AP Insight -->
+  <div class="ai">
+    <h5>⚡ AP Insight — Skill 2.C: The "Significance of Limitations" Upgrade</h5>
+    <p>On the AP exam, Skill 2.C is tested in <strong>Document-Based Questions (DBQ)</strong> and sometimes SAQs. The key distinction from Skill 2.B (basic HAPP analysis) is the requirement to explain the <strong>significance</strong> of limitations — not just identify them.</p>
+    <p><strong>Skill 2.B response:</strong> "This source was written by an American journalist in 1954, during the Cold War. His purpose was to warn Americans about communism, and his point of view reflects American anti-communist ideology."</p>
+    <p><strong>Skill 2.C response (adds significance of limitation):</strong> "Because this source was written by an American journalist during the height of Cold War anti-communist hysteria, it is significantly limited as evidence for understanding WHY communism appealed to millions globally — it frames communism as purely a moral/ideological threat, entirely obscuring the material conditions of land inequality, poverty, and colonial exploitation that drove peasants toward communist movements. This limitation makes it reliable only as a source about American fears, not about the causes of communist movements."</p>
+    <p><strong>In a DBQ:</strong> The "outside evidence" requirement often involves connecting a source's limitation to what's missing — and providing the missing evidence from your own knowledge. Guatemala is a perfect example: the Collier's source limits you to the US perspective; your outside evidence fills the gap with the peasant and land reform perspective.</p>
+  </div>
+
+  <!-- SAQ Practice — With Source -->
+  <div class="saq">
+    <h4>📝 SAQ Practice — With Source (Skill 2.C)</h4>
+    <p class="saqctx">Use the source below and your knowledge of Topic 8.4 to answer all three parts. Write 3–5 sentences per part. Label answers A, B, C.</p>
+    <div style="background:#1a1408;border-left:4px solid var(--gold);padding:16px 18px;margin-bottom:16px;border-radius:0 6px 6px 0;font-style:italic;font-size:14px;color:var(--text-muted)">
+      "We're going to flip the whole system upside down. You have no land, you'll get land, you feel exploited, you'll have dignity. The idea was to build a brand new society where the workers, not the bosses, were in charge. Now, if you're someone who has absolutely nothing, that's not just some abstract political theory. That sounds like survival. That sounds like justice."
+      <span style="display:block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);font-style:normal">— Paraphrase of the core communist appeal, as described in the Topic 8.4 video explainer, summarizing the promise made to peasants across Asia, Africa, and Latin America, c. 1940s–1970s</span>
+    </div>
+
+    <div class="saqp">
+      <div class="saqlbl">PART A — Describe (DOK 1/2 threshold)</div>
+      <p>Describe ONE specific historical development that explains why the promise described in the source was so compelling to peasants in China, Vietnam, or one other region.</p>
+      <textarea class="ta3" style="min-height:80px;margin-bottom:8px;"></textarea>
+      <button class="ab" onclick="toggleAcc('saqa',this)">▶ REVEAL SAMPLE RESPONSE</button>
+      <div class="ac" id="saqa">
+        <strong>Sample Response — Part A (China):</strong><br><br>
+        In China, the promise described in the source was particularly compelling because decades of civil war and Japanese occupation had destroyed what little economic security peasants possessed, leaving them in a state of profound desperation and without any functioning political alternative. China's land distribution was starkly unequal — a small class of landlords and Nationalist-aligned elites controlled the majority of agricultural land, while the vast peasant majority worked it as tenants with no path to ownership. Mao's Communists directly responded to this condition by actually redistributing land during the civil war — not merely promising it but delivering it — which earned them a loyalty that the Nationalists, seen as corrupt and more concerned with foreign backing than peasant welfare, could not match. By 1949, peasants had experienced enough of the Communist's concrete delivery on their promise to swing the civil war's balance decisively in Mao's favor (KC-6.2.I.i).
+      </div>
+    </div>
+
+    <div class="saqp">
+      <div class="saqlbl">PART B — Explain (DOK 3 / Skill 2.C)</div>
+      <p>Explain ONE significant limitation of the source above as historical evidence for understanding the spread of communism after 1900. Be sure to explain the significance of the limitation, not just identify it.</p>
+      <textarea class="ta3" style="min-height:80px;margin-bottom:8px;"></textarea>
+      <button class="ab" onclick="toggleAcc('saqb',this)">▶ REVEAL SAMPLE RESPONSE</button>
+      <div class="ac" id="saqb">
+        <strong>Sample Response — Part B (Skill 2.C):</strong><br><br>
+        A significant limitation of this source is that it represents the communist promise entirely from the perspective of its appeal — presenting the best possible case for why peasants would embrace it — without any engagement with what actually happened when communist governments took power. As a summary of the promise's rhetoric rather than a record of outcomes, the source is significantly limited for understanding the full history of communism's spread: it can explain why peasants initially supported communist movements, but it cannot explain why those same movements often produced famine, repression, and mass death. This limitation matters historically because it creates the appearance that the communist promise and the communist reality were aligned — whereas the central historical problem of Topic 8.4 is precisely their divergence. Using this source alone would leave students unable to evaluate whether the movements fulfilled their stated goals, which is the analytical core of both LO-D (China's Great Leap Forward) and LO-E (multiple cases of failed or compromised reform).
+      </div>
+    </div>
+
+    <div class="saqp">
+      <div class="saqlbl">PART C — Explain with Outside Evidence (DOK 3)</div>
+      <p>Explain ONE way in which a specific land reform movement outside of China supports OR challenges the argument implied by the source — that land inequality was the primary driver of communist and socialist movements after 1900.</p>
+      <textarea class="ta3" style="min-height:80px;margin-bottom:8px;"></textarea>
+      <button class="ab" onclick="toggleAcc('saqc',this)">▶ REVEAL SAMPLE RESPONSE</button>
+      <div class="ac" id="saqc">
+        <strong>Sample Response — Part C (Guatemala challenges the argument):</strong><br><br>
+        The Guatemalan case challenges the argument that land inequality was the primary driver by revealing a complicating factor: even where land inequality existed and a democratic government attempted reform, Cold War superpower intervention could prevent reform from occurring entirely, independent of whether the movement was genuinely communist or not. Jacobo Árbenz was not a communist — he was a democratically elected president pursuing moderate land redistribution — but the US government characterized his reform as a communist threat primarily because it affected United Fruit Company land holdings. The CIA-backed coup of 1954 stopped the reform before it could deliver on its promise to Guatemalan peasants, demonstrating that the obstacle to land redistribution in Latin America was not only internal land inequality but also external Cold War politics. This challenges the source's implication that the communist promise naturally leads to communist movements — in Guatemala, a non-communist reform that could have addressed inequality was suppressed precisely by the Cold War framework, showing that the relationship between inequality and communist revolution was mediated by powerful external forces that the source completely omits (KC-6.2.II.D.i).
+      </div>
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="te-wrap">
+    <h4>⚖️ Thesis Evaluator — Click Each Card to Reveal the Verdict</h4>
+    <div class="kct">HTS-5: Argumentation · AP Rubric: Thesis/Claim · LO-D &amp; LO-E</div>
+    <div class="te-prompt">
+      <strong>LEQ Prompt:</strong> "Explain the causes and consequences of the spread of communism and socialist land reform movements in the period after 1900."
+    </div>
+    <div class="tg">
+
+      <div class="tc" onclick="revThesis(this)">
+        <p>"After 1900, communism spread to many countries including China, Vietnam, and Ethiopia. This essay will explain how communism spread and what its effects were on the people of these countries."</p>
+        <div class="tv fail">
+          <div class="tvl">✗ FAILS — Restatement Without Claim</div>
+          This restates the prompt by listing examples but makes no defensible claim. "How communism spread and what its effects were" simply restates the question without taking any position on it. A thesis must make a claim that could be argued — not just announce what you'll be discussing.
+        </div>
+      </div>
+
+      <div class="tc" onclick="revThesis(this)">
+        <p>"The spread of communism after 1900 had both positive and negative consequences for the countries it affected."</p>
+        <div class="tv fail">
+          <div class="tvl">✗ FAILS — Claim Without Line of Reasoning</div>
+          This makes a claim (both positive and negative consequences) but provides no line of reasoning — no explanation of what the consequences were or what pattern explains them. The AP rubric requires "some indication of the reason for making the claim." Without identifying the specific consequences or the causal mechanism, this doesn't meet the standard.
+        </div>
+      </div>
+
+      <div class="tc" onclick="revThesis(this)">
+        <p>"The spread of communism after 1900 was primarily caused by the deep land inequality created by colonialism and feudalism, which made the communist promise of redistribution sound like survival to impoverished peasants — but the consequences were often catastrophic, as communist governments then used state repression and failed economic policies to consolidate power rather than deliver on their original promises."</p>
+        <div class="tv pass">
+          <div class="tvl">✓ PASSES — Defensible Claim with Line of Reasoning</div>
+          Strong thesis: identifies a specific cause (colonial land inequality making redistribution sound like survival), establishes a line of reasoning for consequences (governments used repression rather than delivering on promises), and sets up a comparative/analytical argument across multiple cases. The "rather than" construction creates a productive tension between promise and reality that can be argued across the essay.
+        </div>
+      </div>
+
+      <div class="tc" onclick="revThesis(this)">
+        <p>"Although communist and socialist land reform movements after 1900 shared a common cause — extreme inequality rooted in colonialism — their consequences varied dramatically based on whether external Cold War interference, state repression, or reform's inherent contradictions shaped each movement's outcome, revealing that 'spreading communism' was less a unified phenomenon than a series of local responses to injustice that powerful external forces either exploited, crushed, or distorted."</p>
+        <div class="tv pass">
+          <div class="tvl">✓ PASSES — Sophisticated Claim with Complex Line of Reasoning</div>
+          Excellent thesis: acknowledges shared cause (colonial inequality), sets up a comparative framework for varying consequences (Cold War interference vs. state repression vs. internal contradictions), and makes an analytical claim that reframes the entire prompt ("less a unified phenomenon than a series of local responses"). This is the kind of thesis that earns the complexity point — it complicates a simple narrative rather than confirming it.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="cbtn" onclick="completeSection(3,this)">✓ Mark DOK 3 Complete</button>
+</div>
+
+<div class="sdiv"></div>
+
+<!-- ═══════════ DOK 4 ═══════════ -->
+<div class="sw d4" id="dok4">
+  <div class="sh">
+    <div><span class="db">DOK 4</span></div>
+    <div>
+      <div class="stitle">Knowledge Augmentation</div>
+      <div class="stag">GOAL: Explore and Explain with Examples and Evidence — contextualize, synthesize, transfer</div>
+    </div>
+  </div>
+
+  <!-- Contextualization Builder -->
+  <div class="ctx-wrap">
+    <h4>🏗 Contextualization Builder</h4>
+    <p>Situating 8.4 in broader historical context. Choose ONE pathway. Strong contextualization goes beyond a passing reference — it establishes the broader context AND explains how that context shaped the specific historical development.</p>
+
+    <div class="cp">
+      <div class="cpl">Pathway A — The Legacy of Colonialism (Unit 6 Connection)</div>
+      <div class="cstem">"The communist and socialist land reform movements of the mid-20th century did not emerge from nowhere — they were rooted in the specific social structures that European colonialism had created across Asia, Africa, and Latin America over the previous century. Colonial powers had restructured land ownership to maximize extraction for European benefit, concentrating ownership among colonial elites and leaving the majority populations as landless laborers..."</div>
+      <textarea class="ta4" style="min-height:80px;margin-bottom:8px;" placeholder="Complete this paragraph. How did colonialism's specific legacy — in terms of land concentration, destroyed traditional ownership systems, and the elite-peasant divide — create the conditions that made communist land promises so appealing? Cite at least one specific example (China, Vietnam, or Guatemala)."></textarea>
+      <button class="ab" onclick="toggleAcc('ctxa',this)">▶ REVEAL MODEL RESPONSE</button>
+      <div class="ac" id="ctxa">
+        <strong>Model Contextualization — Pathway A:</strong><br><br>
+        "The communist and socialist land reform movements of the mid-20th century did not emerge from nowhere — they were rooted in the specific social structures that European colonialism had created across Asia, Africa, and Latin America over the previous century. Colonial powers had restructured land ownership to maximize extraction for European benefit, concentrating ownership among colonial elites and leaving the majority populations as landless laborers with no legal path to ownership. In Vietnam, the French colonial system had concentrated landholdings in the hands of a small Vietnamese and French-connected elite, while the majority peasant population worked as tenants; Ho Chi Minh's communist movement explicitly targeted this colonial land structure by pledging to redistribute it, making his anti-colonial independence movement inseparable from his communist redistribution promise. In Guatemala, the US-owned United Fruit Company controlled enormous tracts of land that had passed through colonial and post-colonial elite hands — making Árbenz's reform both an anti-colonial and economic justice act. The depth of communist appeal across these diverse regions was not coincidental: it was directly proportional to the depth of colonial land dispossession that had preceded it, demonstrating that KC-6.2.II.D.i's land reform movements were, at their core, a postcolonial response to a colonial legacy."<br><br>
+        <em>AP Note: This earns the contextualization point by connecting the Unit 8.4 development (communist land reform movements) to the broader context of colonialism, explaining the mechanism (colonial land concentration created the inequality that made redistribution promises compelling), and going beyond a passing reference by providing specific examples.</em>
+      </div>
+    </div>
+
+    <div class="cp">
+      <div class="cpl">Pathway B — The Russian Revolution as Model (Unit 7 / Early Unit 8 Connection)</div>
+      <div class="cstem">"To understand why communist land reform movements spread so rapidly after 1945, historians must look back to the Russian Revolution of 1917, which provided a proof of concept for the rest of the world: if peasants and workers in the largest country on earth could seize power from a tsar and an aristocracy, then perhaps the same transformation was possible elsewhere..."</div>
+      <textarea class="ta4" style="min-height:80px;margin-bottom:8px;" placeholder="Complete this paragraph. How did the Russian Revolution's specific features — its appeal to peasants, its seizure of land from the nobility, and its establishment of a communist state — provide both inspiration and a model for later communist movements in China, Vietnam, and elsewhere?"></textarea>
+      <button class="ab" onclick="toggleAcc('ctxb',this)">▶ REVEAL MODEL RESPONSE</button>
+      <div class="ac" id="ctxb">
+        <strong>Model Contextualization — Pathway B:</strong><br><br>
+        "To understand why communist land reform movements spread so rapidly after 1945, historians must look back to the Russian Revolution of 1917, which provided a proof of concept for the rest of the world: if peasants and workers in the largest country on earth could seize power from a tsar and an aristocracy, then perhaps the same transformation was possible elsewhere. The Bolsheviks had explicitly promised 'Peace, Land, and Bread' — redistributing noble land to peasants as the revolutionary's first act — establishing a template that communist movements worldwide would replicate. For Mao Zedong in China, the Soviet model was not abstract inspiration but a practical blueprint: he nationalized industry on the Soviet model, created 5-year plans modeled on Soviet planning, and when he launched the Great Leap Forward, he was trying to achieve in years what Soviet industrialization had taken decades to accomplish. The Soviet Union's very existence as a functioning communist state also provided material support — Soviet backing of North Korea, Chinese communists, and later African socialist governments like Mengistu's Ethiopia shows how the Russian Revolution's legacy became an active Cold War force, offering both an ideological model and a powerful patron for land reform movements that might otherwise have been crushed."<br><br>
+        <em>AP Note: This pathway is especially effective for cross-period contextualization — connecting the Unit 7 Russian Revolution to Unit 8.4's spread of communism, showing how earlier developments shaped later ones through both inspiration and concrete institutional support.</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="syn">
+    <h4>🔀 Cross-Unit Synthesis — Where Does 8.4 Connect?</h4>
+    <p>Topic 8.4's land reform theme connects backward through colonialism and forward through decolonization, Cold War proxy logic, and the eventual collapse of communist states. These connections build the AP Complexity argument.</p>
+    <div class="scon">
+      <div class="sc">
+        <div class="sclbl">← UNIT 7 Connection</div>
+        <p><strong>Russian Revolution (1917) → Chinese Revolution (1949):</strong> Mao explicitly modeled his policies on Lenin and Stalin. But where Lenin had a largely industrial urban workforce, Mao had a peasant majority — so he adapted Marxism to a peasant-based revolution. What does this adaptation reveal about how communist ideology was modified for different local conditions?</p>
+      </div>
+      <div class="sc">
+        <div class="sclbl">↔ 8.3 Connection</div>
+        <p><strong>Land Reform → Proxy Wars:</strong> Vietnam and Guatemala show how domestic land reform movements got "swallowed" by Cold War logic. The US intervened not because these were genuine communist threats but because any redistribution was framed as communist. How does 8.4 reframe the proxy wars of 8.3 — revealing them as, partly, a Cold War suppression of domestic economic justice movements?</p>
+      </div>
+      <div class="sc">
+        <div class="sclbl">→ 8.8 Forward Connection</div>
+        <p><strong>Great Leap Forward → End of Cold War:</strong> KC-6.2.IV.E cites "economic weakness in communist countries" as a cause of the Cold War's end. The Great Leap Forward's catastrophe is the earliest and most dramatic example of this economic weakness. How does 8.4's Chinese case study directly set up the argument you'll need for 8.8?</p>
+      </div>
+    </div>
+    <div class="stask">
+      <p><strong>Your Turn — Complexity Move:</strong> The video ends with a genuinely open question: "When you're faced with a system that is fundamentally unjust, what is the real cost of revolution? What's the price of tearing it all down? And is it worth it?" This is an AP complexity question — it requires nuance, multiple variables, and evidence from multiple cases. Write 4–5 sentences that address this question using evidence from at least TWO of the six case studies, showing how different cases produce different answers.</p>
+      <textarea class="ta4" style="min-height:110px;" placeholder="Use at least two case studies. Show how comparing cases reveals the complexity — perhaps Kerala (gradual reform, partial success) vs. Great Leap Forward (revolutionary reform, catastrophic failure) vs. Guatemala (democratic reform, externally crushed). What does comparing these cases reveal that examining any one case alone cannot?"></textarea>
+    </div>
+    <button class="ab" onclick="toggleAcc('syn1',this)" style="margin-top:10px;">▶ REVEAL SAMPLE SYNTHESIS</button>
+    <div class="ac" id="syn1">
+      <strong>Sample Cross-Unit Synthesis — Complexity Move:</strong><br><br>
+      The question of revolution's cost is not answerable through any single case — the cases diverge too dramatically. In Kerala, incremental democratic land reform achieved real results without mass violence: tenants gained ownership rights through legislation between 1960–1974, suggesting that the cost of reform could be low where democratic institutions functioned and external interference was limited. But Kerala's experience was exceptional precisely because it was gradual, democratic, and relatively insulated from Cold War superpower intervention. In China, the revolutionary path produced the opposite: Mao's 1949 victory did initially deliver land to peasants, validating the revolutionary promise — but the same revolutionary logic that justified seizing land from landlords later justified seizing it from the peasants who had received it, forcing ~20 million deaths during the Great Leap Forward. Guatemala offers a third answer: the question of revolution's cost was never answered because Cold War intervention prevented any reform from occurring — suggesting that for many postcolonial nations, the real obstacle was not the domestic cost of revolution but the external cost of challenging powerful interests that would not tolerate even moderate redistribution. Together, these cases reveal that the "cost of revolution" question cannot be answered abstractly: it depends entirely on the specific configuration of domestic institutions, external powers, and the degree to which revolutionary governments remained accountable to the people they claimed to liberate.<br><br>
+      <em>AP Note: This earns the complexity point by explaining nuance through multiple variables (domestic institutions, external intervention, revolutionary accountability), making insightful cross-topic connections (8.4 land reform → 8.3 proxy war suppression → 8.8 economic failure), and offering a sophisticated argument that avoids the oversimplification of both "revolution is always wrong" and "revolution is always justified."</em>
+    </div>
+  </div>
+
+  <!-- Self-Assessment -->
+  <div class="sa">
+    <h4>🎯 Self-Assessment — Rate Your AP Skills for Topic 8.4</h4>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">Click the dots: <span style="color:var(--dok3)">■ Not Yet</span> &nbsp;<span style="color:var(--gold)">■ Getting There</span> &nbsp;<span style="color:var(--dok1)">■ Confident</span></p>
+    <div class="salabels"><div class="sali">Not Yet</div><div class="sali">Getting There</div><div class="sali">Confident</div></div>
+    <div class="sai">
+      <div class="sask">I can <strong>explain KC-6.2.I.i</strong> — the causes of China's communist revolution: internal tension + Japanese aggression → Mao's victory (LO-D)</div>
+      <div class="sads"><div class="sad" onclick="rateDot(this,1,1)"></div><div class="sad" onclick="rateDot(this,1,2)"></div><div class="sad" onclick="rateDot(this,1,3)"></div></div>
+    </div>
+    <div class="sai">
+      <div class="sask">I can <strong>explain KC-6.3.I.A.ii</strong> — the Great Leap Forward as state economic control with repressive policies → negative repercussions (~20M deaths) (LO-D)</div>
+      <div class="sads"><div class="sad" onclick="rateDot(this,2,1)"></div><div class="sad" onclick="rateDot(this,2,2)"></div><div class="sad" onclick="rateDot(this,2,3)"></div></div>
+    </div>
+    <div class="sai">
+      <div class="sask">I can <strong>identify and explain all CED illustrative examples</strong> (Vietnam, Mengistu/Ethiopia, Kerala/India, White Revolution/Iran) as distinct cases of KC-6.2.II.D.i (LO-E)</div>
+      <div class="sads"><div class="sad" onclick="rateDot(this,3,1)"></div><div class="sad" onclick="rateDot(this,3,2)"></div><div class="sad" onclick="rateDot(this,3,3)"></div></div>
+    </div>
+    <div class="sai">
+      <div class="sask">I can <strong>apply Skill 2.C</strong> — explain the significance of a source's limitations, not just identify its HAPP (e.g., the Collier's quote tells us about American fears but NOT about why millions chose communism)</div>
+      <div class="sads"><div class="sad" onclick="rateDot(this,4,1)"></div><div class="sad" onclick="rateDot(this,4,2)"></div><div class="sad" onclick="rateDot(this,4,3)"></div></div>
+    </div>
+    <div class="sai">
+      <div class="sask">I can <strong>explain the Promise vs. Reality tension</strong> — why communist land promises won support AND why communist governance often produced famine and repression (the central LO-D/E analytical challenge)</div>
+      <div class="sads"><div class="sad" onclick="rateDot(this,5,1)"></div><div class="sad" onclick="rateDot(this,5,2)"></div><div class="sad" onclick="rateDot(this,5,3)"></div></div>
+    </div>
+    <div class="sai">
+      <div class="sask">I can <strong>write a strong thesis</strong> for an LEQ about the causes and consequences of communism's spread — with a defensible claim AND a line of reasoning that can be argued across multiple cases</div>
+      <div class="sads"><div class="sad" onclick="rateDot(this,6,1)"></div><div class="sad" onclick="rateDot(this,6,2)"></div><div class="sad" onclick="rateDot(this,6,3)"></div></div>
+    </div>
+    <div class="sai">
+      <div class="sask">I can <strong>connect 8.4 to other topics</strong> — using the Great Leap Forward as early evidence for the communist economic weakness that drives 8.8, and using Guatemala to deepen 8.3's proxy war analysis</div>
+      <div class="sads"><div class="sad" onclick="rateDot(this,7,1)"></div><div class="sad" onclick="rateDot(this,7,2)"></div><div class="sad" onclick="rateDot(this,7,3)"></div></div>
+    </div>
+  </div>
+
+  <button class="cbtn" onclick="completeSection(4,this)">✓ Mark DOK 4 Complete — Module Finished!</button>
+</div>
+
+<div style="max-width:900px;margin:0 auto 60px;padding:0 20px;text-align:center;">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);letter-spacing:2px;">AP WORLD HISTORY: MODERN · UNIT 8 · TOPIC 8.4 · DOK STUDY MATERIALS<br>Built from CED (KC-6.2.I.i · KC-6.3.I.A.ii · KC-6.2.II.D.i) · Video: "Spread of Communism After 1900"<br>Skill 2.C: Sourcing &amp; Situation · LO-D: China · LO-E: Global Land Reform</p>
+</div>
+
+<script>
+let done=[false,false,false,false];
+function updatePg(){document.getElementById('pgfill').style.width=(done.filter(Boolean).length*25)+'%'}
+function completeSection(n,btn){if(!done[n-1]){done[n-1]=true;btn.textContent='✓ Completed!';btn.disabled=true;updatePg()}}
+
+function chkMCQ(qid,btn,ok){
+  const item=document.getElementById(qid);
+  item.querySelectorAll('.mo').forEach(b=>{b.classList.add('disabled');b.onclick=null});
+  btn.classList.add(ok?'correct':'incorrect');
+  document.getElementById(qid+'-fb').classList.add('show');
+}
+
+function toggleAcc(id,btn){
+  const c=document.getElementById(id),open=c.classList.contains('open');
+  c.classList.toggle('open',!open);btn.classList.toggle('open',!open);
+  const txt=btn.textContent.trim();
+  btn.textContent=(open?'▶':'▼')+' '+txt.slice(2);
+}
+
+let selM=null;
+function selMatch(id,type){
+  const el=document.getElementById(id);
+  if(el.classList.contains('matched'))return;
+  if(selM&&selM.id===id){el.classList.remove('selected');selM=null;return}
+  if(selM){
+    const prev=document.getElementById(selM.id);
+    if(selM.type===type){prev.classList.remove('selected');el.classList.add('selected');selM={id,type,pair:el.dataset.pair};return}
+    if(selM.pair===el.dataset.pair){
+      prev.classList.remove('selected');prev.classList.add('matched');el.classList.add('matched');selM=null;
+      const rem=document.querySelectorAll('.mi:not(.matched)').length;
+      document.getElementById('mstat').textContent=rem===0?'✓ All matched!':(rem/2)+' pairs remaining';
+    }else{
+      prev.classList.add('wrong');el.classList.add('wrong');
+      setTimeout(()=>{prev.classList.remove('wrong','selected');el.classList.remove('wrong');selM=null},700);
+    }
+  }else{el.classList.add('selected');selM={id,type,pair:el.dataset.pair}}
+}
+
+const blankData={
+  blank1:'Communists won peasant support by redistributing land during the civil war — giving peasants actual ownership of the land they worked. This was not just a promise but a delivery, earning the Communists extraordinary loyalty. Peasants also saw the Communists as more nationalist and less corrupt than the Nationalists, who were associated with foreign backing and urban elites.',
+  blank2:'The Great Leap Forward (1958) reversed the land promise entirely: abolished private land, forced peasants onto state communes, and diverted all effort to producing useless backyard steel instead of growing food. Failed policies + brutal repression of critics + terrible harvests = one of history\'s worst famines: ~20 million Chinese died. By 1960 the program was abandoned. The land given to peasants in 1949 had been taken away by 1958 — the promise became its opposite.'
+};
+function revBlank(id){
+  const el=document.getElementById(id);
+  el.textContent=blankData[id];
+  el.classList.remove('blank');el.classList.add('revealed');
+}
+function revAllBlanks(){Object.keys(blankData).forEach(id=>revBlank(id))}
+
+function revThesis(card){card.querySelector('.tv').classList.toggle('show')}
+
+function rateDot(dot,row,level){
+  dot.parentElement.querySelectorAll('.sad').forEach((d,i)=>{
+    d.classList.remove('a1','a2','a3');
+    if(i<level)d.classList.add('a'+level);
+  });
+}
+
+updatePg();
+</script>
+</body>
+</html>

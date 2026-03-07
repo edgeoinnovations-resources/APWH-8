@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 8 Introduction: Cold War & Decolonization | AP World History: Modern</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-page: #2a2016;
+    --bg-card: #32291a;
+    --bg-card-light: #3d3120;
+    --gold: #b8860b;
+    --gold-light: #d4a820;
+    --gold-faint: rgba(184,134,11,0.15);
+    --text-primary: #e8dcc8;
+    --text-secondary: #b8a888;
+    --text-muted: #7a6a50;
+    --dok1: #2d5a27;
+    --dok1-light: #3a7232;
+    --dok1-bg: rgba(45,90,39,0.15);
+    --dok2: #1a3d6e;
+    --dok2-light: #2250a0;
+    --dok2-bg: rgba(26,61,110,0.15);
+    --dok3: #6b2d2d;
+    --dok3-light: #963838;
+    --dok3-bg: rgba(107,45,45,0.15);
+    --dok4: #4a2d6b;
+    --dok4-light: #6040a0;
+    --dok4-bg: rgba(74,45,107,0.15);
+    --radius: 8px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* ===== PROGRESS BAR ===== */
+  #progress-bar-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #1e1810;
+    border-bottom: 1px solid var(--gold);
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  #progress-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+  }
+  #progress-track {
+    flex: 1;
+    height: 6px;
+    background: #3d3120;
+    border-radius: 3px;
+    overflow: visible;
+    position: relative;
+  }
+  #progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--dok1), var(--dok2), var(--dok3), var(--dok4));
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.5s ease;
+  }
+  .progress-marker {
+    position: absolute;
+    top: -4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-page);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transform: translateX(-50%);
+    transition: background 0.3s;
+  }
+  .progress-marker[data-pct="25"] { left: 25%; background: var(--dok1); }
+  .progress-marker[data-pct="50"] { left: 50%; background: var(--dok2); }
+  .progress-marker[data-pct="75"] { left: 75%; background: var(--dok3); }
+  .progress-marker[data-pct="100"] { left: 100%; background: var(--dok4); }
+
+  /* ===== HEADER ===== */
+  .page-header {
+    background: linear-gradient(135deg, #1e1810 0%, #2a2016 50%, #1e1810 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 48px 24px 32px;
+    text-align: center;
+  }
+  .unit-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .page-subtitle {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-style: italic;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+  }
+  .header-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== HOW-TO BANNER ===== */
+  .howto-banner {
+    background: linear-gradient(135deg, #3d2e0a, #4a3810);
+    border: 1px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin: 24px auto;
+    max-width: 900px;
+  }
+  .howto-banner h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-light);
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .howto-banner p { color: var(--text-secondary); margin-bottom: 8px; font-size: 15px; }
+  .howto-banner .dok-pills {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
+  }
+  .dok-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.08em;
+  }
+  .dok-pill.d1 { background: var(--dok1-bg); border: 1px solid var(--dok1); color: #6ecf66; }
+  .dok-pill.d2 { background: var(--dok2-bg); border: 1px solid var(--dok2); color: #6fa8f0; }
+  .dok-pill.d3 { background: var(--dok3-bg); border: 1px solid var(--dok3); color: #f07070; }
+  .dok-pill.d4 { background: var(--dok4-bg); border: 1px solid var(--dok4); color: #b07ae0; }
+
+  /* ===== MAIN LAYOUT ===== */
+  .main { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* ===== DOK SECTION HEADERS ===== */
+  .dok-section {
+    margin: 40px 0 0;
+  }
+  .dok-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 24px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    margin-bottom: 0;
+  }
+  .dok-header.dok1 { background: var(--dok1); }
+  .dok-header.dok2 { background: var(--dok2); }
+  .dok-header.dok3 { background: var(--dok3); }
+  .dok-header.dok4 { background: var(--dok4); }
+  .dok-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    background: rgba(0,0,0,0.3);
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.08em;
+    color: white;
+    white-space: nowrap;
+  }
+  .dok-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+  }
+  .dok-subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    margin-left: auto;
+  }
+
+  .dok-body {
+    background: var(--bg-card);
+    border-radius: 0 0 var(--radius) var(--radius);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-top: none;
+    padding: 28px;
+  }
+
+  /* ===== COMPONENTS ===== */
+  .component { margin-bottom: 32px; }
+  .component:last-child { margin-bottom: 0; }
+
+  .component-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* Callout boxes */
+  .callout-blue {
+    background: rgba(26,61,110,0.2);
+    border: 1px solid var(--dok2-light);
+    border-left: 4px solid var(--dok2-light);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .callout-blue .callout-icon { color: #6fa8f0; font-size: 18px; margin-bottom: 6px; }
+  .callout-blue strong { color: #6fa8f0; }
+
+  .callout-gold {
+    background: rgba(184,134,11,0.12);
+    border: 1px solid var(--gold);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .callout-gold .callout-icon { color: var(--gold-light); font-size: 18px; margin-bottom: 6px; }
+  .callout-gold strong { color: var(--gold-light); }
+
+  .callout-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .callout-blue .callout-title { color: #6fa8f0; }
+  .callout-gold .callout-title { color: var(--gold-light); }
+  .callout-blue p, .callout-gold p { font-size: 14px; color: var(--text-secondary); margin-bottom: 4px; }
+  .callout-blue a, .callout-gold a { color: var(--gold-light); }
+
+  /* Opening Quote */
+  .quote-block {
+    background: var(--bg-card-light);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    position: relative;
+  }
+  .quote-block::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: var(--gold);
+    opacity: 0.4;
+    position: absolute;
+    top: 4px; left: 14px;
+    line-height: 1;
+  }
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--text-primary);
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  .quote-attr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding-left: 30px;
+  }
+
+  /* Visual Framework Grid */
+  .framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .framework-card {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+  }
+  .framework-card .fw-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .framework-card .fw-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+  .framework-card p {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .framework-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 4px;
+  }
+
+  /* Timeline */
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 72px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--dok1), var(--dok2), var(--dok3), var(--dok4));
+  }
+  .timeline-event {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+    width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .timeline-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+    margin-top: 5px;
+    border: 2px solid var(--bg-page);
+    position: relative;
+    z-index: 1;
+  }
+  .timeline-content { flex: 1; }
+  .timeline-event-title {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 15px;
+  }
+  .timeline-event-note {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  /* Flip Cards */
+  .flip-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  .flip-card {
+    height: 110px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+  }
+  .flip-front {
+    background: var(--bg-card-light);
+    border: 1px solid var(--gold);
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--gold-light);
+    flex-direction: column;
+    gap: 6px;
+  }
+  .flip-front::after {
+    content: 'tap to flip';
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+  }
+  .flip-back {
+    background: #1e1810;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-size: 12px;
+    color: var(--text-primary);
+    transform: rotateY(180deg);
+    flex-direction: column;
+  }
+
+  /* MCQ */
+  .mcq-item {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+  .mcq-question {
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+    text-align: left;
+  }
+  .mcq-option:hover { background: rgba(255,255,255,0.08); color: var(--text-primary); border-color: var(--gold); }
+  .mcq-option.correct { background: rgba(45,90,39,0.3); border-color: var(--dok1-light); color: #6ecf66; }
+  .mcq-option.incorrect { background: rgba(107,45,45,0.3); border-color: var(--dok3-light); color: #f08080; }
+  .mcq-feedback {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    background: rgba(0,0,0,0.2);
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: none;
+  }
+  .mcq-feedback.show { display: block; }
+
+  /* Matching */
+  .matching-area { display: flex; gap: 20px; flex-wrap: wrap; }
+  .matching-col { flex: 1; min-width: 200px; }
+  .matching-col h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .match-term {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-primary);
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .match-term:hover { border-color: var(--gold); }
+  .match-term.selected { border-color: var(--gold); background: var(--gold-faint); }
+  .match-term.matched-correct { border-color: var(--dok1-light); background: rgba(45,90,39,0.2); color: #6ecf66; }
+  .match-term.matched-wrong { border-color: var(--dok3-light); background: rgba(107,45,45,0.2); color: #f08080; animation: shake 0.3s; }
+  @keyframes shake {
+    0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)}
+  }
+  .matching-result {
+    margin-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    text-align: center;
+    min-height: 20px;
+  }
+
+  /* Accordion */
+  .accordion {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-top: 12px;
+  }
+  .accordion-trigger {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+  }
+  .accordion-trigger:hover { background: rgba(255,255,255,0.04); }
+  .accordion-trigger .arrow { transition: transform 0.3s; }
+  .accordion-trigger.open .arrow { transform: rotate(90deg); }
+  .accordion-body {
+    padding: 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+  }
+  .accordion-body.open {
+    max-height: 800px;
+    padding: 14px 16px;
+  }
+  .accordion-body p, .accordion-body li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+  .accordion-body ul { padding-left: 18px; }
+
+  /* Explain drills */
+  .prompt-box {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 3px solid var(--dok2-light);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+  .prompt-verb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #6fa8f0;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .prompt-text { font-size: 15px; color: var(--text-primary); font-weight: 600; }
+  .prompt-context { font-size: 13px; color: var(--text-muted); margin-top: 6px; font-style: italic; }
+
+  /* Comparison Table */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .comp-table th {
+    background: var(--dok2);
+    color: white;
+    padding: 12px 14px;
+    text-align: left;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+  }
+  .comp-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+  .comp-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  .comp-table td:first-child { color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .reflection-prompt {
+    background: rgba(26,61,110,0.15);
+    border: 1px solid var(--dok2);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-top: 14px;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+  .reflection-prompt strong { color: #6fa8f0; }
+
+  /* Apply Activity */
+  .source-box {
+    background: #1e1810;
+    border: 1px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  .source-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .source-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .source-citation { font-size: 12px; color: var(--text-muted); }
+
+  /* Causal Chain */
+  .causal-chain {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  .causal-node {
+    background: var(--bg-card-light);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    position: relative;
+    transition: border-color 0.3s;
+  }
+  .causal-node.blank {
+    border: 2px dashed var(--gold);
+    background: rgba(184,134,11,0.05);
+  }
+  .causal-node.revealed { border-color: var(--dok3-light); }
+  .causal-node-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    letter-spacing: 0.1em;
+  }
+  .causal-node-text { font-size: 14px; color: var(--text-primary); }
+  .causal-node.blank .causal-node-text { color: var(--text-muted); font-style: italic; }
+  .causal-node.blank.revealed .causal-node-text { color: var(--text-primary); font-style: normal; }
+  .causal-arrow {
+    text-align: center;
+    color: var(--gold);
+    font-size: 20px;
+    padding: 4px 0;
+  }
+  .reveal-btn {
+    background: var(--dok3);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    margin-top: 14px;
+    transition: background 0.2s;
+  }
+  .reveal-btn:hover { background: var(--dok3-light); }
+
+  /* AP Insight Card */
+  .ap-insight {
+    background: linear-gradient(135deg, #3d2a0a, #4a3510);
+    border: 1px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+  }
+  .ap-insight-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .ap-insight h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-light);
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .ap-insight p { font-size: 14px; color: var(--text-secondary); margin-bottom: 6px; }
+
+  /* SAQ */
+  .saq-part {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 3px solid var(--dok3-light);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .saq-part-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--dok3-light);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .saq-verb-tag {
+    display: inline-block;
+    background: var(--dok3);
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .saq-question { font-size: 14px; color: var(--text-primary); display: inline; }
+
+  /* CCOT Grid */
+  .ccot-table { width: 100%; border-collapse: collapse; }
+  .ccot-table th {
+    padding: 12px 14px;
+    text-align: left;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    color: white;
+  }
+  .ccot-table th:first-child { background: var(--dok1); }
+  .ccot-table th:last-child { background: var(--dok3); }
+  .ccot-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 14px;
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+  .ccot-table td:first-child { border-right: 1px solid rgba(255,255,255,0.06); }
+
+  /* Thesis Evaluator */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .thesis-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .thesis-card-body {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 16px;
+    font-size: 14px;
+    color: var(--text-primary);
+    font-style: italic;
+    border-bottom: none;
+    min-height: 100px;
+    transition: background 0.2s;
+  }
+  .thesis-card:hover .thesis-card-body { background: #3d3120; }
+  .thesis-card-verdict {
+    padding: 10px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .verdict-fail { color: #f08080; border-color: var(--dok3-light) !important; }
+  .verdict-pass { color: #6ecf66; border-color: var(--dok1-light) !important; }
+  .thesis-explain {
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: none;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-top: none;
+  }
+  .thesis-explain.show { display: block; }
+
+  /* Contextualization Builder */
+  .ctx-pathway {
+    background: var(--bg-card-light);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .ctx-pathway-header {
+    padding: 14px 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(74,45,107,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+  }
+  .ctx-pathway-header:hover { background: rgba(74,45,107,0.35); }
+  .ctx-pathway-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #b07ae0;
+    letter-spacing: 0.1em;
+  }
+  .ctx-pathway-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 15px;
+  }
+  .ctx-stem {
+    padding: 14px 18px;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--gold-light);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .ctx-body { padding: 0 18px; }
+
+  /* Cross-Unit Synthesis */
+  .synthesis-box {
+    background: var(--dok4-bg);
+    border: 1px solid var(--dok4-light);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .synthesis-box h4 {
+    font-family: 'Playfair Display', serif;
+    color: #b07ae0;
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .synthesis-box p { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+
+  /* Self-Assessment */
+  .self-assess-grid { display: flex; flex-direction: column; gap: 12px; }
+  .assess-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--bg-card-light);
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    flex-wrap: wrap;
+  }
+  .assess-skill {
+    flex: 1;
+    min-width: 180px;
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+  .assess-dots { display: flex; gap: 10px; }
+  .assess-dot {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .assess-dot.not-yet { border-color: var(--dok3-light); }
+  .assess-dot.getting-there { border-color: var(--gold); }
+  .assess-dot.confident { border-color: var(--dok1-light); }
+  .assess-dot.not-yet.active { background: var(--dok3-light); }
+  .assess-dot.getting-there.active { background: var(--gold); }
+  .assess-dot.confident.active { background: var(--dok1-light); }
+  .assess-dot-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--text-muted);
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  .assess-level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  /* Complete button */
+  .complete-btn {
+    display: block;
+    margin: 24px auto 0;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 10px 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .complete-btn.dok1 { border-color: var(--dok1); color: #6ecf66; }
+  .complete-btn.dok1:hover { background: var(--dok1-bg); }
+  .complete-btn.dok2 { border-color: var(--dok2); color: #6fa8f0; }
+  .complete-btn.dok2:hover { background: var(--dok2-bg); }
+  .complete-btn.dok3 { border-color: var(--dok3); color: #f08080; }
+  .complete-btn.dok3:hover { background: var(--dok3-bg); }
+  .complete-btn.dok4 { border-color: var(--dok4); color: #b07ae0; }
+  .complete-btn.dok4:hover { background: var(--dok4-bg); }
+  .complete-btn.done { opacity: 0.5; cursor: default; }
+  .complete-btn.done::before { content: '✓ '; }
+
+  /* Textarea */
+  .response-area {
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-family: 'Source Serif 4', serif;
+    font-size: 14px;
+    padding: 12px;
+    resize: vertical;
+    min-height: 100px;
+    margin-top: 10px;
+  }
+  .response-area:focus { outline: none; border-color: var(--gold); }
+
+  /* Divider */
+  .section-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 28px 0;
+  }
+
+  /* KC code tag */
+  .kc-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: rgba(184,134,11,0.15);
+    border: 1px solid var(--gold);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--gold-light);
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 600px) {
+    .dok-title { font-size: 18px; }
+    .dok-subtitle { display: none; }
+    .timeline::before { left: 60px; }
+    .framework-grid { grid-template-columns: 1fr; }
+    .framework-connector { display: none; }
+    .thesis-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar-container">
+  <span id="progress-label">PROGRESS: 0%</span>
+  <div id="progress-track">
+    <div id="progress-fill"></div>
+    <div class="progress-marker" data-pct="25">1</div>
+    <div class="progress-marker" data-pct="50">2</div>
+    <div class="progress-marker" data-pct="75">3</div>
+    <div class="progress-marker" data-pct="100">4</div>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="unit-label">AP World History: Modern · Unit 8 · Introduction</div>
+  <h1 class="page-title">Cold War &amp; Decolonization</h1>
+  <div class="page-subtitle">Two Parallel Tracks That Changed the World</div>
+  <div class="header-meta">c. 1900 to the present · 8–10% AP Exam Weighting · 14–17 Class Periods</div>
+</header>
+
+<!-- HOW-TO BANNER -->
+<div class="main">
+  <div class="howto-banner">
+    <h3>📋 How to Use This Module</h3>
+    <p><strong>Central Argument (from the video):</strong> The end of World War II did not bring peace — instead, it unleashed two massive, intersecting forces: a superpower ideological struggle between capitalism and communism (the Cold War), and a sweeping wave of liberation as colonized peoples demanded independence (decolonization). These two stories began on parallel tracks but <em>collided violently</em> in the postcolonial world.</p>
+    <p><strong>Thematic Lens:</strong> Governance (GOV) — how states form, compete, collapse, and reshape global power after 1945.</p>
+    <p>Work through each section in order. Every level builds on the one before. Complete the <strong>Mark Section Complete</strong> button at the end of each level to track your progress.</p>
+    <div class="dok-pills">
+      <span class="dok-pill d1">DOK 1 · Answer Correctly</span>
+      <span class="dok-pill d2">DOK 2 · Establish &amp; Explain with Examples</span>
+      <span class="dok-pill d3">DOK 3 · Examine &amp; Explain with Evidence</span>
+      <span class="dok-pill d4">DOK 4 · Explore &amp; Explain Across Contexts</span>
+    </div>
+  </div>
+
+  <!-- ============================== DOK 1 ============================== -->
+  <section class="dok-section" id="dok1-section">
+    <div class="dok-header dok1">
+      <span class="dok-badge">DOK 1</span>
+      <span class="dok-title">Knowledge Acquisition</span>
+      <span class="dok-subtitle">Answer Correctly</span>
+    </div>
+    <div class="dok-body">
+
+      <!-- Video Callout -->
+      <div class="component">
+        <div class="callout-blue">
+          <div class="callout-title">🎧 Watch the Video Explainer First</div>
+          <p><strong><a href="https://youtu.be/H9f2jvv2m24" target="_blank">APWH 8.0 Cold War &amp; Decolonization →</a></strong></p>
+          <p>As you watch, listen for: <strong>(1)</strong> The "two parallel tracks" framing and what each track represents. <strong>(2)</strong> The specific turning points named for the Cold War (1945, 1949, 1955, 1961). <strong>(3)</strong> How and where the two tracks "collided violently."</p>
+        </div>
+      </div>
+
+      <!-- Opening Quote -->
+      <div class="component">
+        <div class="component-title">Opening Quote</div>
+        <div class="quote-block">
+          <div class="quote-text">The end of colonial rule was not merely a political event; it was a world revolution — the most profound reorganization of the world since the Industrial Revolution.</div>
+          <div class="quote-attr">— Kwame Nkrumah, first President of Ghana, 1961 · pioneer of African independence and Pan-Africanism</div>
+        </div>
+      </div>
+
+      <!-- Visual Framework Card -->
+      <div class="component">
+        <div class="component-title">Visual Framework · The Two Parallel Tracks</div>
+        <div class="kc-tag">KC-6.2.II · KC-6.2.IV.C</div>
+        <div class="framework-grid" style="grid-template-columns: 1fr 40px 1fr 40px 1fr;">
+          <div class="framework-card" style="border-top: 3px solid #6fa8f0;">
+            <div class="fw-icon">🌐</div>
+            <div class="fw-title">Track 1: The Cold War</div>
+            <p>US vs. USSR — capitalism vs. communism — a 50-year ideological standoff that split the globe</p>
+          </div>
+          <div class="framework-connector">⚡</div>
+          <div class="framework-card" style="border-top: 3px solid var(--gold);">
+            <div class="fw-icon">🤝</div>
+            <div class="fw-title">The Collision Point</div>
+            <p>Newly independent states became Cold War battlegrounds — proxy wars turned local struggles into superpower contests</p>
+          </div>
+          <div class="framework-connector">⚡</div>
+          <div class="framework-card" style="border-top: 3px solid #6ecf66;">
+            <div class="fw-icon">🕊️</div>
+            <div class="fw-title">Track 2: Decolonization</div>
+            <p>Hundreds of millions demanding freedom from colonial rule — achieved through negotiation or armed struggle</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Annotated Timeline -->
+      <div class="component">
+        <div class="component-title">Annotated Timeline · Unit 8 Key Events</div>
+        <div class="timeline">
+          <div class="timeline-event">
+            <div class="timeline-date">1945</div>
+            <div class="timeline-dot" style="background:#6ecf66"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">End of World War II &amp; Soviet Control of Eastern Europe</div>
+              <div class="timeline-event-note">European empires shattered, creating a power vacuum; the USSR refused to allow free elections in Eastern Europe, sparking the Cold War rivalry.</div>
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="timeline-date">1947</div>
+            <div class="timeline-dot" style="background:#6fa8f0"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">Indian Independence &amp; Partition</div>
+              <div class="timeline-event-note">India achieved independence from Britain through negotiation, but partition created Pakistan and triggered massive population displacement — an early model of decolonization.</div>
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="timeline-date">1949</div>
+            <div class="timeline-dot" style="background:#6fa8f0"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">NATO Founded; Chinese Communist Revolution</div>
+              <div class="timeline-event-note">Western democracies formed NATO for collective defense; Mao Zedong's Communist Party defeated the Nationalists, demonstrating the spread of communism beyond the Soviet Union.</div>
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="timeline-date">1950</div>
+            <div class="timeline-dot" style="background:#f08080"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">Korean War Begins</div>
+              <div class="timeline-event-note">The US and Soviets backed opposing sides in Korea — a classic proxy war that previewed how Cold War competition would be fought through local conflicts.</div>
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="timeline-date">1955</div>
+            <div class="timeline-dot" style="background:#f08080"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">Warsaw Pact Founded; Bandung Conference</div>
+              <div class="timeline-event-note">The Soviet response to NATO created two armed military blocs; at Bandung, newly independent nations began organizing the Non-Aligned Movement as a "third way."</div>
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="timeline-date">1961</div>
+            <div class="timeline-dot" style="background:#f08080"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">Berlin Wall Constructed</div>
+              <div class="timeline-event-note">East Germany built a physical wall dividing Berlin — the most powerful symbol of the Cold War's division of the world.</div>
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="timeline-date">1960s</div>
+            <div class="timeline-dot" style="background:#6ecf66"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">"Year of Africa" and the Decolonization Wave</div>
+              <div class="timeline-event-note">17 African nations gained independence in 1960 alone; within decades the world went from a handful of empires to nearly 190 independent nations.</div>
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="timeline-date">1989</div>
+            <div class="timeline-dot" style="background:#b07ae0"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">Berlin Wall Falls; Tiananmen Square Protests</div>
+              <div class="timeline-event-note">Communist governments across Eastern Europe collapsed; China crushed pro-democracy protests at Tiananmen Square — demonstrating both the power and the limits of that desire for freedom.</div>
+            </div>
+          </div>
+          <div class="timeline-event">
+            <div class="timeline-date">1991</div>
+            <div class="timeline-dot" style="background:#b07ae0"></div>
+            <div class="timeline-content">
+              <div class="timeline-event-title">Soviet Union Collapses; Cold War Ends</div>
+              <div class="timeline-event-note">Economic stagnation, the costly Afghanistan invasion, and loss of popular legitimacy caused the USSR to dissolve — ending the 50-year standoff.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vocabulary Flip Cards -->
+      <div class="component">
+        <div class="component-title">Vocabulary Flip Cards · 10 Essential Terms (tap to reveal)</div>
+        <div class="flip-cards-grid" id="flip-grid">
+          <!-- 10 cards generated by JS -->
+        </div>
+      </div>
+
+      <!-- Recall MCQs -->
+      <div class="component">
+        <div class="component-title">Recall MCQs · 5 Questions</div>
+        <div id="mcq-container"></div>
+      </div>
+
+      <!-- Matching Activity -->
+      <div class="component">
+        <div class="component-title">Matching Activity · 5 Pairs (click a term, then click its match)</div>
+        <div class="matching-area" id="matching-area">
+          <div class="matching-col">
+            <h4>Terms</h4>
+            <div id="match-terms"></div>
+          </div>
+          <div class="matching-col">
+            <h4>Definitions</h4>
+            <div id="match-defs"></div>
+          </div>
+        </div>
+        <div class="matching-result" id="matching-result"></div>
+      </div>
+
+      <button class="complete-btn dok1" id="btn-dok1" onclick="completeSection(1)">Mark Section 1 Complete</button>
+    </div>
+  </section>
+
+  <!-- ============================== DOK 2 ============================== -->
+  <section class="dok-section" id="dok2-section">
+    <div class="dok-header dok2">
+      <span class="dok-badge">DOK 2</span>
+      <span class="dok-title">Knowledge Application</span>
+      <span class="dok-subtitle">Establish &amp; Explain with Examples</span>
+    </div>
+    <div class="dok-body">
+
+      <!-- Explain Drill 1 -->
+      <div class="component">
+        <div class="component-title">Explain Drill 1</div>
+        <div class="kc-tag">KC-6.2.IV.C.ii</div>
+        <div class="prompt-box">
+          <div class="prompt-verb">AP Command Verb: Explain</div>
+          <div class="prompt-text">Explain why the end of World War II led to conflict rather than peace between the United States and the Soviet Union.</div>
+          <div class="prompt-context">Context: Think about what the two nations stood for ideologically, and how they each responded to the postwar power vacuum in Europe and Asia.</div>
+        </div>
+        <textarea class="response-area" placeholder="Write your explanation here. Remember: 'explain' means you must show HOW or WHY — don't just state what happened."></textarea>
+        <div class="accordion">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="arrow">▶</span> View Sample Response
+          </button>
+          <div class="accordion-body">
+            <p>After World War II, the United States and the Soviet Union emerged as the world's dominant powers, but they held fundamentally incompatible visions for the postwar world. The United States promoted capitalism and liberal democracy, while the Soviet Union pursued communist ideology and called for worldwide workers' revolution. This ideological incompatibility meant that each nation viewed the other's growing influence as an existential threat.</p>
+            <p>The conflict escalated quickly because of concrete actions: the Soviet Union refused to allow free elections in Eastern Europe, effectively establishing communist satellite states. The United States responded with containment policy, seeking to prevent communism from spreading further. Both nations raced to build nuclear arsenals and military alliances — NATO in 1949, the Warsaw Pact in 1955 — turning ideological rivalry into armed standoff. The postwar power vacuum created by the collapse of European empires gave both superpowers an urgent reason to compete for influence worldwide.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Explain Drill 2 -->
+      <div class="component">
+        <div class="component-title">Explain Drill 2</div>
+        <div class="kc-tag">KC-6.2.II</div>
+        <div class="prompt-box">
+          <div class="prompt-verb">AP Command Verb: Explain</div>
+          <div class="prompt-text">Explain why newly independent postcolonial states became battlegrounds for Cold War proxy conflicts.</div>
+          <div class="prompt-context">Context: Consider what was at stake for both superpowers, and why they chose to fight through local conflicts rather than directly against each other.</div>
+        </div>
+        <textarea class="response-area" placeholder="Write your explanation here."></textarea>
+        <div class="accordion">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="arrow">▶</span> View Sample Response
+          </button>
+          <div class="accordion-body">
+            <p>Both the United States and the Soviet Union were deterred from direct military conflict by the terrifying prospect of nuclear war — a confrontation that could annihilate both nations. Instead, they competed for global influence through proxy wars: backing opposing sides in local conflicts in postcolonial states and pouring in weapons, money, and advisors.</p>
+            <p>Newly independent nations in Latin America, Africa, and Asia became the primary arena for this competition because they were politically fragile and economically underdeveloped — and therefore potentially susceptible to either capitalist or communist influence. The Korean War (1950) is a key example: the US and Soviets backed opposing sides in a local conflict, turning a civil war into a Cold War battle. The entire postcolonial world became what the video describes as "a potential battlefield," with local struggles "sucked up into the huge superpower competition."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Comparison Table -->
+      <div class="component">
+        <div class="component-title">Comparison Table · Two Paths to Independence</div>
+        <div class="kc-tag">KC-6.2.II.A · KC-6.2.I.C</div>
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th style="width:25%">Dimension</th>
+              <th>Negotiated Independence (e.g., India)</th>
+              <th>Armed Struggle (e.g., Algeria / Vietnam)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Primary Method</td>
+              <td>Nonviolent resistance, political negotiation, mass civil disobedience</td>
+              <td>Armed guerrilla warfare, direct military confrontation with colonial power</td>
+            </tr>
+            <tr>
+              <td>Key Leaders</td>
+              <td>Gandhi and Nehru (Indian National Congress); Kwame Nkrumah (Gold Coast)</td>
+              <td>Ho Chi Minh (Vietnam); FLN leadership (Algeria)</td>
+            </tr>
+            <tr>
+              <td>Colonial Response</td>
+              <td>Gradual concessions; Britain ultimately negotiated transfer of power</td>
+              <td>Military suppression and prolonged counterinsurgency campaigns</td>
+            </tr>
+            <tr>
+              <td>Cold War Dimension</td>
+              <td>Often aligned with Non-Aligned Movement; resisted superpower domination</td>
+              <td>Frequently drew superpower backing — US or Soviet support for one side</td>
+            </tr>
+            <tr>
+              <td>Postcolonial Challenge</td>
+              <td>Inherited colonial borders; partition violence (India/Pakistan); economic dependency</td>
+              <td>Destroyed infrastructure; political instability; often drew continued Cold War interference</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="reflection-prompt"><strong>Reflection:</strong> Why might some independence movements choose negotiation while others resort to armed struggle? What role did the colonial power's willingness to negotiate play?</div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Apply Activity -->
+      <div class="component">
+        <div class="component-title">Apply Activity · Source Analysis</div>
+        <div class="kc-tag">KC-6.2.V.B · Non-Aligned Movement</div>
+        <div class="source-box">
+          <div class="source-label">Primary Source — Bandung Conference Declaration, 1955</div>
+          <div class="source-text">"We the peoples of Asia and Africa... are united by a common detestation of colonialism in whatever form it manifests itself... We are determined to resist imperialism in all its forms — economic, political, and ideological. We will not be pawns in anyone else's contest for global supremacy."</div>
+          <div class="source-citation">Source: Bandung Conference communiqué, April 1955 (paraphrased from the principles declared at the Afro-Asian Conference, Bandung, Indonesia)</div>
+        </div>
+        <p style="font-size:14px; color:var(--text-secondary); margin-bottom:10px;">Using the source and your knowledge of Unit 8, answer the following:</p>
+        <p style="font-size:14px; color:var(--text-primary); font-weight:600; margin-bottom:6px;">Explain how this source reflects the goals of the Non-Aligned Movement and explain why newly independent nations sought a "third way" outside of both US and Soviet spheres of influence.</p>
+        <textarea class="response-area" placeholder="Apply what you know about KC-6.2.V.B (Groups and individuals, including the Non-Aligned Movement, opposed alternatives to existing orders) to analyze this source."></textarea>
+        <div class="accordion">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span class="arrow">▶</span> View Sample Response
+          </button>
+          <div class="accordion-body">
+            <p>This source reflects the goals of the Non-Aligned Movement (KC-6.2.V.B) by asserting the right of Asian and African nations to determine their own futures without submitting to either superpower's agenda. The phrase "we will not be pawns" directly challenges the Cold War logic of proxy conflict, in which the US and USSR channeled their rivalry through local conflicts in postcolonial states.</p>
+            <p>Newly independent nations sought a "third way" for several interconnected reasons: they had just escaped one form of foreign domination (colonialism) and were unwilling to trade it for another (Cold War client-state status). Leaders like Sukarno of Indonesia and Kwame Nkrumah of Ghana recognized that alignment with either superpower risked sacrificing national sovereignty and drawing their nations into dangerous military confrontations. The Non-Aligned Movement was thus both a practical strategy for maintaining independence and an ideological assertion that the postcolonial world had its own interests and voice on the world stage.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infographic Callout -->
+      <div class="callout-gold" style="margin-bottom:8px;">
+        <div class="callout-title">🗺️ Review the Infographic Now</div>
+        <p>Before continuing to DOK 3, return to the Unit 8 infographic from NotebookLM. Use it as a reference as you move into analysis. Look specifically for: the visual representation of the two "tracks," the timeline of key events, and the collision points where Cold War and decolonization intersected.</p>
+      </div>
+
+      <button class="complete-btn dok2" id="btn-dok2" onclick="completeSection(2)">Mark Section 2 Complete</button>
+    </div>
+  </section>
+
+  <!-- ============================== DOK 3 ============================== -->
+  <section class="dok-section" id="dok3-section">
+    <div class="dok-header dok3">
+      <span class="dok-badge">DOK 3</span>
+      <span class="dok-title">Knowledge Analysis</span>
+      <span class="dok-subtitle">Examine &amp; Explain with Evidence</span>
+    </div>
+    <div class="dok-body">
+
+      <!-- Causal Chain -->
+      <div class="component">
+        <div class="component-title">Causal Chain · How WWII Led to the Cold War Standoff</div>
+        <div class="kc-tag">KC-6.2.IV.C.i · KC-6.2.IV.C.ii</div>
+        <div class="causal-chain" id="causal-chain">
+          <div class="causal-node">
+            <div class="causal-node-num">NODE 1 — CAUSE</div>
+            <div class="causal-node-text">World War II devastates the European empires — Britain, France, and others are economically and morally exhausted, unable to maintain their colonial holdings.</div>
+          </div>
+          <div class="causal-arrow">↓</div>
+          <div class="causal-node blank" id="cn2">
+            <div class="causal-node-num">NODE 2 — BLANK (fill in your own reasoning)</div>
+            <div class="causal-node-text" id="cn2-text">What power vacuum does this create, and which two nations fill it?</div>
+          </div>
+          <div class="causal-arrow">↓</div>
+          <div class="causal-node">
+            <div class="causal-node-num">NODE 3 — DEVELOPMENT</div>
+            <div class="causal-node-text">The US and USSR hold fundamentally opposed ideologies — capitalism/liberal democracy vs. communism — and each views the other's growing influence as an existential threat.</div>
+          </div>
+          <div class="causal-arrow">↓</div>
+          <div class="causal-node">
+            <div class="causal-node-num">NODE 4 — ESCALATION</div>
+            <div class="causal-node-text">Both superpowers fear direct nuclear war, so they compete through proxy conflicts — backing opposing sides in postcolonial states across Latin America, Africa, and Asia.</div>
+          </div>
+          <div class="causal-arrow">↓</div>
+          <div class="causal-node blank" id="cn5">
+            <div class="causal-node-num">NODE 5 — BLANK (fill in your own reasoning)</div>
+            <div class="causal-node-text" id="cn5-text">What eventually causes this standoff to collapse — and how does it end?</div>
+          </div>
+          <div class="causal-arrow">↓</div>
+          <div class="causal-node">
+            <div class="causal-node-num">NODE 6 — LEGACY</div>
+            <div class="causal-node-text">The Cold War ends, but its legacy remains: the borders of nearly 190 independent nations, the conflicts it fueled, and the alliances it created continue to shape the world today.</div>
+          </div>
+        </div>
+        <button class="reveal-btn" onclick="revealChain()">Reveal Blank Nodes</button>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- AP Insight Card -->
+      <div class="component">
+        <div class="ap-insight">
+          <div class="ap-insight-header">🎯 AP Insight · Historical Thinking Skill: Contextualization</div>
+          <h4>Why Contextualization Is the Key Skill for This Unit Introduction</h4>
+          <p>The Unit 8 CED (Skill 4.B) asks you to <strong>explain how a specific historical development is situated within a broader historical context</strong>. For Unit 8, the "context" is what happened <em>before</em> 1945 — specifically, the devastation of the world wars and the weakening of European empires.</p>
+          <p>On the AP exam, earning the <strong>contextualization point</strong> requires you to do more than mention WWII. You must explain <em>how</em> the destruction of European imperial power created the specific conditions — the power vacuum, the ideological competition, the fragile new states — that made both the Cold War and decolonization possible and inevitable.</p>
+          <p>Practice framing: <em>"The aftermath of World War II created conditions that... which in turn led to..."</em></p>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- SAQ Practice -->
+      <div class="component">
+        <div class="component-title">SAQ Practice · Unit 8 Introduction</div>
+        <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Answer Parts A, B, and C. Each part earns 1 point independently. Write 2–3 sentences per part.</p>
+
+        <div class="saq-part">
+          <div class="saq-part-label">Part A</div>
+          <span class="saq-verb-tag">Describe</span>
+          <span class="saq-question">Describe ONE way in which the end of World War II created conditions for the Cold War.</span>
+          <textarea class="response-area" placeholder="2–3 sentences. 'Describe' requires relevant characteristics — more than a term alone."></textarea>
+          <div class="accordion">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)"><span class="arrow">▶</span> View Sample Response (Part A)</button>
+            <div class="accordion-body">
+              <p><strong>Sample Response:</strong> The end of World War II left the traditional European powers — Britain, France, and others — economically devastated and politically weakened, creating a massive global power vacuum. The United States and the Soviet Union emerged as the only nations with the military and economic strength to fill that vacuum. Because these two powers held fundamentally incompatible ideological systems, their competition to fill the vacuum immediately generated the tensions that would define the Cold War.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="saq-part">
+          <div class="saq-part-label">Part B</div>
+          <span class="saq-verb-tag">Explain</span>
+          <span class="saq-question">Explain ONE cause of the wave of decolonization that swept Africa and Asia after 1945.</span>
+          <textarea class="response-area" placeholder="2–3 sentences. 'Explain' = show HOW or WHY. Don't just name a cause — connect it to its effect."></textarea>
+          <div class="accordion">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)"><span class="arrow">▶</span> View Sample Response (Part B)</button>
+            <div class="accordion-body">
+              <p><strong>Sample Response:</strong> The devastation of World War II undermined the moral and material foundations of European colonialism. Colonial subjects had fought and died for their colonizers' wars, and nationalist movements had grown increasingly organized and vocal during the interwar period. When the war ended with the explicit language of self-determination and human rights — embedded in the Atlantic Charter and later the UN Charter — colonized peoples used this framework to demand the independence that European powers could no longer credibly deny them.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="saq-part">
+          <div class="saq-part-label">Part C</div>
+          <span class="saq-verb-tag">Explain</span>
+          <span class="saq-question">Explain how the Cold War and decolonization became interconnected in the period after 1945.</span>
+          <textarea class="response-area" placeholder="2–3 sentences. Focus on the mechanism: HOW did these two separate forces collide?"></textarea>
+          <div class="accordion">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)"><span class="arrow">▶</span> View Sample Response (Part C)</button>
+            <div class="accordion-body">
+              <p><strong>Sample Response:</strong> As newly independent nations emerged from colonial rule, both the United States and the Soviet Union sought to draw them into their respective spheres of influence, transforming local political struggles into Cold War battlegrounds. Because the superpowers feared direct nuclear confrontation, they instead backed opposing sides in conflicts within postcolonial states — a strategy known as proxy warfare. The Korean War (1950) and later conflicts in Vietnam, Angola, and Nicaragua demonstrate this pattern: what began as local nationalist or independence struggles became entangled in the global ideological contest between capitalism and communism.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- CCOT Grid -->
+      <div class="component">
+        <div class="component-title">CCOT Grid · Global Political Order, 1900 to 2000</div>
+        <div class="kc-tag">KC-6.2 · KC-6.2.II</div>
+        <table class="ccot-table">
+          <thead>
+            <tr>
+              <th>📗 Continuity (What Stayed the Same)</th>
+              <th>📕 Change Over Time (What Transformed)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Great powers continued to compete for global influence — the form changed (proxy wars instead of colonial conquest), but the drive for dominance persisted.</td>
+              <td>The number of sovereign states exploded from a handful of empires to nearly 190 independent nations — a fundamental transformation of the political map.</td>
+            </tr>
+            <tr>
+              <td>Economic dependency of formerly colonized regions on more powerful nations continued even after formal independence — "neo-colonialism" replaced direct rule.</td>
+              <td>The ideological basis of global competition shifted from imperial rivalry among European powers to ideological confrontation between capitalist and communist blocs.</td>
+            </tr>
+            <tr>
+              <td>Violence and conflict remained central features of the global order — wars continued, now as proxy conflicts or wars of independence rather than world wars.</td>
+              <td>The primary actors in global affairs shifted from European empires to two non-European superpowers (US and USSR) and to newly independent postcolonial nations.</td>
+            </tr>
+            <tr>
+              <td>The struggles of ordinary people for freedom, dignity, and self-determination continued throughout — from anticolonial movements to Cold War–era democracy movements.</td>
+              <td>By 1991, even the bipolar Cold War framework collapsed, leaving a fundamentally different world order from the one that existed in 1900.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="accordion" style="margin-top:14px;">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)"><span class="arrow">▶</span> Analysis Note: What does this pattern of CCOT tell us?</button>
+          <div class="accordion-body">
+            <p>The CCOT pattern for Unit 8 reveals a central AP World History insight: the form of global domination changed dramatically (from empire to Cold War competition), but the underlying drive of powerful states to shape weaker ones persisted. For CCOT essay prompts, this nuance — acknowledging both real transformation AND underlying continuity — is exactly the kind of complexity that earns the highest analytical scores.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Thesis Evaluator -->
+      <div class="component">
+        <div class="component-title">Thesis Evaluator · LEQ Practice Prompt</div>
+        <div style="background:var(--bg-card-light); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:16px; margin-bottom:16px;">
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:4px; font-family:'JetBrains Mono',monospace; letter-spacing:0.08em;">LEQ PROMPT</p>
+          <p style="font-size:15px; color:var(--text-primary); font-weight:600;">"Evaluate the extent to which the Cold War shaped the process of decolonization in the period c. 1945 to 1991."</p>
+          <p style="font-size:12px; color:var(--text-muted); margin-top:6px;">Click each thesis card to reveal the verdict and explanation.</p>
+        </div>
+        <div class="thesis-grid" id="thesis-grid"></div>
+      </div>
+
+      <button class="complete-btn dok3" id="btn-dok3" onclick="completeSection(3)">Mark Section 3 Complete</button>
+    </div>
+  </section>
+
+  <!-- ============================== DOK 4 ============================== -->
+  <section class="dok-section" id="dok4-section">
+    <div class="dok-header dok4">
+      <span class="dok-badge">DOK 4</span>
+      <span class="dok-title">Knowledge Augmentation</span>
+      <span class="dok-subtitle">Explore &amp; Explain with Examples &amp; Evidence</span>
+    </div>
+    <div class="dok-body">
+
+      <!-- Contextualization Builder -->
+      <div class="component">
+        <div class="component-title">Contextualization Builder · 3 Pathways</div>
+        <div class="kc-tag">HTS-4 · Contextualization · Skill 4.B</div>
+        <p style="font-size:14px; color:var(--text-secondary); margin-bottom:14px;">Select one pathway. Use the stem provided and write your own full contextualization paragraph (3–5 sentences). Then expand the accordion to compare with the model response.</p>
+
+        <div class="ctx-pathway">
+          <div class="ctx-pathway-header" onclick="toggleCtx(this)">
+            <div>
+              <div class="ctx-pathway-num">PATHWAY A</div>
+              <div class="ctx-pathway-title">World War I and the Broken Promise of Self-Determination</div>
+            </div>
+            <span style="color:var(--text-muted)">▶</span>
+          </div>
+          <div class="ctx-stem">Stem: <em>"Although Woodrow Wilson's Fourteen Points promised self-determination after World War I, colonized peoples found that promise did not apply to them. This context helps explain why..."</em></div>
+          <div class="ctx-body">
+            <textarea class="response-area" placeholder="Complete the contextualization paragraph from this stem..."></textarea>
+            <div class="accordion">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)"><span class="arrow">▶</span> View Model Response (Pathway A)</button>
+              <div class="accordion-body">
+                <p>Although Woodrow Wilson's Fourteen Points promised self-determination after World War I, colonized peoples found that promise did not apply to them — the Paris Peace Conference of 1919 redistributed German and Ottoman colonies to Britain and France rather than granting independence. This broken promise radicalized nationalist movements across Asia and Africa, as leaders like Ho Chi Minh (who presented a petition for Vietnamese independence at Paris and was ignored) drew the lesson that independence would have to be won rather than granted. The interwar period thus saw the rise of organized nationalist parties — the Indian National Congress, African nationalist movements, and others — whose demands intensified after World War II revealed the full weakness of the colonial powers. This context helps explain why decolonization accelerated so rapidly after 1945: the political infrastructure for independence already existed, and the moral authority of colonialism had long since collapsed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ctx-pathway">
+          <div class="ctx-pathway-header" onclick="toggleCtx(this)">
+            <div>
+              <div class="ctx-pathway-num">PATHWAY B</div>
+              <div class="ctx-pathway-title">The Russian Revolution and the Spread of Communist Ideology</div>
+            </div>
+            <span style="color:var(--text-muted)">▶</span>
+          </div>
+          <div class="ctx-stem">Stem: <em>"The Bolshevik Revolution of 1917 established the world's first communist state and provided a revolutionary model that would shape global politics for the next 70 years. This context helps explain why..."</em></div>
+          <div class="ctx-body">
+            <textarea class="response-area" placeholder="Complete the contextualization paragraph from this stem..."></textarea>
+            <div class="accordion">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)"><span class="arrow">▶</span> View Model Response (Pathway B)</button>
+              <div class="accordion-body">
+                <p>The Bolshevik Revolution of 1917 established the world's first communist state and provided a revolutionary model that would shape global politics for the next 70 years. Lenin's Marxist-Leninist ideology explicitly linked imperialism to capitalism and called for the liberation of colonized peoples as part of a worldwide workers' revolution. This gave the Soviet Union both an ideological reason and a strategic incentive to support anti-colonial movements after 1945. This context helps explain why the Cold War and decolonization became so intertwined: the USSR saw newly independent nations as potential allies in its global struggle against capitalism, while the United States feared that independence movements would lead to communist governments. The ideological contest of the Cold War was, from its origins, connected to the question of who would guide the postcolonial world.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ctx-pathway">
+          <div class="ctx-pathway-header" onclick="toggleCtx(this)">
+            <div>
+              <div class="ctx-pathway-num">PATHWAY C</div>
+              <div class="ctx-pathway-title">The Economic and Human Cost of Two World Wars</div>
+            </div>
+            <span style="color:var(--text-muted)">Pathway C ▶</span>
+          </div>
+          <div class="ctx-stem">Stem: <em>"The two world wars of the 20th century did not merely cause massive destruction — they fundamentally undermined the economic and moral foundations of European imperial power. This context helps explain why..."</em></div>
+          <div class="ctx-body">
+            <textarea class="response-area" placeholder="Complete the contextualization paragraph from this stem..."></textarea>
+            <div class="accordion">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)"><span class="arrow">▶</span> View Model Response (Pathway C)</button>
+              <div class="accordion-body">
+                <p>The two world wars of the 20th century did not merely cause massive destruction — they fundamentally undermined the economic and moral foundations of European imperial power. Britain and France, the world's two largest empires, emerged from World War II deeply indebted, with decimated populations and economies that could no longer sustain the administrative and military costs of maintaining global empires. Simultaneously, millions of colonial subjects had fought in those wars, had witnessed European brutality firsthand, and returned home with heightened expectations for self-governance. The explicit wartime language of freedom and self-determination — in the Atlantic Charter (1941) and later in the United Nations Charter (1945) — gave nationalist movements a powerful rhetorical weapon. This context helps explain why decolonization was not simply a postwar policy choice but an inevitability: the empires could no longer hold, and the colonized peoples would no longer accept being held.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Cross-Unit Synthesis -->
+      <div class="component">
+        <div class="component-title">Cross-Unit Synthesis Activity</div>
+        <div class="synthesis-box">
+          <h4>Connecting Unit 8 to Unit 7 and Unit 9</h4>
+          <p><strong>Backward Connection (Unit 7):</strong> Unit 7 covers World War I and World War II — the very events that made both the Cold War and decolonization possible. How do the causes and effects you studied in Unit 7 (nationalism, total war, the collapse of old empires) set the stage for Unit 8? Specifically, how does the failure of Wilsonian self-determination after WWI connect to the decolonization wave after WWII?</p>
+          <p><strong>Forward Connection (Unit 9):</strong> Unit 9 covers Globalization (c. 1900–present). How might the legacy of the Cold War and decolonization shape the economic and political dimensions of globalization? Consider: How did the creation of nearly 190 new nations affect global trade, international institutions (UN, World Bank, IMF), and patterns of migration?</p>
+          <textarea class="response-area" style="min-height:130px;" placeholder="Write a paragraph connecting Unit 8 to either Unit 7 (backward) or Unit 9 (forward). Use specific examples from the CED to support your synthesis."></textarea>
+          <div class="accordion" style="margin-top:10px;">
+            <button class="accordion-trigger" onclick="toggleAccordion(this)"><span class="arrow">▶</span> View Synthesis Model</button>
+            <div class="accordion-body">
+              <p><strong>Unit 7 → Unit 8 Connection:</strong> The failures and promises of World War I directly seeded Unit 8's conflicts. Wilson's self-determination language, applied only to European nations at Paris 1919, radicalized nationalists like Ho Chi Minh who had dared to hope it applied universally. The Great Depression of the 1930s undermined European economic power further. And World War II's total war mobilization — drawing millions of colonial subjects into European armies — exposed the hypocrisy of fighting for freedom abroad while denying it at home. Unit 8 is, in large part, the reckoning for Unit 7's unresolved promises.</p>
+              <p><strong>Unit 8 → Unit 9 Connection:</strong> The Cold War and decolonization shaped globalization in profound ways. The newly independent states of the 1950s–1970s entered a global economy already structured by Western colonial interests — and international institutions like the World Bank and IMF were often seen as instruments of continued dependency. Cold War–era migration patterns (Vietnamese refugees, South Asians to Britain, Algerians to France) created the diasporas that continue to shape cultural and economic globalization today. The end of the Cold War in 1991 also accelerated economic globalization by opening formerly communist markets and creating a brief era of US-led liberal international order.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <!-- Self-Assessment -->
+      <div class="component">
+        <div class="component-title">Self-Assessment · AP Skills Inventory</div>
+        <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">Rate yourself honestly. These skills will be practiced throughout the unit.</p>
+        <div class="self-assess-grid" id="self-assess"></div>
+      </div>
+
+      <button class="complete-btn dok4" id="btn-dok4" onclick="completeSection(4)">Mark Section 4 Complete</button>
+    </div>
+  </section>
+
+</div><!-- end .main -->
+
+<script>
+// ===== DATA =====
+const vocabCards = [
+  { term: "Cold War", def: "A 50-year ideological and geopolitical standoff (1945–1991) between the US-led capitalist bloc and the Soviet-led communist bloc; characterized by proxy wars, arms race, and nuclear deterrence rather than direct military conflict." },
+  { term: "Decolonization", def: "The process by which colonial peoples achieved independence from European imperial rule, primarily in Africa and Asia after 1945; occurred through negotiation or armed struggle." },
+  { term: "Proxy War", def: "A conflict in which two opposing powers (US and USSR) back different sides of a local or regional war rather than fighting each other directly; the Korean War and Vietnam War are key examples." },
+  { term: "Non-Aligned Movement", def: "A coalition of newly independent nations (led by figures like Sukarno of Indonesia and Nkrumah of Ghana) that refused to align with either the US or Soviet bloc; sought a 'third way' in global politics." },
+  { term: "Power Vacuum", def: "The absence of dominant authority in a region that invites competition for control; after WWII, the weakening of European empires created a global power vacuum that the US and USSR moved to fill." },
+  { term: "Containment", def: "US Cold War policy aimed at preventing the spread of communism beyond its existing borders; articulated by diplomat George Kennan in 1947 and implemented through the Truman Doctrine, Marshall Plan, and military alliances." },
+  { term: "NATO", def: "North Atlantic Treaty Organization (1949); military alliance of Western democracies led by the US, committed to collective defense — an attack on one member is an attack on all." },
+  { term: "Warsaw Pact", def: "Soviet-led military alliance (1955) of Eastern European communist states; formed in response to NATO; dissolved in 1991 with the collapse of the Soviet Union." },
+  { term: "Nationalist Movement", def: "A political movement in colonized regions demanding self-governance or independence, based on shared cultural, ethnic, or historical identity; key CED examples include the Indian National Congress, Ho Chi Minh in Vietnam, and Kwame Nkrumah in Ghana." },
+  { term: "Iron Curtain", def: "The metaphorical (and partly physical) boundary dividing Soviet-dominated Eastern Europe from Western Europe; coined by Winston Churchill in 1946 to describe the division of the continent into two hostile blocs." }
+];
+
+const mcqData = [
+  {
+    q: "Which of the following best explains why the end of World War II did NOT lead to global peace?",
+    choices: [
+      "The United Nations failed to organize quickly enough to prevent new conflicts.",
+      "The devastation of WWII created a power vacuum that the US and USSR rushed to fill, bringing their opposing ideologies into direct competition.",
+      "European nations immediately began rebuilding their empires, provoking new nationalist wars.",
+      "Nuclear weapons made all nations too afraid to maintain any alliances."
+    ],
+    correct: 1,
+    explanation: "The correct answer is B. The video's central argument is that WWII shattered the old European empires and created a 'massive power vacuum' — which the US and USSR immediately competed to fill. Their incompatible ideologies (capitalism vs. communism) turned that competition into the Cold War. The UN (A) did form quickly but couldn't prevent superpower rivalry. European empires did not immediately rebuild (C). Nuclear weapons increased deterrence but nations still formed alliances (D)."
+  },
+  {
+    q: "The Non-Aligned Movement was primarily a response to which historical development?",
+    choices: [
+      "The economic failures of colonialism, which left new nations without resources.",
+      "The danger that newly independent nations would be drawn into Cold War competition between the superpowers.",
+      "The unwillingness of the United Nations to recognize new independent states.",
+      "The military aggression of the Soviet Union in Eastern Europe."
+    ],
+    correct: 1,
+    explanation: "The correct answer is B. The Non-Aligned Movement (KC-6.2.V.B) was formed by newly independent nations — led by figures like Sukarno and Nkrumah — who recognized the danger of being 'pawns' in the US-Soviet competition. They sought a 'third way' outside of either superpower's sphere. Options A, C, and D describe real problems but do not explain the specific motivation for non-alignment."
+  },
+  {
+    q: "According to the CED (KC-6.2.I.C), which of the following accurately describes the two paths to independence for colonized peoples after WWII?",
+    choices: [
+      "Economic development and military buildup.",
+      "United Nations arbitration and superpower sponsorship.",
+      "Negotiation and armed struggle.",
+      "Cultural assimilation and political revolution."
+    ],
+    correct: 2,
+    explanation: "The correct answer is C. The CED explicitly states that 'after the end of World War II, some colonies negotiated their independence, while others achieved independence through armed struggle' (KC-6.2.I.C). India is the key example of negotiation; Algeria and Vietnam are key examples of armed struggle."
+  },
+  {
+    q: "The Berlin Wall (constructed 1961) is historically significant primarily because it:",
+    choices: [
+      "Prevented the Soviet Union from invading West Germany.",
+      "Symbolized the physical division of the world along ideological lines during the Cold War.",
+      "Was the direct cause of the Cuban Missile Crisis.",
+      "Demonstrated that communism had become economically superior to capitalism."
+    ],
+    correct: 1,
+    explanation: "The correct answer is B. The video explicitly calls the Berlin Wall 'the ultimate symbol of the Cold War' and 'the most powerful symbol of a divided world.' It physically divided a single city along ideological lines — capitalism in the West, communism in the East. It was not the cause of the Cuban Missile Crisis (C), which preceded the Wall's construction, and it did not demonstrate communist economic superiority (D)."
+  },
+  {
+    q: "Which of the following best explains why the Cold War ended without a direct military confrontation between the US and USSR?",
+    choices: [
+      "The two nations signed a formal peace treaty in 1985.",
+      "The Non-Aligned Movement successfully mediated between the two superpowers.",
+      "The Soviet state-controlled economy collapsed under the weight of the arms race and public discontent, causing the USSR to dissolve from within.",
+      "The United Nations imposed economic sanctions that forced both nations to disarm."
+    ],
+    correct: 2,
+    explanation: "The correct answer is C. The video and CED (KC-6.2.IV.E) are clear that the Cold War ended not with a military confrontation but through internal collapse: the Soviet economy failed under the strain of the arms race, the invasion of Afghanistan proved costly, and people living under communist rule lost faith in the system. The Berlin Wall fell in 1989 and the USSR dissolved in 1991 — from within, not from external pressure."
+  }
+];
+
+const matchPairs = [
+  { term: "Proxy War", def: "Superpowers fund opposing sides in a local conflict to avoid direct nuclear confrontation" },
+  { term: "Containment", def: "US strategy to prevent the spread of communism beyond its 1947 borders" },
+  { term: "Iron Curtain", def: "Churchill's metaphor for the ideological and physical division of Cold War Europe" },
+  { term: "Decolonization", def: "The dismantling of European empires and emergence of nearly 190 independent nations" },
+  { term: "Non-Aligned Movement", def: "Third-way coalition of new nations refusing alignment with either superpower bloc" }
+];
+
+const thesisCards = [
+  {
+    text: "The Cold War shaped the process of decolonization in the period c. 1945 to 1991.",
+    verdict: "FAIL",
+    reason: "This thesis restates the prompt without establishing a line of reasoning. It makes no defensible claim about HOW MUCH or IN WHAT WAYS the Cold War shaped decolonization, and offers no preview of a historical argument. A line of reasoning requires a 'because' — a reason for the claim."
+  },
+  {
+    text: "The Cold War significantly influenced decolonization because both the US and USSR supported independence movements.",
+    verdict: "FAIL",
+    reason: "This thesis makes a defensible claim ('significantly influenced') but lacks a true line of reasoning. It identifies what happened (superpower support) without explaining the mechanism or establishing analytical categories. It also contains a historical oversimplification — the US often supported colonial powers rather than independence movements."
+  },
+  {
+    text: "The Cold War fundamentally distorted the process of decolonization by transforming anti-colonial struggles into superpower proxy conflicts, ensuring that newly independent nations inherited political instability, economic dependency, and foreign-backed civil wars rather than genuine self-determination.",
+    verdict: "PASS",
+    reason: "This thesis earns the point. It makes a defensible claim ('fundamentally distorted'), provides a clear line of reasoning (proxy conflict mechanism → inherited instability), and uses analytical categories that preview a coherent argument. It responds to 'evaluate the extent' by arguing for significant Cold War impact with specific consequences."
+  },
+  {
+    text: "Although the Cold War created some obstacles for decolonization, the primary drivers of independence movements were internal nationalist forces that existed long before 1945, meaning that decolonization would have occurred regardless of Cold War competition.",
+    verdict: "PASS",
+    reason: "This thesis also earns the point by taking the opposite position — arguing the Cold War's impact was limited. It establishes a line of reasoning (pre-existing nationalism as the primary cause), uses 'although' to acknowledge complexity, and offers a defensible counterclaim. Both this thesis and Thesis 3 are valid; 'evaluate the extent' genuinely allows multiple positions."
+  }
+];
+
+const selfAssessSkills = [
+  { skill: "Describe the 'two parallel tracks' framework for Unit 8", code: "DOK 1" },
+  { skill: "Explain how WWII created conditions for both the Cold War and decolonization", code: "KC-6.2.IV.C.i" },
+  { skill: "Compare negotiated vs. armed-struggle paths to independence", code: "HTS-2 Comparison" },
+  { skill: "Explain the role of proxy wars in Cold War competition", code: "KC-6.2.IV.D" },
+  { skill: "Construct a causal chain linking WWII → Cold War → proxy conflicts", code: "HTS-1 Causation" },
+  { skill: "Write a contextualization paragraph connecting Unit 7 to Unit 8", code: "HTS-4 Contextualization" },
+  { skill: "Evaluate thesis statements using AP rubric language", code: "HTS-5 Argumentation" }
+];
+
+// ===== RENDER FUNCTIONS =====
+function renderFlipCards() {
+  const grid = document.getElementById('flip-grid');
+  grid.innerHTML = vocabCards.map((c, i) => `
+    <div class="flip-card" id="fc${i}" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front">${c.term}</div>
+        <div class="flip-back">${c.def}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderMCQs() {
+  const container = document.getElementById('mcq-container');
+  container.innerHTML = mcqData.map((q, qi) => `
+    <div class="mcq-item" id="mcq${qi}">
+      <div class="mcq-question">${qi+1}. ${q.q}</div>
+      <div class="mcq-options">
+        ${q.choices.map((c, ci) => `
+          <button class="mcq-option" onclick="checkMCQ(${qi}, ${ci})" id="mcq${qi}opt${ci}">
+            ${String.fromCharCode(65+ci)}. ${c}
+          </button>
+        `).join('')}
+      </div>
+      <div class="mcq-feedback" id="mcqfb${qi}">${q.explanation}</div>
+    </div>
+  `).join('');
+}
+
+function checkMCQ(qi, ci) {
+  const q = mcqData[qi];
+  const fb = document.getElementById(`mcqfb${qi}`);
+  // Disable all options
+  for (let i = 0; i < q.choices.length; i++) {
+    const btn = document.getElementById(`mcq${qi}opt${i}`);
+    btn.onclick = null;
+    if (i === q.correct) btn.classList.add('correct');
+    else if (i === ci) btn.classList.add('incorrect');
+  }
+  fb.classList.add('show');
+}
+
+// Matching logic
+let matchState = { selectedTerm: null, selectedDef: null, termEl: null, defEl: null, matched: 0 };
+
+function renderMatching() {
+  const shuffledDefs = [...matchPairs].sort(() => Math.random() - 0.5);
+  document.getElementById('match-terms').innerHTML = matchPairs.map((p, i) =>
+    `<div class="match-term" id="mt${i}" onclick="selectMatch('term',${i},this)">${p.term}</div>`
+  ).join('');
+  document.getElementById('match-defs').innerHTML = shuffledDefs.map((p, i) =>
+    `<div class="match-term" id="md${i}" onclick="selectMatch('def',${i},this)" data-def="${p.def}">${p.def}</div>`
+  ).join('');
+}
+
+function selectMatch(type, idx, el) {
+  if (el.classList.contains('matched-correct')) return;
+  if (type === 'term') {
+    if (matchState.termEl) matchState.termEl.classList.remove('selected');
+    matchState.selectedTerm = idx;
+    matchState.termEl = el;
+    el.classList.add('selected');
+  } else {
+    matchState.selectedDef = el.dataset.def;
+    matchState.defEl = el;
+  }
+  if (matchState.selectedTerm !== null && matchState.selectedDef !== null) {
+    const correctDef = matchPairs[matchState.selectedTerm].def;
+    if (matchState.selectedDef === correctDef) {
+      matchState.termEl.classList.remove('selected');
+      matchState.termEl.classList.add('matched-correct');
+      matchState.defEl.classList.add('matched-correct');
+      matchState.matched++;
+      if (matchState.matched === matchPairs.length) {
+        document.getElementById('matching-result').textContent = '✓ All pairs matched correctly!';
+      }
+    } else {
+      matchState.termEl.classList.remove('selected');
+      matchState.defEl.classList.add('matched-wrong');
+      setTimeout(() => matchState.defEl.classList.remove('matched-wrong'), 500);
+    }
+    matchState.selectedTerm = null; matchState.selectedDef = null;
+    matchState.termEl = null; matchState.defEl = null;
+  }
+}
+
+function renderThesis() {
+  const grid = document.getElementById('thesis-grid');
+  grid.innerHTML = thesisCards.map((t, i) => `
+    <div class="thesis-card" onclick="toggleThesis(${i})">
+      <div class="thesis-card-body">${t.text}</div>
+      <div class="thesis-card-verdict ${t.verdict === 'FAIL' ? 'verdict-fail' : 'verdict-pass'}" id="thv${i}">
+        ${t.verdict === 'FAIL' ? '✗ FAILS AP Rubric' : '✓ PASSES AP Rubric'} — click to see why
+      </div>
+      <div class="thesis-explain" id="the${i}">${t.reason}</div>
+    </div>
+  `).join('');
+}
+
+function toggleThesis(i) {
+  document.getElementById(`the${i}`).classList.toggle('show');
+}
+
+function renderSelfAssess() {
+  const grid = document.getElementById('self-assess');
+  grid.innerHTML = selfAssessSkills.map((s, i) => `
+    <div class="assess-row">
+      <div class="assess-skill">${s.skill} <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);">[${s.code}]</span></div>
+      <div class="assess-dots">
+        <div class="assess-level">
+          <div class="assess-dot not-yet" onclick="setDot(${i},0,this)"></div>
+          <div class="assess-dot-label">Not Yet</div>
+        </div>
+        <div class="assess-level">
+          <div class="assess-dot getting-there" onclick="setDot(${i},1,this)"></div>
+          <div class="assess-dot-label">Getting There</div>
+        </div>
+        <div class="assess-level">
+          <div class="assess-dot confident" onclick="setDot(${i},2,this)"></div>
+          <div class="assess-dot-label">Confident</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function setDot(row, level, el) {
+  const rowEl = el.closest('.assess-row');
+  rowEl.querySelectorAll('.assess-dot').forEach(d => d.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ===== ACCORDION =====
+function toggleAccordion(btn) {
+  btn.classList.toggle('open');
+  const body = btn.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+function toggleCtx(header) {
+  const body = header.nextElementSibling.nextElementSibling;
+  const arr = header.querySelector('span');
+  if (body.style.display === 'block') {
+    body.style.display = 'none';
+    arr.textContent = '▶';
+  } else {
+    body.style.display = 'block';
+    arr.textContent = '▼';
+  }
+}
+
+// ===== CAUSAL CHAIN REVEAL =====
+function revealChain() {
+  const n2 = document.getElementById('cn2');
+  const n5 = document.getElementById('cn5');
+  n2.classList.add('revealed');
+  document.getElementById('cn2-text').textContent = "This creates a massive global power vacuum. The United States and the Soviet Union — the only nations with sufficient military and economic strength — rush to fill it, bringing their ideologically opposed systems into direct competition worldwide.";
+  n5.classList.add('revealed');
+  document.getElementById('cn5-text').textContent = "Decades of arms-race spending bankrupts the Soviet economy; the costly USSR invasion of Afghanistan (1979–1989) accelerates the decline; and public discontent with communist rule erodes the system's legitimacy. By 1989, the Berlin Wall falls; by 1991, the Soviet Union itself dissolves — the Cold War ends from within, not through military defeat.";
+  document.querySelector('.reveal-btn').textContent = '✓ Nodes Revealed';
+  document.querySelector('.reveal-btn').style.opacity = '0.6';
+}
+
+// ===== PROGRESS BAR =====
+let completed = { 1: false, 2: false, 3: false, 4: false };
+
+function completeSection(n) {
+  completed[n] = true;
+  const btn = document.getElementById(`btn-dok${n}`);
+  btn.classList.add('done');
+  btn.onclick = null;
+  btn.textContent = btn.textContent; // trigger re-render with ::before
+  updateProgress();
+}
+
+function updateProgress() {
+  const count = Object.values(completed).filter(Boolean).length;
+  const pct = count * 25;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = `PROGRESS: ${pct}%`;
+}
+
+// ===== INIT =====
+renderFlipCards();
+renderMCQs();
+renderMatching();
+renderThesis();
+renderSelfAssess();
+
+// Close ctx pathways by default
+document.querySelectorAll('.ctx-body').forEach(b => b.style.display = 'none');
+</script>
+</body>
+</html>

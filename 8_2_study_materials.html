@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP World History 8.2 — The Cold War</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-page: #2a2016; --bg-card: #32291a; --bg-card-light: #3a3020;
+    --gold: #b8860b; --gold-light: #d4a820; --gold-pale: #f0d878;
+    --dok1: #2d5a27; --dok1-light: #3a7a32; --dok1-pale: #c8e6c4;
+    --dok2: #1a3d6e; --dok2-light: #2255a0; --dok2-pale: #c2d4f0;
+    --dok3: #6b2d2d; --dok3-light: #952020; --dok3-pale: #f0c8c8;
+    --dok4: #4a2d6b; --dok4-light: #6a3da0; --dok4-pale: #dac8f0;
+    --text: #f0e8d8; --text-muted: #c8b898; --border: #5a4828;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg-page); color: var(--text); font-family: 'Source Serif 4', serif; font-size: 17px; line-height: 1.7; }
+
+  /* PROGRESS */
+  #progress-bar-container { position: sticky; top: 0; z-index: 100; background: #1a1408; border-bottom: 2px solid var(--gold); padding: 10px 20px; display: flex; align-items: center; gap: 16px; }
+  #progress-bar-container span { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold-light); white-space: nowrap; }
+  #progress-track { flex: 1; height: 10px; background: #3a2e18; border-radius: 5px; overflow: hidden; }
+  #progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--dok1), var(--dok2), var(--dok3), var(--dok4)); border-radius: 5px; transition: width 0.6s ease; }
+  .progress-markers { display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); margin-top: 3px; }
+
+  /* HEADER */
+  .page-header { text-align: center; padding: 48px 24px 32px; border-bottom: 1px solid var(--border); }
+  .unit-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+  .page-title { font-family: 'Playfair Display', serif; font-size: clamp(28px,5vw,46px); font-weight: 900; color: var(--gold-pale); line-height: 1.2; margin-bottom: 12px; }
+  .page-subtitle { font-size: 18px; color: var(--text-muted); font-style: italic; }
+
+  /* HOW-TO */
+  .how-to-banner { max-width: 860px; margin: 28px auto; background: linear-gradient(135deg,#2a1e06,#3a2e0e); border: 2px solid var(--gold); border-radius: 10px; padding: 24px 28px; }
+  .how-to-banner h3 { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 18px; margin-bottom: 10px; }
+  .how-to-banner p { color: var(--text-muted); margin-bottom: 8px; font-size: 15px; }
+  .how-to-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 10px; margin-top: 14px; }
+  .how-to-step { background: rgba(0,0,0,.3); border-radius: 6px; padding: 10px 14px; font-size: 13px; color: var(--text-muted); border-left: 3px solid; }
+  .how-to-step strong { display: block; font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-bottom: 3px; }
+  .s1 { border-color: var(--dok1); } .s1 strong { color: var(--dok1-pale); }
+  .s2 { border-color: var(--dok2); } .s2 strong { color: var(--dok2-pale); }
+  .s3 { border-color: var(--dok3); } .s3 strong { color: var(--dok3-pale); }
+  .s4 { border-color: var(--dok4); } .s4 strong { color: var(--dok4-pale); }
+
+  /* SECTIONS */
+  .section-wrapper { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 2px solid; }
+  .dok-badge { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: 4px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(22px,3vw,30px); }
+  .section-tagline { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .dok1-section .section-header { border-color: var(--dok1); } .dok1-section .section-title { color: var(--dok1-pale); } .dok1-section .dok-badge { background: var(--dok1); color: #fff; }
+  .dok2-section .section-header { border-color: var(--dok2); } .dok2-section .section-title { color: var(--dok2-pale); } .dok2-section .dok-badge { background: var(--dok2); color: #fff; }
+  .dok3-section .section-header { border-color: var(--dok3); } .dok3-section .section-title { color: var(--dok3-pale); } .dok3-section .dok-badge { background: var(--dok3); color: #fff; }
+  .dok4-section .section-header { border-color: var(--dok4); } .dok4-section .section-title { color: var(--dok4-pale); } .dok4-section .dok-badge { background: var(--dok4); color: #fff; }
+
+  /* CALLOUTS */
+  .callout-blue { background: linear-gradient(135deg,#0d2240,#1a3560); border: 2px solid #3a70c0; border-radius: 10px; padding: 20px 24px; margin-bottom: 28px; }
+  .callout-blue h4 { color: #80b4ff; font-family: 'Playfair Display', serif; font-size: 16px; margin-bottom: 8px; }
+  .callout-blue p { color: #b8d0f8; font-size: 14px; } .callout-blue a { color: #80b4ff; }
+  .callout-blue ul { color: #b8d0f8; font-size: 14px; margin-left: 20px; margin-top: 6px; } .callout-blue ul li { margin-bottom: 4px; }
+  .callout-gold { background: linear-gradient(135deg,#2a1e06,#3a2c08); border: 2px solid var(--gold); border-radius: 10px; padding: 20px 24px; margin-bottom: 28px; }
+  .callout-gold h4 { color: var(--gold-light); font-family: 'Playfair Display', serif; font-size: 16px; margin-bottom: 8px; }
+  .callout-gold p { color: var(--text-muted); font-size: 14px; }
+
+  /* QUOTE */
+  .opening-quote { background: var(--bg-card); border-left: 5px solid var(--gold); border-radius: 0 8px 8px 0; padding: 24px 28px; margin-bottom: 28px; }
+  .opening-quote blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(18px,2.5vw,22px); color: var(--gold-pale); line-height: 1.5; margin-bottom: 10px; }
+  .opening-quote cite { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); display: block; }
+
+  /* FRAMEWORK CARD */
+  .framework-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 24px; margin-bottom: 28px; }
+  .framework-card h4 { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 18px; margin-bottom: 18px; text-align: center; }
+  .framework-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 14px; }
+  .framework-item { background: var(--bg-card-light); border-radius: 8px; padding: 16px; border-top: 3px solid; text-align: center; }
+  .fi1 { border-color: var(--dok1-light); } .fi1 .fi-title { color: var(--dok1-pale); }
+  .fi2 { border-color: var(--dok2-light); } .fi2 .fi-title { color: var(--dok2-pale); }
+  .fi3 { border-color: var(--dok3-light); } .fi3 .fi-title { color: var(--dok3-pale); }
+  .fi4 { border-color: var(--gold); } .fi4 .fi-title { color: var(--gold-pale); }
+  .fi-icon { font-size: 28px; margin-bottom: 8px; }
+  .fi-title { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .framework-item p { font-size: 13px; color: var(--text-muted); }
+
+  /* TIMELINE */
+  .sub-heading { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 16px; margin-bottom: 12px; margin-top: 4px; }
+  .kc-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px; background: rgba(184,134,11,.15); border: 1px solid var(--gold); color: var(--gold-light); border-radius: 4px; padding: 2px 8px; margin-bottom: 10px; }
+  .timeline-item { display: grid; grid-template-columns: 100px 1fr; gap: 16px; margin-bottom: 12px; background: var(--bg-card); border-radius: 8px; padding: 14px 16px; border-left: 3px solid var(--dok1); align-items: start; }
+  .timeline-date { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--dok1-pale); padding-top: 2px; }
+  .timeline-text { font-size: 14px; color: var(--text-muted); } .timeline-text strong { color: var(--text); }
+
+  /* FLIP CARDS */
+  .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap: 14px; margin-bottom: 28px; }
+  .flip-card { height: 150px; perspective: 1000px; cursor: pointer; }
+  .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+  .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 14px; text-align: center; }
+  .flip-front { background: var(--bg-card); border: 2px solid var(--dok1); }
+  .flip-back { background: var(--dok1); transform: rotateY(180deg); border: 2px solid var(--dok1-light); }
+  .flip-front .term { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--dok1-pale); margin-bottom: 6px; }
+  .flip-front .kc-code-small { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); }
+  .flip-front .hint { font-size: 11px; color: var(--text-muted); margin-top: 8px; }
+  .flip-back .definition { font-size: 13px; color: #fff; line-height: 1.5; }
+
+  /* MCQ */
+  .mcq-item { background: var(--bg-card); border-radius: 8px; padding: 20px; margin-bottom: 16px; border: 1px solid var(--border); }
+  .mcq-question { font-size: 15px; color: var(--text); margin-bottom: 14px; font-weight: 600; }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option { background: var(--bg-card-light); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; cursor: pointer; font-size: 14px; color: var(--text-muted); transition: all .2s; text-align: left; }
+  .mcq-option:hover { border-color: var(--gold); color: var(--text); }
+  .mcq-option.correct { background: #1a4a1a; border-color: var(--dok1-light); color: var(--dok1-pale); }
+  .mcq-option.incorrect { background: #4a1a1a; border-color: var(--dok3-light); color: var(--dok3-pale); }
+  .mcq-option.disabled { cursor: default; pointer-events: none; }
+  .mcq-feedback { display: none; margin-top: 12px; padding: 12px 16px; background: rgba(0,0,0,.3); border-radius: 6px; font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .mcq-feedback.show { display: block; } .mcq-feedback strong { color: var(--gold-light); }
+
+  /* MATCHING */
+  .matching-container { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+  .matching-col h5 { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; text-align: center; }
+  .match-item { background: var(--bg-card); border: 2px solid var(--border); border-radius: 6px; padding: 12px 14px; cursor: pointer; font-size: 13px; margin-bottom: 8px; transition: all .2s; min-height: 50px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.4; }
+  .match-item.term { color: var(--dok1-pale); border-color: var(--dok1); }
+  .match-item.def { color: var(--text-muted); border-color: var(--border); }
+  .match-item.selected { border-color: var(--gold-light); background: #3a2c08; }
+  .match-item.matched { border-color: var(--dok1-light); background: #1a3a1a; color: var(--dok1-pale); pointer-events: none; }
+  .match-item.wrong { border-color: var(--dok3-light); background: #3a1a1a; animation: shake .3s; }
+  @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+  #matching-status { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--gold-light); text-align: center; margin-top: 8px; height: 20px; }
+
+  /* EXPLAIN DRILLS */
+  .explain-drill { background: var(--bg-card); border: 1px solid var(--dok2); border-radius: 10px; padding: 22px; margin-bottom: 20px; }
+  .drill-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--dok2-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .drill-prompt { font-size: 15px; color: var(--text); margin-bottom: 16px; font-style: italic; }
+  .drill-ta { width: 100%; min-height: 90px; background: var(--bg-card-light); border: 1px solid var(--border); border-radius: 6px; padding: 12px; color: var(--text); font-family: 'Source Serif 4', serif; font-size: 14px; resize: vertical; margin-bottom: 10px; }
+  .drill-ta:focus { outline: none; border-color: var(--dok2-light); }
+
+  /* COMPARISON TABLE */
+  .comp-wrap { background: var(--bg-card); border-radius: 10px; padding: 22px; margin-bottom: 28px; border: 1px solid var(--dok2); overflow-x: auto; }
+  .comp-wrap h4 { font-family: 'Playfair Display', serif; color: var(--dok2-pale); font-size: 18px; margin-bottom: 16px; }
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 14px; }
+  .comp-table th { background: var(--dok2); color: #fff; padding: 10px 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-align: left; }
+  .comp-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-muted); vertical-align: top; }
+  .comp-table tr:nth-child(even) td { background: rgba(255,255,255,.03); }
+  .comp-table td:first-child { color: var(--dok2-pale); font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .reflection-prompt { background: var(--bg-card-light); border-radius: 6px; padding: 12px 16px; font-size: 13px; color: var(--text-muted); font-style: italic; margin-top: 10px; }
+
+  /* APPLY ACTIVITY */
+  .apply-activity { background: var(--bg-card); border: 1px solid var(--dok2); border-radius: 10px; padding: 22px; margin-bottom: 28px; }
+  .apply-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--dok2-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  .source-box { background: #1a1408; border-left: 4px solid var(--gold); padding: 16px 18px; margin-bottom: 16px; border-radius: 0 6px 6px 0; font-style: italic; font-size: 14px; color: var(--text-muted); }
+  .source-box cite { display: block; margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); font-style: normal; }
+  .apply-ta { width: 100%; min-height: 100px; background: var(--bg-card-light); border: 1px solid var(--border); border-radius: 6px; padding: 12px; color: var(--text); font-family: 'Source Serif 4', serif; font-size: 14px; resize: vertical; margin-top: 12px; }
+  .apply-ta:focus { outline: none; border-color: var(--dok2-light); }
+
+  /* CAUSAL CHAIN */
+  .chain-wrap { background: var(--bg-card); border-radius: 10px; padding: 22px; margin-bottom: 28px; border: 1px solid var(--dok3); }
+  .chain-wrap h4 { font-family: 'Playfair Display', serif; color: var(--dok3-pale); font-size: 18px; margin-bottom: 16px; }
+  .chain-nodes { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+  .chain-row { display: flex; align-items: center; gap: 8px; }
+  .chain-node { flex: 1; background: var(--bg-card-light); border: 2px solid var(--dok3); border-radius: 8px; padding: 12px 16px; font-size: 14px; color: var(--text); text-align: center; line-height: 1.4; min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .chain-node.blank { background: #2a1818; border-style: dashed; color: var(--dok3-pale); font-style: italic; font-size: 13px; cursor: pointer; transition: all .2s; }
+  .chain-node.blank:hover { background: #3a2020; }
+  .chain-node.revealed { background: #3a1a1a; border-style: solid; color: var(--dok3-pale); font-style: normal; }
+  .chain-arrow { font-size: 22px; color: var(--dok3-light); flex-shrink: 0; }
+  .chain-btn { background: var(--dok3); border: none; border-radius: 6px; color: #fff; padding: 10px 20px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; transition: background .2s; }
+  .chain-btn:hover { background: var(--dok3-light); }
+
+  /* AP INSIGHT */
+  .ap-insight { background: linear-gradient(135deg,#2a1e06,#3a2c08); border: 2px solid var(--gold); border-radius: 10px; padding: 20px 24px; margin-bottom: 28px; }
+  .ap-insight h5 { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .ap-insight p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-top: 8px; } .ap-insight strong { color: var(--gold-light); }
+
+  /* SAQ */
+  .saq-wrap { background: var(--bg-card); border: 1px solid var(--dok3); border-radius: 10px; padding: 22px; margin-bottom: 28px; }
+  .saq-wrap h4 { font-family: 'Playfair Display', serif; color: var(--dok3-pale); font-size: 18px; margin-bottom: 6px; }
+  .saq-context { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; font-style: italic; }
+  .saq-part { background: var(--bg-card-light); border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 4px solid var(--dok3); }
+  .saq-part-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--dok3-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .saq-part p { font-size: 14px; color: var(--text); margin-bottom: 10px; }
+  .saq-ta { width: 100%; min-height: 70px; background: var(--bg-page); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; color: var(--text); font-family: 'Source Serif 4', serif; font-size: 14px; resize: vertical; margin-bottom: 8px; }
+  .saq-ta:focus { outline: none; border-color: var(--dok3-light); }
+
+  /* CCOT */
+  .ccot-wrap { background: var(--bg-card); border-radius: 10px; padding: 22px; margin-bottom: 28px; border: 1px solid var(--dok3); overflow-x: auto; }
+  .ccot-wrap h4 { font-family: 'Playfair Display', serif; color: var(--dok3-pale); font-size: 18px; margin-bottom: 16px; }
+  .ccot-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 14px; }
+  .ccot-table th { padding: 10px 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-align: left; }
+  .ccot-table th:first-child { background: var(--dok2); color: #fff; } .ccot-table th:last-child { background: var(--dok3); color: #fff; }
+  .ccot-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-muted); vertical-align: top; }
+  .ccot-table td:first-child { color: var(--dok2-pale); } .ccot-table td:last-child { color: var(--dok3-pale); }
+  .ccot-table tr:nth-child(even) td { background: rgba(255,255,255,.03); }
+
+  /* THESIS */
+  .thesis-eval-wrap { margin-bottom: 28px; }
+  .thesis-eval-wrap h4 { font-family: 'Playfair Display', serif; color: var(--dok3-pale); font-size: 18px; margin-bottom: 6px; }
+  .thesis-eval-prompt { font-size: 14px; color: var(--text-muted); font-style: italic; margin-bottom: 16px; background: var(--bg-card); padding: 14px 18px; border-radius: 8px; border-left: 4px solid var(--dok3); }
+  .thesis-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(380px,1fr)); gap: 14px; }
+  .thesis-card { background: var(--bg-card); border: 2px solid var(--border); border-radius: 10px; padding: 18px; cursor: pointer; transition: all .2s; }
+  .thesis-card:hover { border-color: var(--gold); }
+  .thesis-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+  .thesis-verdict { display: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; margin-top: 8px; }
+  .thesis-verdict.show { display: block; }
+  .thesis-verdict.fail { background: #3a1a1a; border: 1px solid var(--dok3-light); color: var(--dok3-pale); }
+  .thesis-verdict.pass { background: #1a3a1a; border: 1px solid var(--dok1-light); color: var(--dok1-pale); }
+  .verdict-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+
+  /* CONTEXTUALIZATION */
+  .ctx-wrap { background: var(--bg-card); border: 1px solid var(--dok4); border-radius: 10px; padding: 22px; margin-bottom: 28px; }
+  .ctx-wrap h4 { font-family: 'Playfair Display', serif; color: var(--dok4-pale); font-size: 18px; margin-bottom: 8px; }
+  .ctx-wrap > p { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+  .ctx-pathway { background: var(--bg-card-light); border: 2px solid var(--dok4); border-radius: 8px; padding: 16px; margin-bottom: 14px; }
+  .ctx-pathway-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--dok4-pale); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .ctx-stem { font-size: 14px; color: var(--gold-pale); font-style: italic; margin-bottom: 12px; padding: 10px 14px; background: rgba(0,0,0,.3); border-radius: 6px; }
+  .ctx-ta { width: 100%; min-height: 80px; background: var(--bg-page); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; color: var(--text); font-family: 'Source Serif 4', serif; font-size: 14px; resize: vertical; margin-bottom: 8px; }
+  .ctx-ta:focus { outline: none; border-color: var(--dok4-light); }
+
+  /* SYNTHESIS */
+  .syn-wrap { background: var(--bg-card); border: 1px solid var(--dok4); border-radius: 10px; padding: 22px; margin-bottom: 28px; }
+  .syn-wrap h4 { font-family: 'Playfair Display', serif; color: var(--dok4-pale); font-size: 18px; margin-bottom: 12px; }
+  .syn-wrap p { font-size: 14px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.7; }
+  .syn-connections { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; margin: 16px 0; }
+  .syn-con { background: var(--bg-card-light); border-radius: 8px; padding: 14px; border-left: 3px solid var(--dok4-light); }
+  .syn-con .sc-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--dok4-pale); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
+  .syn-con p { font-size: 13px; margin-bottom: 0; }
+  .syn-task { background: #1a1408; border: 1px solid var(--gold); border-radius: 8px; padding: 16px; margin-top: 14px; }
+  .syn-task p { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+  .syn-ta { width: 100%; min-height: 90px; background: var(--bg-page); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; color: var(--text); font-family: 'Source Serif 4', serif; font-size: 14px; resize: vertical; }
+  .syn-ta:focus { outline: none; border-color: var(--gold); }
+
+  /* SELF-ASSESSMENT */
+  .sa-wrap { background: var(--bg-card); border: 1px solid var(--dok4); border-radius: 10px; padding: 22px; margin-bottom: 40px; }
+  .sa-wrap h4 { font-family: 'Playfair Display', serif; color: var(--dok4-pale); font-size: 18px; margin-bottom: 16px; }
+  .sa-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+  .sa-item:last-child { border-bottom: none; }
+  .sa-skill { font-size: 14px; color: var(--text-muted); flex: 1; min-width: 200px; }
+  .sa-dots { display: flex; gap: 8px; }
+  .sa-dot { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--border); cursor: pointer; transition: all .2s; }
+  .sa-dot:hover { border-color: var(--gold); }
+  .sa-dot.active-1 { background: var(--dok3); border-color: var(--dok3-light); }
+  .sa-dot.active-2 { background: var(--gold); border-color: var(--gold-light); }
+  .sa-dot.active-3 { background: var(--dok1); border-color: var(--dok1-light); }
+  .sa-labels { display: flex; gap: 8px; margin-bottom: 10px; justify-content: flex-end; }
+  .sa-label-item { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); width: 28px; text-align: center; line-height: 1.2; }
+
+  /* ACCORDION */
+  .accordion-btn { width: 100%; background: rgba(0,0,0,.4); border: 1px solid var(--border); border-radius: 6px; padding: 10px 16px; color: var(--text-muted); cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; text-align: left; display: flex; justify-content: space-between; align-items: center; transition: all .2s; margin-bottom: 4px; }
+  .accordion-btn:hover { border-color: var(--gold); color: var(--gold-light); }
+  .accordion-btn.open { border-color: var(--gold); color: var(--gold-light); }
+  .accordion-content { display: none; background: rgba(0,0,0,.3); border: 1px solid var(--border); border-radius: 0 0 6px 6px; padding: 16px; margin-bottom: 10px; font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .accordion-content.open { display: block; } .accordion-content strong { color: var(--gold-light); } .accordion-content em { color: var(--text); }
+
+  /* COMPLETE BTN */
+  .complete-btn { display: block; margin: 28px auto 0; background: transparent; border: 2px solid; border-radius: 8px; padding: 12px 28px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; cursor: pointer; transition: all .2s; text-transform: uppercase; }
+  .dok1-section .complete-btn { border-color: var(--dok1); color: var(--dok1-pale); } .dok1-section .complete-btn:hover { background: var(--dok1); color: #fff; }
+  .dok2-section .complete-btn { border-color: var(--dok2); color: var(--dok2-pale); } .dok2-section .complete-btn:hover { background: var(--dok2); color: #fff; }
+  .dok3-section .complete-btn { border-color: var(--dok3); color: var(--dok3-pale); } .dok3-section .complete-btn:hover { background: var(--dok3); color: #fff; }
+  .dok4-section .complete-btn { border-color: var(--dok4); color: var(--dok4-pale); } .dok4-section .complete-btn:hover { background: var(--dok4); color: #fff; }
+  .complete-btn:disabled { opacity: .5; cursor: default; }
+  .section-divider { max-width: 900px; margin: 0 auto 10px; padding: 0 20px; height: 1px; background: linear-gradient(90deg,transparent,var(--border),transparent); }
+  @media(max-width:600px){ .matching-container{grid-template-columns:1fr} .thesis-grid{grid-template-columns:1fr} .timeline-item{grid-template-columns:80px 1fr} }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar-container">
+  <span>PROGRESS</span>
+  <div style="flex:1">
+    <div id="progress-track"><div id="progress-fill"></div></div>
+    <div class="progress-markers"><span>START</span><span>DOK 1 — 25%</span><span>DOK 2 — 50%</span><span>DOK 3 — 75%</span><span>DOK 4 — 100%</span></div>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="unit-label">AP World History: Modern · Unit 8 · Topic 8.2</div>
+  <h1 class="page-title">The Cold War</h1>
+  <p class="page-subtitle">Thematic Focus: Cultural Developments &amp; Interactions (CDI) &nbsp;·&nbsp; KC-6.2.IV.C.ii &nbsp;·&nbsp; KC-6.2.V.B &nbsp;·&nbsp; HTS: Sourcing &amp; Situation (2.B)</p>
+</div>
+
+<!-- HOW-TO BANNER -->
+<div class="how-to-banner">
+  <h3>📋 How to Use This Module</h3>
+  <p><strong>Central Argument (from the video):</strong> The Cold War was a war of ideas — not armies and trenches. Two fundamentally incompatible worldviews (capitalist democracy vs. authoritarian communism) drove both superpowers to compete in every arena imaginable: economic policy, technology, the arms race, and propaganda. But the story isn't just US vs. USSR — a massive third force, the Non-Aligned Movement, rejected the entire binary and tried to forge an independent path. The Cold War teaches us that ideas are powerful, and that we must always ask: <em>who is telling the story, and why?</em></p>
+  <p><strong>Thematic Lens:</strong> Cultural Developments &amp; Interactions (CDI) — How ideological belief systems divide societies, shape state behavior, and drive global competition.</p>
+  <div class="how-to-grid">
+    <div class="how-to-step s1"><strong>DOK 1 — Answer Correctly</strong>Watch the video, master the vocabulary, check recall with MCQs and matching.</div>
+    <div class="how-to-step s2"><strong>DOK 2 — Establish &amp; Explain</strong>Apply concepts, compare US and Soviet strategies, analyze a primary source.</div>
+    <div class="how-to-step s3"><strong>DOK 3 — Examine with Evidence</strong>Trace causes of the Cold War, write an SAQ, evaluate thesis statements using 2.B sourcing.</div>
+    <div class="how-to-step s4"><strong>DOK 4 — Explore &amp; Synthesize</strong>Write contextualization, connect 8.2 to 8.1 and 8.3, assess your AP skills.</div>
+  </div>
+</div>
+
+<!-- ═══════════════ DOK 1 ═══════════════ -->
+<div class="section-wrapper dok1-section" id="dok1">
+  <div class="section-header">
+    <div><span class="dok-badge">DOK 1</span></div>
+    <div>
+      <div class="section-title">Knowledge Acquisition</div>
+      <div class="section-tagline">GOAL: Answer Correctly — acquire the vocabulary and facts that power the rest of the module</div>
+    </div>
+  </div>
+
+  <!-- Video Callout -->
+  <div class="callout-blue">
+    <h4>🎬 Layer 1: Watch the Video Explainer First</h4>
+    <p><strong>APWH 8.2 — The Cold War</strong> &nbsp;|&nbsp; <a href="https://youtu.be/Gzr4JwdAnd0" target="_blank">https://youtu.be/Gzr4JwdAnd0</a></p>
+    <p>As you watch, listen for these three things:</p>
+    <ul>
+      <li>How did each superpower try to win the ideological war through <em>economic</em> strategy — not just military force?</li>
+      <li>What is the Non-Aligned Movement, who led it, and why was "staying truly neutral a constant struggle"?</li>
+      <li>What does the Joseph McCarthy example reveal about propaganda and the AP skill of Sourcing (HTS-6 / Skill 2.B)?</li>
+    </ul>
+  </div>
+
+  <!-- Opening Quote -->
+  <div class="opening-quote">
+    <blockquote>"Let us not be deceived — we are today in the midst of a cold war."</blockquote>
+    <cite>— Bernard Baruch, banker and presidential advisor, 1947 (coining the term)</cite>
+  </div>
+
+  <!-- Visual Framework Card -->
+  <div class="framework-card">
+    <h4>Four Arenas of the Cold War Conflict</h4>
+    <div class="framework-grid">
+      <div class="framework-item fi1">
+        <div class="fi-icon">💡</div>
+        <div class="fi-title">The Ideology War</div>
+        <p>Capitalism/democracy (US) vs. communism/authoritarianism (USSR) — oil and water worldviews that made rivalry inevitable once their common enemy was gone.</p>
+      </div>
+      <div class="framework-item fi2">
+        <div class="fi-icon">💰</div>
+        <div class="fi-title">The Economic War</div>
+        <p>Marshall Plan ($12B to rebuild Western Europe) vs. COMECON (Soviet bloc economic integration). Each side used money as a weapon to win hearts and minds.</p>
+      </div>
+      <div class="framework-item fi3">
+        <div class="fi-icon">☢️</div>
+        <div class="fi-title">The Arms &amp; Space Race</div>
+        <p>From Sputnik (1957) to ICBMs — a technological competition that produced MAD: the terrifying "balance of terror" that paradoxically kept direct war unthinkable.</p>
+      </div>
+      <div class="framework-item fi4">
+        <div class="fi-icon">🌍</div>
+        <div class="fi-title">The Third World Option</div>
+        <p>The Non-Aligned Movement (Bandung 1955 → formally 1961), led by Sukarno, Nkrumah, Nehru, and Nasser, rejected the binary and sought an independent path (KC-6.2.V.B).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Annotated Timeline -->
+  <div class="sub-heading">📅 Annotated Timeline — The Cold War Unfolds</div>
+  <div class="kc-tag">KC-6.2.IV.C.ii · KC-6.2.V.B</div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">1946</div>
+    <div class="timeline-text"><strong>Churchill's "Iron Curtain" Speech</strong> — A year before the term "Cold War" was coined, Churchill described an "iron curtain" dividing democratic-capitalist Western Europe from authoritarian-communist Eastern Europe under Soviet thumb.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">1947</div>
+    <div class="timeline-text"><strong>Truman Doctrine &amp; Marshall Plan</strong> — Truman pledges US economic/military support to countries resisting communist takeover (beginning with Greece and Turkey). The $12 billion Marshall Plan rebuilds Western Europe — deliberately making capitalism look better than communism.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">1947</div>
+    <div class="timeline-text"><strong>Bernard Baruch coins "Cold War"</strong> — Names the new geopolitical reality: not a hot direct war, but a constant global struggle fought through spies, propaganda, and proxy conflicts.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">1949</div>
+    <div class="timeline-text"><strong>NATO formed; Soviets test nuclear weapon</strong> — Western military alliance created; US nuclear monopoly ends. The arms race intensifies — the "balance of terror" begins taking shape.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">1955</div>
+    <div class="timeline-text"><strong>Bandung Conference, Indonesia</strong> — 29 nations representing over half the world's population gather to condemn colonialism and reject superpower domination. The Non-Aligned Movement is born (KC-6.2.V.B). Key leaders: Sukarno (Indonesia), Nasser (Egypt), Nehru (India).</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">1957</div>
+    <div class="timeline-text"><strong>Sputnik Launch</strong> — Soviet Union launches first artificial satellite. The US is shocked — a "tiny beeping metal ball" becomes proof of communist technological superiority. The Space Race explodes into a full ideological battle.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">1959</div>
+    <div class="timeline-text"><strong>Mutual Assured Destruction (MAD)</strong> — Both superpowers now possess ICBMs capable of nuclear annihilation. The logic of MAD: since neither side can win a nuclear war, neither side starts one. The whole world holds its breath.</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">1961</div>
+    <div class="timeline-text"><strong>Non-Aligned Movement formally organized</strong> — Building on Bandung, newly independent nations formalize their refusal to align with either bloc. But staying truly neutral proves a "constant struggle" — many need superpower economic aid, creating dependence despite declarations of independence.</div>
+  </div>
+
+  <!-- Vocabulary Flip Cards -->
+  <div class="sub-heading" style="margin-top:20px">🃏 Vocabulary Flip Cards — Click to Reveal</div>
+  <div class="kc-tag">CED Vocabulary · KC-6.2.IV.C.ii · KC-6.2.V.B</div>
+  <div class="vocab-grid">
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">Iron Curtain</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">Churchill's metaphor (1946) for the ideological and political divide between democratic-capitalist Western Europe and authoritarian-communist Eastern Europe under Soviet control. Not a real wall — yet — but a profound symbolic division.</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">Containment</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">US foreign policy (developed by diplomat George Kennan) aimed at preventing communism from spreading beyond its existing borders. Not rolling back existing communist states — just stopping further expansion. Drove US Cold War strategy throughout the era.</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">Truman Doctrine</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">1947 policy in which President Truman pledged US economic and military support to any country resisting communist takeover. First applied to Greece and Turkey. Operationalized the containment strategy with concrete commitments.</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">Marshall Plan</div><div class="kc-code-small">KC-6.2.IV.C.ii</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">US program (1947) that pumped $12 billion into rebuilding Western European economies. Strategic logic: prosperous democracies are resistant to communism. The video calls it "a brilliant strategic move" — not just charity.</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">Satellite States</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">Eastern European countries that were nominally independent but politically and economically controlled by the Soviet Union. Forced to trade exclusively within the Soviet bloc (COMECON) and governed by Soviet-backed regimes — "puppet governments that did whatever Moscow wanted."</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">COMECON</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">Council for Mutual Economic Assistance — the Soviet response to the Marshall Plan. Integrated Eastern Bloc economies through trade and credit agreements. More limited in scope and impact than the Marshall Plan; deepened the economic divide between East and West.</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">Mutual Assured Destruction (MAD)</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">The nuclear deterrence doctrine in which both superpowers possessed enough weapons to obliterate each other — making nuclear war effectively unwinnable and therefore, paradoxically, unlikely to be started. The "balance of terror" that kept a hot war from erupting.</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">Non-Aligned Movement</div><div class="kc-code-small">KC-6.2.V.B</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">A grouping of newly independent Asian and African nations that rejected alignment with either superpower bloc. Formally organized in 1961, building on the 1955 Bandung Conference. CED illustrative examples: Sukarno (Indonesia), Kwame Nkrumah (Ghana).</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">Bandung Conference</div><div class="kc-code-small">KC-6.2.V.B</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">1955 conference in Indonesia where 29 nations — representing over half the world's population — gathered to condemn colonialism and declare independence from superpower domination. The founding moment of the Non-Aligned Movement, organized by Sukarno.</div></div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-front"><div class="term">World Revolution</div><div class="hint">Click to flip</div></div>
+        <div class="flip-back"><div class="definition">Soviet ideological belief that organized workers would overthrow capitalism globally. The USSR actively funded communist movements and revolutions worldwide — the offensive counterpart to the US containment strategy. Rooted in Marxist-Leninist ideology dating to the 1917 Russian Revolution.</div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MCQs -->
+  <div class="sub-heading">✅ Recall Multiple Choice</div>
+  <div class="kc-tag">KC-6.2.IV.C.ii · KC-6.2.V.B</div>
+
+  <div class="mcq-item" id="mcq1">
+    <div class="mcq-question">1. The video argues that the Cold War was fundamentally "a war of ideas." Which pairing best captures the ideological divide at the heart of this conflict?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(A) Militarism vs. Pacifism</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(B) Nationalism vs. Imperialism</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq1',this,true)">(C) Capitalist democracy vs. Authoritarian communism</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq1',this,false)">(D) Industrialism vs. Agrarianism</button>
+    </div>
+    <div class="mcq-feedback" id="mcq1-fb"><strong>Correct — C.</strong> The video identifies this as "the absolute heart of the matter" — not a rivalry over territory or resources, but "a clash of belief systems down to the very core." The US championed private ownership, free markets, and democracy; the USSR championed state ownership, centrally planned economy, and single-party rule. These worldviews were "like oil and water" — they just couldn't mix. (KC-6.2.IV.C.ii)</div>
+  </div>
+
+  <div class="mcq-item" id="mcq2">
+    <div class="mcq-question">2. What was the strategic logic behind the Marshall Plan — beyond simply rebuilding war-devastated Europe?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(A) To create markets for US exports and protect American corporate profits in Europe.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq2',this,true)">(B) To prevent communist revolution by making capitalist democracies economically prosperous — "if your economy is strong and people are doing well, the promises of communism don't sound so good."</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(C) To punish Germany economically for starting WWII by tying it into a US-controlled trade system.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq2',this,false)">(D) To accelerate European unity so the continent could form a single military bloc against the USSR.</button>
+    </div>
+    <div class="mcq-feedback" id="mcq2-fb"><strong>Correct — B.</strong> The video explicitly calls the Marshall Plan "a brilliant strategic move" — "not just the US being nice." The textbook confirms: it was "based on the belief that a communist revolution could happen in economically unstable nations." By making Western Europe prosperous, the US made communism less attractive — fighting the ideological war through economic reconstruction. (KC-6.2.IV.C.ii)</div>
+  </div>
+
+  <div class="mcq-item" id="mcq3">
+    <div class="mcq-question">3. The CED's illustrative examples for KC-6.2.V.B (the Non-Aligned Movement) include Sukarno and Kwame Nkrumah. Which statement about the Non-Aligned Movement is best supported by the textbook?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(A) Non-Aligned nations successfully remained economically and politically independent from both superpowers throughout the Cold War.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(B) The Non-Aligned Movement was led exclusively by nations in sub-Saharan Africa.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq3',this,true)">(C) While non-aligned nations rejected superpower domination, many still became more closely tied to one bloc or the other — often due to economic dependence on superpower aid.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq3',this,false)">(D) The Non-Aligned Movement successfully replaced the United Nations as the primary international peacekeeping organization.</button>
+    </div>
+    <div class="mcq-feedback" id="mcq3-fb"><strong>Correct — C.</strong> Both the video and textbook highlight this tension. The video: "staying truly neutral was a constant struggle. Many of their countries were still developing and needed economic help, which often meant they had to make tricky deals with the very superpowers they were trying to avoid." The textbook cites Somalia/Ethiopia (1977) — even self-declared non-aligned nations ended up on opposite sides of superpower proxy conflicts. (KC-6.2.V.B)</div>
+  </div>
+
+  <div class="mcq-item" id="mcq4">
+    <div class="mcq-question">4. What was the logic of Mutual Assured Destruction (MAD), and why did it paradoxically function as a form of "peace"?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(A) Both superpowers agreed to use nuclear weapons only in response to conventional military invasion of their homelands.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(B) The UN Security Council's veto power prevented either superpower from launching a first nuclear strike.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq4',this,true)">(C) Since both superpowers could obliterate each other regardless of who fired first, neither had an incentive to start a nuclear war — making the "balance of terror" a perverse form of deterrence.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq4',this,false)">(D) Both superpowers signed a treaty pledging never to use nuclear weapons against each other directly.</button>
+    </div>
+    <div class="mcq-feedback" id="mcq4-fb"><strong>Correct — C.</strong> The textbook states it precisely: "regardless of who started a war, both would be obliterated by the end of it. Since neither side could win a nuclear war, neither side had an incentive to start one." The video calls MAD's logic "insane, but simple." This is the reason the Cold War never became a direct "hot war" between the superpowers — the stakes of direct conflict were existential for both sides.</div>
+  </div>
+
+  <div class="mcq-item" id="mcq5">
+    <div class="mcq-question">5. The CED's suggested skill for Topic 8.2 is Sourcing and Situation (2.B): "Explain the point of view, purpose, historical situation, and/or audience of a source." How does the video's McCarthy example illustrate why this skill is essential for understanding the Cold War?</div>
+    <div class="mcq-options">
+      <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(A) McCarthy's speech proves that communist infiltration of the US government was a genuine and well-documented threat.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(B) McCarthy's accusations demonstrate that historical sources should always be accepted at face value when they come from government officials.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq5',this,true)">(C) McCarthy's words were weapons designed to stir up fear and gain political power — not to present evidence. Analyzing his purpose reveals that Cold War sources cannot be taken at face value; they must be analyzed for who is speaking and why.</button>
+      <button class="mcq-option" onclick="checkMCQ('mcq5',this,false)">(D) McCarthy's example shows that propaganda was only used by the Soviet Union, not by US politicians.</button>
+    </div>
+    <div class="mcq-feedback" id="mcq5-fb"><strong>Correct — C.</strong> The video explicitly uses McCarthy to model Skill 2.B: "He wasn't just making an accusation. His purpose was to stir up fear to gain more political power." The video's takeaway: "you have to analyze the source — who's talking and what do they really want?" Both superpowers waged massive propaganda wars, making sourcing analysis essential for any Cold War document. This is exactly what Skill 2.B requires.</div>
+  </div>
+
+  <!-- Matching -->
+  <div class="sub-heading">🔗 Matching Activity — Click a Term, Then Click Its Definition</div>
+  <div class="matching-container">
+    <div class="matching-col">
+      <h5>Terms</h5>
+      <div class="match-item term" id="mt1" onclick="selectMatch('mt1','term')" data-pair="1">Truman Doctrine</div>
+      <div class="match-item term" id="mt2" onclick="selectMatch('mt2','term')" data-pair="2">COMECON</div>
+      <div class="match-item term" id="mt3" onclick="selectMatch('mt3','term')" data-pair="3">Bandung Conference</div>
+      <div class="match-item term" id="mt4" onclick="selectMatch('mt4','term')" data-pair="4">Sputnik</div>
+      <div class="match-item term" id="mt5" onclick="selectMatch('mt5','term')" data-pair="5">KC-6.2.V.B</div>
+    </div>
+    <div class="matching-col">
+      <h5>Definitions</h5>
+      <div class="match-item def" id="md4" onclick="selectMatch('md4','def')" data-pair="4">Soviet satellite (1957) whose launch shocked the US and ignited the Space Race as an ideological battle over which system's technology was superior.</div>
+      <div class="match-item def" id="md1" onclick="selectMatch('md1','def')" data-pair="1">1947 US commitment to support any country resisting communist takeover — operationalizing containment with military and economic pledges, first to Greece and Turkey.</div>
+      <div class="match-item def" id="md5" onclick="selectMatch('md5','def')" data-pair="5">The CED key concept stating that groups and individuals, including the Non-Aligned Movement, opposed and promoted alternatives to existing economic, political, and social orders.</div>
+      <div class="match-item def" id="md2" onclick="selectMatch('md2','def')" data-pair="2">Soviet-led economic organization that integrated Eastern Bloc nations through trade agreements — the USSR's response to the Marshall Plan, though more limited in scope and impact.</div>
+      <div class="match-item def" id="md3" onclick="selectMatch('md3','def')" data-pair="3">1955 meeting of 29 nations in Indonesia where delegates representing half the world's population condemned colonialism and laid the groundwork for the Non-Aligned Movement.</div>
+    </div>
+  </div>
+  <div id="matching-status"></div>
+
+  <button class="complete-btn" onclick="completeSection(1,this)">✓ Mark DOK 1 Complete</button>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════ DOK 2 ═══════════════ -->
+<div class="section-wrapper dok2-section" id="dok2">
+  <div class="section-header">
+    <div><span class="dok-badge">DOK 2</span></div>
+    <div>
+      <div class="section-title">Knowledge Application</div>
+      <div class="section-tagline">GOAL: Establish and Explain with Examples — apply concepts, compare strategies, demonstrate understanding</div>
+    </div>
+  </div>
+
+  <!-- Explain Drill 1 -->
+  <div class="explain-drill">
+    <div class="drill-label">EXPLAIN DRILL 1 · KC-6.2.IV.C.ii · Causation</div>
+    <div class="drill-prompt">Explain how the ideological differences between the United States and the Soviet Union caused their post-WWII rivalry to become a global conflict.</div>
+    <textarea class="drill-ta" placeholder="Remember: 'explain' requires HOW or WHY — not just what. Show the mechanism connecting ideology to global conflict..."></textarea>
+    <button class="accordion-btn" onclick="toggleAccordion('ed1',this)">▶ REVEAL SAMPLE ANSWER</button>
+    <div class="accordion-content" id="ed1">
+      <strong>Sample Answer (models AP 'explain' verb):</strong><br><br>
+      The ideological differences between the US and USSR caused their rivalry to become global because each side believed its system was not just better — but the only legitimate model for organizing human society. The US, championing capitalist democracy, saw the spread of communism as an existential threat to free markets and political liberty worldwide, leading to the containment doctrine: an active policy of preventing communist expansion anywhere on the globe. The Soviet Union, committed to authoritarian communism and the concept of "world revolution," viewed capitalism as fundamentally hostile and actively funded communist movements and satellite states to expand its sphere. Because both sides defined their survival in terms of their ideology's global reach — not merely territorial defense — their rivalry could not stay regional. Every newly independent nation, every unstable government, every civil war became a potential front in this ideological contest, transforming what began as a European standoff into a worldwide competition for influence. (KC-6.2.IV.C.ii)
+    </div>
+  </div>
+
+  <!-- Explain Drill 2 -->
+  <div class="explain-drill">
+    <div class="drill-label">EXPLAIN DRILL 2 · KC-6.2.V.B · Causation / CCOT</div>
+    <div class="drill-prompt">Explain why newly independent nations formed the Non-Aligned Movement rather than joining one of the superpower blocs.</div>
+    <textarea class="drill-ta" placeholder="Think about: what did these nations want, what did they fear, and what did the Cold War binary mean for countries still overcoming colonialism?"></textarea>
+    <button class="accordion-btn" onclick="toggleAccordion('ed2',this)">▶ REVEAL SAMPLE ANSWER</button>
+    <div class="accordion-content" id="ed2">
+      <strong>Sample Answer (models AP 'explain' verb):</strong><br><br>
+      Newly independent nations formed the Non-Aligned Movement rather than joining a superpower bloc because alignment meant trading one form of domination for another — and these nations had just fought to escape domination. Having won independence from European colonial empires, leaders like Sukarno, Nkrumah, and Nehru saw the Cold War blocs as a continuation of the same imperial logic: powerful outside forces dictating the political and economic choices of weaker nations. The video captures this: non-aligned nations "saw the Cold War as old news, a relic of an imperialist past, and they were determined to build a future based on their own terms." Joining either bloc would have meant accepting military bases, ideological conformity, and economic dependency — conditions that mirrored colonial relationships they had just escaped. By organizing collectively at Bandung (1955) and through the Non-Aligned Movement (1961), these nations attempted to assert sovereignty and create an alternative international framework that was "not dominated by the two superpowers." (KC-6.2.V.B)
+    </div>
+  </div>
+
+  <!-- Comparison Table -->
+  <div class="comp-wrap">
+    <h4>Comparison: US Strategy vs. Soviet Strategy in the Cold War</h4>
+    <div class="kc-tag">KC-6.2.IV.C.ii · HTS-2: Comparison</div>
+    <table class="comp-table">
+      <thead>
+        <tr><th>DIMENSION</th><th>UNITED STATES</th><th>SOVIET UNION</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Core Doctrine</td>
+          <td><strong>Containment</strong> — prevent communism from spreading beyond existing borders; defensive posture focused on limiting Soviet expansion</td>
+          <td><strong>World Revolution</strong> — active support for communist movements globally; offensive posture aimed at spreading communist ideology</td>
+        </tr>
+        <tr>
+          <td>Economic Weapon</td>
+          <td><strong>Marshall Plan</strong> — $12B to rebuild Western Europe; make capitalism attractive by making it prosperous</td>
+          <td><strong>COMECON</strong> — integrate Eastern Bloc economies; enforce Soviet economic dominance through mandatory trade within the bloc</td>
+        </tr>
+        <tr>
+          <td>Political Weapon</td>
+          <td>Truman Doctrine — pledged support to governments resisting communist takeover; backed anti-communist leaders regardless of democratic credentials</td>
+          <td>Satellite States — installed Soviet-backed governments in Eastern Europe; "puppet governments that did whatever Moscow wanted"</td>
+        </tr>
+        <tr>
+          <td>Technology Race</td>
+          <td>Responded to Sputnik (1957) by accelerating space program; launched Explorer 1 (1958); ultimately won the moon landing (1969)</td>
+          <td>Launched Sputnik (1957) and Yuri Gagarin first human in space (1961); first ICBMs tested (1959); led early space race</td>
+        </tr>
+        <tr>
+          <td>Propaganda</td>
+          <td>Radio, film, and cultural programs promoting democracy and capitalism; McCarthy-era Red Scare created domestic anti-communist hysteria</td>
+          <td>Funded communist parties worldwide; depicted capitalism as exploitative; used Soviet achievements (space race, athletics) as proof of communist superiority</td>
+        </tr>
+        <tr>
+          <td>Key Limitation</td>
+          <td>Supporting anti-communist governments often meant backing authoritarian regimes — contradicting democratic values the US claimed to champion</td>
+          <td>Forced conformity of satellite states created resentment; economic model proved less productive than Marshall Plan-backed Western economies</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="reflection-prompt">🔍 <strong>Reflection:</strong> Both superpowers used economic aid as a strategic weapon. How were the Marshall Plan and COMECON similar in purpose yet different in method and outcome? What does this comparison reveal about the strengths and weaknesses of each system?</div>
+  </div>
+
+  <!-- Apply Activity — Primary Source with Sourcing (2.B) -->
+  <div class="apply-activity">
+    <div class="apply-label">APPLY ACTIVITY · HTS-6: Sourcing (Skill 2.B) · Primary Source Analysis</div>
+    <p style="font-size:15px;color:var(--text);margin-bottom:14px;">Read the following primary source excerpt, then apply the AP Sourcing skill (2.B): <em>explain the point of view, purpose, historical situation, and/or audience of the source.</em></p>
+    <div class="source-box">
+      "We are met to discuss and determine the problems confronting us. We are of one mind: to oppose colonialism in all its manifestations. We are united by a common detestation of racialism. And we are united by a common determination to preserve and stabilize peace in the world."
+      <cite>— President Sukarno of Indonesia, Opening Speech at the Bandung Conference, April 18, 1955</cite>
+    </div>
+    <p style="font-size:14px;color:var(--text);margin-bottom:6px;">Using Skill 2.B (Sourcing), answer the following HIPP questions:</p>
+    <ol style="font-size:14px;color:var(--text-muted);margin-left:20px;margin-bottom:4px;">
+      <li style="margin-bottom:6px;"><strong>Historical Situation:</strong> What was happening in 1955 that makes this speech particularly significant? (Think: Cold War, decolonization wave, new nations)</li>
+      <li style="margin-bottom:6px;"><strong>Purpose:</strong> What is Sukarno trying to accomplish with this speech? Why does he emphasize unity and shared values?</li>
+      <li style="margin-bottom:6px;"><strong>Point of View / Audience:</strong> Who is Sukarno speaking to, and how might this shape what he says? What does he NOT say — and why?</li>
+      <li style="margin-bottom:6px;"><strong>Significance for KC-6.2.V.B:</strong> How does this source illustrate the key concept that groups "opposed and promoted alternatives to the existing economic, political, and social orders"?</li>
+    </ol>
+    <textarea class="apply-ta" placeholder="Write your HIPP analysis here. A strong sourcing response goes beyond identifying who wrote it — it explains HOW the source's historical situation, purpose, or audience affects its meaning or reliability..."></textarea>
+    <button class="accordion-btn" onclick="toggleAccordion('apply1',this)" style="margin-top:8px;">▶ REVEAL SAMPLE HIPP ANALYSIS</button>
+    <div class="accordion-content" id="apply1">
+      <strong>Sample HIPP Analysis — Skill 2.B:</strong><br><br>
+      <em>Historical Situation:</em> Sukarno delivers this speech in April 1955 — a pivotal moment when dozens of Asian and African nations have recently gained or are in the process of gaining independence from European colonial empires. Simultaneously, the Cold War is intensifying, with both superpowers pressuring newly independent nations to join their blocs. This context makes the speech significant: it is not just a condemnation of colonialism, but a direct declaration of independence from the Cold War binary itself.<br><br>
+      <em>Purpose:</em> Sukarno's purpose is simultaneously diplomatic and political: to forge a coalition among nations that share the experience of colonialism, to establish the Non-Aligned Movement's moral legitimacy on the world stage, and to project strength by demonstrating that these nations — representing over half the world's population — can act collectively without superpower direction. By emphasizing shared values ("common detestation," "common determination"), he builds the solidarity needed to resist superpower pressure.<br><br>
+      <em>Point of View / Audience:</em> Sukarno is speaking to the 29 national delegates assembled at Bandung — leaders of newly independent or decolonizing nations. His audience already shares his anti-colonial sentiment, so he frames the speech around what unites them rather than dwelling on internal differences (such as religious or political divisions between nations). Notably, he does <em>not</em> explicitly name the US or USSR — an omission that reflects the Non-Aligned commitment to neutrality and avoids alienating potential sources of aid from either bloc.<br><br>
+      <em>Significance for KC-6.2.V.B:</em> This source directly illustrates how groups "opposed and promoted alternatives to the existing... orders." The existing order Sukarno opposes is both colonialism (the old European imperial system) and the new Cold War binary (the superpower system). By convening Bandung and declaring collective unity, these nations assert that a third path is possible — embodying exactly what KC-6.2.V.B describes.
+    </div>
+  </div>
+
+  <!-- Gold Callout -->
+  <div class="callout-gold">
+    <h4>🗺️ Layer 2: Review the Infographic Now</h4>
+    <p>Pause here and review the NotebookLM infographic for Topic 8.2. Use it as a reference as you continue into DOK 3. Focus on: the four arenas of Cold War competition, the geographic divide between First/Second/Third World, and the key Non-Aligned Movement leaders and their countries.</p>
+  </div>
+
+  <button class="complete-btn" onclick="completeSection(2,this)">✓ Mark DOK 2 Complete</button>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════ DOK 3 ═══════════════ -->
+<div class="section-wrapper dok3-section" id="dok3">
+  <div class="section-header">
+    <div><span class="dok-badge">DOK 3</span></div>
+    <div>
+      <div class="section-title">Knowledge Analysis</div>
+      <div class="section-tagline">GOAL: Examine and Explain with Evidence — construct arguments, apply sourcing skill, evaluate thesis statements</div>
+    </div>
+  </div>
+
+  <!-- Causal Chain -->
+  <div class="chain-wrap">
+    <h4>⛓ Causal Chain: From Ideological Divide to Global Cold War</h4>
+    <div class="kc-tag">HTS-1: Causation · KC-6.2.IV.C.ii</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px;">Two nodes are blank. Fill them in mentally, then click "Reveal All" to check your thinking.</p>
+    <div class="chain-nodes">
+      <div class="chain-row"><div class="chain-node">US and USSR hold fundamentally incompatible ideologies — capitalist democracy vs. authoritarian communism — described by the video as "like oil and water"</div></div>
+      <div class="chain-row" style="justify-content:center"><div class="chain-arrow">↓</div></div>
+      <div class="chain-row"><div class="chain-node blank" id="blank1" onclick="revealBlank('blank1')">[BLANK 1: What was the economic policy the US used to fight communism's appeal in Western Europe? Click to reveal.]</div></div>
+      <div class="chain-row" style="justify-content:center"><div class="chain-arrow">↓</div></div>
+      <div class="chain-row"><div class="chain-node">Both superpowers race to develop nuclear weapons and delivery systems — the arms race culminates in both sides holding ICBMs capable of mutual annihilation</div></div>
+      <div class="chain-row" style="justify-content:center"><div class="chain-arrow">↓</div></div>
+      <div class="chain-row"><div class="chain-node blank" id="blank2" onclick="revealBlank('blank2')">[BLANK 2: What doctrine explained why this mutual nuclear capability paradoxically prevented direct war? Click to reveal.]</div></div>
+      <div class="chain-row" style="justify-content:center"><div class="chain-arrow">↓</div></div>
+      <div class="chain-row"><div class="chain-node">With direct war "unthinkable," the rivalry explodes into every other arena: Space Race, propaganda, proxy wars in newly independent nations, and the Non-Aligned Movement's attempt to escape the binary entirely</div></div>
+    </div>
+    <button class="chain-btn" onclick="revealAllBlanks()">Reveal All Blank Nodes</button>
+  </div>
+
+  <!-- AP Insight Card -->
+  <div class="ap-insight">
+    <h5>⚡ AP Insight — Sourcing &amp; Situation Skill (2.B)</h5>
+    <p>Topic 8.2's CED-designated skill is <strong>Sourcing and Situation (2.B)</strong>: "Explain the point of view, purpose, historical situation, and/or audience of a source." On the AP exam, this skill is most commonly tested in the <strong>DBQ</strong> (required for the sourcing point on at least 2 documents) and in <strong>source-based SAQs</strong> (Questions 1 and 2).</p>
+    <p><strong>Why Topic 8.2 is ideal for 2.B practice:</strong> The Cold War was a propaganda war — every major source from this period was produced by actors with powerful ideological stakes. A McCarthy speech, a Soviet poster, a Bandung Conference address, a US State Department memo — all require asking: who produced this, for what audience, in what historical situation, and what did they want their audience to believe? The video makes this explicit: "both the US and the Soviet Union were waging a massive propaganda war." Understanding 2.B means recognizing that Cold War sources are <em>never</em> neutral — and explaining <em>how</em> that shapes their meaning.</p>
+    <p><strong>AP Rubric reminder:</strong> To earn the sourcing point in a DBQ, you must do more than <em>identify</em> a source's POV or purpose — you must <em>explain</em> how or why it is relevant to the argument. Example: "Because McCarthy was speaking in the paranoid atmosphere of the Red Scare and needed to maintain political power, his accusations lack credible evidence and instead weaponize fear — making this source useful for showing how the Cold War distorted domestic politics, but not reliable as proof of actual communist infiltration."</p>
+  </div>
+
+  <!-- SAQ Practice -->
+  <div class="saq-wrap">
+    <h4>📝 SAQ Practice — Source-Based (Question 1 Style)</h4>
+    <div class="source-box" style="margin-bottom:12px;font-style:italic;font-size:14px;color:var(--text-muted);">
+      "I have here in my hand a list of 205 — a list of names that were made known to the Secretary of State as being members of the Communist Party and who nevertheless are still working and shaping policy in the State Department."
+      <cite>— Senator Joseph McCarthy, speech in Wheeling, West Virginia, February 9, 1950</cite>
+    </div>
+    <p class="saq-context">Use the source above and your knowledge of Topic 8.2 to answer all three parts. Write 2–3 sentences per part. Label your answers A, B, and C.</p>
+
+    <div class="saq-part">
+      <div class="saq-part-label">PART A — Identify (DOK 2 threshold)</div>
+      <p>Identify ONE historical development that provides context for understanding why McCarthy's speech was politically effective in 1950.</p>
+      <textarea class="saq-ta" placeholder="Part A (2–3 sentences)..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion('saqa',this)">▶ REVEAL SAMPLE RESPONSE</button>
+      <div class="accordion-content" id="saqa">
+        <strong>Sample Response — Part A (Identify):</strong><br><br>
+        One historical development that provides context for McCarthy's political effectiveness is the intensification of the Cold War rivalry and the "Red Scare" atmosphere of the late 1940s. The Soviet Union had tested its first nuclear weapon in 1949 and China had become communist that same year, creating genuine fear in the US that communism was advancing rapidly. In this climate of anxiety about communist expansion, McCarthy's accusation that Soviet agents had infiltrated the US government itself found a ready and frightened audience.
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">PART B — Explain the Source's Purpose (DOK 3 / Skill 2.B)</div>
+      <p>Explain the purpose of McCarthy's speech and how it reflects the broader propaganda dimension of the Cold War described in KC-6.2.IV.C.ii.</p>
+      <textarea class="saq-ta" placeholder="Part B (2–3 sentences)..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion('saqb',this)">▶ REVEAL SAMPLE RESPONSE</button>
+      <div class="accordion-content" id="saqb">
+        <strong>Sample Response — Part B (Explain purpose / Skill 2.B):</strong><br><br>
+        McCarthy's purpose was not primarily to expose genuine communist infiltration — as the video notes, "he never actually had a credible list" — but to weaponize fear to gain political power and shut down opposition by labeling critics as traitors. This reflects the broader propaganda dimension of KC-6.2.IV.C.ii: both superpowers "waged a massive propaganda war" using every tool available — including domestic political rhetoric — to convince their own populations that the other side represented an existential evil. McCarthy's speech illustrates how the ideological struggle of the Cold War extended beyond foreign policy into domestic politics, creating an atmosphere where the line between legitimate dissent and suspected disloyalty became dangerously blurred.
+      </div>
+    </div>
+
+    <div class="saq-part">
+      <div class="saq-part-label">PART C — Explain a Continuity or Comparison (DOK 3)</div>
+      <p>Explain how the Non-Aligned Movement (KC-6.2.V.B) represented a different response to the ideological pressures illustrated in McCarthy's speech and the broader Cold War conflict.</p>
+      <textarea class="saq-ta" placeholder="Part C (2–3 sentences)..."></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion('saqc',this)">▶ REVEAL SAMPLE RESPONSE</button>
+      <div class="accordion-content" id="saqc">
+        <strong>Sample Response — Part C (Explain a comparison):</strong><br><br>
+        While McCarthy's speech illustrates how the Cold War's ideological pressure forced domestic conformity within the superpowers themselves — demanding absolute loyalty and treating ambiguity as treason — the Non-Aligned Movement represented a fundamentally different response: a collective refusal to accept the Cold War's binary terms at all. Where McCarthy's logic demanded "you're either with us or against us," Sukarno, Nkrumah, and Nehru argued at Bandung that a third path existed — one based on anti-colonialism and sovereignty rather than Cold War ideology. However, as KC-6.2.V.B notes, even non-aligned nations ultimately struggled to maintain true independence, often forced to accept economic aid from one bloc or another, showing that the Cold War's ideological pressure was nearly impossible to fully escape.
+      </div>
+    </div>
+  </div>
+
+  <!-- CCOT Grid -->
+  <div class="ccot-wrap">
+    <h4>🔄 CCOT Grid — International Relations and Superpower Competition, 1945–1991</h4>
+    <div class="kc-tag">HTS-3: CCOT · KC-6.2.IV.C.ii</div>
+    <table class="ccot-table">
+      <thead>
+        <tr><th>CONTINUITY (What persisted?)</th><th>CHANGE OVER TIME (What shifted?)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fundamental ideological incompatibility between US capitalism/democracy and Soviet communism/authoritarianism persisted throughout the entire Cold War</td>
+          <td>The arena of competition evolved — from economic rivalry (Marshall Plan vs. COMECON) to the Arms Race to the Space Race to proxy wars — as each side sought new fronts in the ideological contest</td>
+        </tr>
+        <tr>
+          <td>Neither superpower ever fought the other directly — both maintained the "no hot war" principle rooted in MAD deterrence throughout the conflict</td>
+          <td>The Non-Aligned Movement grew from an informal gathering (Bandung 1955) to a formally organized international bloc (1961), reflecting the increasing confidence and organization of newly independent nations</td>
+        </tr>
+        <tr>
+          <td>Both superpowers used economic aid as a strategic weapon throughout the Cold War era to win allies and limit the other's influence</td>
+          <td>The balance of nuclear terror shifted — from US monopoly (1945) to rough parity with MAD (by 1959) — fundamentally changing the calculus of superpower conflict</td>
+        </tr>
+        <tr>
+          <td>Propaganda and information control remained a core tool of both superpowers from the earliest Cold War years through its end</td>
+          <td>Many non-aligned nations found it increasingly difficult to maintain true neutrality, gradually moving closer to one bloc as economic dependence and regional conflicts drew them into superpower competition</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="accordion-btn" onclick="toggleAccordion('ccot1',this)">▶ REVEAL SAMPLE ANALYSIS</button>
+    <div class="accordion-content" id="ccot1">
+      <strong>Sample CCOT Analysis:</strong><br><br>
+      The Cold War's most striking continuity was the mutual commitment to avoiding direct military conflict — the "no hot war" principle that persisted from 1945 to 1991. Despite escalating rhetoric and proxy conflicts worldwide, both superpowers consistently recognized that direct confrontation risked mutual annihilation. What changed most dramatically was the arena of competition: as MAD locked both sides out of direct military action, the rivalry exploded into technology (Space Race), economics (competing aid programs), culture (propaganda), and proxy conflicts in the developing world. The Non-Aligned Movement represents a significant change as well — the emergence of a third global force that rejected the Cold War's terms entirely, growing from 29 nations at Bandung to a major international bloc by the 1960s, permanently complicating the simple binary narrative of the Cold War.
+    </div>
+  </div>
+
+  <!-- Thesis Evaluator -->
+  <div class="thesis-eval-wrap">
+    <h4>⚖️ Thesis Evaluator — Click Each Card to Reveal the Verdict</h4>
+    <div class="kc-tag">HTS-5: Argumentation · AP Rubric: Thesis/Claim</div>
+    <div class="thesis-eval-prompt">
+      <strong>LEQ Prompt:</strong> "Evaluate the extent to which ideological conflict was the primary cause of the Cold War rivalry between the United States and the Soviet Union."
+    </div>
+    <div class="thesis-grid">
+
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <p>"The Cold War was caused by ideological conflict between the United States and the Soviet Union. The two countries had very different political and economic systems which led to a major rivalry after World War II."</p>
+        <div class="thesis-verdict fail">
+          <div class="verdict-label">✗ FAILS — Restatement Without Line of Reasoning</div>
+          This restates the prompt's premise without making a defensible claim or establishing a line of reasoning. "Very different political and economic systems...led to a rivalry" simply paraphrases the question. No argument about the <em>extent</em> of ideological causation or a "because" that explains the mechanism.
+        </div>
+      </div>
+
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <p>"Ideological conflict was the primary cause of the Cold War."</p>
+        <div class="thesis-verdict fail">
+          <div class="verdict-label">✗ FAILS — Claim Without Line of Reasoning</div>
+          This makes a defensible claim (ideology as primary cause) but provides no line of reasoning — no explanation of why or how ideology produced the Cold War. The AP rubric requires "some indication of the reason for making the claim." A single sentence without a "because" or "since" does not meet this standard.
+        </div>
+      </div>
+
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <p>"While ideological differences between capitalism and communism significantly drove Cold War tensions, the rivalry was primarily caused by structural geopolitical factors — specifically, the post-WWII power vacuum that placed two incompatible superpowers in direct competition for global influence, making some form of conflict nearly inevitable regardless of ideology."</p>
+        <div class="thesis-verdict pass">
+          <div class="verdict-label">✓ PASSES — Defensible Claim with Line of Reasoning</div>
+          This addresses the "extent" framing by acknowledging ideology's role while arguing that structural factors were more fundamental. It establishes a line of reasoning: the power vacuum + superpower competition made conflict "nearly inevitable regardless of ideology." The "while...primarily caused by" construction models sophisticated thesis writing.
+        </div>
+      </div>
+
+      <div class="thesis-card" onclick="revealThesis(this)">
+        <p>"Ideological conflict was the primary cause of the Cold War because the fundamental incompatibility of capitalist democracy and authoritarian communism meant each superpower viewed the other's mere existence as a threat — transforming every geopolitical dispute into an existential battle over which system would define humanity's future."</p>
+        <div class="thesis-verdict pass">
+          <div class="verdict-label">✓ PASSES — Defensible Claim with Line of Reasoning (Opposite Position)</div>
+          This takes the opposite defensible position from Card 3, arguing ideology <em>was</em> the primary cause. It passes equally because it provides a compelling line of reasoning: ideology was primary because each side viewed the other's existence as an existential threat — not just a rival — meaning the conflict was fundamentally different in kind from ordinary geopolitical competition. Both Card 3 and Card 4 are valid responses to an "evaluate the extent" prompt.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="complete-btn" onclick="completeSection(3,this)">✓ Mark DOK 3 Complete</button>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════ DOK 4 ═══════════════ -->
+<div class="section-wrapper dok4-section" id="dok4">
+  <div class="section-header">
+    <div><span class="dok-badge">DOK 4</span></div>
+    <div>
+      <div class="section-title">Knowledge Augmentation</div>
+      <div class="section-tagline">GOAL: Explore and Explain with Examples and Evidence — transfer learning, synthesize across topics</div>
+    </div>
+  </div>
+
+  <!-- Contextualization Builder -->
+  <div class="ctx-wrap">
+    <h4>🏗 Contextualization Builder</h4>
+    <p>For essays about Cold War causes or effects (common LEQ/DBQ prompts), you need a contextualization paragraph that situates the topic in broader history — <em>before, during, or around</em> the period — and connects it to your argument. Choose ONE pathway and complete the stem.</p>
+
+    <div class="ctx-pathway">
+      <div class="ctx-pathway-label">Pathway A — WWI, the Russian Revolution, and the Origins of Ideological Conflict</div>
+      <div class="ctx-stem">"The ideological conflict at the heart of the Cold War did not begin in 1945. Its roots stretch back to 1917, when the Russian Revolution created the world's first communist state — immediately alarming Western capitalist powers who feared the spread of Marxist revolution to their own working classes. Throughout the 1920s and 1930s, the Soviet Union and the Western democracies regarded each other with deep mutual suspicion..."</div>
+      <textarea class="ctx-ta" placeholder="Complete this paragraph. How did the pre-WWII history of Western-Soviet hostility create the ideological fault lines that the Cold War would deepen?"></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion('ctxa',this)">▶ REVEAL MODEL RESPONSE</button>
+      <div class="accordion-content" id="ctxa">
+        <strong>Model Contextualization — Pathway A:</strong><br><br>
+        "The ideological conflict at the heart of the Cold War did not begin in 1945. Its roots stretch back to 1917, when the Russian Revolution created the world's first communist state — immediately alarming Western capitalist powers who feared the spread of Marxist revolution to their own working classes. Throughout the 1920s and 1930s, the Soviet Union and the Western democracies regarded each other with deep mutual suspicion: the West intervened against the Bolsheviks during the Russian Civil War, while the Soviets actively funded communist movements in Western Europe and beyond under the banner of 'world revolution.' The WWII alliance that brought these adversaries together was always a marriage of convenience against Hitler — not a genuine reconciliation of incompatible worldviews. When the war ended and their common enemy was gone, the two sides reverted to the deep ideological hostility that had defined their relationship since 1917. Understanding this pre-existing ideological divide is essential for contextualizing why the Cold War emerged so rapidly and so intensely from WWII's ashes."<br><br>
+        <em>AP Note: This earns the contextualization point by situating the Cold War in the longer arc of US-Soviet ideological conflict (back to 1917), elaborating the mechanism, and connecting it to the topic.</em>
+      </div>
+    </div>
+
+    <div class="ctx-pathway">
+      <div class="ctx-pathway-label">Pathway B — Decolonization and the Creation of the "Third World"</div>
+      <div class="ctx-stem">"The Cold War unfolded simultaneously with one of the most significant geopolitical transformations of the twentieth century: the rapid decolonization of Asia and Africa. In the decades following World War II, roughly fifty new nations achieved independence from European colonial empires, creating a massive new arena in which the superpowers would compete for influence..."</div>
+      <textarea class="ctx-ta" placeholder="Continue this paragraph. How does the wave of decolonization provide essential context for understanding why the Cold War became a truly global conflict rather than just a European one?"></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion('ctxb',this)">▶ REVEAL MODEL RESPONSE</button>
+      <div class="accordion-content" id="ctxb">
+        <strong>Model Contextualization — Pathway B:</strong><br><br>
+        "The Cold War unfolded simultaneously with one of the most significant geopolitical transformations of the twentieth century: the rapid decolonization of Asia and Africa. In the decades following World War II, roughly fifty new nations achieved independence from European colonial empires, creating a massive new arena in which the superpowers would compete for influence. These newly independent states were often politically unstable, economically underdeveloped, and strategically positioned — making them prime targets for both US containment policy and Soviet 'world revolution' ideology. Each new nation represented a potential Cold War ally to be won or a potential dominoe to fall. This intersection of decolonization and superpower rivalry explains why the Cold War rapidly extended beyond Europe to encompass Asia, Africa, Latin America, and the Middle East — transforming what might have been a European standoff into a genuinely global contest for the future of the postcolonial world. The Non-Aligned Movement emerged directly from this dynamic: newly independent nations recognized both the opportunity and the danger of their position in the superpower contest."<br><br>
+        <em>AP Note: This pathway is particularly strong for DBQ or LEQ prompts that ask about the global reach of the Cold War or the relationship between the Cold War and decolonization.</em>
+      </div>
+    </div>
+
+    <div class="ctx-pathway">
+      <div class="ctx-pathway-label">Pathway C — The Failure of the League of Nations and the Search for a New World Order</div>
+      <div class="ctx-stem">"The Cold War's emergence must be understood against the backdrop of the failed attempt at international order that followed World War I. The League of Nations — designed to prevent future wars through collective security — collapsed when it failed to stop Japanese, Italian, and German aggression in the 1930s, leading directly to WWII. This failure haunted the architects of the post-WWII world order..."</div>
+      <textarea class="ctx-ta" placeholder="Continue this paragraph. How does the League's failure and the creation of the UN provide context for understanding the Cold War's particular character — especially the role of competing ideological blocs?"></textarea>
+      <button class="accordion-btn" onclick="toggleAccordion('ctxc',this)">▶ REVEAL MODEL RESPONSE</button>
+      <div class="accordion-content" id="ctxc">
+        <strong>Model Contextualization — Pathway C:</strong><br><br>
+        "The Cold War's emergence must be understood against the backdrop of the failed attempt at international order that followed World War I. The League of Nations — designed to prevent future wars through collective security — collapsed when it failed to stop Japanese, Italian, and German aggression in the 1930s, leading directly to WWII. This failure haunted the architects of the post-WWII world order, who created the United Nations in 1945 with a permanent Security Council — including both the US and USSR — designed to ensure that the great powers could not ignore international institutions as they had before. However, the UN's very structure reflected the Cold War's emerging logic: the veto power held by the Security Council's permanent members meant that superpower rivalry would paralyze any collective action that threatened either bloc's interests. Rather than transcending the ideological divide, the UN institutionalized it. The Cold War thus developed not in the absence of international institutions, but in their presence — revealing that no formal organization could overcome the fundamental incompatibility of capitalist democracy and authoritarian communism when both sides possessed nuclear weapons."<br><br>
+        <em>AP Note: This pathway is excellent for connecting the Cold War to the Unit 7 context of WWI and the League — a cross-unit connection that can earn the complexity point.</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cross-Unit Synthesis -->
+  <div class="syn-wrap">
+    <h4>🔀 Cross-Unit Synthesis Activity</h4>
+    <p>Topic 8.2 is the heart of Unit 8 — its causes flow from 8.1 and its effects radiate forward through 8.3–8.8. This activity builds the cross-unit and cross-period connections that earn the AP Complexity point.</p>
+    <div class="syn-connections">
+      <div class="syn-con">
+        <div class="sc-label">← TOPIC 8.1 Connection</div>
+        <p><strong>From Context to Conflict:</strong> Topic 8.1 established the structural conditions (power vacuum, ideological incompatibility, collapsing European order). Topic 8.2 shows how those conditions became active policy: containment, world revolution, economic warfare. How does knowing 8.1 deepen your understanding of <em>why</em> the strategies in 8.2 took the specific forms they did?</p>
+      </div>
+      <div class="syn-con">
+        <div class="sc-label">→ TOPIC 8.3 Forward Connection</div>
+        <p><strong>From Strategy to Consequences:</strong> The containment doctrine and world revolution strategy described in 8.2 directly produced the military alliances (NATO, Warsaw Pact) and proxy wars (Korea, Angola, Nicaragua) detailed in 8.3. The ideological framework of 8.2 is the <em>cause</em> of the specific Cold War effects in 8.3.</p>
+      </div>
+      <div class="syn-con">
+        <div class="sc-label">↔ UNIT 7 Long Connection</div>
+        <p><strong>From Fascism to Communism:</strong> Unit 7's theme of ideological conflict (nationalism, fascism, communism vs. liberalism in WWII) directly prefigures 8.2's ideological Cold War. How does the WWII ideological conflict — democracy vs. fascism — transform into the Cold War ideological conflict — democracy vs. communism — and what does this continuity reveal about 20th-century history?</p>
+      </div>
+    </div>
+    <div class="syn-task">
+      <p><strong>Your Turn — Complexity Move:</strong> Choose ONE connection above. Write a 3–4 sentence response that makes an explicit cross-unit or cross-topic connection that <em>modifies, complicates, or adds nuance</em> to the historical argument. Aim for the AP Complexity standard: "explain relevant and insightful connections within and across periods."</p>
+      <textarea class="syn-ta" placeholder="Write your synthesis here. Name the connection, explain the mechanism, and show how it adds nuance to our understanding of the Cold War..."></textarea>
+    </div>
+    <button class="accordion-btn" onclick="toggleAccordion('syn1',this)" style="margin-top:10px;">▶ REVEAL SAMPLE SYNTHESIS (Topic 8.1 → 8.2 Connection)</button>
+    <div class="accordion-content" id="syn1">
+      <strong>Sample Cross-Topic Synthesis — 8.1 → 8.2:</strong><br><br>
+      Understanding Topic 8.1's structural analysis deepens our reading of the specific strategies described in 8.2 in an important way: containment was not simply a response to Soviet aggression — it was a logical response to a <em>structural condition</em>. The power vacuum created by Europe's collapse (8.1) meant that any expansion of Soviet influence anywhere in the world directly threatened the balance of power that the US was trying to maintain. This explains why containment was applied so broadly — from Greece and Turkey to Korea to Vietnam — even in cases where the US had limited direct strategic interests. Without the structural lens of 8.1 (the power vacuum, the collapsed European order), containment in 8.2 can look like simple anti-communist ideology; with it, containment looks like a rational — if ultimately overextended — response to a genuinely destabilized world order. This connection <em>modifies</em> the simple narrative of Cold War origins as purely ideological by revealing the structural-geopolitical dimension that ideology alone cannot explain.<br><br>
+      <em>AP Note: This response earns the Complexity point by making an "insightful connection within [the unit]" (8.1 to 8.2) and using it to add nuance to the historical argument — showing that Cold War strategies cannot be understood purely in ideological terms.</em>
+    </div>
+  </div>
+
+  <!-- Self-Assessment -->
+  <div class="sa-wrap">
+    <h4>🎯 Self-Assessment — Rate Your AP Skills for Topic 8.2</h4>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">Click the dots: <span style="color:var(--dok3)">■ Not Yet</span> &nbsp; <span style="color:var(--gold)">■ Getting There</span> &nbsp; <span style="color:var(--dok1)">■ Confident</span></p>
+    <div class="sa-labels"><div class="sa-label-item">Not Yet</div><div class="sa-label-item">Getting There</div><div class="sa-label-item">Confident</div></div>
+    <div class="sa-item">
+      <div class="sa-skill">I can <strong>explain the causes and effects</strong> of the ideological struggle of the Cold War (Learning Objective B / KC-6.2.IV.C.ii)</div>
+      <div class="sa-dots"><div class="sa-dot" onclick="rateDot(this,1,1)"></div><div class="sa-dot" onclick="rateDot(this,1,2)"></div><div class="sa-dot" onclick="rateDot(this,1,3)"></div></div>
+    </div>
+    <div class="sa-item">
+      <div class="sa-skill">I can <strong>describe the Non-Aligned Movement</strong> and explain why newly independent nations sought an alternative to the Cold War binary (KC-6.2.V.B)</div>
+      <div class="sa-dots"><div class="sa-dot" onclick="rateDot(this,2,1)"></div><div class="sa-dot" onclick="rateDot(this,2,2)"></div><div class="sa-dot" onclick="rateDot(this,2,3)"></div></div>
+    </div>
+    <div class="sa-item">
+      <div class="sa-skill">I can <strong>analyze a primary source using Skill 2.B</strong> — explaining its point of view, purpose, historical situation, and/or audience (HTS-6)</div>
+      <div class="sa-dots"><div class="sa-dot" onclick="rateDot(this,3,1)"></div><div class="sa-dot" onclick="rateDot(this,3,2)"></div><div class="sa-dot" onclick="rateDot(this,3,3)"></div></div>
+    </div>
+    <div class="sa-item">
+      <div class="sa-skill">I can <strong>compare US and Soviet Cold War strategies</strong> (containment vs. world revolution; Marshall Plan vs. COMECON) (HTS-2: Comparison)</div>
+      <div class="sa-dots"><div class="sa-dot" onclick="rateDot(this,4,1)"></div><div class="sa-dot" onclick="rateDot(this,4,2)"></div><div class="sa-dot" onclick="rateDot(this,4,3)"></div></div>
+    </div>
+    <div class="sa-item">
+      <div class="sa-skill">I can <strong>explain MAD</strong> and why the nuclear arms race produced a paradoxical "peace" between the superpowers</div>
+      <div class="sa-dots"><div class="sa-dot" onclick="rateDot(this,5,1)"></div><div class="sa-dot" onclick="rateDot(this,5,2)"></div><div class="sa-dot" onclick="rateDot(this,5,3)"></div></div>
+    </div>
+    <div class="sa-item">
+      <div class="sa-skill">I can <strong>write a contextualization paragraph</strong> that situates the Cold War in broader historical context (pre-1945 US-Soviet relations, decolonization, or League failure) (HTS-4)</div>
+      <div class="sa-dots"><div class="sa-dot" onclick="rateDot(this,6,1)"></div><div class="sa-dot" onclick="rateDot(this,6,2)"></div><div class="sa-dot" onclick="rateDot(this,6,3)"></div></div>
+    </div>
+    <div class="sa-item">
+      <div class="sa-skill">I can <strong>connect Topic 8.2 to 8.1 and 8.3</strong> to show how Cold War causes (8.1) produced strategies (8.2) that produced effects (8.3) (HTS-4: Cross-unit synthesis)</div>
+      <div class="sa-dots"><div class="sa-dot" onclick="rateDot(this,7,1)"></div><div class="sa-dot" onclick="rateDot(this,7,2)"></div><div class="sa-dot" onclick="rateDot(this,7,3)"></div></div>
+    </div>
+  </div>
+
+  <button class="complete-btn" onclick="completeSection(4,this)">✓ Mark DOK 4 Complete — Module Finished!</button>
+</div>
+
+<div style="max-width:900px;margin:0 auto 60px;padding:0 20px;text-align:center;">
+  <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);letter-spacing:2px;">AP WORLD HISTORY: MODERN · UNIT 8 · TOPIC 8.2 · DOK STUDY MATERIALS<br>Built from CED (KC-6.2.IV.C.ii, KC-6.2.V.B) · Video: "The Cold War" · Skills: HTS-1,2,3,4,5,6 · Skill 2.B: Sourcing &amp; Situation</p>
+</div>
+
+<script>
+  let completed=[false,false,false,false];
+  function updateProgress(){document.getElementById('progress-fill').style.width=(completed.filter(Boolean).length*25)+'%';}
+  function completeSection(n,btn){if(!completed[n-1]){completed[n-1]=true;btn.textContent='✓ Completed!';btn.disabled=true;updateProgress();}}
+
+  function checkMCQ(qid,btn,isCorrect){
+    const item=document.getElementById(qid);
+    item.querySelectorAll('.mcq-option').forEach(b=>{b.classList.add('disabled');b.onclick=null;});
+    btn.classList.add(isCorrect?'correct':'incorrect');
+    const fb=document.getElementById(qid+'-fb');
+    fb.classList.add('show');
+  }
+
+  function toggleAccordion(id,btn){
+    const c=document.getElementById(id);
+    const open=c.classList.contains('open');
+    c.classList.toggle('open',!open);
+    btn.classList.toggle('open',!open);
+    btn.querySelector('span, :first-child') || (btn.childNodes[0].textContent=open?'▶':'▼');
+    const firstChar=btn.textContent.trim()[0];
+    if(firstChar==='▶'||firstChar==='▼') btn.childNodes[0].textContent=(open?'▶':'▼')+' ';
+  }
+
+  let selectedMatch=null;
+  function selectMatch(id,type){
+    const el=document.getElementById(id);
+    if(el.classList.contains('matched'))return;
+    if(selectedMatch&&selectedMatch.id===id){el.classList.remove('selected');selectedMatch=null;return;}
+    if(selectedMatch){
+      const prev=document.getElementById(selectedMatch.id);
+      if(selectedMatch.type===type){prev.classList.remove('selected');el.classList.add('selected');selectedMatch={id,type,pair:el.dataset.pair};return;}
+      if(selectedMatch.pair===el.dataset.pair){
+        prev.classList.remove('selected');prev.classList.add('matched');el.classList.add('matched');selectedMatch=null;
+        const rem=document.querySelectorAll('.match-item:not(.matched)').length;
+        document.getElementById('matching-status').textContent=rem===0?'✓ All matched!':(rem/2)+' pairs remaining';
+      } else {
+        prev.classList.add('wrong');el.classList.add('wrong');
+        setTimeout(()=>{prev.classList.remove('wrong','selected');el.classList.remove('wrong');selectedMatch=null;},700);
+      }
+    } else {el.classList.add('selected');selectedMatch={id,type,pair:el.dataset.pair};}
+  }
+
+  const blankAnswers={
+    blank1:'The Marshall Plan — the US pumped $12 billion into rebuilding Western European economies. Strategic logic: if capitalism delivers prosperity, communism loses its appeal. The Soviets refused the aid and created COMECON instead — deepening the economic divide.',
+    blank2:'Mutual Assured Destruction (MAD) — since both superpowers can obliterate each other regardless of who fires first, neither has an incentive to start a nuclear war. The "balance of terror" paradoxically keeps direct conflict unthinkable.'
+  };
+  function revealBlank(id){const el=document.getElementById(id);el.textContent=blankAnswers[id];el.classList.remove('blank');el.classList.add('revealed');}
+  function revealAllBlanks(){Object.keys(blankAnswers).forEach(id=>revealBlank(id));}
+
+  function revealThesis(card){card.querySelector('.thesis-verdict').classList.toggle('show');}
+
+  function rateDot(dot,row,level){
+    dot.parentElement.querySelectorAll('.sa-dot').forEach((d,i)=>{d.classList.remove('active-1','active-2','active-3');if(i<level)d.classList.add('active-'+level);});
+  }
+
+  // Fix accordion button text toggling
+  document.querySelectorAll('.accordion-btn').forEach(btn=>{
+    btn.addEventListener('click',function(){
+      const arrow=this.textContent.includes('▼')?'▶':'▼';
+      this.childNodes[0].textContent=arrow+' ';
+    });
+  });
+
+  updateProgress();
+</script>
+</body>
+</html>
