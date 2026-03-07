@@ -759,49 +759,61 @@
   /* Thesis Evaluator */
   .thesis-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 14px;
   }
+  @media (max-width: 600px) { .thesis-grid { grid-template-columns: 1fr; } }
   .thesis-card {
     border-radius: var(--radius);
     overflow: hidden;
     cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: border-color 0.2s;
   }
+  .thesis-card:hover { border-color: rgba(184,134,11,0.5); }
   .thesis-card-body {
     background: var(--bg-card-light);
-    border: 1px solid rgba(255,255,255,0.1);
     padding: 16px;
     font-size: 14px;
     color: var(--text-primary);
     font-style: italic;
-    border-bottom: none;
-    min-height: 100px;
+    line-height: 1.55;
     transition: background 0.2s;
   }
   .thesis-card:hover .thesis-card-body { background: #3d3120; }
+  .thesis-click-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--smoke);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 8px 16px;
+    background: rgba(0,0,0,0.15);
+  }
+  .thesis-card.revealed .thesis-click-hint { display: none; }
   .thesis-card-verdict {
     padding: 10px 14px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     letter-spacing: 0.1em;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 8px;
     background: rgba(0,0,0,0.2);
-    border: 1px solid rgba(255,255,255,0.1);
   }
-  .verdict-fail { color: #f08080; border-color: var(--dok3-light) !important; }
-  .verdict-pass { color: #6ecf66; border-color: var(--dok1-light) !important; }
+  .thesis-card.revealed .thesis-card-verdict { display: flex; }
+  .verdict-fail { color: #f08080; }
+  .verdict-pass { color: #6ecf66; }
   .thesis-explain {
     padding: 10px 14px;
     font-size: 12px;
     color: var(--text-secondary);
+    line-height: 1.5;
     display: none;
     background: rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-top: none;
+    border-top: 1px solid rgba(255,255,255,0.05);
   }
-  .thesis-explain.show { display: block; }
+  .thesis-card.revealed .thesis-explain { display: block; }
 
   /* Contextualization Builder */
   .ctx-pathway {
@@ -1798,18 +1810,21 @@ function selectMatch(type, idx, el) {
 function renderThesis() {
   const grid = document.getElementById('thesis-grid');
   grid.innerHTML = thesisCards.map((t, i) => `
-    <div class="thesis-card" onclick="toggleThesis(${i})">
+    <div class="thesis-card" id="tc${i}" onclick="revealThesisCard(${i})">
       <div class="thesis-card-body">${t.text}</div>
-      <div class="thesis-card-verdict ${t.verdict === 'FAIL' ? 'verdict-fail' : 'verdict-pass'}" id="thv${i}">
-        ${t.verdict === 'FAIL' ? '✗ FAILS AP Rubric' : '✓ PASSES AP Rubric'} — click to see why
+      <div class="thesis-click-hint">Click to evaluate &rarr;</div>
+      <div class="thesis-card-verdict ${t.verdict === 'FAIL' ? 'verdict-fail' : 'verdict-pass'}">
+        ${t.verdict === 'FAIL' ? '&#10007; Does NOT earn the point' : '&#10003; Earns the point'}
       </div>
-      <div class="thesis-explain" id="the${i}">${t.reason}</div>
+      <div class="thesis-explain">${t.reason}</div>
     </div>
   `).join('');
 }
 
-function toggleThesis(i) {
-  document.getElementById(`the${i}`).classList.toggle('show');
+function revealThesisCard(i) {
+  const card = document.getElementById('tc' + i);
+  if (card.classList.contains('revealed')) return;
+  card.classList.add('revealed');
 }
 
 function renderSelfAssess() {
