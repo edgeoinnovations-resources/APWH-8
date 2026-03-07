@@ -1300,9 +1300,14 @@
         <div class="node-box">For centuries, colonial economies were designed exclusively to extract raw materials — rubber, cotton, minerals — and ship them to the colonizing country, generating almost no industrial base or local wealth.</div>
       </div>
       <div class="causal-arrow">↓</div>
-      <div class="causal-node">
-        <span class="node-num">2</span>
-        <div class="node-box blank" id="chain2">[ Student completes this node ]</div>
+      <div class="causal-node" style="flex-direction:column;align-items:stretch;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span class="node-num">2</span>
+          <div class="node-box blank" style="flex:1;">
+            <textarea class="causal-input" placeholder="What did newly independent nations inherit economically from colonialism?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+          </div>
+        </div>
+        <div id="chain2-answer" style="display:none;margin-left:42px;margin-top:8px;padding:10px 14px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.88rem;color:var(--text-secondary);"></div>
       </div>
       <div class="causal-arrow">↓</div>
       <div class="causal-node">
@@ -1310,9 +1315,14 @@
         <div class="node-box">Newly independent leaders concluded that free markets — the very system that had served colonizers — could not be trusted to develop their nations; the state had to take an active, directing role in the economy.</div>
       </div>
       <div class="causal-arrow">↓</div>
-      <div class="causal-node">
-        <span class="node-num">4</span>
-        <div class="node-box blank" id="chain4">[ Student completes this node ]</div>
+      <div class="causal-node" style="flex-direction:column;align-items:stretch;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span class="node-num">4</span>
+          <div class="node-box blank" style="flex:1;">
+            <textarea class="causal-input" placeholder="What specific policies did leaders enact to redirect their economies?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+          </div>
+        </div>
+        <div id="chain4-answer" style="display:none;margin-left:42px;margin-top:8px;padding:10px 14px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.88rem;color:var(--text-secondary);"></div>
       </div>
       <div class="causal-arrow">↓</div>
       <div class="causal-node">
@@ -1663,12 +1673,12 @@
 
   // Causal chain reveal
   function revealChain() {
-    const n2 = document.getElementById('chain2');
-    const n4 = document.getElementById('chain4');
-    n2.textContent = 'At independence, newly independent nations inherited these extractive economies: infrastructure built for export, no industrial base, trade relationships locked into serving the former colonizing power — the same free markets that had organized colonial exploitation remained in place.';
-    n2.classList.remove('blank'); n2.classList.add('revealed');
-    n4.textContent = 'Specific policies were enacted: Nasser nationalized the Suez Canal (1956) to fund Egyptian development; Nyerere collectivized farms under Ujamaa; Indira Gandhi implemented a 20-point development program; Bandaranaike pursued land reform in Sri Lanka — each using state power to redirect economic resources toward national rather than foreign goals.';
-    n4.classList.remove('blank'); n4.classList.add('revealed');
+    const a2 = document.getElementById('chain2-answer');
+    const a4 = document.getElementById('chain4-answer');
+    a2.textContent = 'At independence, newly independent nations inherited these extractive economies: infrastructure built for export, no industrial base, trade relationships locked into serving the former colonizing power — the same free markets that had organized colonial exploitation remained in place.';
+    a2.style.display = 'block';
+    a4.textContent = 'Specific policies were enacted: Nasser nationalized the Suez Canal (1956) to fund Egyptian development; Nyerere collectivized farms under Ujamaa; Indira Gandhi implemented a 20-point development program; Bandaranaike pursued land reform in Sri Lanka — each using state power to redirect economic resources toward national rather than foreign goals.';
+    a4.style.display = 'block';
   }
 
   // Thesis evaluator
