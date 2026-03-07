@@ -1709,20 +1709,17 @@ function toggleAccordion(header) {
 
 // ======= MCQs =======
 function checkMCQ(li, qNum, isCorrect) {
-  const allLis = li.parentElement.querySelectorAll('li');
-  allLis.forEach(l => l.classList.add('disabled'));
-  if (isCorrect) {
-    li.classList.add('correct');
-  } else {
-    li.classList.add('incorrect');
-    allLis.forEach(l => {
-      if (l.getAttribute('onclick') && l.getAttribute('onclick').includes('true')) {
-        l.classList.add('correct');
-      }
-    });
-  }
   const exp = document.getElementById('mcq' + qNum + '-exp');
-  if (exp) exp.style.display = 'block';
+  if (!exp._orig && exp) exp._orig = exp.innerHTML;
+  if (isCorrect) {
+    const allLis = li.parentElement.querySelectorAll('li');
+    allLis.forEach(l => l.classList.add('disabled'));
+    li.classList.add('correct');
+    if (exp) { exp.innerHTML = exp._orig; exp.style.display = 'block'; }
+  } else {
+    li.classList.add('incorrect', 'disabled');
+    if (exp) { exp.innerHTML = '<strong>Incorrect.</strong> That\'s not it — try again.'; exp.style.display = 'block'; }
+  }
 }
 
 // ======= FLIP CARDS — prevent double init =======
