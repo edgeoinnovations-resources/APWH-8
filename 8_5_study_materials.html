@@ -1500,9 +1500,14 @@
         <div class="node-box">World War II devastates European colonial powers economically and militarily — empires can no longer be maintained at full strength.</div>
       </div>
       <div class="causal-arrow">↓</div>
-      <div class="causal-node">
-        <span class="node-num">2</span>
-        <div class="node-box blank" id="chain2">[ Student completes this node ]</div>
+      <div class="causal-node" style="flex-direction:column;align-items:stretch;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span class="node-num">2</span>
+          <div class="node-box blank" style="flex:1;">
+            <textarea class="causal-input" placeholder="What happened as a result of WWII that fueled independence movements across Asia and Africa?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+          </div>
+        </div>
+        <div id="chain2-answer" style="display:none;margin-left:42px;margin-top:8px;padding:10px 14px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.88rem;color:var(--text-secondary);"></div>
       </div>
       <div class="causal-arrow">↓</div>
       <div class="causal-node">
@@ -1510,9 +1515,14 @@
         <div class="node-box">In Algeria, France had settled over one million of its own citizens; the French government declared Algeria part of France itself — making peaceful withdrawal politically impossible.</div>
       </div>
       <div class="causal-arrow">↓</div>
-      <div class="causal-node">
-        <span class="node-num">4</span>
-        <div class="node-box blank" id="chain4">[ Student completes this node ]</div>
+      <div class="causal-node" style="flex-direction:column;align-items:stretch;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span class="node-num">4</span>
+          <div class="node-box blank" style="flex:1;">
+            <textarea class="causal-input" placeholder="What organization launched the armed struggle, and what did the conflict look like?" style="width:100%;min-height:60px;background:transparent;border:none;color:var(--parchment);font-family:'Source Serif 4',serif;font-size:0.88rem;resize:vertical;outline:none;"></textarea>
+          </div>
+        </div>
+        <div id="chain4-answer" style="display:none;margin-left:42px;margin-top:8px;padding:10px 14px;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.3);border-radius:4px;font-size:0.88rem;color:var(--text-secondary);"></div>
       </div>
       <div class="causal-arrow">↓</div>
       <div class="causal-node">
@@ -1867,14 +1877,12 @@
 
   // Causal chain reveal
   function revealChain() {
-    const n2 = document.getElementById('chain2');
-    const n4 = document.getElementById('chain4');
-    n2.textContent = 'Rising nationalism across Asia and Africa — colonized peoples who had fought for Allied "freedom" now demanded their own; the legitimacy of empire collapsed on the world stage.';
-    n2.classList.remove('blank');
-    n2.classList.add('revealed');
-    n4.textContent = 'The FLN (Front de Libération Nationale) launched an armed guerrilla campaign in 1954; for eight years, approximately 500,000 French troops fought Algerian forces in urban and rural warfare, including the brutal Battle of Algiers.';
-    n4.classList.remove('blank');
-    n4.classList.add('revealed');
+    const a2 = document.getElementById('chain2-answer');
+    const a4 = document.getElementById('chain4-answer');
+    a2.textContent = 'Rising nationalism across Asia and Africa — colonized peoples who had fought for Allied "freedom" now demanded their own; the legitimacy of empire collapsed on the world stage.';
+    a2.style.display = 'block';
+    a4.textContent = 'The FLN (Front de Libération Nationale) launched an armed guerrilla campaign in 1954; for eight years, approximately 500,000 French troops fought Algerian forces in urban and rural warfare, including the brutal Battle of Algiers.';
+    a4.style.display = 'block';
   }
 
   // Thesis evaluator
