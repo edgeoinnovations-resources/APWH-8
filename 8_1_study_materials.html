@@ -436,6 +436,7 @@
     line-height: 1.6;
   }
   .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: rgba(107,45,45,0.3); border-color: #f08080; }
   .mcq-feedback strong { color: var(--gold-light); }
 
   /* ── MATCHING ── */
@@ -1947,11 +1948,20 @@
   // ── MCQ ──
   function checkMCQ(qid, btn, isCorrect) {
     const item = document.getElementById(qid);
-    const btns = item.querySelectorAll('.mcq-option');
-    btns.forEach(b => { b.classList.add('disabled'); b.onclick = null; });
-    btn.classList.add(isCorrect ? 'correct' : 'incorrect');
     const fb = document.getElementById(qid + '-fb');
-    fb.classList.add('show');
+    if (!fb._orig) fb._orig = fb.innerHTML;
+    if (isCorrect) {
+      item.querySelectorAll('.mcq-option').forEach(b => { b.classList.add('disabled'); b.onclick = null; });
+      btn.classList.add('correct');
+      fb.innerHTML = fb._orig;
+      fb.classList.remove('wrong-fb');
+      fb.classList.add('show');
+    } else {
+      btn.classList.add('incorrect', 'disabled');
+      btn.onclick = null;
+      fb.innerHTML = '<strong>Incorrect.</strong> That\u0027s not it \u2014 try again.';
+      fb.classList.add('show', 'wrong-fb');
+    }
   }
 
   // ── ACCORDION ──

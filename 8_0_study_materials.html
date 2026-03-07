@@ -473,6 +473,7 @@
     display: none;
   }
   .mcq-feedback.show { display: block; }
+  .mcq-feedback.wrong-fb { background: rgba(107,45,45,0.3); border-color: #f08080; }
 
   /* Matching */
   .matching-area { display: flex; gap: 20px; flex-wrap: wrap; }
@@ -1753,14 +1754,22 @@ function renderMCQs() {
 function checkMCQ(qi, ci) {
   const q = mcqData[qi];
   const fb = document.getElementById(`mcqfb${qi}`);
-  // Disable all options
-  for (let i = 0; i < q.choices.length; i++) {
-    const btn = document.getElementById(`mcq${qi}opt${i}`);
+  if (!fb._orig) fb._orig = fb.innerHTML;
+  const btn = document.getElementById(`mcq${qi}opt${ci}`);
+  if (ci === q.correct) {
+    for (let i = 0; i < q.choices.length; i++) {
+      document.getElementById(`mcq${qi}opt${i}`).onclick = null;
+    }
+    btn.classList.add('correct');
+    fb.innerHTML = fb._orig;
+    fb.classList.remove('wrong-fb');
+    fb.classList.add('show');
+  } else {
+    btn.classList.add('incorrect');
     btn.onclick = null;
-    if (i === q.correct) btn.classList.add('correct');
-    else if (i === ci) btn.classList.add('incorrect');
+    fb.innerHTML = '<strong>Incorrect.</strong> That\u0027s not it \u2014 try again.';
+    fb.classList.add('show', 'wrong-fb');
   }
-  fb.classList.add('show');
 }
 
 // Matching logic
