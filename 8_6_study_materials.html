@@ -834,12 +834,6 @@
   </div>
 </div>
 
-<section style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:2rem auto;max-width:1100px;padding:1.5rem 2rem;text-align:center;">
-  <h2 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.4rem;margin:0 0 0.4rem 0;">📋 Graphic Organizer</h2>
-  <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.95rem;margin:0 0 1rem 0;">Use this organizer alongside the video and infographic to structure your notes for this topic.</p>
-  <img src="8.6.png" alt="Graphic Organizer for Topic 8.6" style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
-</section>
-
 <!-- HOW-TO BANNER -->
 <div class="how-to-banner">
   <h3>📌 How to Use This Module</h3>
@@ -1282,6 +1276,20 @@
       <li>The comparison between political independence and economic dependency</li>
       <li>The migration arrows showing post-colonial movement from colonies to metropoles</li>
     </ul>
+  </div>
+
+  <!-- Infographic Image (click to expand) -->
+  <div style="background:#1a1206;border:2px solid #c9a84c;border-radius:12px;margin:0 0 1.5rem 0;padding:1.5rem 2rem;text-align:center;">
+    <h3 style="font-family:'Playfair Display',serif;color:#c9a84c;font-size:1.2rem;margin:0 0 0.4rem 0;">📋 Topic 8.6 Infographic</h3>
+    <p style="font-family:'Source Serif 4',serif;color:#d4c4a0;font-size:0.85rem;margin:0 0 1rem 0;">Click the image to expand it for easier reading.</p>
+    <img src="8.6.png" alt="Infographic for Topic 8.6" id="infographic-thumb"
+         style="width:100%;max-width:1000px;border-radius:8px;border:1px solid #c9a84c;box-shadow:0 4px 20px rgba(0,0,0,0.5);cursor:pointer;"
+         onclick="document.getElementById('infographic-overlay').style.display='flex'">
+  </div>
+  <div id="infographic-overlay" onclick="this.style.display='none'"
+       style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.92);z-index:9999;cursor:zoom-out;justify-content:center;align-items:center;padding:2rem;">
+    <img src="8.6.png" alt="Infographic for Topic 8.6 (expanded)"
+         style="max-width:95vw;max-height:95vh;border-radius:10px;border:2px solid #c9a84c;box-shadow:0 0 40px rgba(201,168,76,0.3);">
   </div>
 
   <button class="complete-section-btn d2" onclick="completeSection(2,this)">✓ Mark DOK 2 Complete</button>
